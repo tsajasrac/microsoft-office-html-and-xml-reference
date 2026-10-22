@@ -1,0 +1,125 @@
+<html>
+
+<head>
+<title>Media Element (Microsoft PowerPoint)</title>
+<style>@import url(../shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Media Element (Microsoft PowerPoint)</h1>
+<p class="T">Describes the audio/video portion of a slide.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>endtrack</b></td>
+    <td class="T" width="66%">Ending track in a track sequence if the media is a
+      compact disk.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>loops</b></td>
+    <td class="T" width="66%">Defines whether the media will loop around. If <b>True</b>,
+      the media will loop. The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>href</b></td>
+    <td class="T" width="66%">Defines the path pointing to the file that
+      contains the audio/video media. Required only for media objects that
+      reference an external file.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>isnarration</b></td>
+    <td class="T" width="66%">Defines whether the media is a narration. If <b>True</b>,
+      the media is a narration. The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>length</b></td>
+    <td class="T" width="66%">Specifies the length of the media sequence in
+      milliseconds. The default value is 0.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>rewinds</b></td>
+    <td class="T" width="66%">Defines whether the media will rewind when it
+      comes to the end of the sequence. If <b>True</b>, the media will rewind.
+      The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>starttrack</b></td>
+    <td class="T" width="66%">Beginning track if the media is a compact disk.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>type</b></td>
+    <td class="T" width="66%">
+      <p>Defines the audio/video format. One of the following values is required
+      for this attribute.</p>
+      <table cellpadding="4" cellspacing="4" border="1">
+        <tr valign="top">
+          <td><b>avi</b></td>
+          <td>Files that are encoded in the Microsoft Audio-Video Interleaved
+            format.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>cdAudio</b></td>
+          <td>Audio tracks on a compact disk.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>embeddedWAV</b></td>
+          <td>Embedded files that are encoded in the Microsoft Windows
+            Audio-Video Interleaved format.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>linkedWAV</b></td>
+          <td>Linked files that are encoded in the Microsoft Windows Audio-Video
+            Interleaved format</td>
+        </tr>
+        <tr valign="top">
+          <td><b>mci</b></td>
+          <td>Audio/video information that provides commands for the Microsoft
+            Windows Media Control Interface.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>midi</b></td>
+          <td>Files that conform to the Musical Instruments Digital Interface
+            specification.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>quicktime</b></td>
+          <td>Files that are encoded in the Apple QuickTime format.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><a href="ppeleSlide.htm"><b>Slide</b></a><br>
+</p>
+<p class="RL"><b>Subelements</b></p>
+<p class="T"><a href="ppeleSound.htm"><b>Sound</b></a><br>
+</p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">All subelements are optional.
+<p class="T">Use the <b>OnMouseClick</b> element to play a media object. For
+example:
+<pre class="C"><code>
+&lt;p:onmouseclick action=&quot;playMedia&quot;/&gt;
+
+</code></pre>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">A media object is created that is an embedded WAV file 5 seconds
+long. The actual sound derives from a <b>Sound</b> subelement that references a
+WAV.
+<pre class="C"><code>
+&lt;p:media type=&quot;embeddedWAV&quot; length=5000&gt;
+&lt;p:sound id=&quot;040754&quot; name=&quot;LAURE.WAV&quot; href=&quot;sound001.wav&quot;/&gt;
+&lt;/p:media&gt;
+</code></pre>
+
+</body>
+
+</html>

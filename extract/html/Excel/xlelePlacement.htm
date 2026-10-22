@@ -1,0 +1,24 @@
+<html><head>
+<title>Placement Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Placement Element (Microsoft Excel)</H1>
+<p class=T>Specifies the position of an axis or legend within a chart.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleAxis.htm"><B>Axis</B></A>,
+<A HREF="xleleLegend.htm"><B>Legend</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>For a Chart component, this element contains one of the following string constants specifying the position of the axis: <B>Bottom</B>, <B>Left</B>, <B>Right</B>, or <B>Top</B>.
+In Microsoft Excel, the default placement depends on the axis type.
+The primary value axis appears on the left and the primary category axis at the bottom, while the secondary value axis appears on the right and the secondary category axis at the top.
+Bar charts appear with the primary value axis on the bottom and the primary category axis on the left, while the secondary value axis appears on the top and the secondary category axis at the right.</p>
+<p class=T>For a legend, this element contains one of the following string constants specifying the position: <B>Automatic</B>, <B>Bottom</B>, <B>Corner</B>, <B>Custom</B>, <B>Left</B>, <B>None</B>, <B>Right</B>, or <B>Top</B>.</p>
+<p class=T>When this element contains the string constant <B>None</B>, the legend is hidden.
+The subelements of the <B>Legend</B> element contain formatting properties that are used if the legend becomes visible.</p>
+<p class=T>When this element contains the string constant <B>Custom</B>, the <B>Height</B>, <B>Left</B>, <B>Top</B>, and <B>Width</B> elements specify the exact position of the legend relative to the top left corner of the chart.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xleleWebChart.htm#Example"><B>WebChart</B></A> element topic.</p>
+</body></html>

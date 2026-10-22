@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>Saving and Opening HTML Files</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1 class="RH1">Saving and Opening HTML Files</h1>
+<p class="T">When an HTML file is opened in Microsoft Excel, the data in the
+body is stored in a worksheet starting with cell A1. When HTML data is pasted
+into a worksheet, the data is stored starting with the active cell.</p>
+<h4 class="RH4">Table and cell formatting</h4>
+<p class="T">When a table is opened, each data element in the table is one column
+wide. Excel automatically adjusts the column widths and row heights in
+the worksheet, and applies a column data format. For columns that become wider than
+four column widths, wordwrap is enabled. When an HTML table is pasted in a
+worksheet, the column widths are not adjusted.</p>
+<p class="T">For tables that use spaces instead of tabs to pad entries, any
+sequence of two or more spaces is treated as a single tab.</p>
+<p class="T"> Excel does not support percent widths in the <b>width</b>
+attribute of a <b>Table</b> element. If there is only one table in a file, the <b>width</b>
+attribute specifies the width of the table in the worksheet. If there's more
+than one table in the file, Excel determines the width of all tables
+in the worksheet. If the tables are nested, the width specified for the outer
+table is used and, if necessary, the width is adjusted to accomodate the data in
+the nested tables. The columns and rows around the table are merged to preserve
+the appearance of the nested table. When the workbook is saved, only a single
+table is saved per worksheet.</p>
+<p class=T>Table cell formatting is saved using cascading style sheet (CSS) styles.
+Style definitions are stored either in the head of the HTML file or in a separate file.
+For workbooks that contain a single worksheet, the style definitions are stored in the head of the workbook file within a <b>Style</b> 
+element.  
+For workbooks that contain more than one worksheet, the style definitions (including the default cell formatting and all class definitions) are stored in a separate file.
+The file has the same name as the workbook but with a .css extension instead of .htm.</p>
+<p class=T>A style class is used to specify a set of formatting properties using a single name.
+For example, a style class can be defined as both a number formatting style and
+a border style.
+The class name can be specified in the class attribute of the HTML <b>TD</b>, <b>TR</b>,
+<b>Col</b>, and <b> Table</b> elements.
+The style class provides a shorthand way of specifying a complex set of styles.</p>
+<p class=T> Excel creates a class name for each unique combination of formatting.
+The class name can be specified in table elements that have this particular formatting.
+The following example shows four style classes applied to a table, a row, cells, a fragment of red text, and a span of text.
+The <b>class</b> attribute of the <b>Table</b> element specifies the formatting that would 
+be applied to a column if it contained data.</p>
+<PRE class=C><CODE>
+ &lt;TABLE CLASS=XL9&gt;
+  &lt;TR CLASS=XL2&gt;
+   &lt;TD CLASS=XL4&gt;Plain&lt;FONT COLOR=red CLASS=XL5&gt;Red&lt;/FONT&gt;&lt;/TD&gt; 
+   &lt;TD CLASS=XL4&gt;Plain&lt;SPAN CLASS=XL5&gt;Red&lt;/SPAN&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+ &lt;/TABLE&gt;
+</CODE></PRE>  
+<p class=T>Class names begin with <b>XL</b>, built-in style names begin with
+<b>style</b>, and rich text formatting 
+that only specifies font formatting begins with <b>font</b>.
+All names are followed by an integer starting with 1 for the first formatting combination in the table.</p>
+<p class=T>Certain CSS Level 1 and Level 2 styles can also be specified. For more information about styles and
+the syntax of style definitions, see the <A HREF="../Concepts/ofconStyleTable.htm">Style Attributes</A> topic and
+the CSS Level 1 and Level 2 Recommendations.
+For information about cell and worksheet formatting, see the <a href="xlconCellFormatting.htm">Cell Formatting</a> and <a href="xlconTables.htm">Worksheets</a> topics.</p>
+<h4 class=RH4>Copying and pasting tables</h4>
+<p class=T>Parent styles and comments are not stored in the Clipboard.
+For formulas that reference cells outside the selected range, only the result of the formula is stored.</p>
+<p class=T>When HTML is pasted, column widths, picture properties, and shape properties are not
+included.
+Any references are pasted as relative references.</p>
+<h4 class="RH4">Cell and row breaks</h4>
+<p class="T">The <b>BR</b> tag has a <b>mso-data-placement</b> style attribute
+specifying where the data is stored. The attribute can have one of the following
+string constants: <b>new-cell</b> means to start a new cell in the next row after
+the break and <b>same-cell</b> means that the break is in a cell.</p>
+<h4 class="RH4">Hyperlinks</h4>
+<p class="T">There cannot be more than one hyperlink in a worksheet cell. If the
+cell contains a hyperlink, the entire content of the cell is a hyperlink. If a
+cell contains plain text and a hyperlink, the plain text becomes part of the
+hyperlink. If more than one hyperlink is placed in a cell, no text in the cell is
+a hyperlink.</p>
+<h4 class="RH4">Web queries</h4>
+<p class="T">If a file contains a Web query and formulas dependent on the query,
+the formulas might not work if the layout of the query is changed. The XML <b>97Query</b>
+element is specified if a Microsoft Excel 97 Web query is used.</p>
+<h4 class="RH4">Text surrounding tables</h4>
+<p class="T">The text around a table is stored in column A of a worksheet in a
+paragraph style format. If the text is longer than the width of the table or if
+the file does not contain a table, the worksheet cells are merged across the
+width of the screen and wordwrap is enabled. If the table is smaller than 400
+pixels, the cells are merged to the 400 pixel mark. When a paragraph break is
+encountered, the text is broken.
+When a file containing <b>Pre</b>  elements is opened, the Text Import
+Wizard determines whether the text is delimited and how to align the text.</p>
+<h4 class="RH4">Microsoft Excel 97 elements</h4>
+<p class="T">In Excel 97, the <b>vnd.ms-excel.numberformat</b> style
+attribute is used to specify the number format using a custom format string.
+This style attribute is equivalent to the <b>mso-number-format</b> style
+attribute.</p>
+<h4 class="RH4">Invalid attribute and element values</h4>
+<p class="T">When a file containing an invalid or unsupported value is opened, the
+default value is used.</p>
+<h4 class="RH4">Invalid worksheet names and index numbers</h4>
+<p class="T">If the worksheet name is invalid, the prefix <b>recovered</b> and an
+underscore are specified in front of the default name of the sheet or chart (for
+example, recovered_sheet1 and recovered_chart1).
+If the worksheet index is invalid, the default index is used based
+on the position of the worksheet in the workbook.</p>
+<h4 class="RH4">Missing images and files</h4>
+<p class="T">If image files are missing and alt text exists, the text is
+displayed in place of the image.
+If the worksheet HTML file is missing, a blank worksheet is
+inserted in its place.
+If the workbook HTML file is missing, each worksheet HTML file is
+opened as a separate workbook.
+If the CSS file is missing, all text is formatted in the Normal style.
+If any HTML or other formatting is found in the table, it is applied to the text.</p>
+</body>
+</html>

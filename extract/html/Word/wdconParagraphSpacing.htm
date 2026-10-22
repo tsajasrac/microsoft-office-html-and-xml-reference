@@ -1,0 +1,75 @@
+<html><head>
+<title>Paragraph Spacing</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Paragraph Spacing</H1>
+
+<p class=RH1>Microsoft Word has various paragraph spacing options that can be saved to
+HTML and displayed in the browser. Users can also specify Web-like Auto spacing for paragraphs.
+It is important to note that paragraph spacing might be displayed differently depending on the browser or browser version used.</p>
+
+<H4 class=RH4>Empty paragraphs</h4>
+<p class=T>Because browsers ignore empty <b>P</b> elements, Word inserts a nonbreaking space (<b>&amp;nbsp;</b>) between these elements when saving to
+HTML. On import, Word ignores empty <b>P</b> elements.</p>
+<H4 class=RH4>Paragraph spacing</h4>
+<p class=T>In Word, users can specify the spacing before and after a paragraph.
+When saving to HTML, Word uses the <b>P</b> element's <b>style</b> attribute to display and store
+these settings.</p>
+<H4 class=RH4>Auto paragraph spacing</h4>
+<p class=T>Word 2000 has a before and after paragraph setting for spacing called Auto. Word uses paragraph Auto spacing to emulate browser display of
+non-specified paragraph spacing. When Word opens an HTML file that was not
+created with Office programs, paragraphs that do not have before
+or after paragraph spacing specified are typically assigned Auto paragraph spacing. Word
+saves this setting to HTML using the <b>mso-margin-top-alt</b> and <b>mso-margin-bottom-alt</b>
+ style attributes.</p>
+<p class=T>Auto spacing in Word displays a standard amount of spacing before and after paragraphs,
+usually about 14 points for a 12-point font size, similar to browsers. Word
+also applies spacing differently depending on the context of the paragraph as browsers do. The following table shows the actual spacing applied to
+paragraphs in specific document contexts when <b>Auto</b>  is set for before and
+after spacing.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows" width="100%" height="227">
+  <tr valign="top">
+    <td class="I" align="left" height="18"><b>Type of paragraph</b></td>
+    <td class="I" align="left" height="18"><b>Auto spacing displayed</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="TT" height="17">First
+                paragraph in a document</td>
+    <td class="TT" height="17">No spacing before</td>
+  </tr>
+  <tr valign="top">
+    <td class="TT" height="18">First paragraph in a table cell</td>
+    <td class="TT" height="18">No spacing before</td>
+  </tr>
+  <tr valign="top">
+    <td class="TT" height="18">Last
+                paragraph in a table cell</td>
+    <td class="TT" height="18">No spacing after</td>
+  </tr>
+  <tr valign="top">
+    <td class="TT" height="36">List
+                item paragraph before another list item</td>
+    <td class="TT" height="36">No spacing after</td>
+  </tr>
+  <tr>
+    <td class="TT" height="36">List
+                item paragraph after
+                another list item</td>
+    <td class="TT" height="36">No spacing before</td>
+  </tr>
+  <tr>
+    <td class="TT" height="36">Other paragraphs</td>
+    <td class="TT" height="36">Space before and space after</td>
+  </tr>
+</table>
+<p class=T>Word might not always display Auto spacing in the same way that a specific
+browser does. This feature primarily provides a way for Word to display
+undefined paragraph spacing in a manner similar to most browsers.</p>
+<p class=T>For information about the style attributes that Office uses and their possible values, see the
+<a href="../concepts/ofconStyleTable.htm">Style Attributes</a> 
+topic.</p>
+
+
+</body></html>

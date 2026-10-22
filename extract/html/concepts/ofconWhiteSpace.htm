@@ -1,0 +1,31 @@
+<html><head>
+<title>White Space</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>White Space</H1>
+
+<p class="T">Office programs and Web browsers
+interpret spaces and tabs differently. Office programs use character and tab
+spaces to indent text. Most Web browsers display one space when several
+consecutive spaces are encountered in an HTML file. Tabs are not displayed. When saving to HTML,
+Office spaces and tabs are displayed to the extent possible in the Web browser,
+and tab settings are stored for use in Office programs.</p>
+<p class="T">Office encloses two or more regular
+spaces in a <b>Span</b> element with the <b>mso-spacerun: yes</b> 
+ attribute, and it exports each nonbreaking space as an HTML nonbreaking space
+character (<b>&amp;nbsp;</b>).</p>
+<p class="T">Office uses the <b>tab-stops</b> attribute to list the tab settings for a
+collection of text. To save tab settings in the HTML file, Office uses a <b>Span</b>
+element with the <b>mso-tab-count</b>  style. Within this <b>Span</b>
+element, Office inserts enough spaces so that the browser can display the tab spacing.
+For tabs with leaders, Office places the appropriate ASCII character inside the <b>Span</b>
+element to emulate the leader type. Office stores default tab intervals in the <b>Body</b>
+element.</p>
+
+<p class="T">For information about the style attributes that Office uses and
+their possible values, see the <a href="ofconStyleTable.htm">Style
+Attributes</a> topic.</p>
+
+</body></html>

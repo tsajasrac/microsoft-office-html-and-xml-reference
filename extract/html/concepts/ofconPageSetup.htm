@@ -1,0 +1,87 @@
+<html><head>
+<title>Page Setup</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Page Setup</H1>
+
+<p class=T>Office programs store page setup settings using both CSS
+and <a HREF="../Shared/ofeleXML.htm">XML</a>. Many Office page setup settings are intended to format printed output and might not be displayed
+when opened in a Web browser. However, the settings are saved in HTML to be used when the
+page is opened in an Office program.</p>
+
+
+<h4 class=RH4>Word</h4>
+
+
+<p class=T>Word uses CSS and <b> @page</b> definitions to store section-level page
+setup settings. For more information about how Word stores page setup settings in HTML, see the Word <a href="../word/wdconSectionBreaks.htm">Page
+Layout and Section Breaks</a> topic.</p>
+
+
+<h4 class=RH4>Excel</h4>
+
+
+<p class=T>Excel uses CSS and <b> @page</b> definitions to store some page setup
+settings and XML to store others. The following table lists the CSS attributes
+that describe Excel page setup settings.</p>
+
+
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows width="100%">
+<TR valign=top>
+<TD class=I width=33% align=left><b>Excel page setup setting</b></TD>
+<TD class=I width=66% align=left><b>Attribute that describes it</b></TD>
+</TR>
+<tr>
+<TD class=T width=33%>Page size</TD>
+<TD class=T width=66%><b>size</b></TD>
+</tr>
+<tr>
+<TD class=T width=33%>
+  Margins</TD>
+<TD class=T width=66%>
+<b>
+margin</b>
+
+</TD>
+</tr>
+<tr>
+<TD class=T width=33%>Header margin</TD>
+<TD class=T width=66%><b>mso-margin-header</b></TD>
+</tr>
+<tr>
+<TD class=T width=33%>Footer margin</TD>
+<TD class=T width=66%><b>mso-margin-footer</b></TD>
+</tr>
+<tr>
+<TD class=T width=33%>Page orientation</TD>
+<TD class=T width=66%><b>mso-page-orientation</b></TD>
+</tr>
+<tr>
+<TD class=T width=33%>Horizontal justification</TD>
+<TD class=T width=66%><b>mso-horizontal-page-align</b></TD>
+</tr>
+<tr>
+<TD class=T width=33%>Vertical justification</TD>
+<TD class=T width=66%><b>mso-vertical-page-align</b></TD>
+</tr>
+<tr>
+<TD class=T width=33%>Starting page number</TD>
+<TD class=T width=66%><b>mso-page-number-start</b></TD>
+</tr>
+</TABLE>
+
+<p class=T>Many of the Excel page setup settings that are stored using XML are
+contained in the <a href="../Excel/xlelePrint.htm">Print</a> element.</p>
+
+
+<h4 class=RH4>PowerPoint</h4>
+
+
+<p class=T>PowerPoint has fewer page setup settings than Word and Excel and uses VML to save
+them to HTML. For more
+information, see the PowerPoint topics.</p>
+
+
+</body></html>

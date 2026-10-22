@@ -1,0 +1,135 @@
+<html><head>
+<title>Office XML Syntax</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Office XML Syntax</H1>
+
+<p class=T>A fundamental concept in XML is that elements contain values or other elements. These elements are expressed as a pair of start and end tags, the forward slash (<B>/</B>) specifying an end tag. For example, a bicycle could be described using the following elements.
+
+<PRE class=C><CODE>
+&lt;Bicycle&gt;
+ &lt;Model&gt;2000&lt;/Model&gt;
+ &lt;Speeds&gt;3&lt;/Speeds&gt;
+ &lt;Drive&gt;Chain&lt;/Drive&gt;
+ &lt;BuiltOn&gt;1996.12.28T13:12-0800&lt;/BuiltOn&gt;
+&lt;/Bicycle&gt;
+</CODE></PRE>
+
+<p class=T>In the example, <B>Bicycle</B> is the fundamental element, and it contains subelements that define the properties of the bicycle. A subelement can be required, but it can also be optional, meaning that the object it defines might not have that property. When an object has several of the same properties, some elements can be specified more than once, or up to a certain number of times, to define those properties. For example, the names of the colors in a flag might be defined as follows.</p>
+
+<PRE class=C><CODE>
+&lt;Flag&gt;
+ &lt;Color&gt;Red&lt;/Color&gt;
+ &lt;Color&gt;White&lt;/Color&gt;
+ &lt;Color&gt;Blue&lt;/Color&gt;
+&lt;/Flag&gt;
+</CODE></PRE>
+
+<p class=T>For more information about syntax, see the Extensible Markup Language (XML) Recommendation.</p>
+
+<H4 class=RH4>Boolean Values in Office XML Elements</H4>
+
+<p class=T>Most Office XML elements that contain a Boolean value can be specified by a single tag instead of by start and end tags containing the value.
+By specifying a single element, the file size and complexity is reduced.
+For example, to specify case sensitivity, <CODE>&lt;x:CaseSensitive/&gt;</CODE> is used instead of <CODE>&lt;x:CaseSensitive&gt;True&lt;/x:CaseSensitive&gt;</CODE>.
+The element is specified only when its content is not the default, further reducing the file size and complexity.
+In the previous example, the sort is not case-sensitive by default.</p>
+
+<p class=T>The protection XML elements cannot be specified in this way.
+For more information about protection, see the <A HREF="ofconSecurity.htm">Security, Protection, and VBA Projects</A> topic.</p>
+
+<H4 class=RH4>Namespaces</H4>
+
+<p class=T>An XML namespace provides a method for creating unique XML element names, which are qualified by a namespace prefix and a single colon followed by the local name.
+The prefix, which is mapped to a Universal Resource Identifier (URI), specifies a namespace. The combination of the URI namespace and the local schema namespace produces names that are guaranteed to be universally unique. The following example shows the declarations for <B>o</B> and <B>w</B> global namespaces for a document, the default HTML namespace, and their URIs. </p>
+
+<PRE class=C><CODE>
+&lt;html xmlns:o="urn:schemas.microsoft.com:office/office"
+xmlns:w="urn:schemas.microsoft.com:office/word"
+xmlns=urn:w3-org-ns:HTML&gt;
+</CODE></PRE>
+
+<p class=T>To use namespace declarations, specify the namespace prefix and a single colon followed by the local name. The following example shows Microsoft Office and Microsoft Word elements in a Web page. The <B>DocumentProperties</B>, <B>Created</B>, <B>OfficeDocumentSettings</B>, and <B>ReadOnlyRecommended</B> elements come from the Office namespace, while the <B>WordDocument</B> and <B>CurrentView</B> elements come from the Word namespace. Note that the namespace prefix is used for both the start and end tags.</p>
+
+<PRE class=C><CODE>
+&lt;xml&gt;
+&lt;o:DocumentProperties&gt;
+ &lt;o:Created&gt;1997-11-18T00:10:21Z&lt;/o:Created&gt;
+&lt;/o:DocumentProperties&gt;
+&lt;o:OfficeDocumentSettings&gt;
+ &lt;o:ReadOnlyRecommended/&gt;
+&lt;/o:OfficeDocumentSettings&gt;
+&lt;w:WordDocument&gt;
+ &lt;w:CurrentView&gt;Normal&lt;/w:CurrentView&gt;
+&lt;/w:WordDocument&gt;
+&lt;/xml&gt;
+</CODE></PRE>
+
+<p class=T>The following namespace declarations are used in Office documents.</p>
+
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=20% align=left><B>Prefix</B></TD>
+<TD class=I width=40% align=left><B>Namespace</B></TD>
+<TD class=I width=40% align=left><B>URI</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%></TD>
+<TD class=T width=40%>Hypertext Markup Language (HTML), default</TD>
+<TD class=T width=40%>urn:w3-org-ns:HTML</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%><B>a</B></TD>
+<TD class=T width=40%>Microsoft Access</TD>
+<TD class=T width=40%>urn:schemas-microsoft-com:office/access</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%><B>dt</B></TD>
+<TD class=T width=40%>Data type</TD>
+<TD class=T width=40%>uuid:C2F41010-65B3-11d1-A29F-00AA00C14882</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%><B>o</B></TD>
+<TD class=T width=40%>Microsoft Office</TD>
+<TD class=T width=40%>urn:schemas-microsoft-com:office/office</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%><B>p</B></TD>
+<TD class=T width=40%>Microsoft PowerPoint</TD>
+<TD class=T width=40%>urn:schemas-microsoft-com:office/powerpoint</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%><B>rs</B></TD>
+<TD class=T width=40%>XML-Data recordset</TD>
+<TD class=T width=40%>urn:schemas-microsoft-com:rowset</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%><B>rsSchema</B></TD>
+<TD class=T width=40%>XML-Data rowset</TD>
+<TD class=T width=40%>urn:RowsetSchema</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%><B>s</B></TD>
+<TD class=T width=40%>XML-Data schema</TD>
+<TD class=T width=40%>uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%><B>v</B></TD>
+<TD class=T width=40%>Vector Markup Language (VML)</TD>
+<TD class=T width=40%>urn:schemas-microsoft-com:vml</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%><B>w</B></TD>
+<TD class=T width=40%>Microsoft Word</TD>
+<TD class=T width=40%>urn:schemas-microsoft-com:office/word</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=20%><B>x</B></TD>
+<TD class=T width=40%>Microsoft Excel</TD>
+<TD class=T width=40%>urn:schemas-microsoft-com:office/excel</TD>
+</TR>
+</TABLE>
+
+</body></html>

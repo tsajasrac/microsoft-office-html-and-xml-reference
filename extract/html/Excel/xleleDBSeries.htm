@@ -1,0 +1,32 @@
+<html><head>
+<title>DBSeries Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>DBSeries Element (Microsoft Excel)</H1>
+<p class=T>Contains a description of database data that is used in a chart.
+This element allows you to specify which columns of data returned from a database query are used in a chart.
+The chart is drawn after a connection to the data source is made and data from a query is returned.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleDBSeries.htm"><B>DBSeries</B></A>,
+<A HREF="xleleGraph.htm"><B>Graph</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleBubbleColumn.htm"><B>BubbleColumn</B></A>,
+<A HREF="xleleCategoryColumn.htm"><B>CategoryColumn</B></A>,
+<A HREF="xleleDBSeries.htm"><B>DBSeries</B></A>,
+<A HREF="xleleSeriesColumn.htm"><B>SeriesColumn</B></A>,
+<A HREF="xleleValueColumn.htm"><B>ValueColumn</B></A>,
+<A HREF="xleleXValueColumn.htm"><B>XValueColumn</B></A>,
+<A HREF="xleleYValueColumn.htm"><B>YValueColumn</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>DBSeries</B> element is used only with the Chart component.</p>
+<p class=T>Depending on the type of chart, various subelements are required.
+The <B>BubbleSize</B>, <B>XValueColumn</B>, and <B>YValueColumn</B> subelements are specified for bubble, xy (scatter), surface, and other charts that use bubble size or category and value axes.
+For all other charts, the <B>ValueColumn</B> subelement is used.</p>
+<p class=T>One or more <B>DBSeries</B> subelements can be specified for bubble pie charts in which each bubble has its own series making up the pie.
+Each <B>DBSeries</B> subelement corresponds to a pie chart of a bubble.</p>
+</body></html>

@@ -1,0 +1,240 @@
+<html><head>
+<title>Page Layout and Section Breaks</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Page Layout and Section Breaks</H1>
+
+<p class=T>Many important Microsoft Word page layout settings are stored on a section-by-section
+basis within a document. Many of these section-level settings are intended to
+format printed output and might not be displayed when opened in a Web browser. However,
+these settings are used when the page is opened in an Office program, so Word
+saves them to HTML using CSS.</p>
+
+<H4 class=RH4>Dividing an HTML document into sections</h4>
+<p class=T>Word preserves section-level structure in HTML by enclosing each section's
+data with <b>Div</b> elements. The syntax of these <b>Div</b> elements is as
+follows, where <i>n</i> is the successive section number</p>
+<p class=T><b>&lt;div class=Section</b><i>n</i><b>&gt;</b></p>
+<p class=T>The settings of each section is referenced in the <b>class</b> attribute
+of the section's <b>Div</b> element. Because these settings are meant to format the
+printed page, Word uses the syntax of the CSS
+Printing Extensions and contains CSS definitions in the <b>Head</b> element rather than
+in <b>Div</b>  elements.</p>
+<H4 class=RH4>Section settings</h4>
+<p class=T>Word uses the <b>@page</b>  definition&nbsp;to store document layout settings for the entire document.
+For storing section-level page settings, Word uses similar definitions with the
+following syntax, where <i> n</i> is the successive section number.</p>
+<p class=T><b>@page Section</b><i>n</i></p>
+<p class=T>This allows Word to apply page formatting to
+individual HTML elements referenced through the <b>class</b> attribute.</p>
+<p class=T>Word applies page settings to <b>Div</b> elements enclosing the sections
+using the following syntax, where <i> n</i> is the successive section number</p>
+<p class=T><b>div.Section</b><i>n</i></p>
+<p class=T> The complete syntax for a three-section document is shown
+below:</p>
+<b>&lt;head&gt;&lt;style&gt; &lt;!--</b>
+<blockquote>
+  <p align="left"><b>@page { </b><i>document-level settings</i><b> }</b></p>
+  <p align="left"><b>@page Section1 { </b><i>first section settings </i><b>}<br>
+  div.Section1 { page: Section1; }<br>
+  </b></p>
+  <p align="left"><b>@page Section2 { </b><i>second section settings </i><b>}<br>
+  div.Section2 { page: Section2; }<br>
+  </b></p>
+  <p align="left"><b>@page Section3 { </b><i>third section settings</i><b> }<br>
+  div.Section3 { page: Section3; }</b></p>
+</blockquote>
+<p class=T><b>--&gt;&lt;/style&gt;&lt;/head&gt;<br>
+&lt;body&gt;</b></p>
+<blockquote>
+  <p class=T><b>&lt;div class=Section1&gt;</b><i>first section data goes here</i><b>&lt;/div&gt;</b></p>
+  <p class=T><b>&lt;div class=Section2 &gt;</b><i>second section data goes here</i><b>&lt;/div&gt;</b></p>
+  <p class=T><b>&lt;div class=Section3&gt; &lt;</b><i>third section data goes here</i><b>&lt;/div&gt;</b></p>
+</blockquote>
+<p class=T><b>&lt;/body&gt;</b></p>
+<H4 class=RH4>Section break types</h4>
+<p class=T>Word has five section break types to control how text flows across the break:
+<ul>
+  <li><b>Next page</b> sections begin on a new page.</li>
+  <li><b>Even page</b> sections begin on the next even page.</li>
+  <li><b>Odd page</b> sections begin on the next odd page.</li>
+  <li><b>Continuous</b> sections continue after a line break.</li>
+  <li><b>Column break</b> sections start with a new column.</li>
+</ul>
+<p class=T>All five section break types are represented in the browser window by a <b>BR</b>
+ element that introduces a line break. Word normally positions the <b>BR </b>element
+before the opening
+<b>Div</b> element for every section
+except the
+first. Word uses the <b>clear=all</b>  attribute-value pair to ensure that text following the break
+character comes after left and right-aligned images.</p>
+<p class=T>Word saves the break type to HTML by applying styles to the <b> BR</b> element
+preceding a section. No <b>BR </b>element is placed before the
+first section, and the remaining sections use the <b>page-break-before</b>
+style attribute.</p>
+<p class=T>For the special case of column breaks, Word uses the <b>mso-column-break-before</b>
+style attribute. To differentiate section <b>BR</b> elements from page break <b>BR</b>
+ elements, Word uses the <b>mso-break-type</b>  style attribute. Word only inserts
+this attribute when the document contains section breaks.</p>
+<H4 class=RH4>Margins</h4>
+<p class=T>Word stores page margin information for each section using the <b>margin</b>
+attribute within each section's <b>@page</b>  definition. For gutter margins and
+mirror margins, Word uses the <strong>mso-gutter-margin</strong> and <strong> mso-mirror-margins
+</strong>style attributes, which only save to HTML in non-default cases.&nbsp;</p>
+<p class=T>Word uses the <strong>mso-header-margin</strong> and <strong>mso-footer-margin</strong>
+style attributes to save the header and footer margin settings to HTML.</p>
+<H4 class=RH4>Page size and orientation</h4>
+<p class=T>Word stores page size information in the <b>size</b>  attribute. Browsers that support the CSS-PX &quot;size&quot; standard will
+properly format the page dimensions of printed Word documents. Word
+exports the page size information in the measurement unit selected by the user. Because the CSS-PX defaults to
+the <b>size:auto</b>   attribute, Word always specifies the absolute page dimensions when
+saving to HTML, even for default page dimensions</p>
+<p class=T>Word treats page orientation and page dimensions as independent
+settings,
+so the <strong>mso-page-orientation</strong> style attribute describes the
+section's orientation. Word only uses this attribute for the non-default value <b>landscape</b>.</p>
+<p class=T>The following example shows how Word saves page size and orientation to HTML.</p>
+<blockquote>
+  <p class=T><code>@page Section1 { size: 8.5in 11in;
+  mso-page-orientation: landscape }</code></p>
+</blockquote>
+<H4 class=RH4>Paper source</h4>
+<p class=T>Word uses the <strong>mso-paper-source</strong>  style attribute to store paper
+source information. This style attribute has two possible values, specifying the
+paper source for the first page and the one for all other pages. If they are the same,
+only the first value needs to be listed. This style attribute is not exported to
+HTML when the first page paper source
+matches the CSS default value of 0.</p>
+<H4 class=RH4>Page numbering</h4>
+<p class=T>For each section, Word page numbering settings are saved as HTML using the
+following style attributes:</p>
+<ul>
+  <li><strong>mso-page-numbers-style </strong>specifies the page
+    numbering style and whether page numbering restarts after a section break.</li>
+  <li><strong>mso-page-numbers-chapter-style</strong> specifies
+    whether chapter numbers are included in the page numbering and the style
+    used to identify the chapter titles.</li>
+  <li><strong>mso-page-numbers-chapter-separator </strong>specifies
+    the character used to separate the chapter number and page number.</li>
+</ul>
+<H4 class=RH4>Line numbering</h4>
+<p class=T>For each section, Word line numbering settings are saved as HTML using the
+following style attributes:</p>
+<ul>
+  <li><strong>mso-line-numbers-count-by&nbsp;</strong>specifies the
+    numerical increment to count by.</li>
+  <li><strong>mso-line-numbers-start</strong>&nbsp;specifies what number
+    to begin numbering with.</li>
+  <li><strong>mso-line-numbers-distance</strong>&nbsp;specifies the
+    distance between the right edge of the line numbers and the left edge
+    of the document text.</li>
+  <li><strong>mso-line-numbers-restart</strong>&nbsp;specifies when the
+    numbering restarts.</li>
+</ul>
+<H4 class=RH4>Columns</h4>
+<p class=T>Word saves column settings to HTML, but columns do
+not display in the browser window because HTML and CSS do not yet support
+multicolumn layout. For each section, Word column layout settings are saved as HTML using the <strong>mso-columns</strong>
+style attribute.
+The syntax for this attribute follows, where&nbsp;<i>integer</i> is the number
+of columns; <i>widthN </i>is the width of the <i>n</i>th column and <i>spacingN</i> is
+the width of the <i>n</i>th spacing between columns, from left to right.</p>
+<p class=T><strong>mso-columns</strong>:<i>integer</i> || <b>even</b> | <b>not-even</b>
+|| <i>widthN</i> <i>spacingN</i></p>
+<p class=T> The number of <i>width</i> values depends on whether
+column width is fixed:</p>
+<ul>
+  <li>If <b>even</b>, Word exports a single <i>width</i> value that
+    specifies the inter-column spacing. On import, the column width is
+    determined automatically by Word based on the inter-column spacing and page
+    dimensions.
+  <li>If <b>not-even</b>, Word exports an array of <i>width</i> values that specify the width and
+    spacing of all the columns from left to
+    right. Exactly <i>n</i>-1 <i>width</i> values are
+    specified, where <i>n</i> equals the number of columns.</li>
+</ul>
+<p class=T>The Word column separator is saved in HTML using the <strong>mso-column-separator</strong>
+style attribute.</p>
+<p class=T>The following sample shows a 3-column layout where column one is 3 inches wide,
+column two is 1 inch wide, and column three is 2 inches wide. There is a .25
+inch space between each column and a separator line between.</p>
+<code><pre>@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-columns:3 not-even 3.0in .25in 1.0in .25in 2.0in;
+	mso-column-separator:solid;
+	mso-paper-source:0;}</pre></code>
+<p class=T>When importing HTML, Word performs some error correcting to protect
+against a mismatch between the number of columns and the number of <i>width</i> values.
+The <i>width</i><b> </b>column number value takes priority.
+Extra <i>width</i> values are ignored. Missing <i>width</i> values are
+generated by repeating the last <i>width</i> value.</p>
+<H4 class=RH4>Headers and footers</h4>
+<p class=T>Headers and footers are section-level settings. Because they contain richly formatted data
+that must be stored in a separate subdocument, they are covered in the <a href="../concepts/ofconHeadersFootersStyle.htm">Headers
+and Footers</a> topic.</p>
+<H4 class=RH4>Page borders and shading</h4>
+<p class=T>Page borders and shading can be applied to a section but are not displayed in
+the browser. Page borders are very similar to paragraph borders, which Word extends
+to apply borders to the page context. Word saves most of the page border
+settings to HTML in exactly the same way as paragraph borders, except
+that the style is applied to the <b>@page</b> definition for that section instead of
+a <b>P</b> element. For a more detailed discussion of borders and
+shading and their elements, see <a href="../concepts/ofconBordersShading.htm">Borders and
+Shading</a>.</p>
+<p class=T>For each section, Word page border settings are saved as HTML using the
+following style attributes:</p>
+<ul>
+  <li>
+<b>mso-page-border-z-order</b>&nbsp;specifies whether the border displays in front of any text or object that
+    intersects the page border.</li>
+  <li>
+<b>mso-page-border-offset-from</b>&nbsp;specifies whether the border position is set as the distance from the text
+    within or from the edge of the page.&nbsp;</li>
+  <li>
+<b>mso-page-border-display</b>&nbsp;specifies whether the border is applied to all pages, all pages in the
+    section, the first page only, or all pages except the first page.</li>
+  <li>
+<b>mso-page-border-surround-header</b>&nbsp;specifies whether the page border surrounds the header region.</li>
+  <li>
+<b>mso-border-page-surround-footer</b>&nbsp;specifies whether the page border surrounds
+    the footer region.</li>
+  <li>
+<b>mso-border-aligned</b>&nbsp;specifies
+    whether paragraph borders and table edges are aligned with page borders.</li>
+</ul>
+<p style="margin-left: 0">Word also offers art for page borders that is not
+available for other types of borders. The <b>mso-border-art</b>  style attribute
+sets
+the style of the four borders. It can have one to four values, and the values
+are set on the different sides, similar to the <b>border-width</b>  attribute.
+If multiple values are used, they can only consist of <b> none</b> and a single value
+representing the border art. The border color of art borders is always Auto,
+which Word does not save as HTML. The border width is a variable and is saved in HTML using the <b>border-width</b>  attribute.</p>
+<H4 class=RH4>Forms protection</h4>
+<p class=T>If the <b><a href="wdeleDocumentProtection.htm">DocumentProtection</a></b>
+element appears in the header with the <b>forms</b> value, it is possible for
+some sections to be protected and others not. In this case, Word adds the <b>mso-forms-protection</b>
+ style attribute to the <b>@page</b>  definition for the section. The <b>mso-forms-protection</b>
+ style attribute has a default value of <b>yes</b> and it is only listed with
+the value <b>no</b> in the <b>@page</b>
+ definition of sections that are not protected.</p>
+<H4 class=RH4>Vertical text justification</h4>
+<p class=T>Word has a section-level setting to align text vertically on the page in
+different ways. This is saved as HTML using the <strong>mso-vertical-page-align</strong>
+ style attribute. The value names for this attribute follow the convention used for the
+<b>vertical-align</b>  attribute.</p>
+<H4 class=RH4>Suppression of endnotes</h4>
+<p class=T>Word has a section-level setting to suppress display of endnotes at the
+end of a section.&nbsp;This is saved as HTML using the <b>mso-endnote-display</b>
+ style attribute.</p>
+<p class=T>For information about the style attributes that Office uses and their
+possible values, see the <a href="../concepts/ofconStyleTable.htm">Style
+Attributes</a> topic.</p>
+
+
+</body></html>

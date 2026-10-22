@@ -1,0 +1,74 @@
+<html><head>
+<title>Wrap Element (Microsoft Word)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Wrap Element (Microsoft Word)</H1>
+<p class=T>Specifies whether text wraps around an AutoShape.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td class="T" width="33%"><b>anchorx</b></td>
+    <td class="T" width="66%">Specifies the horizontal anchor to which the
+      object is aligned, such as &quot;Margin&quot;.</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%"><b>anchory</b></td>
+    <td class="T" width="66%">Specifies the vertical anchor to which the object
+      is aligned, such as &quot;Paragraph&quot;.</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%"><b>side</b></td>
+    <td class="T" width="66%">Specifies the sides around which Word wraps text.</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%"><b>type</b></td>
+    <td class="T" width="66%">Specifies the text wrapping style.</td>
+  </tr>
+</table>
+
+
+
+<p class=RL><b>Remarks</b></p>
+<p class="T">If <code>&lt;w:wrap/&gt;</code>  is specified, text
+wraps around the AutoShape. This element also specifies the page
+alignment and text wrapping characteristics
+of the AutoShape.
+
+
+
+
+
+<p class="RL"><b>See Also</b></p>
+<p class="T"><b><a href="wdeleanchorlock.htm">AnchorLock</a></b>
+
+
+
+
+
+<p class=RL>
+<A NAME="Example"><b>Example</b></A>
+</p>
+<p class="T">This example shows an AutoShape aligned horizontally to the left edge of the
+page and vertically 50 points below the margin. It has Through text wrapping
+style on the right
+side of the object only and its anchor is locked.</p>
+
+
+<PRE class=C><CODE>&lt;v:shape id=&quot;_x0000_s1029&quot; type=&quot;#_x0000_t13&quot; style='position:absolute;
+ margin-left:0;margin-top:26.95pt;width:279pt;height:135pt;z-index:-1;
+ mso-wrap-edited:f;mso-wrap-distance-left:4pt;mso-wrap-distance-top:5pt;
+ mso-wrap-distance-right:4pt;mso-wrap-distance-bottom:5pt;
+ mso-position-horizontal:left;mso-position-horizontal-relative:page;
+ mso-position-vertical:absolute;mso-position-vertical-relative:margin'
+ wrapcoords=&quot;16084 0 16084 3840 -116 5280 -116 16320 8477 17280 16084 17280 16084 21600 16316 21600 21368 11520 21716 11400 21658 10800 16316 0 16084 0&quot;
+ o:allowoverlap=&quot;f&quot;&gt;
+ &lt;w:wrap type=&quot;through&quot; side=&quot;right&quot; anchorx=&quot;page&quot; anchory=&quot;margin&quot;/&gt;
+ &lt;w:anchorlock/&gt;
+&lt;/v:shape&gt;</CODE></PRE>
+
+</body></html>

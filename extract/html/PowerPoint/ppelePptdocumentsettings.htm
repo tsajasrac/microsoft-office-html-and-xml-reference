@@ -1,0 +1,84 @@
+<html>
+
+<head>
+<title>Pptdocumentsettings Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Pptdocumentsettings Element (Microsoft PowerPoint)</h1>
+<p class="T">Defines document settings for a presentation when it is saved to
+the Web.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>browsersupport</b></td>
+    <td class="T" width="66%">Contains one of the following string constants
+      specifying the version of Microsoft Internet Explorer supported: <b>dual</b>,
+      <b>v3</b>, or <b>v4</b>. <b>Dual</b> specifies both versions 3 and 4.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>donotresizegraphics</b></td>
+    <td class="T" width="66%">Determines whether the graphics are resized to fit
+      the Web page. The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>framecolors</b></td>
+    <td class="T" width="66%">Contains one of the following string constants
+      specifying the frame colors.
+      <table cellpadding="4" cellspacing="4" border="1">
+        <tr valign="top">
+          <td><b>BlackTextOnWhite</b></td>
+          <td>Black text on white</td>
+        </tr>
+        <tr valign="top">
+          <td><b>BrowserColor</b></td>
+          <td>Default colors used by browser</td>
+        </tr>
+        <tr valign="top">
+          <td><b>PresentationSchemeAccentColor</b></td>
+          <td>Presentation colors (accent color)</td>
+        </tr>
+        <tr valign="top">
+          <td><b>PresentationSchemeTextColor</b></td>
+          <td>Presentation colors (text color)</td>
+        </tr>
+        <tr valign="top">
+          <td><b>WhiteTextOnBlack</b></td>
+          <td>White text on black (default)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>hidenavigation</b></td>
+    <td class="T" width="66%">Determines whether the slide navigation controls
+      are hidden. The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>hideslideanimation</b></td>
+    <td class="T" width="66%">Determines whether the slide animation is hidden.
+      The default value is <b>False</b>.</td>
+  </tr>
+</table>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><a href="ppelePresentation.htm"><b>Presentation</b></a></p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">The <b>Web Options </b>dialog box is used to modify the document
+settings.</p>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">This example shows a document setting of white text on black for
+the frame colors.<br>
+<pre class="C"><code>&lt;p:pptdocumentsettings framecolors=&quot;WhiteTextOnBlack&quot; /&gt;
+</code></pre>
+
+</body>
+
+</html>

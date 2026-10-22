@@ -1,0 +1,30 @@
+<html><head>
+<title>OLE Objects</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#ffffff" TEXT="#000000">
+
+<H1 class=RH1>OLE Objects</H1>
+
+<p class=T>                          OLE                          objects can be stored                          by                          Microsoft Office 2000 in a variety of ways, depending on both the application (Microsoft Word, Microsoft Excel, and Microsoft PowerPoint) and the type of OLE object. OLE objects are structured sets of data that are either embedded (stored with the file) or linked (accessed through a path, network, or moniker). Each OLE object type (for example, drawing, music, spreadsheet, and so forth) has a specific server that must be installed to display the object properly.</p>
+<P class=T>If an OLE object can be converted to a simple set of HTML or XML 
+elements (such as a shape for a drawing object), the object will be defined with 
+tags.</P>
+<P class=T>If an object can be used as an ActiveX control on 
+the Web page, an <STRONG>Object </STRONG>element will be used with the 
+appropriate <STRONG>Param </STRONG>               
+         elements included to define the 
+initial values.</P>
+<P class=T>Specific applications can set up the OLE object 
+to be saved to a Web page. PowerPoint uses the <STRONG><A href="../PowerPoint/ppeleOleclientdata.htm">OLEClientData</A> 
+</STRONG>element to define known types 
+of data and Excel uses <STRONG><A href="../Excel/xleleClientData.htm">ClientData</A> </STRONG>for the same purpose.</P>
+<P class=T>If an object cannot be easily converted for display to a&nbsp;Web 
+page, it will be saved as a file (Oledata.mso) and will be retained for 
+reloading back into the originating application. </P>
+<P class=T>For more information about OLE objects, see the 
+Microsoft Windows Platform SDK or <EM>Inside OLE </EM>          
+     by Kraig Brockschmidt (published by Microsoft 
+Press).</P>
+
+</body></html>

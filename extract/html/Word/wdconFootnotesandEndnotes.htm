@@ -1,0 +1,145 @@
+<html><head>
+<title>Footnotes and Endnotes</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Footnotes and Endnotes</H1>
+
+
+<p class=T>Word displays both footnote and endnote text at the end of the HTML document,
+separated from the document text and each other by a gray line. A two-way
+hyperlink allows you to jump between the footnote or endnote reference and its text
+at the end of the document.</p>
+
+
+<p class=T>Word uses the styles listed in the table below to store and display
+footnote and endnote information.</p>
+
+
+<H4 class=RH4>Footnote and endnote text</h4>
+
+
+<p class=T>Word uses a <b>Div</b> element with the <b>mso-element:footnote-list</b>
+or<b> mso-element:endnote-list </b> attribute to contain all footnote or endnote
+text, followed by an <b>HR</b> element.</p>
+
+
+<p class=T>Word uses a <b>Div</b> element with the <b>mso-element</b>:<b>footnote</b>  or
+<b>mso-element</b>:<b>endnote</b>   attribute to contain the individual
+footnotes. The <b>ID</b> attribute describes the footnote or endnote order.</p>
+
+
+<H4 class=RH4>Horizontal line</h4>
+
+
+<p class=T>Word always inserts an <b>HR</b> element in the main HTML
+document just before any footnote text and another before any endnote text. Word recognizes and discards
+this <b>HR</b> element and restores the original separators (default or
+customized) when it opens a file that was created using Word. The horizontal line automatically inherits any CSS styles attached
+to its element, so the footnote or endnote separator will conform to the overall
+style of the Web page.</p>
+
+
+<H4 class=RH4>Hyperlinking reference to text</h4>
+<p class=T>Word uses an <b>A</b> element to link each footnote or endnote with its text.
+Using the following syntax, Word assigns the <b>Name </b>attribute to each
+footnote and endnote, where <i>i</i> is a sequential integer.<p class=T>&nbsp;
+
+
+<TABLE border=1 cellpadding=5 cols=5 frame=below rules=rows width="100%">
+  <TR valign=top>
+    <TD class=I align=left><b>Reference</b></td>
+    <TD class=I align=left><b>Syntax</b></td>
+  </tr>
+  <tr>
+    <TD class=I align=left>Footnote reference</td>
+    <TD class=I align=left><b>name = &quot;_ftnref</b><i>i</i><b>&quot;</b></td>
+  </tr>
+  <tr>
+    <TD class=I align=left>Footnote</td>
+    <TD class=I align=left><b>name = &quot;_ftn</b><i>i</i><b>&quot;</b></td>
+  </tr>
+  <tr>
+    <TD class=I align=left>Endnote reference</td>
+    <TD class=I align=left><b>name = &quot;_ednref</b><i>i</i><b>&quot;</b></td>
+  </tr>
+  <tr>
+    <TD class=I align=left>Endnote</td>
+    <TD class=I align=left><b>name = &quot;_edn</b><i>i</i><b>&quot;</b></td>
+  </tr>
+</table>
+<p class=T>The purpose of the preceding underscore character &quot;_&quot; is to
+prevent confusion with <b>A</b> elements corresponding to user-added bookmarks,
+which cannot begin with the underscore character. These values are also
+completely distinguishable from bookmarks automatically generated in Word, which
+all begin with strings other than &quot;_ftn&quot; and
+&quot;_edn&quot;.</p>
+<p class=T>The <b>title</b> attribute is included but empty in the footnote and endnote
+<b>A</b> elements. This bypasses the Internet Explorer 4.0 tooltip feature that displays
+the value of the <b>name</b> attribute if the <b>title</b> attribute is not
+present.</p>
+<h4 class=RH4>Positioning</h4>
+<p class=T>Word allows footnotes to be positioned either directly beneath the text on a
+page or at the very bottom of a page. Similarly, endnotes can be positioned
+either at the end of a section or at the end of the document. Word stores the
+positioning information using the&nbsp;<strong>mso-footnote-position</strong>
+and <strong>mso-endnote-position</strong>   style attributes for non-default
+settings.</p>
+<h4 class=RH4>Autonumbering</h4>
+<p class=T>Word provides several options for formatting autonumber references:
+<ul>
+  <li>The numbering style, such as Arabic numbers, lowercase alphabet, uppercase
+    alphabet, and so forth.
+  <li>The starting value.
+  <li>Rules for restarting numbering after page and section breaks.</li>
+</ul>
+<p class=T>When saving as HTML, Word disregards the original option settings and
+renumbers all autonumbered footnotes and endnotes sequentially, beginning
+with the first number, symbol, or character in the sequence. The only exception
+to this is when a footnote or endnote has a custom mark instead of an AutoNumber.
+In this case, the footnote or endnote is ordered between the notes that precede
+and follow.</p>
+<p class=T>The following styles in the <b>@page</b> definition store footnote and endnote
+numbering options:</p>
+
+
+<ul>
+  <li><b>mso-footnote-numbering-style</b></li>
+  <li><b>mso-footnote-numbering-start</b></li>
+  <li><b>mso-footnote-numbering-restart</b></li>
+  <li><b>mso-endnote-numbering-style</b></li>
+  <li><b>mso-endnote-numbering-start</b></li>
+  <li><b>mso-endnote-numbering-restart</b></li>
+</ul>
+<p class=T>For the options listed above, the default values will not produce output.</p>
+<h4 class=RH4>Custom marks</h4>
+<p class=T>If the reference is a custom mark, it will be converted to HTML as
+formatted text and stored inside the footnote's or endnote's <b>A</b>  element. If the custom mark is superscripted in Word, it will retain its
+superscript formatting in HTML.</p>
+<h4 class=RH4>Word separators and continuation notices</h4>
+<p class=T>Because footnote or endnote separators and notices can be customized to have
+a variety of features and text formatting, Word must save them in a
+separate HTML file from the main document, along with the header and footer
+information. For more information about headers and footers, see the <a href="../concepts/ofconHeadersFootersStyle.htm">Headers
+and Footers</a> topic.</p>
+<p class=T>The following style attributes in the <b>@page</b> definition reference the footnote
+or endnote separator and notice data:</p>
+<ul>
+  <li><strong>mso-footnote-separator</strong></li>
+  <li><strong>mso-footnote-continuation-separator</strong></li>
+  <li><strong>mso-footnote-continuation-notice</strong></li>
+  <li><strong>mso-endnote-separator</strong></li>
+  <li><strong>mso-endnote-continuation separator</strong></li>
+  <li><strong>mso-endnote-continuation-notice</strong></li>
+</ul>
+<p class=T>The syntax for the above styles follows, where <i>filename</i> is the name of the file containing the
+footnote or endnote separator and notice data, and <i>id</i> is the named <b>ID</b>
+attribute for the separator or notice.</p>
+<p class=T><strong>mso-footnote-separator: url </strong><i>filename</i>  <i>id</i></p>
+<p class=T>For information about the style attributes that Office uses and their possible values, see the
+<a href="../concepts/ofconStyleTable.htm">Style Attributes</a> 
+topic.</p>
+
+
+</body></html>

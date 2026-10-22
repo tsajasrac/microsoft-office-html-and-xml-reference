@@ -1,0 +1,129 @@
+<html>
+
+<head>
+<title>Oleclientdata Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Oleclientdata Element (Microsoft PowerPoint)</h1>
+<p class="T">Defines how OLE data is stored.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>clipboardname</b></td>
+    <td class="T" width="66%">Defines the Clipboard name that corresponds to the
+      object.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>followcolorscheme</b></td>
+    <td class="T" width="66%">
+      <p>Contains one of the following string constants specifying the object's
+      color scheme: <b>fullScheme</b>, <b>none</b>, or <b>textAndBackground</b>.
+      This attribute is specified if a color scheme is applied and the object is
+      embedded.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>id</b></td>
+    <td class="T" width="66%">Defines the OLE class identifier if an object is
+      linked.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>menuname</b></td>
+    <td class="T" width="66%">Defines the menu name that the object is related
+      to.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>subtype</b></td>
+    <td class="T" width="66%">Contains one of the following string constants
+      specifying the type of OLE data saved.
+      <table cellpadding="4" cellspacing="4" border="1">
+        <tbody>
+          <tr valign="top">
+            <td><b>clipart</b></td>
+            <td>Clip art</td>
+          </tr>
+          <tr valign="top">
+            <td><b>default</b></td>
+            <td>Default OLE data type</td>
+          </tr>
+          <tr valign="top">
+            <td><b>equation</b></td>
+            <td>Equation</td>
+          </tr>
+          <tr valign="top">
+            <td><b>excel</b></td>
+            <td>Microsoft Excel object</td>
+          </tr>
+          <tr valign="top">
+            <td><b>excelChart</b></td>
+            <td>Microsoft Excel chart object</td>
+          </tr>
+          <tr valign="top">
+            <td><b>graph</b></td>
+            <td>Microsoft Graph chart object</td>
+          </tr>
+          <tr valign="top">
+            <td><b>image</b></td>
+            <td>Image</td>
+          </tr>
+          <tr valign="top">
+            <td><b>mplayer</b></td>
+            <td>Microsoft Media Player object</td>
+          </tr>
+          <tr valign="top">
+            <td><b>noteit</b></td>
+            <td>Note object</td>
+          </tr>
+          <tr valign="top">
+            <td><b>orgchart</b></td>
+            <td>Organizational chart</td>
+          </tr>
+          <tr valign="top">
+            <td><b>pptPresentation</b></td>
+            <td>Microsoft PowerPoint presentation object</td>
+          </tr>
+          <tr valign="top">
+            <td><b>pptSlide</b></td>
+            <td>Microsoft PowerPoint slide object</td>
+          </tr>
+          <tr valign="top">
+            <td><b>project</b></td>
+            <td>Microsoft Project object</td>
+          </tr>
+          <tr valign="top">
+            <td><b>sound</b></td>
+            <td>Audio sound</td>
+          </tr>
+          <tr valign="top">
+            <td><b>table</b></td>
+            <td>Table</td>
+          </tr>
+          <tr valign="top">
+            <td><b>wordart</b></td>
+            <td>Microsoft WordArt object</td>
+          </tr>
+      </table>
+</table>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><a href="ppeleSlide.htm"><b>Slide</b></a></p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">The actual OLE data is stored as a separate file that is referenced
+through the <a href="../Shared/ofeleOLEObject.htm"><b>OLEObject</b> </a>element.</p>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">A Microsoft Excel worksheet is embedded on a slide.<br>
+<pre class="C"><code>
+&lt;p:oleclientdata clipboardname=&quot;Microsoft Excel Worksheet&quot; menuname =&quot;Worksheet&quot; subtype=&quot;excel&quot;&gt;
+
+</code></pre>
+
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+<html><head>
+<title>ExcelWorkbook Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>ExcelWorkbook Element (Microsoft Excel)</H1>
+<p class=T>Contains the properties of a workbook.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="../Shared/ofeleXML.htm"><B>XML</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xlele1904Date.htm"><B>1904Date</B></A>,
+<A HREF="xleleActiveChart.htm"><B>ActiveChart</B></A>,
+<A HREF="xleleActiveSheet.htm"><B>ActiveSheet</B></A>,
+<A HREF="xleleCalculation.htm"><B>Calculation</B></A>,
+<A HREF="xleleCreateBackup.htm"><B>CreateBackup</B></A>,
+<A HREF="xleleDisplayDrawingObjects.htm"><B>DisplayDrawingObjects</B></A>,
+<A HREF="xleleDoNotAcceptLabelsInFormulas.htm"><B>DoNotAcceptLabelsInFormulas</B></A>,
+<A HREF="xleleDoNotCalculateBeforeSave.htm"><B>DoNotCalculateBeforeSave</B></A>,
+<A HREF="xleleDoNotSaveLinkValues.htm"><B>DoNotSaveLinkValues</B></A>,
+<A HREF="xleleExcelWorksheets.htm"><B>ExcelWorksheets</B></A>,
+<A HREF="xleleHideHorizontalScrollBar.htm"><B>HideHorizontalScrollBar</B></A>,
+<A HREF="xleleHideVerticalScrollBar.htm"><B>HideVerticalScrollBar</B></A>,
+<A HREF="xleleHideWorkbookTabs.htm"><B>HideWorkbookTabs</B></A>,
+<A HREF="xleleIteration.htm"><B>Iteration</B></A>,
+<A HREF="xleleMaxChange.htm"><B>MaxChange</B></A>,
+<A HREF="xleleMaxIterations.htm"><B>MaxIterations</B></A>,
+<A HREF="xlelePrecisionAsDisplayed.htm"><B>PrecisionAsDisplayed</B></A>,
+<A HREF="xleleProtectStructure.htm"><B>ProtectStructure</B></A>,
+<A HREF="xleleProtectWindows.htm"><B>ProtectWindows</B></A>,
+<A HREF="xleleRefModeR1C1.htm"><B>RefModeR1C1</B></A>,
+<A HREF="xleleSelectedSheets.htm"><B>SelectedSheets</B></A>,
+<A HREF="xleleTabRatio.htm"><B>TabRatio</B></A>,
+<A HREF="xleleUncalced.htm"><B>Uncalced</B></A>,
+<A HREF="xleleWindowHeight.htm"><B>WindowHeight</B></A>,
+<A HREF="xleleWindowHidden.htm"><B>WindowHidden</B></A>,
+<A HREF="xleleWindowIconic.htm"><B>WindowIconic</B></A>,
+<A HREF="xleleWindowTopX.htm"><B>WindowTopX</B></A>,
+<A HREF="xleleWindowTopY.htm"><B>WindowTopY</B></A>,
+<A HREF="xleleWindowWidth.htm"><B>WindowWidth</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>ExcelWorksheets</B> subelement is required, but all other subelements are optional.
+<!-- *** -->
+The other subelements are not specified when the data comes from a PivotList component.</p>
+<!-- *** -->
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example specifies a workbook containing three worksheets.
+The workbook window is minimized.
+Sheet1 is split into four panes, Sheet2 is split into two panes, and Sheet3 is not split.
+The range B3:B7 in Sheet1 is selected.
+AutoFilter is enabled in Sheet2.
+The contents, objects, and scenarios of each worksheet, in addition to the structure and windows of the workbook, are not protected.
+<BR>
+<PRE class=C><CODE>
+ &lt;x:ExcelWorkbook&gt;
+  &lt;x:ExcelWorksheets&gt;
+   &lt;x:ExcelWorksheet&gt;
+    &lt;x:Name&gt;Sheet1&lt;/x:Name&gt;
+    &lt;x:WorksheetOptions&gt;
+     &lt;x:CodeName&gt;Sheet1&lt;/x:CodeName&gt;
+     &lt;x:TopRowVisible&gt;11&lt;/x:TopRowVisible&gt;
+     &lt;x:SplitHorizontal&gt;3210&lt;/x:SplitHorizontal&gt;
+     &lt;x:TopRowBottomPane&gt;0&lt;/x:TopRowBottomPane&gt;
+     &lt;x:SplitVertical&gt;6195&lt;/x:SplitVertical&gt;
+     &lt;x:LeftColumnRightPane&gt;0&lt;/x:LeftColumnRightPane&gt;
+     &lt;x:ActivePane&gt;0&lt;/x:ActivePane&gt;
+     &lt;x:Panes&gt;
+      &lt;x:Pane&gt;
+       &lt;x:Number&gt;3&lt;/x:Number&gt;
+       &lt;x:ActiveRow&gt;2&lt;/x:ActiveRow&gt;
+       &lt;x:ActiveCol&gt;1&lt;/x:ActiveCol&gt;
+       &lt;x:RangeSelection&gt;B3:B7&lt;/x:RangeSelection&gt;
+      &lt;/x:Pane&gt;
+      &lt;x:Pane&gt;
+       &lt;x:Number&gt;2&lt;/x:Number&gt;
+       &lt;x:ActiveRow&gt;11&lt;/x:ActiveRow&gt;
+      &lt;/x:Pane&gt;
+      &lt;x:Pane&gt;
+       &lt;x:Number&gt;1&lt;/x:Number&gt;
+       &lt;x:ActiveRow&gt;15&lt;/x:ActiveRow&gt;
+       &lt;x:ActiveCol&gt;3&lt;/x:ActiveCol&gt;
+      &lt;/x:Pane&gt;
+      &lt;x:Pane&gt;
+       &lt;x:Number&gt;0&lt;/x:Number&gt;
+       &lt;x:ActiveRow&gt;2&lt;/x:ActiveRow&gt;
+       &lt;x:ActiveCol&gt;1&lt;/x:ActiveCol&gt;
+       &lt;x:RangeSelection&gt;B3:B7&lt;/x:RangeSelection&gt;
+      &lt;/x:Pane&gt;
+     &lt;/x:Panes&gt;
+     &lt;x:FreezePanes/&gt;
+     &lt;x:GridlineColorIndex&gt;32&lt;/x:GridlineColorIndex&gt;
+     &lt;x:ProtectContents&gt;False&lt;/x:ProtectContents&gt;
+     &lt;x:ProtectObjects&gt;False&lt;/x:ProtectObjects&gt;
+     &lt;x:ProtectScenarios&gt;False&lt;/x:ProtectScenarios&gt;
+    &lt;/x:WorksheetOptions&gt;
+   &lt;/x:ExcelWorksheet&gt;
+   &lt;x:ExcelWorksheet&gt;
+    &lt;x:Name&gt;Sheet2&lt;/x:Name&gt;
+    &lt;x:WorksheetOptions&gt;
+     &lt;x:DefaultColumnWidth&gt;12&lt;/x:DefaultColumnWidth&gt;
+     &lt;x:DefaultRowHeight&gt;12&lt;/x:DefaultRowHeight&gt;
+     &lt;x:DisplayFormulas/&gt;
+     &lt;x:DisplayRightToLeft/&gt;
+     &lt;x:DoNotDisplayGridlines/&gt;
+     &lt;x:FrozenNoSplit/&gt;
+     &lt;x:NoSummaryColumnsRightDetail/&gt;
+     &lt;x:NoSummaryRowsBelowDetail/&gt;
+     &lt;x:Print&gt;
+      &lt;x:ValidPrinterInfo/&gt;
+      &lt;x:HorizontalResolution&gt;204&lt;/x:HorizontalResolution&gt;
+      &lt;x:VerticalResolution&gt;196&lt;/x:VerticalResolution&gt;
+      &lt;x:NumberOfCopies&gt;0&lt;/x:NumberOfCopies&gt;
+     &lt;/x:Print&gt;
+     &lt;x:CodeName&gt;Sheet2&lt;/x:CodeName&gt;
+     &lt;x:Selected/&gt;
+     &lt;x:FilterOn/&gt;
+     &lt;x:DisplayFormulas/&gt;
+     &lt;x:DoNotDisplayGridlines/&gt;
+     &lt;x:DoNotDisplayZeros/&gt;
+     &lt;x:DoNotDisplayHeadings/&gt;
+     &lt;x:DoNotDisplayOutline/&gt;
+     &lt;x:SplitVertical&gt;5910&lt;/x:SplitVertical&gt;
+     &lt;x:LeftColumnRightPane&gt;5&lt;/x:LeftColumnRightPane&gt;
+     &lt;x:Panes&gt;
+      &lt;x:Pane&gt;
+       &lt;x:Number&gt;3&lt;/x:Number&gt;
+      &lt;/x:Pane&gt;
+      &lt;x:Pane&gt;
+       &lt;x:Number&gt;1&lt;/x:Number&gt;
+      &lt;/x:Pane&gt;
+     &lt;/x:Panes&gt;
+     &lt;x:ProtectContents&gt;False&lt;/x:ProtectContents&gt;
+     &lt;x:ProtectObjects&gt;False&lt;/x:ProtectObjects&gt;
+     &lt;x:ProtectScenarios&gt;False&lt;/x:ProtectScenarios&gt;
+    &lt;/x:WorksheetOptions&gt;
+   &lt;/x:ExcelWorksheet&gt;
+   &lt;x:ExcelWorksheet&gt;
+    &lt;x:Name&gt;Sheet3&lt;/x:Name&gt;
+    &lt;x:WorksheetOptions&gt;
+     &lt;x:CodeName&gt;Sheet3&lt;/x:CodeName&gt;
+     &lt;x:AlternateExpressionEvaluation/&gt;
+     &lt;x:AlternateFormulaEntry/&gt;
+     &lt;x:ApplyAutomaticOutlineStyles/&gt;
+     &lt;x:ShowPageBreakZoom/&gt;
+     &lt;x:PageBreakZoom&gt;200&lt;/x:PageBreakZoom&gt;
+     &lt;x:ProtectContents&gt;False&lt;/x:ProtectContents&gt;
+     &lt;x:ProtectObjects&gt;False&lt;/x:ProtectObjects&gt;
+     &lt;x:ProtectScenarios&gt;False&lt;/x:ProtectScenarios&gt;
+    &lt;/x:WorksheetOptions&gt;
+   &lt;/x:ExcelWorksheet&gt;
+  &lt;/x:ExcelWorksheets&gt;
+  &lt;x:WindowIconic/&gt;
+  &lt;x:HideHorizontalScrollBar/&gt;
+  &lt;x:HideVerticalScrollBar/&gt;
+  &lt;x:HideWorkbookTabs/&gt;
+  &lt;x:WindowHeight&gt;8070&lt;/x:WindowHeight&gt;
+  &lt;x:WindowWidth&gt;13260&lt;/x:WindowWidth&gt;
+  &lt;x:WindowTopX&gt;240&lt;/x:WindowTopX&gt;
+  &lt;x:WindowTopY&gt;75&lt;/x:WindowTopY&gt;
+  &lt;x:ActiveSheet&gt;1&lt;/x:ActiveSheet&gt;
+  &lt;x:DisplayDrawingObjects&gt;PlaceHolders&lt;/x:DisplayDrawingObjects&gt;
+  &lt;x:Calculation&gt;ManualCalculation&lt;/x:Calculation&gt;
+  &lt;x:DoNotCalculateBeforeSave/&gt;
+  &lt;x:MaxIterations&gt;400&lt;/x:MaxIterations&gt;
+  &lt;x:MaxChange&gt;0.05&lt;/x:MaxChange&gt;
+  &lt;x:Date1904/&gt;
+  &lt;x:RefModeR1C1/&gt;
+  &lt;x:Iteration/&gt;
+  &lt;x:PrecisionAsDisplayed/&gt;
+  &lt;x:DoNotSaveLinkValues/&gt;
+  &lt;x:AcceptLabelsInFormulas/&gt;
+  &lt;x:ProtectStructure&gt;False&lt;/x:ProtectStructure&gt;
+  &lt;x:ProtectWindows&gt;False&lt;/x:ProtectWindows&gt;
+  &lt;x:Uncalced/&gt;
+ &lt;/x:ExcelWorkbook&gt;
+</CODE></PRE></p>
+<p class=T>The next example specifies a workbook containing 3 worksheets and an
+active chart sheet named MyChart.
+The workbook window is hidden.
+The 1904 date format is used and backups are created.
+However, labels are not allowed in formulas, values in linked cells are not saved,
+and the scroll bars and worksheet tabs are hidden.
+Iterations through circular references are tracked with 0.05 as the maximum change between iterations and 500 as the maximum number of iterations allowed.
+Calculations are not automatic, and the workbook is not calculated before it is saved.<BR>
+<PRE class=C><CODE>
+ &lt;x:ExcelWorkbook&gt;
+  &lt;x:ExcelWorksheets&gt;
+   &lt;x:ExcelWorksheet&gt;
+    &lt;x:Name&gt;Sheet1&lt;/x:Name&gt;
+    &lt;x:WorksheetSource HRef="./Book4_files/sheet001.htm"/&gt;
+   &lt;/x:ExcelWorksheet&gt;
+   &lt;x:ExcelWorksheet&gt;
+    &lt;x:Name&gt;Sheet2&lt;/x:Name&gt;
+    &lt;x:WorksheetSource HRef="./Book4_files/sheet002.htm"/&gt;
+   &lt;/x:ExcelWorksheet&gt;
+   &lt;x:ExcelWorksheet&gt;
+    &lt;x:Name&gt;Sheet3&lt;/x:Name&gt;
+    &lt;x:WorksheetSource HRef="./Book4_files/sheet003.htm"/&gt;
+   &lt;/x:ExcelWorksheet&gt;
+   &lt;x:ExcelWorksheet&gt;
+    &lt;x:Name&gt;MyChart&lt;/x:Name&gt;
+    &lt;x:WorksheetSource HRef="./Book4_files/chart001.htm"/&gt;
+    &lt;x:WorksheetType&gt;Chart&lt;/x:WorksheetType&gt;
+   &lt;/x:ExcelWorksheet&gt;
+  &lt;/x:ExcelWorksheets&gt;
+  &lt;x:1904Date/&gt;
+  &lt;x:ActiveChart&gt;MyChart&lt;/x:ActiveChart&gt;
+  &lt;x:CreateBackup/&gt;
+  &lt;x:DoNotAcceptLabelsInFormulas/&gt;
+  &lt;x:DoNotCalculateBeforeSave/&gt;
+  &lt;x:DoNotSaveLinkValues/&gt;
+  &lt;x:HideHorizontalScrollBar/&gt;
+  &lt;x:HideVerticalScrollBar/&gt;
+  &lt;x:HideWorkbookTabs/&gt;
+  &lt;x:Iteration/&gt;
+  &lt;x:MaxChange&gt;0.05&lt;/x:MaxChange&gt;
+  &lt;x:MaxIterations&gt;500&lt;/x:MaxIterations&gt;
+  &lt;x:Calculation&gt;xlManual&lt;/x:Calculation&gt;
+  &lt;x:Stylesheet HRef="./Book4_files/stylesheet.css"/&gt;
+  &lt;x:WindowHidden/&gt;
+  &lt;x:ProtectStructure&gt;False&lt;/x:ProtectStructure&gt;
+  &lt;x:ProtectWindows&gt;False&lt;/x:ProtectWindows&gt;
+ &lt;/x:ExcelWorkbook&gt;
+</CODE></PRE></p>
+<p class=T>The following example specifies a workbook containing three worksheets.
+All three worksheets are selected but Sheet2 is active.
+The 1904 date format is used, backups are created, and placeholders are displayed in place of drawing objects.
+Calculations are performed using only the precision of numbers as they are displayed.
+The workbook window is 13260 points wide by 8070 points high, and it is positioned
+240 points from the left edge and 75 points from the top edge of the application window.<BR>
+<PRE class=C><CODE>
+ &lt;x:ExcelWorkbook&gt;
+  &lt;x:ExcelWorksheets&gt;
+   &lt;x:ExcelWorksheet&gt;
+    &lt;x:Name&gt;Sheet1&lt;/x:Name&gt;
+    &lt;x:WorksheetSource HRef="./Book4_files/sheet001.htm"/&gt;
+   &lt;/x:ExcelWorksheet&gt;
+   &lt;x:ExcelWorksheet&gt;
+    &lt;x:Name&gt;Sheet2&lt;/x:Name&gt;
+    &lt;x:WorksheetSource HRef="./Book4_files/sheet002.htm"/&gt;
+   &lt;/x:ExcelWorksheet&gt;
+   &lt;x:ExcelWorksheet&gt;
+    &lt;x:Name&gt;Sheet3&lt;/x:Name&gt;
+    &lt;x:WorksheetSource HRef="./Book4_files/sheet003.htm"/&gt;
+   &lt;/x:ExcelWorksheet&gt;
+  &lt;/x:ExcelWorksheets&gt;
+  &lt;x:1904Date/&gt;
+  &lt;x:CreateBackup/&gt;
+  &lt;x:ActiveSheet&gt;2&lt;/x:ActiveSheet/&gt;
+  &lt;x:DisplayDrawingObjects&gt;xlPlaceholders&lt;/x:DisplayDrawingObjects&gt;
+  &lt;x:PrecisionAsDisplayed/&gt;
+  &lt;x:SelectedSheets&gt;3&lt;/x:SelectedSheets&gt;
+  &lt;x:Stylesheet HRef="./Book4_files/stylesheet.css"/&gt;
+  &lt;x:WindowHeight&gt;8070&lt;/x:WindowHeight&gt;
+  &lt;x:WindowWidth&gt;13260&lt;/x:WindowWidth&gt;
+  &lt;x:WindowTopX&gt;240&lt;/x:WindowTopX&gt;
+  &lt;x:WindowTopY&gt;75&lt;/x:WindowTopY&gt;
+  &lt;x:ProtectStructure&gt;False&lt;/x:ProtectStructure&gt;
+  &lt;x:ProtectWindows&gt;False&lt;/x:ProtectWindows&gt;
+ &lt;/x:ExcelWorkbook&gt;
+</CODE></PRE></p>
+<p class=T>The following example shows the <A HREF="xleleWorksheetOptions.htm"><B>WorksheetOptions</B></A> element from sheet001.htm in the preceding example.
+The worksheet is selected, row 2 is the active row, and the range A3:A5 is selected.
+The contents, objects, and scenarios in this worksheet are protected.<BR>
+<PRE class=C><CODE>
+ &lt;x:WorksheetOptions&gt;
+  &lt;x:CodeName&gt;Sheet1&lt;/x:CodeName&gt;
+  &lt;x:Selected/&gt;
+  &lt;x:Panes&gt;
+   &lt;x:Pane&gt;
+    &lt;x:Number&gt;3&lt;/x:Number&gt;
+    &lt;x:ActiveRow&gt;2&lt;/x:ActiveRow&gt;
+    &lt;x:RangeSelection&gt;A3:A5&lt;/x:RangeSelection&gt;
+   &lt;/x:Pane&gt;
+  &lt;/x:Panes&gt;
+  &lt;x:ProtectContents&gt;True&lt;/x:ProtectContents&gt;
+  &lt;x:ProtectObjects&gt;True&lt;/x:ProtectObjects&gt;
+  &lt;x:ProtectScenarios&gt;True&lt;/x:ProtectScenarios&gt;
+ &lt;/x:WorksheetOptions&gt;
+</CODE></PRE></p>
+<p class=T>This example shows the <B>WorksheetOptions</B> element from sheet002.htm.
+In this case, the worksheet is hidden and not selected, the zoom level is 200%, column 2 is active, and the range A3:A5 is selected.
+The standard column width is 10 characters.
+The contents, objects, and scenarios in this worksheet are protected.<BR>
+<PRE class=C><CODE>
+ &lt;x:WorksheetOptions&gt;
+  &lt;x:Zoom&gt;200&lt;/x:Zoom&gt;
+  &lt;x:Visible&gt;SheetHidden&lt;/x:Visible&gt;
+  &lt;x:CodeName&gt;Sheet1&lt;/x:CodeName&gt;
+  &lt;x:Panes&gt;
+   &lt;x:Pane&gt;
+    &lt;x:Number&gt;3&lt;/x:Number&gt;
+   &lt;/x:Pane&gt;
+   &lt;x:Pane&gt;
+    &lt;x:Number&gt;2&lt;/x:Number&gt;
+    &lt;x:ActiveCol&gt;2&lt;/x:ActiveCol&gt;
+    &lt;x:RangeSelection&gt;A3:A5&lt;/x:RangeSelection&gt;
+   &lt;/x:Pane&gt;
+  &lt;/x:Panes&gt;
+  &lt;x:StandardWidth&gt;10&lt;/x:StandardWidth&gt;
+  &lt;x:ProtectContents&gt;True&lt;/x:ProtectContents&gt;
+  &lt;x:ProtectObjects&gt;True&lt;/x:ProtectObjects&gt;
+  &lt;x:ProtectScenarios&gt;True&lt;/x:ProtectScenarios&gt;
+ &lt;/x:WorksheetOptions&gt;
+</CODE></PRE></p>
+</body></html>

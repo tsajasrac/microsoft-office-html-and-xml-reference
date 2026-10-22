@@ -1,0 +1,190 @@
+<html>
+
+<head>
+<title>Animation Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Animation Element (Microsoft PowerPoint)</h1>
+<p class="T">Describes the animation portion of a slide.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td width="33%" valign="top"><b>Attribute</b></td>
+    <td width="66%" valign="top"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>afterbuild</b></td>
+    <td width="66%" valign="top">Contains one of the following string constants
+      specifying the closing effect, if any.
+      <table cellpadding="4" cellspacing="4" border="1">
+        <tr valign="top">
+          <td><b>dim</b></td>
+          <td>Object is dimmed.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>hide</b></td>
+          <td>Object is hidden at the end of the animation.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>hideImmediate</b></td>
+          <td>Object is hidden immediately.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>none</b></td>
+          <td>Object is not changed. Default.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>buildby</b></td>
+    <td width="66%" valign="top">Contains one of the following string constants
+      specifying the granularity (if any) of a built text animation.
+      <table cellpadding="4" cellspacing="4" border="1">
+        <tr valign="top">
+          <td><b>char</b></td>
+          <td>Text animation built by character.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>none</b></td>
+          <td>Text introduced all at once. Default.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>word</b></td>
+          <td>Text animation built by word.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>delay</b></td>
+    <td width="66%" valign="top">Delay in milliseconds (1/1000 second) before
+      playing animation. The default delay is 2,147,483,647 milliseconds.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>dimcolor</b></td>
+    <td width="66%" valign="top">If a closing effect is specified, the name or
+      RGB value of the color to dim an object to after an animation.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>direction</b></td>
+    <td width="66%" valign="top">Contains one of the following string constants
+      specifying the direction of the animation, if any: <b>across</b>, <b>bottom</b>,
+      <b>center</b>, <b>down</b>, <b>effect</b>, <b>fast</b>, <b>horizontal</b>,
+      <b>in</b>, <b>inSlightly</b>, <b>left</b>, <b>leftDown</b>, <b>leftUp</b>,
+      <b>medium</b>, <b>noBlack</b>, <b>out</b>, <b>outSlightly</b>, <b>right</b>,
+      <b>rightDown</b>, <b>rightUp</b>, <b>slow</b>, <b>toBlack</b>, <b>transition</b>,
+      <b>up</b>, or <b>vertical</b>. An empty string specifies no direction.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>effect</b></td>
+    <td width="66%" valign="top">Contains one of the following string constants
+      specifying the applied animation effect, if any: <b>blinds</b>, <b>checker</b>,
+      <b>cover</b>, <b>crawl</b>, <b>cut</b>, <b>dissolve</b>, <b>fade</b>, <b>flash</b>,
+      <b>fly</b>, <b>peek</b>, <b>pull</b>, <b>random</b>, <b>randomBar</b>, <b>rotate</b>,
+      <b>spiral</b>, <b>splitIn</b>, <b>splitOut</b>, <b>stretch</b>, <b>strips</b>,
+      <b>wipe</b>, <b>zoom</b>, or <b>zoomFly</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>flag</b></td>
+    <td width="66%" valign="top">Reserved.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>level</b></td>
+    <td width="66%" valign="top">Depth to group paragraphs by. Levels range from
+      1 to 5. The default level is 0.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>number</b></td>
+    <td width="66%" valign="top">Animation number. The default string identifier
+      is 0.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>playverb</b></td>
+    <td width="66%" valign="top">An integer identifying the object's primary
+      action.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>slidecount</b></td>
+    <td width="66%" valign="top">Number of slides that the animation plays.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>target</b></td>
+    <td width="66%" valign="top">If an animation is not built, it is part of a
+      category or series of animations. This attribute contains one of the
+      following string constants specifying whether the animation is a category,
+      element, or series.
+      <table cellpadding="4" cellspacing="4" border="1">
+        <tr valign="top">
+          <td><b>category</b></td>
+          <td>Category description of animation.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>elementInSeries</b></td>
+          <td>Element in animation series.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>elementInCategory</b></td>
+          <td>Element in animation category.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>series</b></td>
+          <td>Series description of animation.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>type</b></td>
+    <td width="66%" valign="top">Contains one of the following string constants
+      specifying the type of animation displayed.
+      <table cellpadding="4" cellspacing="4" border="1">
+        <tr valign="top">
+          <td><b>graph</b></td>
+          <td>Animation of a chart created in Microsoft Graph.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>noBuild</b></td>
+          <td>Animation is not built. Default. For more information, see the
+            description of the <b>target</b> attribute.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>object</b></td>
+          <td>Animation of an object, such as a shape.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>text</b></td>
+          <td>Animation of text only.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><B>Body</B> (HTML) or any other element that surrounds content.</p>
+<p class="RL"><b>Subelements</b></p>
+<p class="T"><a href="ppelesound.htm"><b>Sound</b></a></p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">All subelements are optional.</p>
+<p class="T">To save the animations on a Web page, you must 
+publish a slide and click <b>Show slide animation while browsing</b> in the
+<b>Web Options</b> dialog box.</p>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">One second after the page loads, a simple animation plays that will
+fly an object onto the page from the bottom accompanied by screeching car
+brakes.</p>
+<pre class="C"><code>
+&lt;p:animation number=&quot;1&quot; delay=&quot;1000&quot; type=&quot;object&quot; effect=&quot;fly&quot;
+direction=&quot;down&quot; afterbuild=&quot;dim&quot; dimcolor=&quot;schemeShadow&quot; flag=&quot;17428&quot;&gt;
+&lt;p:sound id=&quot;1&quot; builtinid=&quot;102&quot; name=&quot;carbrake.wav&quot; href= &quot;sound001.wav&quot;/&gt;
+&lt;/p:animation&gt;
+</code></pre>
+
+</body>
+
+</html>

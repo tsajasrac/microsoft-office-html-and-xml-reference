@@ -1,0 +1,75 @@
+<html><head>
+<title>MailMergeAddressFieldName Element (Microsoft Word)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>MailMergeAddressFieldName Element (Microsoft Word)</H1>
+<p class=T>Specifies a data field that contains the e-mail or fax
+address destination when merging to an e-mail or fax document.</p>
+<!--
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+
+<TR valign=top>
+<TD class=TT width=33%><A HREF="wdatt.htm"><B>A</B></A></TD>
+<TD class=TT width=66%>Description</TD>
+</TR>
+
+</TABLE>
+-->
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+ <a HREF="wdeleWordDocument.htm"><b>WordDocument</b></a>
+</p>
+
+<p class=RL><b>Remarks</b></p>
+<p class="T">Contains the name of the data field with the
+destination e-mail or fax address. This element requires that the <a HREF="wdeleMailMergeDestination.htm"><b>MailMergeDestination</b></a><b>
+</b>element contain the value <b>Email</b> or <b>Fax</b>.</p>
+
+<p class=RL><b>See Also</b></p>
+
+<p class=T>
+<A HREF="wdeleMailMergeActiveRecord.htm"><b>MailMergeActiveRecord</b></A>, 
+<A HREF="wdeleMailMergeAsAttachment.htm"><b>MailMergeAsAttachment</b></A>, 
+<A HREF="wdeleMailMergeCheckErrors.htm"><b>MailMergeCheckErrors</b></A>, 
+<a HREF="wdeleMailMergeConnectString.htm"><b>MailMergeConnectString</b></a>, 
+<A HREF="wdeleMailMergeDataSource.htm"><b>MailMergeDataSource</b></A>, 
+<A HREF="wdeleMailMergeDataType.htm"><b>MailMergeDataType</b></A>, 
+<A HREF="wdeleMailMergeDestination.htm"><b>MailMergeDestination</b></A>, 
+<A HREF="wdeleMailMergeDoNotSuppressBlankLines.htm"><b>MailMergeDoNotSuppressBlankLines</b></A>,
+<A HREF="wdeleMailMergeHeaderSource.htm"><b>MailMergeHeaderSource</b></A>, 
+<A HREF="wdeleMailMergeLinkToQuery.htm"><b>MailMergeLinkToQuery</b></A>, 
+<A HREF="wdeleMailMergeMailSubject.htm"><b>MailMergeMailSubject</b></A>, 
+<A HREF="wdeleMailMergeMainDocType.htm"><b>MailMergeMainDocType</b></A>, 
+<A HREF="wdeleMailMergeQueryString.htm"><b>MailMergeQueryString</b></A>, 
+<A HREF="wdeleMailMergeViewMergedData.htm"><b>MailMergeViewMergedData</b></A>
+</p>
+
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This is an example of a mail merge document linked by means of ODBC to a Microsoft Excel
+data source with a separate header source file. The destination of the
+mail merge is an attachment to an e-mail message, which is sent to each address listed in
+the <b>EmailAddress</b> field.</p>
+<PRE class=C><CODE> &lt;w:WordDocument&gt;
+  &lt;w:MailMergeMainDocType&gt;FormLetters&lt;/w:MailMergeMainDocType&gt;
+  &lt;w:MailMergeLinkToQuery/&gt;
+  &lt;w:MailMergeDataType&gt;ODBC&lt;/w:MailMergeDataType&gt;
+  &lt;w:MailMergeConnectString&gt;DSN=Excel Files;DBQ=C:\My Documents\contacts.xls;DriverId=22;MaxBufferSize=2048;PageTimeout=5;&lt;/w:MailMergeConnectString&gt;
+  &lt;w:MailMergeQueryString&gt;SELECT * FROM `Contacts`&lt;/w:MailMergeQueryString&gt;
+  &lt;w:MailMergeDataSource HRef=&quot;C:\My Documents\contacts.xls&quot;&gt;&lt;/w:MailMergeDataSource&gt;
+  &lt;w:MailMergeHeaderSource HRef=&quot;C:\My Documents\head.xls&quot;&gt;&lt;/w:MailMergeHeaderSource&gt;
+  &lt;w:MailMergeDoNotSuppressBlankLines/&gt;
+  &lt;w:MailMergeDestination&gt;Email&lt;/w:MailMergeDestination&gt;
+  &lt;w:MailMergeMailAddressFieldName&gt;EmailAddress&lt;/w:MailMergeMailAddressFieldName&gt;
+  &lt;w:MailMergeMailSubject&gt;New Product&lt;/w:MailMergeMailSubject&gt;
+  &lt;w:MailMergeMailAsAttachment/&gt;
+  &lt;w:MailMergeViewMergedData/&gt;
+  &lt;w:MailMergeCheckErrors&gt;3&lt;/w:MailMergeCheckErrors&gt;
+ &lt;/w:WordDocument&gt;</CODE></PRE>
+
+</body></html>

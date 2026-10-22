@@ -1,0 +1,26 @@
+<html><head>
+<title>NoAllowFiltering Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>NoAllowFiltering Element (Microsoft Excel)</H1>
+<p class=T>Specifies whether the user can modify filters.
+</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xlelePivotTable.htm"><B>PivotTable</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>If <CODE>&lt;x:NoAllowFiltering/&gt;</CODE> is specified, the following conditions are true: 
+<UL>
+<LI>The <B>AutoFilter</B> command is disabled.
+<LI>The <B>Filter By Selection</B> command is disabled.
+<LI>The <B>Move to Filter Area</B> command is disabled.
+<LI>The <B>Move to Detail</B> command is disabled if the selection is a field in the filter area.
+<LI>All AutoFilter drop-down boxes are read-only.
+Note that the user can still view these boxes even though they are disabled. 
+<LI>You can still set filters programmatically.
+<LI>Membership in the filter area is fixed; the user cannot drag a field to or from the filter area.
+</UL>
+</p>
+</body></html>

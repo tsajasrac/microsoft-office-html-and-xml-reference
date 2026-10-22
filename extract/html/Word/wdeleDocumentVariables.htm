@@ -1,0 +1,58 @@
+<html><head>
+<title>DocumentVariables Element (Microsoft Office)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>DocumentVariables Element (Microsoft Office)</H1>
+<p class=T>Specifies the variables stored as part of a document.</p>
+<!--
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+
+<TR valign=top>
+<TD class=T width=33%><A HREF="ofatt.htm"><B>A</B></A></TD>
+<TD class=T width=66%>Description</TD>
+</TR>
+
+</TABLE>
+-->
+<p class=RL><b>Contained In</b></p>
+<p class="T"><a HREF="wdeleWordDocument.htm"><b>WordDocument</b></a>
+</p>
+
+<p class=RL><b>Subelements</b></p>
+<p class="T">The subelements are determined by the variable names.</p>
+
+<p class=RL><b>Remarks</b></p>
+
+<p class="T">This element contains information about the document variables,
+which are used to preserve macro settings between macro sessions. Each <b>DocumentVariables</b>
+subelement is formed by using information from an individual document variable
+stored in the
+document.</p>
+
+<p class="T">The
+following syntax shows how a <b>DocumentVariables</b> subelement is formed,
+where <i>Name</i> is the variable name and <i>Value</i> is the variable value:</p>
+
+<p class=RL><b>&lt;w:</b><i>Name</i><b>&gt;</b><i>Value</i><b>&lt;/w:</b><i>Name</i><b>&gt;</b></p>
+
+<p class=RL><b>See Also</b></p>
+
+<p class="T"><a href="../Shared/ofeleDocumentProperties.htm"><b>DocumentProperties</b></a></p>
+
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+
+<p class=T>This example shows a document that has a variable named
+&quot;Temp&quot; with a value of &quot;12&quot;.
+<PRE class=C><CODE> &lt;w:WordDocument&gt;
+  &lt;w:DocumentVariables&gt;
+   &lt;w:Temp&gt;12&lt;/w:Temp&gt;
+  &lt;/w:DocumentVariables&gt;
+ &lt;/w:WordDocument&gt;</CODE></PRE>
+
+
+</body></html>

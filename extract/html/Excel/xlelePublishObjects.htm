@@ -1,0 +1,34 @@
+<html><head>
+<title>PublishObjects Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>PublishObjects Element (Microsoft Excel)</H1>
+<p class=T>Contains information about all published items in a workbook.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xlelePublishObjects.htm"><B>PublishObjects</B></A>,
+<A HREF="../Shared/ofeleXML.htm"><B>XML</B></A>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xlelePublishObject.htm"><B>PublishObject</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>One or more subelements can be specified.</p>
+<p class=RL><b>Example</b></p>
+<p class=T>This example defines an interactive chart that has been published to a Web page using the Chart component.
+The file is called ChtPage.htm in the C:\Source folder.</p>
+<PRE class=C><CODE>
+ &lt;x:PublishObjects&gt;
+  &lt;x:PublishObject&gt;
+   &lt;x:Id&gt;501&lt;/x:Id&gt;
+   &lt;x:DivID&gt;print_501&lt;/x:DivID&gt;
+   &lt;x:SourceType&gt;SourceChart&lt;/x:SourceType&gt;
+   &lt;x:Source&gt;Chart 1&lt;/x:Source&gt;
+   &lt;x:HtmlType&gt;HtmlChart&lt;/x:HtmlType&gt;
+   &lt;x:Location HRef="C:\Source\ChtPage.htm"/&gt;
+  &lt;/x:PublishObject&gt;
+ &lt;/x:PublishObjects&gt;
+</CODE></PRE>
+</body></html>

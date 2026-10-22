@@ -1,0 +1,61 @@
+<html><head>
+<title>Order Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Order Element (Microsoft Excel)</H1>
+<p class=T>Contains the index number of the first key sort order and specifies whether the data is sorted according to a built-in or custom-defined list of items, by the order of characters in the active code page, by syllabary, or by an East Asian language sort order.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleSorting.htm"><B>Sorting</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>This element can contain one of the following values:</p>
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Value</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=LMC>1 through 4</TD>
+<TD class=LMC>Sort by one of the built-in lists.
+The value is an index to one of the available lists.</TD>
+</TR>
+<TR valign=top>
+<TD class=LMC>5 or greater</TD>
+<TD class=LMC>Sort by a custom-defined list.
+The value is an index to one of the custom-defined lists.</TD>
+</TR>
+</TABLE>
+<p class=T>Or it can contain one of the following string constants:</p>
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Constant</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=LMC><B>xlCodePage</B></TD>
+<TD class=LMC>Sort by the order in the active code page.
+</TD>
+</TR>
+<TR valign=top>
+<TD class=LMC><B>xlPinYin</B></TD>
+<TD class=LMC>Sort by Pin Yin order.
+This constant is used only when East Asian language support is installed and enabled.
+</TD>
+</TR>
+<TR valign=top>
+<TD class=LMC><B>xlSyllabary</B></TD>
+<TD class=LMC>Sort by syllabary.</TD>
+</TR>
+<TR valign=top>
+<TD class=LMC><B>xlStroke</B></TD>
+<TD class=LMC>Sort by character stroke.
+This element is used only when East Asian language support is installed and enabled.
+</TD>
+</TR>
+</TABLE>
+<p class=T>If <B>Order</B> is not specified, the normal sort order is used.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xleleSorting.htm#Example"><B>Sorting</B></A> element topic.</p>
+</body></html>

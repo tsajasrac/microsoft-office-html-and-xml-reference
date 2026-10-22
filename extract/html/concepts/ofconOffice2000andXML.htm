@@ -1,0 +1,38 @@
+<html><head>
+<title>Office HTML and XML</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Office HTML and XML</H1>
+
+<p class=T>Microsoft Office 2000 supports Hypertext Markup Language (HTML) as a native file format.
+Using HTML, Office documents and data can be stored, distributed, and presented in a format that can be viewed using most Web browsers, while retaining the rich content and functionality of Office documents stored using the traditional companion binary file formats.
+Widely used in Web pages, HTML elements are focused primarily on the presentation of content, or in other words, on how information is displayed.
+Although HTML is quite capable of displaying a wide variety of content, it is incapable of describing data in an efficient way.</p>
+
+<p class=T>In order to support the wide variety of functions and features in Office, Extensible Markup Language (XML) is used.
+The XML standard enables the creation of an extended set of elements to define and describe data, objects, and properties, surmounting HTML's inability to describe these objects and separating the data from presentation.
+XML is a subset of Standardized General Markup Language (SGML), and
+although SGML could be used, XML provides the necessary functionality with much less complexity.
+Its structured data descriptions are what makes it possible to open HTML documents in a Web browser and Office application, yet retain the properties, options, and settings that are used only when editing and saving the document.
+The XML standard requires that the rules (or schema) for using these extended elements be specified, enabling the documents to be parsed by Web browsers, document viewers, and editors that support XML and that can act on those rules.</p>
+
+<p class=T>For graphics and shapes, a subset of XML called Vector Markup Language (VML) is used to define and describe the vectors that comprise those objects within a document.
+In Web browsers that support VML, the definitions are used to render the graphics and shapes from vectors.
+Using VML instead of bitmap graphics files results in smaller file sizes and shorter document download times.
+In addition, VML objects can be manipulated in script to perform dynamic image transformations that are not possible using traditional bitmap graphics.
+For more information about Office VML, see the Microsoft Office 2000 VML Reference.</p>
+
+<p class=T>Although HTML contains a number of text formatting elements, cascading style sheets (CSS) are required to display the full range of common Office text formats.
+CSS specifies text formatting and styles that the standard HTML text formatting elements, such as for bold or emphasis, cannot describe.
+Also, CSS works similarly to styles in Microsoft Word in that a style definition can be defined once and used many times in an HTML document.
+CSS provides greater control over positioning of elements such as paragraphs and images within a document.</p>
+
+<H4 class=RH4>File Data Structure</H4>
+<p class=T>In Web pages saved in Office 2000, HTML provides the base technology of the file format, CSS &mdash; a mechanism for specifying text formatting, and XML &mdash; a method for storing and preserving editing environments and graphical data.
+Each of the standards behind these markup languages define a precise structure for specifying elements.
+For example, the rules for constructing attribute pairs (<em>name</em>=<em>value</em>) or start and end tags are spelled out very clearly in the specifications in order to make the languages easy to parse and understand. 
+The HTML and XML document type declarations (DTDs) contain or point to markup declarations that provide the grammar for a class of documents, while an XML schema defines the structure, content, and semantics of those documents.</p>
+
+<p class=T>For more information about the HTML, CSS, and XML standards and their general file structures, see the documentation on the Microsoft Developer Network Web site.</p>
+</body></html>

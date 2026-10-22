@@ -1,0 +1,91 @@
+<html><head>
+<title>Headers and Footers</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#ffffff" TEXT="#000000">
+
+<H1 class=RH1>Headers and Footers</H1>
+
+<p class=T>Microsoft Word, Microsoft Excel, and Microsoft PowerPoint all treat headers and footers differently. Word and Excel do not display header and footer information in an HTML page, but PowerPoint does.
+<p>Word also provides a rich method to save footnotes and endnotes to Web pages.
+
+<h4>Word</h4>
+<p>Word does not display header and footer information in an HTML page, but it does store the data.
+<p>Header and footer information is stored in a separate file named Header.htm. Inside the file, the header and footer information is stored as fields, using <b>Span</b> elements with the <b>mso-element:field-begin</b>, <b>mso-element:field-separator</b>, and <b>mso-element:field-end</b> attributes in conjunction with the <b>MsoHeader</b> and <b>MsoPageNumber</b> styles.
+
+<h4>Excel</h4>
+<p>Excel does not display header and footer information in an HTML page, but it does store the data. Note, however, that if Excel data is saved to HTML with the Add Interactivity option, header and footer data is not saved.
+<p>Excel makes header and footer data persistent through 
+the use of the <STRONG>mso-header-data </STRONG>and <STRONG>mso-footer-data 
+</STRONG>attributes. Each attribute is a string with metadata identified by the 
+ampersand (<STRONG>&amp;</STRONG>). Values include:
+    <!--subtable-->
+      <table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+        
+        <TR>
+          <TD><B>Metadata</B></TD>
+          <TD><STRONG>Represents</STRONG></TD>
+        </TR>
+        
+        <TR>
+          <TD><B>&amp;L</B></TD>
+          <TD>Left-aligned data</TD>
+        </TR>
+        <TR>
+          <TD><B>&amp;R</B></TD>
+          <TD>Right-aligned data</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>&amp;C</B></TD>
+          <TD>Center-aligned data</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>&amp;D</B></TD>
+          <TD>Date</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>&amp;T</B></TD>
+          <TD>Time</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>&amp;P</B></TD>
+          <TD>Page number</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>&amp;N</B></TD>
+          <TD>Number of pages</TD>
+        </TR>
+        
+        <TR>
+          <TD><STRONG>&amp;\0022</STRONG><EM>fontname</EM><STRONG>\,</STRONG><EM>fontstyle</EM><STRONG>\0022&amp;</STRONG><EM>fontsize</EM></TD>
+          <TD>Font name, style, and&nbsp;size</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>&amp;B</B></TD>
+          <TD>Bold</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>&amp;I</B></TD>
+          <TD>Italic</TD>
+        </TR>
+        
+        
+        </TABLE>
+		
+		
+		<h4>PowerPoint</h4>   
+		<p>PowerPoint stores and displays header and footer information. Additional information about printed headers and footers is stored in the Pres.xml file using the <b>Headersfooters</b> element.
+<p> HTML header and footer information is displayed at the bottom of each slide and is part of the slide master. The data is created as part of a shape and uses the <b>mso-field-code</b> attribute to define header and footer metadata such as page number and date. 
+<h4>Footnotes and Endnotes (Word)</h4>
+Word allows the saving of footnotes and endnotes for Web pages. A link is created for each footnote and endnote and the corresponding notes are placed at the end of the Web page.
+<p>Word uses the <STRONG>MsoFootNoteReference</STRONG> and <b>MsoEndNoteReference</b> styles to format footnotes, the <b>mso-footnote-id</b> attribute to number footnotes, the <b>mso-special-character:footnote</b> attribute to insert footnote links, and the <b>MsoFootNoteText</b> and <b>MsoEndNoteText</b> styles to format the text of the footnote and endnote.
+<P></P>
+
+</body></html>

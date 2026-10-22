@@ -1,0 +1,227 @@
+<html>
+
+<head>
+<title>AutoFilter</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1 class="RH1">AutoFilter</h1>
+<p class="T">The <b>autofilter</b>, <b>autofilterrange</b>, and <b>autofiltervalue</b>
+attributes of HTML <b>TD</b> and <b>TH</b> elements are used to store
+information about automatic filtering.</p>
+<p class="T"><a href="#AutoFilter"><b>autofilter</b> attribute</a><br>
+<a href="#AutoFilterRange"><b>autofilterrange</b> attribute</a><br>
+<a href="#AutoFilterValue"><b>autofiltervalue</b> attribute</a><br>
+<a href="#Complex">Complex custom filters and advanced filters</a><br>
+<a href="#Hidden">Saving hidden filtered rows</a><br>
+</p>
+
+<NAME ID="AutoFilter">
+<h4 class="RH4">autofilter attribute</h4>
+</NAME>
+
+<p class="T">Specifies that filter drop-down arrows and the default filter value
+are displayed in a column header row on a worksheet. This attribute can be
+specified in <b>TD</b> and <b>TH</b> elements and contains one of the following
+constants.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Constant</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>all</b></td>
+    <td class="T" width="66%">The column is not filtered and all rows are
+      displayed. If the <b>autofilter</b> attribute is not specified, all rows
+      are displayed by default.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>blanks</b></td>
+    <td class="T" width="66%">Display rows that are blank in the column.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>nonblanks</b></td>
+    <td class="T" width="66%">Display rows that have data in the column.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>top</b></td>
+    <td class="T" width="66%">Display the top number of rows or a percentage of
+      rows. The number or percentage is contained in the <b>a</b><b>utofiltervalue</b>
+      attribute.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>bottom</b></td>
+    <td class="T" width="66%">Display the bottom number of rows or a percentage
+      of rows. The number or percentage is contained in the <b>autofiltervalue</b>
+      attribute.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>custom</b></td>
+    <td class="T" width="66%">Display rows that meet the criteria specified by
+      the formula contained in the <b>autofiltervalue</b> attribute.</td>
+  </tr>
+</table>
+<p class="T">When the <b>autofilter</b> attribute is specified, the worksheet
+displays rows that meet a criterion. The user can change the display to show or
+hide rows of data by using the drop-down arrows on the column header row. When
+more than one column is filtered, only rows that satisfy all the filters are
+displayed.</p>
+<p class="RL">Example</p>
+<p class="T">In the following example, the Product column is filtered for
+non-blank columns and the Channel column is filtered for columns containing the
+word &quot;Wholesale&quot;. Rows that have a non-blank Product field and the
+word &quot;Wholesale&quot; in the Channel field are displayed.
+<pre class="C"><code>
+&lt;TD AUTOFILTER=&quot;nonblanks&quot; AUTOFILTERRANGE=&quot;A1:D14&quot;&gt;Product&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;custom&quot; AUTOFILTERVALUE=&quot;Wholesale&quot;&gt;Channel&lt;/TD&gt;
+</code></pre>
+
+<NAME ID="AutoFilterRange">
+<h4 class="RH4">autofilterrange attribute</h4>
+</NAME>
+
+<p class="T">Specifies a range that a filter is applied to. This attribute
+specifies a single range in A1-style. If the <b>a</b><b>utofilterrange</b> attribute is
+not specified, there is no AutoFilter range. This attribute can be specified in <b>TD</b>
+and <b>TH</b> elements that specify the <b>autofilter</b> attribute.</p>
+<p class="T">The AutoFilter range is a named range in Microsoft Excel, but the
+name is not stored as a named range when the workbook is saved as a Web page.</p>
+<p class="RL">Example</p>
+<p class="T">This example displays the channel, movie title, date, and day of
+the week for movies on channel 5 on Thursday. The data being filtered is in the
+range A2:D50.</p>
+<pre class="C"><code>
+&lt;TD AUTOFILTER=&quot;custom&quot; AUTOFILTERVALUE=&quot;=5&quot; AUTOFILTERRANGE=&quot;A2:D50&quot;&gt;Channel&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;all&quot;&gt;Movie&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;all&quot;&gt;Date&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;custom&quot; AUTOFILTERVALUE=&quot;=Thursday&quot;&gt;Day of the Week&lt;/TD&gt;
+</code></pre>
+
+<NAME ID="AutoFilterValue">
+<h4 class="RH4">autofiltervalue attribute</h4>
+</NAME>
+
+<p class="T">Specifies the number or percentage of top or bottom rows, rows that
+match a user-defined string, or rows that match the results of a formula. This
+attribute can be specified in <b>TD</b> and <b>TH</b> elements that specify the <b>autofilter</b>
+attribute containing the string constants <b>bottom</b>, <b>custom</b>, or <b>top</b>.</p>
+<p class="RL">Examples</p>
+<p class="T">This example displays statistics for the top 10 percent of students
+in a graduating class.</p>
+<pre class="C"><code>
+&lt;TD AUTOFILTER=&quot;top&quot; AUTOFILTERVALUE=&quot;10%&quot;&gt;GPA&lt;/TD&gt;
+</code></pre>
+<p class="T">The following example displays statistics for the bottom 5 students
+with the lowest GPA.</p>
+<pre class="C"><code>
+&lt;TD AUTOFILTER=&quot;bottom&quot; AUTOFILTERVALUE=5&gt;GPA&lt;/TD&gt;
+</code></pre>
+<p class="T">In the next example, the Restaurants column is not filtered because
+the <b>autofilter</b> attribute contains the string constant <b>all</b>, and so
+all the rows are displayed. The Types of Food column is filtered on the word
+&quot;All&quot;. The Price column is filtered on the word &quot;Moderate&quot;.
+The Location column is not filtered.</p>
+<pre class="C"><code>
+&lt;TD AUTOFILTER=&quot;all&quot; AUTOFILTERRANGE=&quot;A50:D50&gt;Restaurants&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;custom&quot; AUTOFILTERVALUE=&quot;=All&quot;&gt;Types of Food&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;custom&quot; AUTOFILTERVALUE=&quot;=Moderate&quot;&gt;Price&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;all&quot;&gt;Location&lt;/TD&gt;
+</code></pre>
+<p class="T">This example displays students who have at least a 3.0 GPA and are
+over the age of 18.</p>
+<pre class="C"><code>
+&lt;TD AUTOFILTER=&quot;all&quot;&gt;&lt;B&gt;Name&lt;/B&gt;&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;custom&quot; AUTOFILTERVALUE=&quot;&gt;=3.0&quot;&gt;&lt;B&gt;GPA&lt;/B&gt;&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;all&quot;&gt;&lt;B&gt;Rank&lt;/B&gt;&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;custom&quot; AUTOFILTERVALUE=&quot;&gt;=18&quot;&gt;&lt;B&gt;Age&lt;/B&gt;&lt;/TD&gt;
+</code></pre>
+
+<NAME ID="Complex">
+<h4 class="RH5">Complex custom filters and advanced filters</h4>
+</NAME>
+
+<p class="T">Filters can contain up to two formulas, allowing complex filtering
+of a series of rows. The string <b>and</b> or <b>or</b> between the formulas
+specifies whether both or either formula must be satisfied to display the row.
+For example, the following filter displays students who have a GPA from 2.0 to
+2.5.</p>
+<pre class="C"><code>
+&lt;TD AUTOFILTER=&quot;custom&quot; AUTOFILTERVALUE=&quot;&gt;=2,and,&lt;=2.5&quot;&gt;GPA&lt;/TD&gt;
+</code></pre>
+<p class="T">A comma is used as the delimiter between arguments.</p>
+<p class="T">An advanced filter is stored in a Web page using the XML <b>AdvancedFilter</b>
+element in the <b>XML</b> element at the worksheet level. The following table
+lists the subelements of <b>AdvancedFilter</b>.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Subelement</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>CopyTo</b></td>
+    <td class="T" width="66%">Optional. Specifies whether the filtered rows are
+      copied to another location or filtered in the original location, and if
+      specified, contains the destination range.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>CriteriaRange</b></td>
+    <td class="T" width="66%">Required. Specifies the range containing the
+      filter criteria.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>ListRange</b></td>
+    <td class="T" width="66%">Required. Specifies the range to filter.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>UniqueRecordsOnly</b></td>
+    <td class="T" width="66%">Optional. Specifies whether only unique rows are
+      displayed. If <code>&lt;x:UniqueRecordsOnly/&gt;</code> is specified, only
+      unique rows are displayed.</td>
+  </tr>
+</table>
+<p class="RL">Example</p>
+<p class="T">This example filters the list in range A2:G9 on Sheet1 using
+criteria from the range F14:G16. The filtered rows are copied to range H2:N9.</p>
+<pre class="C"><code>
+&lt;x:AdvancedFilter&gt;workbook_sheet.htm
+ &lt;x:ListRange&gt;&quot;Sheet1!$A$2:$G$9&quot;&lt;/x:ListRange&gt;
+ &lt;x:CriteriaRange&gt;&quot;$F$14:$G$16&quot;&lt;/x:CriteriaRange&gt;
+ &lt;x:CopyTo&gt;&quot;Sheet1!$H$2:$N$9&quot;&lt;/x:CopyTo&gt;
+&lt;/x:AdvancedFilter&gt;
+</code></pre>
+
+<NAME ID="Hidden">
+<h4 class="RH4">Saving hidden filtered rows</h4>
+</NAME>
+
+<p class="T">When a filtered table is saved as a Web page, some rows might be
+hidden. The <b>display:none</b> style is used to hide the data and store its
+status. Because this style is also used for hidden, unfiltered rows, the <b>mso-ignore:display</b>
+style is also specified to distinguish it as a filtered row that is currently
+hidden.</p>
+
+<p class=T>The following example displays the weather and temperature in New
+Orleans. The information for Charlotte and Fairhope is not displayed.</p>
+<pre class="C"><code>
+&lt;TABLE&gt;
+&lt;TR&gt; 
+&lt;TD AUTOFILTER=&quot;all&quot; AUTOFILTERRANGE=&quot;A1:C4&quot;&gt;Location&lt;/TD&gt; 
+&lt;TD AUTOFILTER=&quot;custom&quot; AUTOFILTERVALUE=&quot;=sunny&quot;&gt;Weather&lt;/TD&gt;
+&lt;TD AUTOFILTER=&quot;all&quot;&gt;Temperature&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR STYLE=&quot;display:none;mso-ignore:display&quot;&gt;
+&lt;TD&gt;Fairhope&lt;/TD&gt;&lt;TD&gt;Thunderstorms&lt;/TD&gt;&lt;TD&gt;82&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR STYLE=&quot;display:none; mso-ignore:display&quot;&gt;
+&lt;TD&gt;Charlotte&lt;/TD&gt;&lt;TD&gt;Overcast&lt;/TD&gt;&lt;TD&gt;79&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD&gt;New Orleans&lt;/TD&gt;&lt;TD&gt;Sunny&lt;/TD&gt;&lt;TD&gt;86&lt;/TD&gt;&lt;/TR&gt;
+&lt;/TABLE&gt; 
+</code></pre>
+
+</body>
+
+</html>

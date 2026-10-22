@@ -1,0 +1,38 @@
+<html><head>
+<title>Condition Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Condition Element (Microsoft Excel)</H1>
+<p class=T>Contains a condition and the formatting that is applied to a cell when the condition is true.</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><A HREF="xlconStyleAttribute.htm"><B>Style</B></A></TD>
+<TD class=T width=66%>A text string containing subattributes that specify the font weight, style, and effects that are applied when the qualifying condition is true.</TD>
+</TR>
+</TABLE>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleConditionalFormatting.htm"><B>ConditionalFormatting</B></A>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleFormat.htm"><B>Format</B></A>,
+<A HREF="xleleQualifier.htm"><B>Qualifier</B></A>,
+<A HREF="xleleValue1.htm"><B>Value1</B></A>,
+<A HREF="xleleValue2.htm"><B>Value2</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>One to three <B>Condition</B> subelements must be included in a <B>ConditionalFormatting</B> element.</p>
+<p class=T>When a <B>Qualifier</B> subelement is specified, the value of a cell in the specified range is compared to the values or results of the formulas specified in the <B>Value1</B> and <B>Value2</B> elements.
+When a <B>Qualifier</B> subelement is not specified, the formula specified in the <B>Value1</B> element is used as the condition, and the formula must return a Boolean value.
+In both cases, the formatting is applied only if the condition is <B>True</B>.</p>
+<p class=T>You can specify a conditional formatting style in the <B>Style</B> attribute of the <B>Condition</B> element or in the <B>Format</B> subelement.
+However, you cannot specify the <B>Style</B> attribute and the <B>Format</B> subelement in the same <B>Condition</B> element.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xleleConditionalFormatting.htm#Example"><B>ConditionalFormatting</B></A> element topic.</p>
+</body></html>

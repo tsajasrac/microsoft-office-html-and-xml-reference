@@ -1,0 +1,135 @@
+<html><head>
+<title>DocumentProperties Element (Microsoft Office)</title>
+<style>@import url(msdn_ie4.css);</style><link disabled rel="stylesheet" href="msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>DocumentProperties Element (Microsoft Office)</H1>
+<p class=T>Specifies a document's properties.</p>
+<!--
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+
+<TR valign=top>
+<TD class=T width=33%><A HREF="ofatt.htm"><B>A</B></A></TD>
+<TD class=T width=66%>Description</TD>
+</TR>
+
+</TABLE>
+-->
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<a HREF="../Shared/ofeleXML.htm"><b>XML</b></a>
+</p>
+
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="ofeleAuthor.htm"><B>Author</B></A>,
+<A HREF="ofeleBytes.htm"><B>Bytes</B></A>,
+<A HREF="ofeleCategory.htm"><B>Category</B></A>,
+<A HREF="ofeleCharacters.htm"><B>Characters</B></A>,
+<A HREF="ofeleCharactersWithSpaces.htm"><B>CharactersWithSpaces</B></A>,
+<A HREF="ofeleCompany.htm"><B>Company</B></A>,
+<A HREF="ofeleCreated.htm"><B>Created</B></A>,
+<A HREF="ofeleDescription.htm"><B>Description</B></A>,
+<A HREF="ofeleHiddenSlides.htm"><B>HiddenSlides</B></A>,
+<A HREF="ofeleKeywords.htm"><B>Keywords</B></A>,
+<A HREF="ofeleLastAuthor.htm"><B>LastAuthor</B></A>,
+<A HREF="ofeleLastPrinted.htm"><B>LastPrinted</B></A>,
+<A HREF="ofeleLastSaved.htm"><B>LastSaved</B></A>,
+<A HREF="ofeleLines.htm"><B>Lines</B></A>,
+<A HREF="ofeleManager.htm"><B>Manager</B></A>,
+<A HREF="ofeleMultimediaClips.htm"><B>MultimediaClips</B></A>,
+<A HREF="ofeleNotes.htm"><B>Notes</B></A>,
+<A HREF="ofelePages.htm"><B>Pages</B></A>,
+<A HREF="ofeleParagraphs.htm"><B>Paragraphs</B></A>,
+<A HREF="ofelePresentationFormat.htm"><B>PresentationFormat</B></A>,
+<A HREF="ofeleRevision.htm"><B>Revision</B></A>,
+<A HREF="ofeleSlides.htm"><B>Slides</B></A>,
+<A HREF="ofeleSubject.htm"><B>Subject</B></A>,
+<A HREF="ofeleTemplate.htm"><B>Template</B></A>,
+<A HREF="ofeleTotalTime.htm"><B>TotalTime</B></A>,
+<A HREF="ofeleVersion.htm"><B>Version</B></A>,
+<A HREF="ofeleWords.htm"><B>Words</B></A>
+</p>
+
+<p class=RL><b>Remarks</b></p>
+<p class=T>This element contains subelements that describe data for the
+document's <b>Properties</b> dialog box. The available fields in the <b>Properties</b>
+dialog box may differ between Office programs. Certain subelements might not
+generate output if
+they represent the default settings or values. </p>
+
+<p class=RL><b>See Also</b></p>
+<p class=T>
+<b><a href="ofeleCustomDocumentProperties.htm">CustomDocumentProperties</a></b>
+</p>
+
+<p class=RL>
+<A NAME="Example"><b>Example</b></A>
+</p>
+<p class=T>The following example shows the document properties for a Microsoft Word document.</p>
+
+
+<PRE class=C><CODE> &lt;o:DocumentProperties&gt;
+  &lt;o:Subject&gt;Sales Data for this Quarter&lt;/o:Subject&gt;
+  &lt;o:Author&gt;Kim Abercrombie&lt;/o:Author&gt;
+  &lt;o:Keywords&gt;Sales Marketing Report&lt;/o:Keywords&gt;
+  &lt;o:Description&gt;Pending approval&lt;/o:Description&gt;
+  &lt;o:Template&gt;Contemporary Report.dot&lt;/o:Template&gt;
+  &lt;o:LastAuthor&gt;Kim Abercrombie&lt;/o:LastAuthor&gt;
+  &lt;o:Revision&gt;10&lt;/o:Revision&gt;
+  &lt;o:TotalTime&gt;114&lt;/o:TotalTime&gt;
+  &lt;o:LastPrinted&gt;1999-05-19T00:49:00Z&lt;/o:LastPrinted&gt;
+  &lt;o:Created&gt;1999-05-18T22:32:00Z&lt;/o:Created&gt;
+  &lt;o:LastSaved&gt;1999-05-19T00:52:00Z&lt;/o:LastSaved&gt;
+  &lt;o:Pages&gt;3&lt;/o:Pages&gt;
+  &lt;o:Words&gt;2330&lt;/o:Words&gt;
+  &lt;o:Characters&gt;13587&lt;/o:Characters&gt;
+  &lt;o:Category&gt;Reports&lt;/o:Category&gt;
+  &lt;o:Manager&gt;Kate Dresen&lt;/o:Manager&gt;
+  &lt;o:Company&gt;Adventure Works&lt;/o:Company&gt;
+  &lt;o:Lines&gt;235&lt;/o:Lines&gt;
+  &lt;o:Paragraphs&gt;32&lt;/o:Paragraphs&gt;
+  &lt;o:CharactersWithSpaces&gt;15885&lt;/o:CharactersWithSpaces&gt;
+  &lt;o:Version&gt;9.2720&lt;/o:Version&gt;
+ &lt;/o:DocumentProperties&gt;</CODE></PRE>
+
+
+<p class=T>The following example shows the document properties for a Microsoft
+PowerPoint presentation.</p>
+
+
+<PRE class=C><CODE> &lt;o:DocumentProperties&gt;
+  &lt;o:Subject&gt;Sales Data for this Quarter&lt;/o:Subject&gt;
+  &lt;o:Author&gt;Kim Abercrombie&lt;/o:Author&gt;
+  &lt;o:Keywords&gt;Sales Marketing Report&lt;/o:Keywords&gt;
+  &lt;o:Description&gt;Pending approval&lt;/o:Description&gt;
+  &lt;o:Template&gt;C:\Program Files\Microsoft Office\Templates\Presentation Designs\Strategic.pot&lt;/o:Template&gt;
+  &lt;o:LastAuthor&gt;Kim Abercrombie&lt;/o:LastAuthor&gt;
+  &lt;o:Revision&gt;8&lt;/o:Revision&gt;
+  &lt;o:TotalTime&gt;52&lt;/o:TotalTime&gt;
+  &lt;o:LastPrinted&gt;1999-05-19T00:49:00Z&lt;/o:LastPrinted&gt;
+  &lt;o:Created&gt;1999-05-18T22:32:00Z&lt;/o:Created&gt;
+  &lt;o:LastSaved&gt;1999-05-19T00:52:00Z&lt;/o:LastSaved&gt;
+  &lt;o:Words&gt;402&lt;/o:Words&gt;
+  &lt;o:Category&gt;Reports&lt;/o:Category&gt;
+  &lt;o:PresentationFormat&gt;On-screen Show&lt;/o:PresentationFormat&gt;
+  &lt;o:Manager&gt;Kate Dresen&lt;/o:Manager&gt;
+  &lt;o:Company&gt;Adventure Works&lt;/o:Company&gt;
+  &lt;o:Bytes&gt;67452&lt;/o:Bytes&gt;
+  &lt;o:Paragraphs&gt;125&lt;/o:Paragraphs&gt;
+  &lt;o:Slides&gt;17&lt;/o:Slides&gt;
+  &lt;o:Notes&gt;2&lt;/o:Notes&gt;
+  &lt;o:HiddenSlides&gt;1&lt;/o:HiddenSlides&gt;
+  &lt;o:MultimediaClips&gt;1&lt;/o:MultimediaClips&gt;
+  &lt;o:Version&gt;9.2720&lt;/o:Version&gt;
+ &lt;/o:DocumentProperties&gt;</CODE></PRE>
+
+<p class=T>&nbsp;</p>
+
+
+</body></html>

@@ -1,0 +1,71 @@
+<html><head>
+<title>ConditionalFormatting Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>ConditionalFormatting Element (Microsoft Excel)</H1>
+<p class=T>Contains the conditions and the formatting elements that are applied to the specified range when the conditions are true.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="../Shared/ofeleXML.htm"><B>XML</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleCondition.htm"><B>Condition</B></A>,
+<A HREF="xleleRange.htm"><B>Range</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>Range</B> subelement is required.
+One to three <B>Condition</B> subelements must be included in a <B>ConditionalFormatting</B> element.</p>
+<p class=RL><A NAME="Example"><b>Examples</b></A></p>
+<p class=T>This example defines two conditions.
+First, if the value in cell A29 is not blank, then format the range B29:H33 with a
+0.5 point outline border, solid shading, pop-up text enabled, and a silver background.
+Second, if the value in A29 is blank, then format the range B29:H33 with no border
+and the default background.</p>
+<PRE class=C><CODE>
+ &lt;x:ConditionalFormatting&gt;
+  &lt;x:Range&gt;B29:H33&lt;/x:Range&gt;
+  &lt;x:Condition&gt;
+   &lt;x:Value1&gt;$A$29&lt;&gt;&quot;&quot;&lt;/x:Value1&gt;
+   &lt;x:Format Style='border:.5pt solid windowtext;background:silver'/&gt;
+  &lt;/x:Condition&gt;
+  &lt;x:Condition&gt;
+   &lt;x:Value1&gt;$A$29=&quot;&quot;&lt;/x:Value1&gt;
+   &lt;x:Format Style='border:none;mso-background-source:auto'/&gt;
+  &lt;/x:Condition&gt;
+ &lt;/x:ConditionalFormatting&gt;
+</CODE></PRE>
+<p class=T>This example defines two conditions.
+First, if the value of a cell in the range B29:H33 is not equal to the value in cell A29 plus 12, then format the cell with a 0.5 point outline border, solid shading, pop-up text enabled, and a silver background.
+Second, if the value in A29 is blank, then format the range B29:H33 with no border
+and the default background.</p>
+<PRE class=C><CODE>
+ &lt;x:ConditionalFormatting&gt;
+  &lt;x:Range&gt;B29:H33&lt;/x:Range&gt;
+  &lt;x:Condition&gt;
+   &lt;x:Qualifier&gt;NotEqual&lt;/x:Qualifier&gt;
+   &lt;x:Value1&gt;=$A$29+12&lt;/x:Value1&gt;
+   &lt;x:Format Style='border:.5pt solid windowtext;background:silver'/&gt;
+  &lt;/x:Condition&gt;
+  &lt;x:Condition&gt;
+   &lt;x:Value1&gt;$A$29=&quot;&quot;&lt;/x:Value1&gt;
+   &lt;x:Format Style='border:none;mso-background-source:auto'/&gt;
+  &lt;/x:Condition&gt;
+ &lt;/x:ConditionalFormatting&gt;
+</CODE></PRE>
+<p class=T>In this example, if the value of a cell in the range B29:H33 is between
+5 and 15, then format the cell with a 0.5 point outline border, solid shading,
+pop-up text enabled, and a silver background.</p>
+<PRE class=C><CODE>
+ &lt;x:ConditionalFormatting&gt;
+  &lt;x:Range&gt;B29:H33&lt;/x:Range&gt;
+  &lt;x:Condition&gt;
+   &lt;x:Qualifier&gt;Between&lt;/x:Qualifier&gt;
+   &lt;x:Value1&gt;5&lt;/x:Value1&gt;
+   &lt;x:Value2&gt;15&lt;/x:Value2&gt;
+   &lt;x:Format Style='border:.5pt solid windowtext;background:silver'/&gt;
+  &lt;/x:Condition&gt;
+ &lt;/x:ConditionalFormatting&gt;
+</CODE></PRE>
+</body></html>

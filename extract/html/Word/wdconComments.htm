@@ -1,0 +1,196 @@
+<html><head>
+<title>Comments</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Comments</H1>
+
+<p class=T>Microsoft Word and Microsoft Excel both have comment features, but
+they are slightly different in each program. However, both programs save their
+comments to HTML in the same way. PowerPoint does not have this feature; rather,
+it uses the notes feature on each slide.</p>
+
+<p class=T>Comments in HTML documents created with Word and Excel display differently
+depending on whether the browser used to display the document supports dynamic
+content. Scripting is used to detect the browser at load time. In
+Microsoft Internet Explorer 4.0 and later browsers, comments are dynamic. They pop up like a tooltip when the cursor is positioned over the comment
+reference. The comments are formatted using CSS to look like post-it
+notes. Visibility is dynamically toggled through JavaScript event handlers.</p>
+
+<p class=T>In
+other browsers, comments are static. They are displayed at the
+bottom of the Web page, much like <a href="wdconFootnotesandEndnotes.htm">footnotes
+and endnotes</a>. Comments and their anchors are hyperlinked for easy browsing
+between them.</p>
+<p class=T>Word and Excel HTML comments have the following distinct components.</p>
+
+
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+
+  <TR valign=top>
+    <TD class=I align=left height="38" nowrap><b>Comment component</b></td>
+    <TD class=I align=left height="38"><b>Description</b></td>
+  </tr>
+  <tr>
+    <TD class=T align=left height="55" nowrap>Comment data</td>
+    <TD class=T align=left height="55">The data is the comment itself, which can
+      contain richly formatted text, pictures, tables, and most other types of
+      Office document data. When saved as HTML, Word and Excel store the comment data
+      near the end of the Web page within a labeled <b>Div</b> element. The comment data
+      is saved to HTML like standard Office document text.</td>
+  </tr>
+  <tr>
+    <TD class=T align=left height="38" nowrap>Comment properties</td>
+    <TD class=T align=left height="38">A set of Microsoft Office properties
+      associated with a comment, such as the author's name, is saved in HTML by
+      applying styles to the <b>Div</b>  element containing the
+      comment.</td>
+  </tr>
+  <tr>
+    <TD class=T align=left height="57" nowrap>Reference</td>
+    <TD class=T align=left height="57">The reference is the range of character
+      positions in the main document that is associated with the comment. This range is
+      saved in HTML by enclosing it within
+      a labeled <b>Span</b> element. Multiple <b>Span </b>elements are used in the case where
+      a comment's range overlaps the ranges of other comments.</td>
+  </tr>
+  <tr>
+    <TD class=T align=left height="95" nowrap>Anchors</td>
+    <TD class=T align=left height="95">Word and Excel include an anchor at the end of the
+      comment reference and an anchor at the beginning of the comment data.
+      The reference anchor provides a visual clue that a comment exists and that
+      it is the <i>n</i>th comment made by a given author. In browsers that do not
+      support dynamic content, the two anchors function as hyperlinks that let
+      the user jump between the reference and the comment.</td>
+  </tr>
+</table>
+
+
+<p class=T>&nbsp;</p>
+<H4 class=RH4>Comment references</h4>
+<p class=T>Word and Excel use <b>A</b> elements to mark the text to which the comment was
+applied, and they use the <b>mso-comment-reference</b>  style attribute to save the comment index
+and the author's initials to HTML. The comment index corresponds to the order of occurrence
+of the ends of comment references in the document, rather than their beginnings,
+because references can be nested with each other. Text-level elements cannot be
+overlapped in HTML, so they must be closed and reopened. In the situation of
+overlapping comment references,
+Word and Excel insert an additional style attribute, <b>mso-comment-continuation</b>.
+<H4 class=RH4>Comment author name</h4>
+<p class=T>To store the author's name for a given comment, Word and Excel use the <strong>mso-comment-author</strong>
+style attribute.</p>
+<H4 class=RH4>Comment text</h4>
+<p class=T>All comments in a Word or Excel HTML document are stored inside a <b>Div</b> element labeled with
+the <strong> mso-element: comment-list</strong>  style.
+Word and Excel position this element after the <b>Div</b> element containing the main document's last section
+and after any <b>Div</b> elements containing <a href="wdconFootnotesandEndnotes.htm">footnotes
+and endnotes</a>. Inside the <b>mso-element: comment-list</b>  style,
+Word and Excel store each comment in its own <b>Div</b> element with the <strong>mso-element:
+comment </strong>style.</p>
+<H4 class=RH4>Comment separator</h4>
+<p class=T>The <strong>mso-element: comment-list </strong>style also contains an
+<b>HR</b> element to cleanly separate comments from preceding
+sections of the document in browsers other than Internet Explorer 4.0 and later.</p>
+<PRE class=C><code>&lt;hr class=msocomoff align=left size=1 width=&quot;33%&quot;&gt;</code></pre>
+<p class=T>The separator is identical to the one used for <a href="wdconFootnotesandEndnotes.htm">footnotes
+and endnotes</a>. The <b>msocomoff</b>
+ style class dynamically formats the separator so it is not displayed in Internet Explorer
+4.0 or later browsers.</p>
+<H4 class=RH4>Syntax for individual comments</h4>
+<p class=T>The following table briefly describes the components of a comment <b>Div</b>
+element.</p>
+
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+    <tr>
+      <td class=I width="50%"><b>Comment Div element component</b></td>
+      <td class=I width="80%"><b>Purpose</b></td>
+    </tr>
+    <tr>
+      <td class=T width="50%"><b>STYLE=&quot;mso-element: comment&quot;</b></td>
+      <td class=T width="80%">A style that Word and Excel use to identify
+        the <b>Div</b>  element as the container of a comment.</td>
+    </tr>
+    <tr>
+      <td class=T width="50%"><b>CLASS=msocomtxt</b></td>
+      <td class=T width="80%">The <b>msocomtxt</b> style class is used to dynamically
+        apply styles to all comments in a document.</td>
+    </tr>
+    <tr>
+      <td class=T width="50%"><b>ID=_com_</b><i>n</i></td>
+      <td class=T width="80%">Unique identifier for the <i>n</i>th comment in a document; JavaScript
+        code uses it to show and hide the comment region in Internet Explorer
+        4.0 and later browsers.</td>
+    </tr>
+    <tr>
+      <td class=T width="50%"><b>onmouseover=&quot;msoCommentShow('_anchor_</b><i>n</i><b>','_com_</b><i>n</i><b>')&quot;</b></td>
+      <td class=T width="80%">Calls a JavaScript
+        function that makes the comment with <b>id=_com_<i>n</i></b> visible and displays it
+        at the position of the anchor with <b>id=_anchor_<i>n</i></b>. This guarantees
+        that the comment remains visible when the user slides the cursor from the
+        anchor onto the comment region.</td>
+    </tr>
+    <tr>
+      <td class=T width="50%"><b>onmouseout=&quot;msoCommentHide('_com_</b><i>n</i><b>')&quot;</b></td>
+      <td class=T width="80%">Calls a JavaScript function that makes
+        the comment with <b>id=_com_<i>n</i></b> invisible when the user moves the cursor off
+        the comment.</td>
+    </tr>
+
+</table>
+<H4 class=RH4>Comment anchors</h4>
+<p class=T>When saving comments as HTML, Word and Excel provide comment anchors that
+help users view comments in the browser. In Internet Explorer 4.0 and later browsers, the anchors
+trigger pop-up display of comments. In other browsers, anchors function as two-way
+hyperlinks between the comment reference and
+comment data. The <b>Span</b> elements enclosing all comment anchors in the document have
+the<strong> msocomoff </strong> style class,
+which is used to dynamically hide the anchor string in Internet Explorer 4.0 or
+later browsers. The <b>Span</b> elements enclosing all reference anchors in the document have
+the <strong>msocomanchor </strong>style class. This is used to dynamically format all reference anchors for Internet
+Explorer 4.0 or later browsers through scripting.</p>
+<H4 class=RH4>Scripting</h4>
+<p class=T>When a Word or Excel document containing comments is saved as HTML, a <b>Script</b>
+ element is placed within the <b>Head</b>  element. The <b>Script</b>   element contains
+scripting statements in JavaScript that make comments dynamic in Internet
+Explorer 4.0 or later browsers. Word and Excel HTML documents use scripting for two basic
+purposes:
+<ul>
+  <li><b>Dynamic stylesheets</b>&nbsp;&nbsp; When a page is first loaded in a browser, the browser type is determined
+  and, in the case of Internet Explorer 4.0 or later browsers,&nbsp;CSS styles are dynamically applied to comments
+  to make them look like post-it notes.&nbsp;The comment regions are
+  initially invisible.</li>
+  <li><b>Event handling</b>&nbsp;&nbsp; In Internet
+    Explorer 4.0 or later browsers, moving the cursor over an anchor toggles
+  visibility of the corresponding comment region. The comment region is
+  positioned near its anchor.</li>
+</ul>
+<p class=T>Word and Excel documents also use scripting for browser detection so that comments can be
+dynamic for Internet Explorer 4.0 or later browsers. Browser
+detection is achieved using a JavaScript function, <strong>msoBrowserCheck( )</strong>,
+stored in the <b>Script</b>  element contained in the head. The function accesses the name and
+version number of the browser by means of the <strong>navigator.appVersion</strong>
+object hierarchy. The function returns <b>True</b> if the browser is
+Internet Explorer 4.0 or later</p>
+<p class=T>If the browser detected is Internet Explorer 4.0 or later, special styles
+are applied to all comment
+elements in the document. The style rules are applied to elements having three
+style classes reserved for Office comments.&nbsp;</p>
+<ul>
+  <li>The <strong>msocomtxt</strong>   style class is reserved for comment regions.
+    The comment regions are formatted to look like post-it notes. They are
+    also made invisible.
+  <li>The <strong>msocomanchor</strong>   style class is reserved for comment anchors.
+    The comment anchors are given a yellow &quot;post-it&quot; note color, which
+    provides a visual clue that they are triggers for comments.
+  <li>The <strong>msocomoff</strong>   style class is reserved for the horizontal rule and
+    the hyperlink anchors that are used to make static comments appear like
+    footnotes in browsers that are not Internet Explorer 4.0 or later. These
+    elements do not display in Internet Explorer 4.0 or later browsers.</li>
+</ul>
+<p class=T>For information about the style attributes that Office uses and their possible values, see the
+<a href="../concepts/ofconStyleTable.htm">Style Attributes</a> 
+topic.</p>
+
+
+</body></html>

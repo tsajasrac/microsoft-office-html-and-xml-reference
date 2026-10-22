@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<title>PivotTable Reports</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1 class="RH1">PivotTable Reports</h1>
+<p class="T">When a range or workbook containing a PivotTable report is saved or
+published to a Web page, the report and its data are specified in the worksheet
+HTML table. The edit time data is stored in XML elements and is not displayed in
+Web browsers. This table and its associated CSS styles are used to display the
+report in a Web browser. For more information about cell and worksheet formatting,
+see the <a href="xlconCellFormatting.htm">Cell
+Formatting</a> and <a href="xlconTables.htm">Worksheets</a> topics.</p>
+<p class="T">A worksheet can contain one or more PivotTable reports. Each report
+is defined by an XML <a href="../Excel/xlelePivotTable.htm"><b>PivotTable</b></a>
+element within the definition of the worksheet.</p>
+<p class="T">When a PivotTable report or a range containing a report is saved as
+a static Web page, only the visible data contained in the selection is saved
+using an HTML table. The PivotTable schema and cache data is not saved, and
+therefore when the page is opened in Microsoft Excel, the report cannot be
+updated and refreshed. Saving a static view of the report is useful, for
+example, if the data is intended for viewing only, and if maintaining small file
+sizes is a concern.</p>
+<p class="T">When a PivotTable report or a range containing a report is
+published using the PivotList component, only the XML elements
+are saved to the Web page. The component allows data to be manipulated when the
+page is viewed in a Web browser.</p>
+<p class="T">The PivotTable cache schema and data are stored using XML elements in a
+separate file. If the cache definition is missing or invalid, a PivotTable
+report that uses the cache must be refreshed before the report is modified.
+If a worksheet containing more than one PivotTable report is saved, the cache
+file contains a cache definition for each report. The PivotTable cache XML
+schema is based on the XML-Data Specification.</p>
+<p class="T">The XML-Data Specification does not allow mixed data types within a
+column schema. For example, a PivotTable based on a worksheet data source can
+have a field containing a mix of dates, numbers, and strings. When the page is
+saved, cache records are not stored, and the PivotTable
+report must be refreshed before the report is modified. If the page is 
+published using the PivotList component, the mixed data is saved as strings.
+A common situation when mixed data types exist is when some entries are blank. To avoid saving mixed data, blank values are saved as nulls.</p>
+
+</body>
+
+</html>

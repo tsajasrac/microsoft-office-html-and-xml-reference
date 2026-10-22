@@ -1,0 +1,51 @@
+<html><head>
+<title>Browser Support</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#ffffff" TEXT="#000000">
+
+<H1 class=RH1>Browser Support</H1>
+
+<p class=T>Microsoft PowerPoint saves to multiple formats to 
+support different browsers. Since PowerPoint 2000 includes&nbsp;Microsoft Internet Explorer 5.0, the 
+most HTML functionality will be achieved with that browser. However, other 
+versions of Internet Explorer and other browsers are supported as much as possible.</p>
+<h4>Simple Browser Support</h4>
+<P class=T>PowerPoint supports Version 3.02 of Internet Explorer and Versions 3 
+and 4 of Netscape Navigator with a simple "publish" mode that displays visual 
+data. Other data that cannot be displayed is preserved for re-reading later.</P>
+<P class=T>PowerPoint uses a three-layer data format to display simple 
+slides:</P>
+<P class=T>1. A background image for the background of the slide. This file is 
+optional and is a flattened image of the background.</P>
+<P class=T>2. HTML 3.2 formatted tags to display information for the slide. To accomplish a 
+2-D layout, tables will be employed. This file is required.</P>
+<P class=T>3. External files that can be overlaid on the background to display images. 
+This can include images, sounds, scripts, and so forth.</P>
+<P class=T>For version 2 browsers, text color, background color and font size 
+will not be preserved and the browser defaults will be used. Fonts will be 
+preserved whenever possible to display non-English characters correctly.</P>
+
+
+<h4>ActiveX Support</h4>
+If the security level of a browser (or the browser itself) does not allow ActiveX controls to be loaded, the following message will be displayed if PowerPoint functionality requires ActiveX:
+<blockquote>"An ActiveX control on this page is not safe.  Your current security settings prohibit running unsafe controls on this page.  As a result, this page may not display as intended."
+</blockquote>  
+<p>ActiveX controls are used to display animations&nbsp;and 
+objects on a master slide. 
+
+<h4>JavaScript Support</h4>
+<P>When the JavaScript support has been turned off or is not available, the 
+following message will be displayed if PowerPoint functionality requires 
+JavaScript:</P>
+<blockquote>
+"This presentation contains graphics that your browser is unable to show. 
+  This presentation was optimized for Microsoft Internet Explorer 3.0 or 
+  Netscape Navigator 3.0 or later. If you are using one of these browsers, 
+  please check that JavaScript is enabled in your browser." 
+</blockquote>
+<p>PowerPoint uses JavaScript for animations in browsers 
+that don't support ActiveX.</p>    
+
+
+</body></html>

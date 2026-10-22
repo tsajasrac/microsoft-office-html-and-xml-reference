@@ -1,0 +1,91 @@
+<html><head>
+<title>XML Element (Microsoft Office)</title>
+<style>@import url(msdn_ie4.css);</style><link disabled rel="stylesheet" href="msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>XML Element (Microsoft Office)</H1>
+<p class=T>Contains Extensible Markup Language (XML) elements.</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>xmlns</B></TD>
+<TD class=T width=66%>The attribute name has a colon and alphabetic letter suffix specifying the XML namespace character.
+More than one <B>xmlns</B> attribute can be specified, and each attribute specifies the XML schema used by the elements of a namespace.</TD>
+</TR>
+</TABLE>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<B>Head</B> (HTML)
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>Microsoft Office:
+<A HREF="ofeleCustomDocumentProperties.htm"><B>CustomDocumentProperties</B></A>,
+<A HREF="ofeleDocumentProperties.htm"><B>DocumentProperties</B></A>,
+<A HREF="ofeleFile.htm"><B>File</B></A>,
+<A HREF="ofeleMainFile.htm"><B>MainFile</B></A>,
+<A HREF="ofeleOfficeDocumentSettings.htm"><B>OfficeDocumentSettings</B></A>
+</p>
+<p class=T>Microsoft Excel:
+<A HREF="../Excel/xleleConditionalFormatting.htm"><B>ConditionalFormatting</B></A>,
+<A HREF="../Excel/xleleDataValidation.htm"><B>DataValidation</B></A>,
+<A HREF="../Excel/xleleExcelName.htm"><B>ExcelName</B></A>,
+<A HREF="../Excel/xleleExcelWorkbook.htm"><B>ExcelWorkbook</B></A>,
+<A HREF="../Excel/xlelePivotCache.htm"><B>PivotCache</B></A>,
+<A HREF="../Excel/xlelePublishObjects.htm"><B>PublishObjects</B></A>,
+<A HREF="../Excel/xleleSorting.htm"><B>Sorting</B></A>,
+<A HREF="../Excel/xleleSupBook.htm"><B>SupBook</B></A>,
+<A HREF="../Excel/xleleWebChart.htm"><B>WebChart</B></A>,
+<A HREF="../Excel/xleleWorksheetOptions.htm"><B>WorksheetOptions</B></A>
+</p>
+<p class=T>Microsoft PowerPoint:
+<A HREF="../PowerPoint/ppelePresentation.htm"><B>Presentation</B></A>
+</p>
+<p class=T>Microsoft Word:
+<A HREF="../Word/wdeleWordDocument.htm"><B>WordDocument</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>XML</B> element contains one or more subelements.
+This element can also be contained in files named cachedata.xml and filelist.xml.</p>
+
+<p class=T>For more information about XML, see the Extensible Markup Language (XML) Recommendation.</p>
+
+<p class=RL><b>Example</b></p>
+<p class=T>This example shows XML document property elements specifying the authors, the company, the version, and when the document was created, printed, and saved.</p>
+<PRE class=C><CODE>
+&gt;&lt;xml&gt;
+ &lt;o:DocumentProperties&gt;
+  &lt;o:Author&gt;Nancy Davolio&lt;/o:Author&gt;
+  &lt;o:LastAuthor&gt;Robert King&lt;/o:LastAuthor&gt;
+  &lt;o:LastPrinted&gt;1999-05-13T01:33:34Z&lt;/o:LastPrinted&gt;
+  &lt;o:Created&gt;1999-05-13T01:32:34Z&lt;/o:Created&gt;
+  &lt;o:LastSaved&gt;1999-05-14T21:52:31Z&lt;/o:LastSaved&gt;
+  &lt;o:Company&gt;Microsoft Corp.&lt;/o:Company&gt;
+  &lt;o:Version&gt;9.2720&lt;/o:Version&gt;
+ &lt;/o:DocumentProperties&gt;
+&lt;/xml&gt;
+</CODE></PRE>
+
+<p class=T>This example shows the contents of the filelist.xml file.
+It lists the main file, print.htm, and its two supporting files, img001.png and filelist.xml.<BR>
+<PRE class=C><CODE>
+ &lt;xml xmlns:o="urn:schemas-microsoft-com:office:office"&gt;
+  &lt;o:MainFile HRef="../print.htm"/&gt;
+  &lt;o:File HRef="img001.png"/&gt;
+  &lt;o:File HRef="filelist.xml"/&gt;
+ &lt;/xml&gt;
+</CODE></PRE></p>
+
+<p class=T>The following example shows the <B>XML</B> element in a cachedata.xml file.
+Five namespaces are specified: dt, rs, s, x, and z.<BR>
+<PRE class=C><CODE>
+&lt;xml xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+ xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema"&gt;
+...
+&lt;/xml&gt;
+</CODE></PRE></p>
+</body></html>

@@ -1,0 +1,1068 @@
+<html>
+
+<head>
+<title>Cell Formatting</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1 class="rh1">Cell Formatting</h1>
+<p class="T">Both HTML and CSS are used to format cells. The default cell
+formatting is specified in a style definition for the <b>TD</b> element. The
+following example shows a style definition for the default cell formatting.</p>
+<pre class="C"><code>TD {mso-style-name: normal; mso-numberformat:general;
+text-align: left; vertical-align: bottom;
+font-family:arial; font-size:10pt; color:black}</code></pre>
+<p class="T">When only a portion of a cell is formatted, the <b>Span</b> element
+is used to contain the formatted text fragment.&nbsp;</p>
+<p class="T">Cell protection and visibility are also specified using styles. The
+<b>mso-protection</b> style attribute is used to specify whether a cell is
+hidden and locked.</p>
+<h4 class="rh4">Built-in and user-defined styles</h4>
+<p class="T">The class name for styles consists of the word <b>style</b>
+followed by a number. Styles used in Microsoft Excel contain the <b>mso-style-name</b>
+style attribute, specifying the name of the style, and the <b>mso-style-id</b>
+style attribute, specifying the style index. The <b>mso-style-id</b> style
+attribute is not used in the user-defined and Normal style definitions.</p>
+<p class="T">The <b>style0</b> style class specifies the formatting for Normal
+style. The following example shows a style definition for the Normal style.</p>
+<pre class="C"><code>.style0 {mso-style-name:normal; mso-numberformat:general;
+text-align: left; vertical-align: bottom;
+font-family:arial; font-size:10pt; color:black}</code></pre>
+<h4 class="RH4">Cell padding</h4>
+<p class="T">In Microsoft Excel, the <b>padding</b> style is used to specify
+padding between the cell text and the side of the cell. For example, the
+following style definition is used to specify the style of a TD element.</p>
+<pre class="C"><code>TD { padding: 1px; mso-ignore: padding; }</code></pre>
+<p class="T">The padding is not specified if the Normal style is used and the
+text is indented, or if the worksheet is published using the Spreadsheet
+component.
+<h4 class="RH4">Formatting related to a specific condition or number format</h4>
+<p class="T">Cells can have formatting that is applied as a result of a
+condition or number format. For example, the color of a number can depend on a
+condition. In this case, a style attribute is applied to the cell in addition to
+the style class. The style specifies the current cell format, while the style
+class specifies the default formatting. The <b>mso-ignore: style</b> style is
+used to specify that the current style results from a condition.</p>
+<p class="T">If a number format is applied, Microsoft Excel uses the number
+format and the cell value to determine the formatting of a style class. Excel
+creates a class name for each unique combination of formatting. The cells in the
+table use the <b>class</b> attribute to specify the style class, and the <b>x:num</b>
+attribute is specified when a number format is applied. The <b>mso-number-format</b>
+style is used to specify the number format string. If a user creates a custom
+number format, the string is specified as the value of the <b>mso-number-format</b>
+style attribute. Only number formats that are used are saved in the workbook.</p>
+<h4 class="RH4">International number formats</h4>
+<p class="T">If an international file is saved with a locale-specific built-in
+number format but opened using a version of Excel that does not have the
+built-in format, the format is treated as a custom number format.</p>
+<p class="T">The <b>mso-displayed-decimal-separator</b> and <b>mso-displayed-thousand-separator</b>
+style attributes of the <b>Table</b> element specify the decimal and thousand
+separators applied in table cells that do not use the <b>x:num</b> attribute.</p>
+<h4 class="RH4">Alignment</h4>
+<p class="T">The following tables show the styles or HTML elements and
+attributes used by Microsoft Excel to specify cell alignment. In general,
+alignment is specified only when it is different from the default alignment, and
+styles applied to the table apply to each row, column, and cell. Styles applied
+to a row only apply to cells of the row, and styles applied to a column only
+apply to cells of the column. Styles applied to rows, columns, or cells take
+precedence over styles applied to the table elements they are contained in.</p>
+<p class="T">For the Spreadsheet component, the <b>text-align</b> and <b>vertical-align</b>
+styles are ignored, and the <b>align</b> and <b>valign</b> attributes of the <b>TD</b>
+element are used instead. Fill, justify, and left are not supported with indent
+alignment styles.</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="20%" align="left"><b>Horizontal alignment</b></td>
+    <td class="I" width="40%" align="left"><b>HTML</b></td>
+    <td class="I" width="40%" align="left"><b>Style</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">General, and the cell contains a
+      numerical value</td>
+    <td class="T" width="40%" align="left"><b>&lt;TD ALIGN=right&gt;</b></td>
+    <td class="T" width="40%" align="left">None. Left alignment is the default
+      alignment in Web browsers. When a cell contains general alignment and the
+      Normal style is not general-aligned, the <b>text-align: auto</b> style is
+      used to specify general alignment.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">General, and the cell contains a
+      non-numerical value</td>
+    <td class="T" width="40%" align="left">None. Left alignment is the default
+      alignment in Web browsers.</td>
+    <td class="T" width="40%" align="left">None. Left alignment is the default
+      alignment in Web browsers. When a cell contains general alignment and the
+      Normal style is not general-aligned, the <b>text-align: auto</b> style is
+      used to specify general alignment.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Left</td>
+    <td class="T" width="40%" align="left">None. Left alignment is the default
+      alignment in Web browsers.</td>
+    <td class="T" width="40%" align="left"><b>text-align: left</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Left with indent</td>
+    <td class="T" width="40%" align="left">None. Left alignment is the default
+      alignment in Web browsers.</td>
+    <td class="T" width="40%" align="left"><b>text-align: left</b>; <b>margin-left:</b>
+      <i>ems</i></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Center</td>
+    <td class="T" width="40%" align="left"><b>&lt;TD ALIGN=center&gt;</b></td>
+    <td class="T" width="40%" align="left"><b>text-align: center</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Right</td>
+    <td class="T" width="40%" align="left"><b>&lt;TD ALIGN=right&gt;</b></td>
+    <td class="T" width="40%" align="left"><b>text-align: right</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Fill</td>
+    <td class="T" width="40%" align="left">None</td>
+    <td class="T" width="40%" align="left"><b>text-align: fill</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Justify</td>
+    <td class="T" width="40%" align="left">None</td>
+    <td class="T" width="40%" align="left"><b>text-align: justify</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Center across selection</td>
+    <td class="T" width="40%" align="left"><b>&lt;TD COLSPAN=</b><i># of cells
+      in selection</i> <b>ALIGN=center&gt;</b></td>
+    <td class="T" width="40%" align="left"><b>colspan</b>; <b>mso-ignore:
+      colspan</b>; <b>text-align: center</b></td>
+  </tr>
+</table>
+<p class="T">If a cell contains a number, the <b>align</b> attribute contains <b>right</b>,
+and no alignment style is specified, then the cell gets general alignment. In
+the following example, the first cell gets general alignment, but the second
+cell is aligned to the right because both the <b>text-align: right</b> and
+alignment style are specified.</p>
+<pre class="C"><code>
+&lt;style&gt;&lt;!--
+TD {font-size:10pt; font-family: arial}
+.XL1 {text-align: right}
+--&gt;&lt;/style&gt;
+.
+.
+.
+&lt;tr&gt;
+ &lt;td align=right&gt;19&lt;/td&gt;
+ &lt;td align=right class=XL1&gt;97&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="20%" align="left"><b>Vertical alignment</b></td>
+    <td class="I" width="40%" align="left"><b>HTML</b></td>
+    <td class="I" width="40%" align="left"><b>Style</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Top</td>
+    <td class="T" width="40%" align="left"><b>&lt;TD VALIGN=top&gt;</b></td>
+    <td class="T" width="40%" align="left"><b>vertical-align: top</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Center</td>
+    <td class="T" width="40%" align="left"><b>&lt;TD VALIGN=middle&gt;</b></td>
+    <td class="T" width="40%" align="left"><b>vertical-align: middle</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Bottom (default)</td>
+    <td class="T" width="40%" align="left"><b>&lt;TD VALIGN=bottom&gt;</b>
+      (specified in each <b>TR</b> element)</td>
+    <td class="T" width="40%" align="left"><b>vertical-align: bottom</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Justify</td>
+    <td class="T" width="40%" align="left">None</td>
+    <td class="T" width="40%" align="left"><b>vertical-align: justify</b></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="20%" align="left"><b>Alignment options</b></td>
+    <td class="I" width="40%" align="left"><b>HTML</b></td>
+    <td class="I" width="40%" align="left"><b>Style</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Wordwrap</td>
+    <td class="T" width="40%" align="left"><b>&lt;TD WIDTH=</b><i># of pixels
+      corresponding to present column width</i><b>&gt;</b></td>
+    <td class="T" width="40%" align="left"><b>white-space:wrap</b>; <b>width:
+      value</b>; <b>white-space: normal</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Shrink to fit</td>
+    <td class="T" width="40%" align="left">None</td>
+    <td class="T" width="40%" align="left"><b>mso-text-control: shrinktofit</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Merge cells horizontally</td>
+    <td class="T" width="40%" align="left"><b>&lt;TD COLSPAN=</b><i># of cells
+      merged</i><b>&gt;</b></td>
+    <td class="T" width="40%" align="left">&nbsp;</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Merge cells vertically</td>
+    <td class="T" width="40%" align="left"><b>&lt;TD ROWSPAN=</b><i># of cells
+      merged</i><b>&gt;</b></td>
+    <td class="T" width="40%" align="left">&nbsp;</td>
+  </tr>
+</table>
+<p class="T">When an HTML file is opened in Microsoft Excel, wordwrap is enabled
+for all imported cells. However, documents created in Excel have wordwrap
+disabled by default. The <b>white-space: wrap</b> style is therefore specified
+for cells that have wordwrap enabled.</p>
+<p class="T">The <b>layout-flow</b> and <b>mso-rotate</b> style attributes are
+used to specify text orientation and rotation.</p>
+<p>The following styles are used to specify additional alignment properties used
+in international documents.</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows" width="542">
+  <tr valign="top">
+    <td class="I" width="168" align="left"><b>Horizontal alignment</b></td>
+    <td class="I" width="342" align="left"><b>Style</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="168" align="left">Distributed</td>
+    <td class="T" width="342" align="left"><b>text-align:distributed</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="168" align="left">Thai justify</td>
+    <td class="T" width="342" align="left"><b>text-align:thai-justify</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="168" align="left">Right with indent</td>
+    <td class="T" width="342" align="left"><b>text-align:right; margin-right:</b><i>ems</i></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows" width="542">
+  <tr valign="top">
+    <td class="I" width="168" align="left"><b>Vertical alignment</b></td>
+    <td class="I" width="342" align="left"><b>Style</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="168" align="left">Distributed</td>
+    <td class="T" width="342" align="left"><b>vertical-align:distributed</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="168" align="left">Thai justify</td>
+    <td class="T" width="342" align="left"><b>vertical-align:thai-justify</b></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows" width="543">
+  <tr valign="top">
+    <td class="I" width="168" align="left"><b>Orientation</b></td>
+    <td class="I" width="343" align="left"><b>Style</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="168" align="left">Vertical text (no rotation)</td>
+    <td class="T" width="343" align="left"><b>layout-flow: vertical</b></td>
+  </tr>
+</table>
+<h4 class="RH4">Auto color</h4>
+<p class="T">A style value other than <b>auto</b> must be used to specify auto
+color. If the string <b>auto</b> is specified as the color, unpredictable
+results can occur in different Web browsers. The following table shows the
+styles specified for different parts of a worksheet when the color is
+&quot;auto.&quot;</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows" width="581">
+  <tr valign="top">
+    <td class="I" width="110" align="left"><b>Object</b></td>
+    <td class="I" width="439" align="left"><b>Styles</b></td>
+    <td class="I" width="439" align="left"><b>Color</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="110" align="left">Background</td>
+    <td class="T" width="439" align="left"><b>mso-background-source:auto </b>(the
+      background color is not specified in the HTML file)</td>
+    <td class="T" width="439" align="left">Not used in Microsoft Excel</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="110" align="left">Border</td>
+    <td class="T" width="439" align="left"><b>border-left:1pt solid windowtext<br>
+      border-right:1pt solid windowtext<br>
+      border-top: 1pt solid windowtext<br>
+      border-bottom: 1pt solid windowtext</b></td>
+    <td class="T" width="439" align="left">Foreground color</td>
+  </tr>
+  <tr>
+    <td class="T" width="110" align="left">Font</td>
+    <td class="T" width="439" align="left"><b>color: windowtext</b></td>
+    <td class="T" width="439" align="left">Auto font color</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="110" align="left">Pattern</td>
+    <td class="T" width="439" align="left"><b>mso-pattern: .25gray windowtext</b></td>
+    <td class="T" width="439" align="left">Foreground color</td>
+  </tr>
+</table>
+<h4 class="RH4">Font formatting</h4>
+
+<!-- *** -->
+<p class="T">The following table lists the basic font properties and how they
+are specified in HTML. Some characteristics, such as bold and italic, use both
+HTML and styles for compatibility with a wide variety of Web browsers. In
+general, cell formatting is specified only when it is different from the default
+formatting.</p>
+<p class="T">For the Spreadsheet component, the strikethrough, subscript, and
+superscript elements and styles are not supported.</p>
+<!-- *** -->
+
+<table border="1" cellpadding="5" cols="5" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="20%" align="left"><b>Font property</b></td>
+    <td class="I" width="30%" align="left"><b>HTML</b></td>
+    <td class="I" width="30%" align="left"><b>Style</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Name</td>
+    <td class="T" width="30%" align="left"><b>&lt;FONT FACE=&quot;</b><i>name of
+      font</i><b>&quot;&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>font-family:&quot;</b><i>name of
+      font</i><b>&quot;</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Italic</td>
+    <td class="T" width="30%" align="left"><b>&lt;I&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>font-style:italic</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Bold</td>
+    <td class="T" width="30%" align="left"><b>&lt;B&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>font-weight:bold</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Regular</td>
+    <td class="T" width="30%" align="left">None</td>
+    <td class="T" width="30%" align="left"><b>font-style:normal</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Size</td>
+    <td class="T" width="30%" align="left"><b>&lt;FONT SIZE=&quot;</b><i>value
+      from 1 to 7</i><b>&quot;&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>font-size:</b><i>ptsize</i></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Single underline</td>
+    <td class="T" width="30%" align="left"><b>&lt;U&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>text-decoration: underline</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Double underline</td>
+    <td class="T" width="30%" align="left"><b>&lt;U&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>text-decoration: underline;
+      mso-text-underline: double</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Single accounting underline</td>
+    <td class="T" width="30%" align="left"><b>&lt;U&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>text-decoration: underline;
+      ms-text-underline: single-accounting</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Double accounting underline</td>
+    <td class="T" width="30%" align="left"><b>&lt;U&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>text-decoration: underline;
+      mso-text-underline: double-accounting</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Color</td>
+    <td class="T" width="30%" align="left"><b>&lt;FONT COLOR=&quot;</b><i>name
+      or rgb value</i><b>&quot;&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>color:</b> <i>name, rgb value, or</i>
+      <b>windowtext</b> <i>for auto color</i></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Normal font</td>
+    <td class="T" width="30%" align="left">None</td>
+    <td class="T" width="30%" align="left"><b>TD {</b><i>formatting from default
+      cell style</i><b>}</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Strikethrough</td>
+    <td class="T" width="30%" align="left"><b>&lt;STRIKE&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>text-decoration:line-through</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Superscript</td>
+    <td class="T" width="30%" align="left"><b>&lt;SUP&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>vertical-align:super</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Subscript</td>
+    <td class="T" width="30%" align="left"><b>&lt;SUB&gt;</b></td>
+    <td class="T" width="30%" align="left"><b>vertical-align:sub</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Outline (Macintosh only)</td>
+    <td class="T" width="30%" align="left">None</td>
+    <td class="T" width="30%" align="left"><b>mso-text-effect: outline</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Shadow (Macintosh only)</td>
+    <td class="T" width="30%" align="left">None</td>
+    <td class="T" width="30%" align="left"><b>text-shadow: auto</b></td>
+  </tr>
+</table>
+<p class="T">The following table lists the color names and corresponding RGB
+values.</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Color name</b></td>
+    <td class="I" width="33%" align="left"><b>Excel color name</b></td>
+    <td class="I" width="33%" align="left"><b>RGB value</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">black</td>
+    <td class="T" width="33%" align="left"><b>auto</b></td>
+    <td class="T" width="33%" align="left">none</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">black</td>
+    <td class="T" width="33%" align="left"><b>black</b></td>
+    <td class="T" width="33%" align="left"><b>#000000</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">blue</td>
+    <td class="T" width="33%" align="left"><b>blue</b></td>
+    <td class="T" width="33%" align="left"><b>#0000ff</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">aqua</td>
+    <td class="T" width="33%" align="left"><b>turquoise</b></td>
+    <td class="T" width="33%" align="left"><b>#00ffff</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">lime</td>
+    <td class="T" width="33%" align="left"><b>bright green</b></td>
+    <td class="T" width="33%" align="left"><b>#00ff00</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">purple</td>
+    <td class="T" width="33%" align="left"><b>pink</b></td>
+    <td class="T" width="33%" align="left"><b>#ff00ff</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">red</td>
+    <td class="T" width="33%" align="left"><b>red</b></td>
+    <td class="T" width="33%" align="left"><b>#ff0000</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">yellow</td>
+    <td class="T" width="33%" align="left"><b>yellow</b></td>
+    <td class="T" width="33%" align="left"><b>#ffff00</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">white</td>
+    <td class="T" width="33%" align="left"><b>white</b></td>
+    <td class="T" width="33%" align="left"><b>#ffffff</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">navy</td>
+    <td class="T" width="33%" align="left"><b>dark blue</b></td>
+    <td class="T" width="33%" align="left"><b>#000080</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">teal</td>
+    <td class="T" width="33%" align="left"><b>teal</b></td>
+    <td class="T" width="33%" align="left"><b>#008080</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">green</td>
+    <td class="T" width="33%" align="left"><b>green</b></td>
+    <td class="T" width="33%" align="left"><b>#008000</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">fuchsia</td>
+    <td class="T" width="33%" align="left"><b>violet</b></td>
+    <td class="T" width="33%" align="left"><b>#800080</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">maroon</td>
+    <td class="T" width="33%" align="left"><b>dark red</b></td>
+    <td class="T" width="33%" align="left"><b>#800000</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">olive</td>
+    <td class="T" width="33%" align="left"><b>dark yellow</b></td>
+    <td class="T" width="33%" align="left"><b>#808000</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">silver</td>
+    <td class="T" width="33%" align="left"><b>gray 25%</b></td>
+    <td class="T" width="33%" align="left"><b>#c0c0c0</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">gray</td>
+    <td class="T" width="33%" align="left"><b>gray 50%</b></td>
+    <td class="T" width="33%" align="left"><b>#808080</b></td>
+  </tr>
+</table>
+<h4 class="RH4">Additional font information</h4>
+<p class="T">The <b>font-family</b> style attribute is used to store additional
+information about the font. The font name is specified in quotation marks
+followed by a comma and the name of the generic font family without quotation
+marks. The <b>mso-font-charset</b> style attribute specifies the font number of
+the Windows character set.</p>
+<p class="T">To reduce file size, formatting that is applied to every cell, such
+as font color and size, is specified in style definitions. However, when the
+font color or size is different from the default color or size and the cell is
+not empty, the <b>Font</b> element is used for compatibility with Web browsers.
+The <b>color</b> attribute of the <b>Font</b> element specifies the font color,
+and the <b>size</b> attribute specifies the font size. The <b>class</b>
+attribute is also specified to preserve the other formatting properties. When
+the Web page is opened in Microsoft Excel and both HTML formatting elements and
+CSS styles are specified, the CSS styles are used to determine the cell
+formatting.</p>
+<h4 class="RH4">Borders</h4>
+<p class="T">The following table lists the style attributes used to specify
+border formatting.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Border</b></td>
+    <td class="I" width="66%" align="left"><b>Style attribute</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">Top</td>
+    <td class="T" width="66%" align="left"><b>border-top</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">Bottom</td>
+    <td class="T" width="66%" align="left"><b>border-bottom</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">Diagonal, top right</td>
+    <td class="T" width="66%" align="left"><b>mso-border-up</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">Left</td>
+    <td class="T" width="66%" align="left"><b>border-left</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">Right</td>
+    <td class="T" width="66%" align="left"><b>border-right</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%" align="left">Diagonal, top left</td>
+    <td class="T" width="66%" align="left"><b>mso-border-down</b></td>
+  </tr>
+</table>
+<p class="T">If the top, bottom, left, and right borders are visible and have
+the same line style and color, the <b>border</b> style attribute is used as a
+shorthand way to specify the border formatting.</p>
+
+<!-- *** -->
+<p class="T">For the Spreadsheet component, the diagonal border styles are not
+supported.</p>
+<!-- *** -->
+
+<h4 class="RH4">Border lines</h4>
+<p class="T">The border style attribute has 3 values: weight, style, and color.</p>
+<table border="1" cellpadding="5" cols="4" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="20%" align="left"><b>Border style</b></td>
+    <td class="I" width="20%" align="left"><b>Thickness (in lines)</b></td>
+    <td class="I" width="40%" align="left"><b>Style</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">None</td>
+    <td class="T" width="20%" align="left">0</td>
+    <td class="T" width="40%" align="left"><b>border: none</b> (default); when
+      no borders are applied, only one value, <b>none</b>, is specified</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Thin</td>
+    <td class="T" width="20%" align="left">1</td>
+    <td class="T" width="40%" align="left"><b>border: .5pt solid</b> <i>rgbcolor</i></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Medium</td>
+    <td class="T" width="20%" align="left">2</td>
+    <td class="T" width="40%" align="left"><b>border: 1pt solid</b> <i>rgbcolor</i></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Dashed</td>
+    <td class="T" width="20%" align="left">1</td>
+    <td class="T" width="40%" align="left"><b>border: .5pt dashed</b> <i>rgbcolor</i></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Dotted</td>
+    <td class="T" width="20%" align="left">1</td>
+    <td class="T" width="40%" align="left"><b>border: .5pt dotted</b> <i>rgbcolor</i></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Thick</td>
+    <td class="T" width="20%" align="left">3</td>
+    <td class="T" width="40%" align="left"><b>border: 1.5pt solid</b> <i>rgbcolor</i></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Double</td>
+    <td class="T" width="20%" align="left">3</td>
+    <td class="T" width="40%" align="left"><b>border: 1.5pt double</b> <i>rgbcolor</i></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Hair</td>
+    <td class="T" width="20%" align="left">1</td>
+    <td class="T" width="40%" align="left"><b>border: .5pt solid</b> <i>rgbcolor</i>;
+      <b>border-style: hairline</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Medium dashed</td>
+    <td class="T" width="20%" align="left">2</td>
+    <td class="T" width="40%" align="left"><b>border: 1pt dashed</b> <i>rgbcolor</i></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Dash-dot</td>
+    <td class="T" width="20%" align="left">1</td>
+    <td class="T" width="40%" align="left"><b>border: .5pt dashed</b> <i>rgbcolor</i>;
+      <b>border-style: dash-dot</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Medium dash-dot</td>
+    <td class="T" width="20%" align="left">2</td>
+    <td class="T" width="40%" align="left"><b>border: 1pt dashed</b> <i>rgbcolor</i>;
+      <b>border-style: dash-dot</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Dash-dot-dot</td>
+    <td class="T" width="20%" align="left">1</td>
+    <td class="T" width="40%" align="left"><b>border: .5 dashed</b> <i>rgbcolor</i>;
+      <b>border-style: dash-dot-dot</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Medium dash-dot-dot</td>
+    <td class="T" width="20%" align="left">2</td>
+    <td class="T" width="40%" align="left"><b>border: 1pt dashed</b> <i>rgbcolor</i>;
+      <b>border-style: dash-dot-dot</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="20%" align="left">Slanted dash dot</td>
+    <td class="T" width="20%" align="left">2</td>
+    <td class="T" width="40%" align="left"><b>border: 1pt dashed</b> <i>rgbcolor</i>;
+      <b>border-style:slanted-dash-dot</b></td>
+  </tr>
+</table>
+<p class="T">When two borders are applied to the same line, the style of the
+last one mentioned is used. In some Web browsers, the border appears twice as
+thick since both are represented. To work around this problem, cell styles are
+specified to hide the borders. In the following example, the top and left
+borders are hidden when they overlap other borders.</p>
+<pre class="C"><code>style='border-top: none; border-left: none'</code></pre>
+<h4 class="RH4">Other border styles</h4>
+<p class="T">The following table lists the border style applied by Microsoft
+Excel when values other than the ones listed in the previous table are
+encountered.</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr>
+    <td class="I" width="33%" align="left"><b>Border style</b></td>
+    <td class="I" width="33%" align="left"><b>Border weight</b></td>
+    <td class="I" width="33%" align="left"><b>Border style applied</b></td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Solid</td>
+    <td class="T" width="33%" align="left"><i>weight </i>&lt; 1pt</td>
+    <td class="T" width="33%" align="left">Thin</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Solid</td>
+    <td class="T" width="33%" align="left">1pt &lt;= <i>weight </i>&lt; 1.5pt</td>
+    <td class="T" width="33%" align="left">Medium</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Solid</td>
+    <td class="T" width="33%" align="left">1.5pt &lt;= <i>weight</i></td>
+    <td class="T" width="33%" align="left">Thick</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Hairline</td>
+    <td class="T" width="33%" align="left">Any</td>
+    <td class="T" width="33%" align="left">Hairline</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Dashed</td>
+    <td class="T" width="33%" align="left"><i>weight </i>&lt; 1pt</td>
+    <td class="T" width="33%" align="left">Dashed</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Dashed</td>
+    <td class="T" width="33%" align="left">1pt &lt;= <i>weight</i></td>
+    <td class="T" width="33%" align="left">Medium dashed</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Double</td>
+    <td class="T" width="33%" align="left">Any</td>
+    <td class="T" width="33%" align="left">Double</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Dotted</td>
+    <td class="T" width="33%" align="left">Any</td>
+    <td class="T" width="33%" align="left">Dotted</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Dash-dot</td>
+    <td class="T" width="33%" align="left"><i>weight </i>&lt; 1pt</td>
+    <td class="T" width="33%" align="left">Dash-dot</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Dash-dot</td>
+    <td class="T" width="33%" align="left">1pt &lt;= <i>weight</i></td>
+    <td class="T" width="33%" align="left">Medium dash-dot</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Dash-dot-dot</td>
+    <td class="T" width="33%" align="left"><i>weight </i>&lt; 1pt</td>
+    <td class="T" width="33%" align="left">Dash-dot-dot</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Dash-dot-dot</td>
+    <td class="T" width="33%" align="left">1pt &lt;= <i>weight</i></td>
+    <td class="T" width="33%" align="left">Medium dash-dot-dot</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Slanted-dash-dot</td>
+    <td class="T" width="33%" align="left">Any</td>
+    <td class="T" width="33%" align="left">Slanted-dash-dot</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Triple</td>
+    <td class="T" width="33%" align="left">Any</td>
+    <td class="T" width="33%" align="left">Double</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Unused style</td>
+    <td class="T" width="33%" align="left">0-1.0pt</td>
+    <td class="T" width="33%" align="left">Thin</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Unused style</td>
+    <td class="T" width="33%" align="left">1.1-1.5pt</td>
+    <td class="T" width="33%" align="left">Medium</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%" align="left">Unused style</td>
+    <td class="T" width="33%" align="left">Over 1.5pt</td>
+    <td class="T" width="33%" align="left">Thick</td>
+  </tr>
+</table>
+<h4 class="rh4">Patterns</h4>
+<p class="T">Tables are saved with a white background by default. The <b>bgcolor</b>
+attribute of the <b>Body</b>, <b>TD</b>, and <b>TR</b> elements specifies the
+color. The background color can be changed, but the color setting is ignored
+when the page is opened in a Microsoft Office program. The <b>background</b>
+style attribute is also used to specify the background color using either the
+color name or hexadecimal RGB value. For <b>TR</b> elements that specify a style
+class with a background style, the color is not always inherited by the <b>TD</b>
+elements contained in the row.</p>
+
+<!-- *** -->
+<p class="T">For the Spreadsheet component, only solid pattern colors are
+supported, and the <b>mso-foreground</b> style is not supported.</p>
+<!-- *** -->
+
+<p class="T">The <b>mso-pattern</b> style attribute has 2 values specifying the
+pattern style and its color. The following table lists the pattern names that
+can be used to specify the pattern style.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr>
+    <td width="33%" height="20"><b>Pattern</b></td>
+    <td width="33%" height="20"><b>Excel pattern name</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Solid (default)</td>
+    <td width="33%" height="19"><b>auto</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">75% gray</td>
+    <td width="33%" height="19"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">50% gray</td>
+    <td width="33%" height="19"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">25% gray</td>
+    <td width="33%" height="19"><b>25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">12.5% gray</td>
+    <td width="33%" height="19"><b>125-gray</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">6.25% gray</td>
+    <td width="33%" height="19"><b>0625-gray</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Horizontal stripe</td>
+    <td width="33%" height="19"><b>horz-stripe</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Vertical stripe</td>
+    <td width="33%" height="19"><b>vert-stripe</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Reverse diagonal stripe</td>
+    <td width="33%" height="19"><b>reverse-diag-stripe</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Diagonal stripe</td>
+    <td width="33%" height="19"><b>diag-stripe</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Diagonal crosshatch</td>
+    <td width="33%" height="19"><b>diag-cross</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Thick diagonal crosshatch</td>
+    <td width="33%" height="19"><b>thick-diag-cross</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Thin horizontal stripe</td>
+    <td width="33%" height="19"><b>thin-horz-stripe</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Thin vertical stripe</td>
+    <td width="33%" height="19"><b>thin-vert-stripe</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Thin reverse diagonal stripe</td>
+    <td width="33%" height="19"><b>thin-reverse-diag-stripe</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Thin diagonal stripe</td>
+    <td width="33%" height="19"><b>thin-diag-stripe</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Thin horizontal crosshatch</td>
+    <td width="33%" height="19"><b>thin-horz-cross</b></td>
+  </tr>
+  <tr>
+    <td width="33%" height="19">Thin diagonal crosshatch</td>
+    <td width="33%" height="19"><b>thin-diag-cross</b></td>
+  </tr>
+</table>
+<p class="T">When a page containing Microsoft Word patterns is opened, the
+patterns are converted to the closest equivalent pattern in Microsoft Excel. The
+following table lists the equivalent patterns.</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr>
+    <td width="50%"><b>Pattern</b></td>
+    <td width="50%"><b>Word pattern name</b></td>
+    <td width="50%"><b>Excel pattern equivalent</b></td>
+  </tr>
+  <tr>
+    <td width="50%">2.5%</td>
+    <td width="50%"><b>25-gray</b></td>
+    <td width="50%"><b>6.25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">5%</td>
+    <td width="50%"><b>5-gray</b></td>
+    <td width="50%"><b>6.25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">7.5%</td>
+    <td width="50%"><b>075-gray</b></td>
+    <td width="50%"><b>6.25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">10%</td>
+    <td width="50%"><b>10-gray</b></td>
+    <td width="50%"><b>12.5-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">12.5%</td>
+    <td width="50%"><b>12.5-gray</b></td>
+    <td width="50%"><b>12.5-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">15%</td>
+    <td width="50%"><b>15-gray</b></td>
+    <td width="50%"><b>12.5-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">17.5%</td>
+    <td width="50%"><b>175-gray</b></td>
+    <td width="50%"><b>12.5-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">20%</td>
+    <td width="50%"><b>20-gray</b></td>
+    <td width="50%"><b>25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">22.5%</td>
+    <td width="50%"><b>225-gray</b></td>
+    <td width="50%"><b>25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">25%</td>
+    <td width="50%"><b>25-gray</b></td>
+    <td width="50%"><b>25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">27.5%</td>
+    <td width="50%"><b>275-gray</b></td>
+    <td width="50%"><b>25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">30%</td>
+    <td width="50%"><b>30-gray</b></td>
+    <td width="50%"><b>25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">32.5%</td>
+    <td width="50%"><b>325-gray</b></td>
+    <td width="50%"><b>25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">35%</td>
+    <td width="50%"><b>35-gray</b></td>
+    <td width="50%"><b>25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">37.5%</td>
+    <td width="50%"><b>37.5-gray</b></td>
+    <td width="50%"><b>25-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">40%</td>
+    <td width="50%"><b>40-gray</b></td>
+    <td width="50%"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">42.5%</td>
+    <td width="50%"><b>425-gray</b></td>
+    <td width="50%"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">45%</td>
+    <td width="50%"><b>45-gray</b></td>
+    <td width="50%"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">47.5%</td>
+    <td width="50%"><b>475-gray</b></td>
+    <td width="50%"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">50%</td>
+    <td width="50%"><b>50-gray</b></td>
+    <td width="50%"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">52.5%</td>
+    <td width="50%"><b>525-gray</b></td>
+    <td width="50%"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">55%</td>
+    <td width="50%"><b>55-gray</b></td>
+    <td width="50%"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">57.5%</td>
+    <td width="50%"><b>575-gray</b></td>
+    <td width="50%"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">60%</td>
+    <td width="50%"><b>60-gray</b></td>
+    <td width="50%"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">62.5%</td>
+    <td width="50%"><b>625-gray</b></td>
+    <td width="50%"><b>50-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">65%</td>
+    <td width="50%"><b>65-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">67.5%</td>
+    <td width="50%"><b>675-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">70%</td>
+    <td width="50%"><b>70-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">72.5%</td>
+    <td width="50%"><b>725-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">75%</td>
+    <td width="50%"><b>75-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">77.5%</td>
+    <td width="50%"><b>775-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">80%</td>
+    <td width="50%"><b>80-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">82.5%</td>
+    <td width="50%"><b>825-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">85%</td>
+    <td width="50%"><b>85-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">87.5%</td>
+    <td width="50%"><b>87.5-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">90%</td>
+    <td width="50%"><b>90-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">92.5%</td>
+    <td width="50%"><b>925-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">95%</td>
+    <td width="50%"><b>95-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">97%</td>
+    <td width="50%"><b>97-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+  <tr>
+    <td width="50%">97.5%</td>
+    <td width="50%"><b>975-gray</b></td>
+    <td width="50%"><b>75-gray</b></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

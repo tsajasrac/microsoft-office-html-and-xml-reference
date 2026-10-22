@@ -1,0 +1,159 @@
+<html><head>
+<title>Borders and Shading</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#ffffff" TEXT="#000000">
+
+<H1 class=RH1>Borders and Shading</H1>
+
+<p class=T>Microsoft Office uses borders and shading to highlight text and graphics. For the most part, these visual effects are saved to HTML using standard HTML cascading style sheets (CSS) formats.
+
+<h4>Word Borders and Shading</h4>
+<p>Microsoft Word allows the application of border and shading 
+properties to text, paragraphs, sections, tables, and table cells. The following 
+CSS style attributes correspond to Word formatting elements. 
+      <TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+        
+        <TR>
+          <TD><B>Attribute</B></TD>
+          <TD><b>Value in Word</b></TD>
+        </TR>
+        
+        <TR>
+          <TD><B>background-color</B></TD>
+          <TD>The shading fill behind the text or art.</TD>
+        </TR>
+        <TR>
+          <TD><B>background</B></TD>
+          <TD>The shading fill of the object.</TD>
+        </TR>
+        
+         <TR>
+          <TD><B>border-style</B></TD>
+          <TD>The style of a border.</TD>
+        </TR>
+        <TR>
+          <TD><B>border-width</B></TD>
+          <TD>The width of a border.</TD>
+        </TR>
+       <TR>
+          <TD><B>border-color</B></TD>
+          <TD>The color of a border.</TD>
+        </TR>
+        <TR>
+          <TD><B>padding</B></TD>
+          <TD>The distance between the text and the border.</TD>
+        </TR>
+       </TABLE>
+<p>To preserve these effects, Word uses the following HTML style attributes. Note that each attribute has multiple values; for example, <b>border-top</b> uses a string to define the values (in order) 
+of width, style, and color.   
+
+    <!--subtable-->
+      <TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+        
+        <TR>
+          <TD><B>Style</B></TD>
+          <TD><STRONG>Word property</STRONG> </TD>
+        </TR>
+        
+         <TR>
+          <TD><B>background</B></TD>
+          <TD>Fill color of the element.</TD>
+        </TR>
+        
+        <TR>
+          <TD><STRONG>border-top</STRONG></TD>
+          <TD>Width, style, and color of the top border.</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>border-left</B></TD>
+          <TD>Width, style, and color of the left border.</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>border-right</B></TD>
+          <TD>Width, style, and color of the right 
+border.</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>border-bottom</B></TD>
+          <TD>Width, style, and color of the bottom 
+  border.</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>border</B></TD>
+          <TD>Width, style, and color of all borders.</TD>
+        </TR>
+        
+       <TR>
+          <TD><B>padding</B></TD>
+          <TD>The distance from each border side to the text 
+      within.</TD>
+        </TR>
+        
+        </TABLE>
+<h4>Padding in Word</h4>   
+<p>Whenever the padding is not 0 (zero) for all four sides, the HTML <b>padding</b> attribute is generated for top, right, bottom, and left values (in that order, which is clockwise).
+<p>Padding is exported in absolute units.
+<p>Padding is stored in the <b>mso-padding-alt </b>attribute if the normal HTML <b>padding</b> attribute does not apply.
+<h4>Border Width, Color, and Style in Word</h4>  
+<p>If all four sides have the same border attributes, then the <b>Border</b> element can be used instead of <b>border-top</b>, <b>border-left</b>, etc.   
+<p>Border widths are in absolute units. Colors are defined by standard HTML colors (<b>red</b>, <b>green</b>, etc.) or color numbers (#<i>nnnnnn</i>). 
+<p>If the border color is set to Auto in the interface, the CSS2 value of <b>windowtext</b> is used.
+<P>Word has 24 border styles; five of them map to standard CSS (none, 	single, double, dotted, and dashed). The rest are mapped using the <b>mso-border-alt</b> attribute. However, if a border style cannot be displayed, it will at least be preserved. For example, the wave border will not be displayed in HTML but it will be displayed when loaded back into Word.
+<p>Shadows are not displayed but are preserved with the <b>mso-border-shadow</b> attribute.
+<p>Shading is displayed in HTML and uses the <b>mso-shading</b> and <b>mso-pattern</b> 
+attributes to generate simple pattern backgrounds. The pattern is not displayed, 
+but the shading is. 
+<P>Word can store a "fifth" border that is between two bordered enclosures. This 
+value is stored in the <STRONG>mso-border-between 
+</STRONG>attribute.
+<p>Page borders (used to define printed borders) are not displayed in a browser but are preserved in the <b>mso-page-border-surround-header</b>, <b>mso-page-border-surround-footer</b>, <b>mso-border-aligned</b>, <b>mso-page-border-display</b>, <b>mso-page-border-offset-from</b>, and <b>mso-page-border-z-order</b> attributes.               
+<p>Borders are generated at three different levels. Values 
+include:
+    <!--subtable-->
+      <TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+        
+        <TR>
+          <TD><B>Level</B></TD>
+          <TD><STRONG>Storage</STRONG></TD>
+        </TR>
+        
+        <TR>
+          <TD><B>text</B></TD>
+          <TD>Borders are stored using the <STRONG>Span 
+      </STRONG>element.</TD>
+        </TR>
+         <TR>
+          <TD><B>paragraph</B></TD>
+          <TD>Borders are stored using the <STRONG>Paragraph 
+      </STRONG>element.</TD>
+        </TR>
+        
+        <TR>
+          <TD><B>document</B></TD>
+          <TD>Borders are stored using the <STRONG>Div 
+      </STRONG>element.</TD>
+        </TR>
+        
+       
+        </TABLE>
+        
+<h4>Tables in Word</h4>
+<p>Tables are exported to HTML tables whenever possible.
+<p>The <STRONG>mso-cellspacing </STRONG>attribute  is used to make the size of the intercell gap persistent.
+<h4>Excel</h4>
+<p>Microsoft Excel uses most of the same attributes and techniques as Word for borders and shading.
+<p>Excel uses the <b>mso-background-source</b> attribute with the UI value of Auto to store backgrounds that have the <b>windowtext</b> 
+value. 
+<h4>PowerPoint</h4>
+<P>  Microsoft PowerPoint doesn't use borders and shading in the same manner 
+as Word and Excel, since it uses VML to generate most of its design 
+elements.</P> 
+
+
+
+</body></html>

@@ -1,0 +1,36 @@
+<html><head>
+<title>Standard and Custom Document Properties</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Standard and Custom Document Properties</H1>
+
+<!-- *** -->
+
+<p class=T>The <b>Properties</b> dialog box contains information about the current
+document. Some of this information is generated automatically, such as the
+creation date; other information is entered by the user in text fields, such as
+the document's subject. Office programs have nearly the same document
+properties, but a few are different between programs. Office stores document
+properties when saving to HTML, even though they do not affect the way the
+document appears in the browser.</p>
+
+
+<p class=T>To store standard document properties in an HTML file, Office uses <a href="../shared/ofeleXML.htm">XML</a> contained in the <b>Head</b> element. The <b><a href="../shared/ofeleDocumentProperties.htm">DocumentProperties</a></b>
+element contains subelements that represent a document's properties. Document
+properties that Office recognizes as blank or default values might not be saved
+in the HTML file, and file system properties are not saved.
+For information about the XML elements used to store document
+properties and examples, see the <b><a href="../shared/ofeleDocumentProperties.htm">DocumentProperties</a></b> element topic.</p>
+
+
+<p class="T">Custom, user-defined properties are either values, or links to document content such as Microsoft Excel range names, Microsoft PowerPoint text ranges, or Microsoft Word bookmarks.
+To store custom document properties in an HTML file, 
+Office uses the <b><a href="../shared/ofeleCustomDocumentProperties.htm">CustomDocumentProperties</a></b>
+element contained in the <b>Head</b> element. For information and examples about how this
+element stores custom document properties, see the <b><a href="../shared/ofeleCustomDocumentProperties.htm">CustomDocumentProperties</a></b>
+element topic.</p>
+
+
+</body></html>

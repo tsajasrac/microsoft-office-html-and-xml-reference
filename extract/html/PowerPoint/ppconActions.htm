@@ -1,0 +1,23 @@
+<html><head>
+<title>Actions</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#ffffff" TEXT="#000000">
+
+<h1 class=RH1>Actions</h1>
+
+<p> Actions are events that result when a mouse is clicked or the pointer passes over an object on a slide. Events can trigger sounds, jumps to another slide, execution of VBA code, or running an outside program. However, for security reasons, the HTML code needed to run VBA code or calling outside programs is not permitted. Information about the macro and/or outside program is preserved. Actions such as moving to another slide are supported and accomplished through JavaScript. Actions are also supported through the <b>OnMouseClick</b> and <b>OnMouseOver</b> tags.
+
+<h4>OnMouseClick</h4>
+<p><STRONG>OnMouseClick </STRONG>is a tag specific to 
+Microsoft PowerPoint. A typical example is presented below; when the object is clicked, the browser window displays to the next slide and plays the applause sound.<p>
+<PRE><code>&lt;p:onmouseclick jump="nextSlide" flag="1"&gt;
+&lt;p:sound id="1" builtinid="105" name="camera.wav" href="sound001.wav"/&gt;
+&lt;/p:onmouseclick&gt;</code></PRE>
+
+
+<h4>OnMouseOver</h4>
+<p><STRONG>OnMouseOver </STRONG>uses the standard HTML tag 
+to create events that are triggered when a mouse pointer passes over an object. 
+This tag can be used to jump to other slides or play sounds.</p>                                 
+</body></html>

@@ -1,0 +1,41 @@
+<html><head>
+<title>Hyperlinks</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Hyperlinks</H1>
+
+<p class=T>Office programs use the standard <b>A</b> element and its attributes
+to save hyperlinks to HTML.</p>
+
+<p class=T>Word converts the HYPERLINK field to an HTML hyperlink and bookmarks
+to named anchor <code>&lt;a name=&gt;</code>   tags.</p>
+
+<p class=T>Excel stores hyperlinks as a format stored per
+range of cells or as an Excel formula. Excel saves both types of hyperlinks as HTML using
+a standard <b>A</b> element with an <b>href</b> attribute and it saves the formula separately. For more information about how Excel
+saves formulas to HTML, see the Excel <a href="../Excel/xlconFormulas.htm">Formulas and
+Data Types</a> topic. For hyperlinks to a specific range of cells on
+the worksheet, Excel uses the <code>&lt;a name=&gt;</code>  tag to identify the
+named cell range.</p>
+<p class=T>PowerPoint primarily uses VML to save presentations to HTML but it
+does use the <b>A</b> element for hyperlinks. For more information, see the
+PowerPoint topics.</p>
+<h4 class=RH4>Overlapping Bookmarks</h4>
+<p class=T>In Word, it is possible to have overlapping bookmarks. Word saves these
+bookmarks to HTML using the <b>A </b>element, but nesting this element results
+in misinterpreted HTML since the browser assumes the <code>&lt;/a&gt;</code> tag
+closes the previous <code>&lt;a name=&gt;</code> tag. Word uses the <b> mso-bookmark</b>
+style attribute to identify bookmarks that continue around nested bookmarks. The following
+example shows Word HTML output where bookmark1 spans the paragraph but bookmark2
+only spans the second sentence in the paragraph.</p>
+<pre><code>&lt;a name=bookmark1&gt;Bookmark 1 starts here and continues 
+to the&nbsp;end of this paragraph.&lt;/a&gt;
+&lt;a name=bookmark2&gt;&lt;span style='mso-bookmark:bookmark1'&gt;Bookmark 2 starts here&nbsp;
+but ends at the end of this sentence.&lt;/span&gt;&lt;/a&gt;
+&lt;span style='mso-bookmark:bookmark1'&gt; Bookmark 1 continues&nbsp;
+to the end of this paragraph.&lt;/span&gt;</code></pre>
+
+
+</body></html>

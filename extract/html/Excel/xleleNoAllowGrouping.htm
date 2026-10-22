@@ -1,0 +1,23 @@
+<html><head>
+<title>NoAllowGrouping Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>NoAllowGrouping Element (Microsoft Excel)</H1>
+<p class=T>Specifies whether the user is able to group column or row fields on a PivotList component.
+</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xlelePivotTable.htm"><B>PivotTable</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>If <CODE>&lt;x:NoAllowGrouping/&gt;</CODE> is specified, pivoting is disabled. This means that membership in the row and column areas is fixed; you cannot drag a field to or from these areas. All commands related to grouping are disabled, including the following commands: 
+<ul>
+<li><B>Move to Row Area</B>
+<li><B>Move to Column Area</B>
+<li><B>Move to Detail</B>, if the selection is a field in the row or column area.
+The report layout is frozen, but the user can still filter the data.
+</ul>
+The grouping buttons are disabled but the user can still group fields programmatically.
+</p>
+</body></html>

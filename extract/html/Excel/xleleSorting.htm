@@ -1,0 +1,49 @@
+<html><head>
+<title>Sorting Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Sorting Element (Microsoft Excel)</H1>
+<p class=T>Contains the sorting specifications and sort options used in the most recent sort.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="../Shared/ofeleXML.htm"><B>XML</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleAlternateMethod.htm"><B>AlternateMethod</B></A>,
+<A HREF="xleleCaseSensitive.htm"><B>CaseSensitive</B></A>,
+<A HREF="xleleDescending.htm"><B>Descending</B></A>,
+<A HREF="xleleLeftToRight.htm"><B>LeftToRight</B></A>,
+<A HREF="xleleOrder.htm"><B>Order</B></A>,
+<A HREF="xleleSort.htm"><B>Sort</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>One to three <B>Sort</B> subelements are required, but all other subelements are optional.
+If a range is sorted in descending order, then the <B>Descending</B> element is specified immediately after the corresponding <B>Sort</B> element.</p>
+<p class=RL><A NAME="Example"><b>Examples</b></A></p>
+<p class=T>This example sorts a range by the ZIP Code column in ascending order, followed by the Currency column in descending order, and then by the Name column in ascending order.
+The sort is case-sensitive and the data is sorted left-to-right by column.
+The normal sorting method is used.<BR>
+<PRE class=C><CODE>
+ &lt;x:Sorting&gt;
+  &lt;x:Sort&gt;ZIP Code&lt;/x:Sort&gt;
+  &lt;x:Sort&gt;Currency&lt;/x:Sort&gt;
+  &lt;x:Descending/&gt;
+  &lt;x:Sort&gt;Name&lt;/x:Sort&gt;
+  &lt;x:LeftToRight/&gt;
+  &lt;x:CaseSensitive/&gt;
+ &lt;/x:Sorting&gt;
+</CODE></PRE></p>
+<p class=T>This example sorts a range by the Month column in ascending order according to the third built-in list.
+The sort is not case-sensitive and the data is sorted left-to-right by column.
+The alternate sorting method is used.<BR>
+<PRE class=C><CODE>
+ &lt;x:Sorting&gt;
+  &lt;x:Sort&gt;Month&lt;/x:Sort&gt;
+  &lt;x:LeftToRight/&gt;
+  &lt;x:AlternateMethod/&gt;
+  &lt;x:Order&gt;3&lt;/x:Order&gt;
+ &lt;/x:Sorting&gt;
+</CODE></PRE></p>
+</body></html>

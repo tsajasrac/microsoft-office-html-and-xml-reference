@@ -1,0 +1,22 @@
+<html><head>
+<title>Bullets and Numbered Lists</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#ffffff" TEXT="#000000">
+
+<H1 class=RH1>Bullets and Numbered Lists</H1>
+<p>The rich bulleted and numbered lists of Microsoft Word 
+and Microsoft PowerPoint are not handled easily by HTML. PowerPoint, for 
+example, even provides bullets that are images. However, the <STRONG>@list 
+</STRONG>                            style aids in the conversion of complex lists to HTML.
+
+<h4>Bullets</h4>
+<P>If the <STRONG>@list </STRONG>style is supported, the 
+<STRONG>mso-list </STRONG>        attribute is used to store list information. The bullet is created with the Symbol font, and fixed spaces of a specified font are used to create the space between the bullet and the text.
+
+<h4>Numbered Lists</h4>
+<P>If the <STRONG>@list </STRONG>   style is supported, the <b>mso-list</b> attribute is used to store list information. The appropriate number is written out and fixed spaces of a specified font are used to create the space between the bullet and the text.
+
+<h4>PowerPoint Bulleted Lists</h4>
+<p>PowerPoint can create bulleted lists using images for bullets. If PowerPoint is installed on the machine, the <b>mso-special-format </b>and <b>mso-bullet-image</b> attributes are used; otherwise, a simple <b>Img</b> element is used.</p>   
+</body></html>

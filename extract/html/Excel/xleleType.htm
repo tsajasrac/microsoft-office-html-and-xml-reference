@@ -1,0 +1,155 @@
+<html><head>
+<title>Type Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Type Element (Microsoft Excel)</H1>
+<p class=T>Specifies the type of axis scaling, chart, data source, 3-D shape, or trendline, the data validation constraints on data entered into a range, or the position of legend entries.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleAxis.htm"><B>Axis</B></A>,
+<A HREF="xleleDataSource.htm"><B>DataSource</B></A>,
+<A HREF="xleleDataValidation.htm"><B>DataValidation</B></A>,
+<A HREF="xleleGraph.htm"><B>Graph</B></A>,
+<A HREF="xleleLegend.htm"><B>Legend</B></A>,
+<A HREF="xleleShape.htm"><B>Shape</B></A>,
+<A HREF="xleleTrendline.htm"><B>Trendline</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>For data validation, the constraint is some characteristic of the data,
+such as the data type or the length.
+This element contains one of the following string constants: <B>Custom</B>, <B>Date</B>, <B>Decimal</B>, <B>List</B>, <B>TextLength</B>, <B>Time</B>, or <B>Whole</B>.
+The default value is <B>AnyValue</B>.</p>
+<p class=T>For an axis, this element contains one of the following string constants specifying the scaling: <B>Automatic</B>, <B>Category</B>, <B>Series</B>, <B>Value</B>, or <B>TimeScale</B>.</p>
+<p class=T>For a chart data source, this element contains one of the following string constants.</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Constant</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=LMC><B>OSP</B></TD>
+<TD class=LMC>The data source is a Microsoft Office 2000 Web component on the same Web page.</TD>
+</TR>
+<TR valign=top>
+<TD class=LMC><B>PivotList</B></TD>
+<TD class=LMC>The data source is a PivotList component on the same Web page.</TD>
+</TR>
+<TR valign=top>
+<TD class=LMC><B>RowSet</B></TD>
+<TD class=LMC>The data source is a Data Source Control component or other rowset provider on the same Web page.</TD>
+</TR>
+</TABLE>
+<p class=T>The <A HREF="xleleConnection.htm"><B>Connection</B></A> element contains the name of the component.</p>
+<p class=T>For a legend, this element contains one of the following string constants specifying the position of legend entries.
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Constant</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=LMC><B>Automatic</B></TD>
+<TD class=LMC>Microsoft Excel or the Chart component determines the optimal position of entries.</TD>
+</TR>
+<TR valign=top>
+<TD class=LMC><B>Horizontal</B></TD>
+<TD class=LMC>Entries are arranged in columns.</TD>
+</TR>
+<TR valign=top>
+<TD class=LMC><B>Vertical</B></TD>
+<TD class=LMC>Entries are arranged in a single column.</TD>
+</TR>
+</TABLE>
+</p>
+<p class=T>For a shape, this element contains one of the following string constants specifying the type of 3-D shape: <B>Cube</B>, <B>Cone</B>, <B>Cone Frustum</B>, <B>Cylinder</B>, <B>Pyramid</B>, or <B>Pyramid Frustum</B>.</p>
+<p class=T>For a trendline, this element contains one of the following string constants specifying the type of trendline: <B>Exponential</B>, <B>Linear</B>, <B>Logarithmic</B>, <B>MovingAverage</B>, <B>Polynomial</B>, or <B>Power</B>.</p>
+<p class=T>For a <B>Graph</B> element, the <B>Type</B> and <A HREF="xleleSubType.htm"><B>SubType</B></A> subelements each contain values for string constants from the following table specifying the type of chart.
+In the SubType column of the following table, constants within square brackets ([<B></B>]) are optional, and the vertical bar (|) indicates a logical OR relationship.
+For example, "Standard [Marker | 3D]" means that the SubType element can contain <B>Standard</B>, <B>Standard Marker</B>, or <B>Standard 3D</B>.
+Attributes can also be specified separately.
+To indicate subtype attributes individually, such as "Stacked" and "3D", use a <B>SubType</B> element containing the string constant <B>Stacked</B> followed by another <B>SubType</B> element containing the string constant <B>3D</B>.
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+  <TR valign=top>
+    <TD class=I width=33% align=left><B>Type</B></TD>
+    <TD class=I width=66% align=left><B>SubType</B></TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Column</B></TD>
+    <TD class=LMC><B>Clustered</B> [<B>3D</B>] [<B>Cylinder</B>]
+    [<B>Pyramid</B>] [<B>Cone</B>]<br>
+    <B>Stacked</B> [<B>3D</B>] [<B>Cylinder</B>] [<B>Pyramid</B>] [<B>Cone</B>]<br>
+    <B>100%</B> <B>Stacked</B> [<B>3D</B>] [<B>Cylinder</B>] [<B>Pyramid</B>] [<B>Cone</B>]<br>
+    <B>3D</B> [<B>Cylinder</B>] [<B>Pyramid</B>] [<B>Cone</B>]</TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Bar</B></TD>
+    <TD class=LMC><B>Clustered</B> [<B>3D</B>] [<B>Cylinder</B>]
+    [<B>Pyramid</B>] [<B>Cone</B>]<br>
+    <B>Stacked</B> [<B>3D</B>] [<B>Cylinder</B>] [<B>Pyramid</B>] [<B>Cone</B>]<br>
+    <B>100%</B> <B>Stacked</B> [<B>3D</B>] [<B>Cylinder</B>] [<B>Pyramid</B>] [<B>Cone</B>]<br>
+    <B>3D</B> [<B>Cylinder</B>] [<B>Pyramid</B>] [<B>Cone</B>]</TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Line</B></TD>
+    <TD class=LMC><B>Standard</B> [<B>Marker</B> | <B>3D</B>] [<B>Smooth</B>] [<B>Rotated</B>]<br>
+    <B>Stacked</B> [<B>Marker</B> | <B>3D</B>] [<B>Smooth</B>] [<B>Rotated</B>]<br>
+    <B>100%</B> <B>Stacked</B> [<B>Marker</B> | <B>3D</B>] [<B>Smooth</B>] [<B>Rotated</B>]<br>
+    <B>3D</B></TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Pie</B></TD>
+    <TD class=LMC><B>Standard</B> [<B>3D</B>]<br>
+    <B>Exploded</B> [<B>3D</B>]<br>
+    <B>of Bar</B><br>
+    <B>of Pie</B></TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Scatter</B></TD>
+    <TD class=LMC><B>Marker</B> [<B>Rotated</B>]<br>
+    <B>Line</B> [<B>Smooth</B>] [<B>Marker</B>] [<B>Rotated</B>]<br>
+    <B>Filled</B> [<B>Rotated</B>]</TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Area</B></TD>
+    <TD class=LMC><B>Standard</B> [<B>3D</B>] [<B>Rotated</B>]<br>
+    <B>Stacked</B> [<B>3D</B>] [<B>Rotated</B>]<br>
+    <B>100%</B> <B>Stacked</B> [<B>3D</B>] [<B>Rotated</B>]</TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Doughnut</B></TD>
+    <TD class=LMC><B>Standard</B><br>
+    <B>Exploded</B></TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Radar</B></TD>
+    <TD class=LMC><B>Standard</B> [<B>Smooth</B>] [<B>Marker</B>] [<B>Rotated</B>]<br>
+    <B>Filled</B> [<B>Rotated</B>]</TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Surface</B></TD>
+    <TD class=LMC><B>Contour</B> [<B>Wireframe</B>]<br>
+    <B>3D</B> [<B>Wireframe</B>]</TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Bubble</B></TD>
+    <td valign="top" width="50%"><B>Standard</B> [<B>3D</B>] [<B>Rotated</B>]<br>
+    <B>Line</B> [<B>Rotated</B>]</font></B></TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Stock</B></TD>
+    <TD class=LMC><B>High-Low-Close</B> [<B>Rotated</B>]<br>
+    <B>Open-High-Low-Close</B> [<B>Rotated</B>]</TD>
+  </TR>
+  <TR valign=top>
+    <TD class=LMC><B>Polar</B></TD>
+    <TD class=LMC><B>Marker</B> [<B>Line</B>] [<B>Smooth</B>]</TD>
+  </TR>
+</TABLE>
+<p class=T>Microsoft Excel does not load or save charts of type <B>Stock</B>, but they can be saved by the Chart component.
+In Excel, you can choose whether these charts appear as line or line and column graphs.</p>
+<p class=T>The order of the <B>Axis</B> subelements determines the primary and secondary axes.
+The first <B>Axis</B> subelement whose <B>ScaleID</B> subelement contains the same identifier as the <A HREF="xleleScaleID.htm"><B>ScaleID</B></A> subelement of their parent <B>Graph</B> element is used as the primary axis.
+The axes used by the first graph to use a primary axis become the primary axes.</p>
+<p class=RL><A NAME="Example"><b>Examples</b></A></p>
+<p class=T>See the examples in the <A HREF="xleleDataValidation.htm#Example"><B>DataValidation</B></A> and <A HREF="xleleWebChart.htm#Example"><B>WebChart</B></A> element topics.</p>
+</body></html>

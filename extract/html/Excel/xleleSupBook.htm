@@ -1,0 +1,91 @@
+<html><head>
+<title>SupBook Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>SupBook Element (Microsoft Excel)</H1>
+<p class=T>Contains information about references and links to other workbooks and data sources.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="../Shared/ofeleXML.htm"><B>XML</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleExternName.htm"><B>ExternName</B></A>,
+<A HREF="xlelePath.htm"><B>Path</B></A>,
+<A HREF="xleleSheetName.htm"><B>SheetName</B></A>,
+<A HREF="xleleXct.htm"><B>Xct</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>All subelements are required.
+More than one <B>ExternName</B>, <B>SheetName</B>, and <B>Xct</B> subelement can be specified.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example shows a description of data from a workbook called Book2.xls.
+There are three worksheets in the workbook called Sheet1, Sheet2, and Sheet3.
+Sheet1 has 4 cells that are referenced, but the other two worksheets do not contain referenced data.
+The cell at row 0, column 0 ("A1") contains the number 1.
+The cell at row 0, column 3 ("D1") contains the text string "My Chart".
+The cell at row 1, column 5 ("F2") contains the Boolean value <B>TRUE</B>.
+The cell at row 3, column 0 ("A4") contains the number 4.
+</p>
+<PRE class=C><CODE>
+ &lt;x:SupBook&gt;
+  &lt;x:Path&gt;Book2.xls&lt;/x:Path&gt;
+  &lt;x:SheetName&gt;Sheet1&lt;/x:SheetName&gt;
+  &lt;x:SheetName&gt;Sheet2&lt;/x:SheetName&gt;
+  &lt;x:SheetName&gt;Sheet3&lt;/x:SheetName&gt;
+  &lt;x:Xct&gt;
+   &lt;x:Count&gt;4&lt;/x:Count&gt;
+   &lt;x:SheetIndex&gt;0&lt;/x:SheetIndex&gt;
+   &lt;x:Crn&gt;
+    &lt;x:Row&gt;0&lt;/x:Row&gt;
+    &lt;x:ColFirst&gt;0&lt;/x:ColFirst&gt;
+    &lt;x:ColLast&gt;0&lt;/x:ColLast&gt;
+    &lt;x:Number&gt;1&lt;/x:Number&gt;
+   &lt;/x:Crn&gt;
+   &lt;x:Crn&gt;
+    &lt;x:Row&gt;0&lt;/x:Row&gt;
+    &lt;x:ColFirst&gt;3&lt;/x:ColFirst&gt;
+    &lt;x:ColLast&gt;3&lt;/x:ColLast&gt;
+    &lt;x:Text&gt;My Chart&lt;/x:Text&gt;
+   &lt;/x:Crn&gt;
+   &lt;x:Crn&gt;
+    &lt;x:Row&gt;1&lt;/x:Row&gt;
+    &lt;x:ColFirst&gt;5&lt;/x:ColFirst&gt;
+    &lt;x:ColLast&gt;5&lt;/x:ColLast&gt;
+    &lt;x:Boolean&gt;TRUE&lt;/x:Boolean&gt;
+   &lt;/x:Crn&gt;
+   &lt;x:Crn&gt;
+    &lt;x:Row&gt;3&lt;/x:Row&gt;
+    &lt;x:ColFirst&gt;0&lt;/x:ColFirst&gt;
+    &lt;x:ColLast&gt;0&lt;/x:ColLast&gt;
+    &lt;x:Number&gt;4&lt;/x:Number&gt;
+   &lt;/x:Crn&gt;
+  &lt;/x:Xct&gt;
+  &lt;x:Xct&gt;
+   &lt;x:Count&gt;0&lt;/x:Count&gt;
+   &lt;x:SheetIndex&gt;1&lt;/x:SheetIndex&gt;
+  &lt;/x:Xct&gt;
+  &lt;x:Xct&gt;
+   &lt;x:Count&gt;0&lt;/x:Count&gt;
+   &lt;x:SheetIndex&gt;2&lt;/x:SheetIndex&gt;
+  &lt;/x:Xct&gt;
+ &lt;/x:SupBook&gt;
+</CODE></PRE>
+<p class=T>This example shows a description of a linked workbook called Book4.xls containing a Microsoft Excel 97 worksheet.
+The workbook is in the C:\My Documents folder.
+The link is an automatic OLE link and the data is in clipboard format 2.
+</p>
+<PRE class=C><CODE>
+ &lt;x:SupBook&gt;
+  &lt;x:Path&gt;Excel.Sheet.8|C:\My Documents\Book4.xls&lt;/x:Path&gt;
+  &lt;x:ExternName&gt;
+   &lt;x:Name&gt;'&lt;/x:Name&gt;
+   &lt;x:WantAdvise/&gt;
+   &lt;x:WantPict/&gt;
+   &lt;x:Cf&gt;2&lt;/x:Cf&gt;
+   &lt;x:OleLink/&gt;
+  &lt;/x:ExternName&gt;
+ &lt;/x:SupBook&gt;
+</CODE></PRE>
+</body></html>

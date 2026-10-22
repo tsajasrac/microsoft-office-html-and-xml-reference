@@ -1,0 +1,25 @@
+<html><head>
+<title>CurrentPage Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>CurrentPage Element (Microsoft Excel)</H1>
+<p class=T>Specifies the currently displayed filter value or page field item.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A>,
+<A HREF="xlelePLPivotField.htm"><B>PLPivotField</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<!-- *** -->
+<p class=T>For a PivotList component based on an OLAP data source, this element contains the string filter value or the unique name of the filter member.
+If the <B>CurrentPage</B> element is not used and page items exist, the default string value is <B>All</B>, specifying all page items.</p>
+<!-- *** -->
+<p class=T>For a PivotTable report on a worksheet, the <B>CurrentPage</B> element contains a text string item name or the string constant <B>All</B>.
+This element can be specified only when the <B>PivotField</B> element describes a page field.
+If the <B>CurrentPage</B> element is not specified, the default page setting is <B>All</B>, which means all page field items are displayed.</p>
+<p class=T>For OLAP-based PivotTable reports, the name is the unique item name contained in the <A HREF="xleleSourceName.htm"><B>SourceName</B></A> subelement of the <A HREF="xlelePivotItem.htm"><B>PivotItem</B></A> element describing the referenced item.</p>
+<p class=T>For all other data sources, the same name is contained in both the <B>CurrentPage</B> element and the <A HREF="xleleName.htm"><B>Name</B></A> subelement of the <B>PivotItem</B> element describing the referenced item.
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xlelePivotTable.htm#Example"><B>PivotTable</B></A> element topic.</p>
+</body></html>

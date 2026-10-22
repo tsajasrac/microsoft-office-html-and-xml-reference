@@ -1,0 +1,37 @@
+<html><head>
+<title>Master Documents</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Master Documents</H1>
+
+<p>In Microsoft Word, a master document contains hyperlinks to its subdocuments. In a Word
+HTML file, this behavior is similarly displayed in the browser.</p>
+
+<p>When saving as HTML, Word stores each subdocument hyperlink in the master
+document file. Word differentiates the subdocument hyperlinks from the master document data by means of <b>Div</b>
+ elements, which are similar to those used for <a href="wdconSectionBreaks.htm">section
+breaks</a>. Master documents might contain text of their own, which is also contained in <b>Div</b> elements.
+The syntax of these <b>Div</b> elements follows, where <i>n</i> is an integer
+representing each successive
+subdocument or part of the master document text.</p>
+<p><b>&lt;div class=Section</b><i>n</i><b>&gt;</b></p>
+
+
+<p>Word uses the <b>A</b> element with the <b>href</b> attribute to link the master
+document to its subdocuments. Word always exports the <b>href</b> path as a
+relative link and uses the <b>target="_BLANK"</b> attribute-value pair to make
+the subdocument open in a separate window. The hyperlink text is the absolute
+path to the subdocument, and Word places it in a <b>Span</b> element contained
+in the <b>A</b> element.</p>
+
+<p>If the <b>Expand Subdocuments</b> button is selected, Word displays the full
+text of each subdocument within the master document, instead of a
+hyperlink to the subdocument. If <b>Expand Subdocuments</b> is selected when saving
+as HTML, Word stores each subdocument and its data in one master
+document file. Word stores each subdocument's data in the master document using <b>Div</b>
+elements as described above.</p>
+
+
+</body></html>

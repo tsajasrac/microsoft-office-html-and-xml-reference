@@ -1,0 +1,24 @@
+<html><head>
+<title>ParentField Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>ParentField Element (Microsoft Excel)</H1>
+<p class=T>Contains the name of a parent field.
+For a PivotList component, specifies the largest grouping field of an automatic date field set.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A>,
+<A HREF="xlelePLTotal.htm"><B>PLTotal</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The name is a text string.</p>
+<!-- *** -->
+<p class=T>For a PivotList component, the <B>ParentField</B> element can be specified in a <B>PivotField</B> element that represents the smallest grouping field in an automatic date field set. If the field represents a total, the <B>ParentField</B> element contains the name of the field being totaled.</p>
+<!-- *** -->
+<p class=T>For a PivotTable report on a worksheet, the <B>ParentField</B> element is valid only when the <B>PivotField</B> element describes a data field or grouped field.</p>
+<p class=T>For OLAP-based PivotTable reports, the name is the unique field name contained in the <A HREF="xleleSourceName.htm"><B>SourceName</B></A> subelement of the <B>PivotField</B> element describing the parent field.</p>
+<p class=T>For all other data sources, the name is the displayed name contained in the <A HREF="xleleName.htm"><B>Name</B></A> subelement of the <B>PivotField</B> element describing the parent field.
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xlelePivotTable.htm#Example"><B>PivotTable</B></A> element topic.</p>
+</body></html>

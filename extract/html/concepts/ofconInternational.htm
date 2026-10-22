@@ -1,0 +1,786 @@
+<html>
+
+<head>
+<title>International Documents</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1 class="RH1">International Documents</h1>
+<p class="T">Web pages created in East Asian and right-to-left language versions
+of Microsoft Office use language-specific cascading style sheet (CSS) styles to
+format text. Settings and editing options are also stored in the document using
+language-specific XML elements. The following sections describe the styles and
+elements used in international documents.</p>
+<h4 class="RH4">Kinsoku character sets</h4>
+<p class="T">A <b>Kinsoku</b> character set allows custom and built-in sets of
+characters to be defined as non-breaking when laying out lines of text in
+Microsoft Word. The character set can be specified for a document and different
+documents can use different character sets.</p>
+<p class="T">Different Kinsoku character sets can be specified for different
+languages. For each language, there are two groups of Kinsoku characters. The
+&quot;leading&quot; Kinsoku contains the characters that cannot begin a new line
+of text (a line break cannot occur immediately before it), and the
+&quot;trailing&quot; Kinsoku contains the characters that cannot end a line of
+text (a line break cannot occur immediately after it).</p>
+<p class="T">Within each of these groups, there are three sets of characters.
+The first two are called <b>Level 1</b> and <b>Level 2</b> and are predefined in
+Microsoft Word. The third one, called <b>Custom</b>, is user-defined. Different
+Kinsoku levels can be associated with different languages. <b>Level 1</b> is the
+default, and <b>Level 2</b> Kinsoku is valid only in Japanese. The level is
+specified using the <b>line-break</b> style attribute. <b>Level 1</b> is used if
+the definition is not specified or if <b>normal</b> is specified, and <b>Level 2</b>
+is used if <b>strict</b> is specified.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the Kinsoku <b>Level 2</b> style is defined for
+Japanese.</p>
+<pre class="C"><code>
+&lt;style&gt;&lt;!--
+BODY { line-break: strict }
+--&gt;&lt;/style&gt;
+</code></pre>
+<p class="T">The <b>Custom</b> Kinsoku character set is specified using the <b>Lang</b>
+attribute of the XML <a href="../Word/wdeleNoLineBreaksAfter.htm"><b>NoLineBreaksAfter</b></a>
+and <a href="../Word/wdeleNoLineBreaksBefore.htm"><b>NoLineBreaksBefore</b></a>
+elements. The <b>Lang</b> attribute contains the ISO language identifier of the
+language for which the character set is specified.
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, a <b>Custom</b> Kinsoku character set is specified
+for Chinese. The characters &quot;abc&quot; specify the leading Kinsoku and
+&quot;fg&quot; specifies the trailing Kinsoku.</p>
+<pre class="C"><code>
+&lt;NoLineBreaksAfter LANG=&quot;ZH-CN&quot;&gt;fg&lt;/NoLineBreaksAfter&gt;
+&lt;NoLineBreaksBefore LANG=&quot;ZH-CN&quot;&gt;abc&lt;/NoLineBreaksBefore&gt;
+</code></pre>
+<h4 class="RH4">Gutter position</h4>
+<p class="T">In Microsoft Word, the document page gutter can be specified to
+appear either vertically along one side of the page or horizontally along the
+top edge of the page. The <b>mso-gutter-position</b> style attribute specifies
+the gutter position. If the style is not specified, the default position is <b>side</b>.
+The style can be specified in the same <b>@page</b> definition as other
+print-related settings for the document.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">This example shows the gutter position set to <b>top</b>.</p>
+<pre class="C"><code>
+@page { mso-gutter-position: top; }
+</code></pre>
+<h4 class="RH4">Reading order</h4>
+<p class="T">In Microsoft Word, the reading order can be specified for
+individual sections. The <b>dir</b> attribute of the <b>Div</b> HTML element is
+used to specify the order. The <b>dir</b> attribute contains one of the
+following string constants: <b>ltr</b> specifying left to right, or <b>rtl</b>
+specifying right to left. If the attribute is not specified, the default
+direction is <b>ltr</b>.
+<p class="T">&nbsp;
+<p class="RL"><b>Example</b></p>
+<p class="T">The following example specifies that the section is read right to
+left.</p>
+<pre class="C"><code>
+&lt;Div dir=&quot;rtl&quot;&gt;...&lt;/Div&gt;
+</code></pre>
+<p class="T">Note that in HTML, the <b>dir</b> attribute setting is inherited by
+the subelements of the <b>Div</b> element; however, in Microsoft Word the
+attribute value does not determine the reading order of the child paragraphs or
+text fragments. The <b>dir</b> attribute must be specified for each child
+paragraph or text fragment whose reading order is different from its container
+element and which is not read in the default direction.</p>
+<p class="T">To specify the reading order of a paragraph, the <b>dir</b>
+attribute of the <b>P</b> HTML element is used to specify the order and the
+layout properties, such as the first line indentation position. The <b>dir</b>
+attribute contains one of the following string constants: <b>ltr</b> specifying
+left to right, or <b>rtl</b> specifying right to left. If the attribute is not
+specified, the default direction is <b>ltr</b>.
+<p class="T">If the reading order of the text inside the paragraph element is
+different from that of the paragraph, the text needs to be put inside a <b>Span</b>
+element having a <b>dir</b> attribute.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">The next example shows a paragraph with right-to-left reading order
+containing text in left-to-right order.</p>
+<pre class="C"><code>
+&lt;P dir=&quot;rtl&quot;&gt;&lt;Span dir=&quot;ltr&quot;&gt;Hello world!&lt;/Span&gt;&lt;/P&gt;
+</code></pre>
+<p class="T">The reading order can also be specified using the <b>direction</b>
+CSS style attribute. If the style is not defined, <b>ltr</b> is the default
+direction.</p>
+<p class="T">To specify the reading order of a text fragment, the <b>dir</b>
+attribute of the <b>BDO</b> HTML element is used to specify the direction of
+text. The <b>dir</b> attribute contains one of the following string constants: <b>ltr</b>
+specifying left to right, or <b>rtl</b> specifying right to left. If the
+attribute is not specified, the default direction is <b>ltr</b>.
+<p class="T">&nbsp;
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the second word is right to left, but the other
+words in the paragraph are left to right.</p>
+<pre class="C"><code>
+&lt;P&gt;One &lt;BDO dir=RTL&gt;shalom&lt;/BDO&gt; three&lt;/P&gt;
+</code></pre>
+<p class="T">In Microsoft Word, the direction of the document page gutter can be
+specified. The gutter can appear either on the side where it would be natural
+for it to show up for left-to-right text, or on the side appropriate for
+right-to-left text. The <b>mso-gutter-direction</b> style attribute specifies
+the direction. If this style is not specified, the default direction is <b>ltr</b>.
+The style can be specified in the same named <b>@page</b> definition as other
+print-related settings for the section.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">This example shows a style definition for a section called section1
+in which the gutter direction is right-to-left
+<pre class="C"><code>
+@page section1 { mso-gutter-direction: rtl; }
+</code></pre>
+<h4 class="RH4">Compression of justification space and leading punctuation</h4>
+<p class="T">In fully justified paragraphs in Microsoft Word, blank space inside
+certain types of characters can be compressed automatically. The <b>text-justify-trim</b>
+style attribute specifies the setting for a document. If the style is not
+specified, the default setting is <b>punctuation</b>, meaning that space inside
+punctuation is compressed. If <b>none</b> is specified, no space is compressed,
+and if <b>punct-and-kana</b> is specified, both punctuation and Kana characters
+are compressed.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In the following style definition, punctuation and Kana characters
+are compressed.</p>
+<pre class="C"><code>
+BODY { text-justify-trim: punct-and-kana }
+</code></pre>
+<p class="T">In East Asian languages, when a punctuation symbol, such as an open
+parenthesis, is represented by a full-width character, excessive white space can
+appear to the left of the symbol. The <b>punctuation-trim</b> style attribute
+specifies whether the white space should be removed so that the line is
+justified with the surrounding lines of the paragraph. If this style is not
+specified, the default is <b>none</b>, specifying that the line is not
+justified.</p>
+<p class="RL"><b>Examples</b></p>
+<p class="T">This example shows the results of specifying <b>none</b> and <b>leading</b>.</p>
+<p class="T"><img height="46" src="images/ptrim0.gif" width="73"> <b>none</b></p>
+<p class="T"><img height="46" src="images/ptrim1.gif" width="68"> <b>leading</b></p>
+<p class="T">The next example specifies leading punctuation compression.</p>
+<pre class="C"><code>
+&lt;P style='punctuation-trim: leading'&gt;Hello World!&lt;/P&gt;
+</code></pre>
+<h4 class="RH4">Hanging punctuation</h4>
+<p class="T">In Microsoft Word, punctuation is allowed in the margin area at the
+end of a line. The <b>punctuation-wrap</b> style attribute is used to specify
+whether punctuation is allowed in the margin for a paragraph. If this style is
+not specified, the default constant is <b>simple</b>, meaning that no
+punctuation is allowed in the margin. Specifying the constant <b>hanging</b>
+enables hanging punctuation.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the paragraph has hanging punctuation.</p>
+<pre class="C"><code>
+&lt;P style='punctuation-wrap: hanging'&gt;Paragraph text...&lt;/P&gt;
+</code></pre>
+<h4 class="RH4">Specifying white space between different character sets</h4>
+<p class="T">In Microsoft Word, white space can be specified between text of
+different character sets to enhance the appearance of the text. The <b>text-autospace</b>
+style attribute is used specify this type of paragraph formatting. If this style
+is not specified, the default is <b>none</b>, meaning that no space is added.
+Specifying <b>ideograph-other</b> causes extra space to appear between runs of
+ideographic and non-ideographic text. The following example shows the formatting
+applied to a paragraph.</p>
+<p class="T"><img height="111" src="images/compress-fe-latin.gif" width="169"></p>
+<p class="T">Specifying <b>ideograph-numeric</b> causes extra white space to
+appear between East Asian language text and numeric characters. The next example
+shows the formatting applied to the same paragraph.</p>
+<p class="T"><img height="118" src="images/compress-fe-numeric.gif" width="169"></p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the paragraph has extra white space around Latin
+text and numeric characters.</p>
+<pre class="C"><code>
+&lt;P style='text-autospace: ideograph-other ideograph-numeric'&gt;...&lt;/P&gt;
+</code></pre>
+<h4 class="RH4">Kinsoku line breaking rules</h4>
+<p class="T">The <b>mso-line-break</b> style attribute specifies whether Kinsoku
+is enabled for a paragraph.<code> </code>If <b>restrictions</b> is specified,
+Kinsoku is disabled for the paragraph. If the style is not specified or if <b>none</b>
+is specified, Kinsoku is enabled.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">The following example shows a paragraph for which Kinsoku is
+disabled.</p>
+<pre class="C"><code>
+&lt;P style='mso-line-break-override: restrictions'&gt;Paragraph text.&lt;/P&gt;
+</code></pre>
+<h4 class="RH4">Word breaking</h4>
+<p class="T">In East Asian language versions of Microsoft Word, Latin and Hangul
+words can be broken at arbitrary positions regardless of whether the word can be
+hyphenated at that position. The <b>word-break</b> style attribute specifies the
+word break rule for a paragraph.<code> </code>The CSS style used to specify the
+word break rule depends on the language version of Word used and the wordwrap
+setting.</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows" width="783">
+  <tr valign="top">
+    <td class="I" width="106" align="left"><b>Language</b></td>
+    <td class="I" width="114" align="left"><b>Wordwrap</b></td>
+    <td class="I" width="225" align="left"><b>Style</b></td>
+    <td class="I" width="278" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="106">Korean</td>
+    <td class="T" width="114">no</td>
+    <td class="T" width="225"><b>word-break: break-hangul</b></td>
+    <td class="T" width="278">Allow Hangul words to be broken</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="106">Korean</td>
+    <td class="T" width="114">yes</td>
+    <td class="T" width="225"><b>word-break: keep-all</b></td>
+    <td class="T" width="278">Do not allow word breaks</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="106">non-Korean</td>
+    <td class="T" width="114">no</td>
+    <td class="T" width="225"><b>word-break: break-all</b></td>
+    <td class="T" width="278">Allow breaks in Latin and Hangul words</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="106">non-Korean</td>
+    <td class="T" width="114">yes</td>
+    <td class="T" width="225"><b>word-break: normal</b></td>
+    <td class="T" width="278">Use the default work breaking rules</td>
+  </tr>
+</table>
+<p class="RL"><b>Example</b></p>
+<p class="T">In the following example, assume that the language version is <b>Korean</b>
+and the wordwrap option is enabled for a paragraph. Word breaks are therefore
+not allowed.
+<pre class="C"><code>
+&lt;P style='word-break: keep-all'&gt;...&lt;/P&gt;
+</code></pre>
+<h4 class="RH4">Alignment</h4>
+<p class="T">East Asian and right to left language versions of Microsoft Word
+allow different types of paragraph justification. The <b>text-justify</b> style
+attribute is used to specify the justification for a paragraph.<code> </code>If
+the style is not specified or if <b>auto</b> is specified, the justification is
+automatic by default. Note that this style does not affect the text appearance.
+It specifies the type of justification to apply when <b>text-align</b> is set to
+<b>justify</b>. If the Web browser does not support the <b>text-justify</b>
+style, the paragraph is justified entirely by using the <b>text-align: justify</b>
+style.
+<p class="T">The following table shows the Word justification setting and the
+corresponding CSS style.</p>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Justification</b></td>
+    <td class="I" width="66%" align="left"><b>CSS style</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%">left</td>
+    <td class="T" width="66%"><b>text-align: left</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%">right</td>
+    <td class="T" width="66%"><b>text-align: right</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%">center</td>
+    <td class="T" width="66%"><b>text-align: center</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%">justify (English, Thai)</td>
+    <td class="T" width="66%"><b>text-align: justify</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%">justify (distribute)</td>
+    <td class="T" width="66%"><b>text-align: justify; text-justify:
+      distribute-all-lines</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%">justify (East Asian ideographic)</td>
+    <td class="T" width="66%"><b>text-align: justify; text-justify:
+      inter-ideograph</b></td>
+  </tr>
+</table>
+<p class="T">The <b>text-align: justify</b> style is always specified with the <b>text-justify</b>
+style.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">This example shows a distributed paragraph.</p>
+<pre class="C"><code>
+&lt;P style='text-align: justify; text-justify: distribute-all-lines'&gt;Hello world&lt;/P&gt;
+</code></pre>
+<h4 class="RH4">Kashida</h4>
+<p class="T">In right-to-left language versions of Microsoft Word, the amount of
+Kashida (special elongation characters used around or inside Arabic words) can
+be specified as a percentage of the space available for a line of text. The <b>text-kashida</b>
+style attribute specifies the Kashida for a paragraph.<code> </code>If the style
+is not specified or if <b>0%</b> is specified, the low Kashida is used. The <b>10%</b>
+value corresponds to medium Kashida, and <b>20%</b> corresponds to high.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In the following example, a justified paragraph is set to medium
+Kashida.</p>
+<pre class="C"><code>
+&lt;P style='text-align: justify; text-kashida: 10%'&gt;Paragraph text...&lt;/P&gt;
+</code></pre>
+<h4 class="RH4">Vertical font alignment</h4>
+<p class="T">Font alignment specifies how characters of different font sizes or
+from different character sets are aligned vertically relative to each other in a
+paragraph. The <b>vertical-align</b> style attribute is used to specify the
+vertical positions in which two characters can be aligned.<code> </code>If the
+style is not specified or if <b>baseline</b> is specified, the default alignment
+is at the baseline.</p>
+<p class="T">Microsoft Word can also automatically align the characters. The <b>mso-vertical-align-alt:
+auto</b> style is specified for automatic vertical alignment. If the layout is
+horizontal, the <b>vertical-align: baseline</b> style is specified, but if the
+layout is vertical, <b>vertical-align: middle</b> is specified.</p>
+<p class="T">The example below shows the alignment positions of a Latin and an
+East Asian font.</p>
+<p class="T"><img height="126" src="images/font.gif" width="412"></p>
+<p class="RL"><b>Examples</b></p>
+<p class="T">In this example, the paragraph is aligned at the top.</p>
+<pre class="C"><code>
+&lt;P style='vertical-align: top'&gt;...&lt;/P&gt;
+</code></pre>
+<p class="T">In the next example, the vertical alignment of a horizontal section
+is <b>auto</b>.</p>
+<pre class="C"><code>
+&lt;P style='vertical-align: baseline; mso-vertical-align-alt: auto'&gt;...&lt;/P&gt;
+</code></pre>
+<h4 class="RH4">Indented first lines</h4>
+<p class="T">In Microsoft Word, the size of the first line indentation is
+expressed in character units and depends on the size of the first character in a
+paragraph.</p>
+<p class="T">The <b>mso-char-indent</b>, <b>mso-char-indent-count</b>, and <b>mso-char-indent-size</b>
+style attributes are used to specify the indentation.<code> </code><b>mso-char-indent-count</b>
+specifies the number of character units. The default is 0 (zero). <b>mso-char-indent-size</b>
+specifies the size of a single character unit in points, and <b>mso-char-indent</b>
+is a shorthand form of the other two. The <b>text-indent</b> style is also
+specified for all the indentation to be displayed in a Web browser.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">This example shows a paragraph having a character unit indentation
+equal to two 12-point characters.
+<pre class="C"><code>
+&lt;P style='text-indent: 24pt; mso-char-indent: 2 12pt'&gt;
+This is a paragraph with a character indent on the first line.&lt;/P&gt;
+</code></pre>
+<h4 class="RH4">Kumimoji and Warichu</h4>
+<p class="T">Kumimoji is a type of East Asian language character formatting that
+can be applied to at least 2, but no more than 5, characters and that makes the
+characters smaller to fit in the space of one character. Also, the characters
+appear to be centered.</p>
+<p class="T"><img height="57" src="images/kumimoji.gif" width="101"></p>
+<p class="T">Warichu is a type of East Asian character formatting that can be
+applied to any number of characters. It makes them smaller so that they fit into
+two lines of text that have a combined height equal to the height of the
+surrounding text. Each Warichu line contains exactly half of the characters.</p>
+<p class="T"><img height="52" src="images/warichu.gif" width="130"></p>
+<p class="T">The <b>text-combine</b> style attribute is used to specify both
+types of formatting.<code> </code>If this style is not specified or if <b>none</b>
+is specified, neither Kumimoji nor Warichu are used. The constant <b>letters</b>
+specifies that Kumimoji is used, and <b>lines</b> specifies that Warichu is
+used.</p>
+<p class="T">The <b>mso-text-combine-id</b> style attribute specifies a unique
+index number required for Warichu.<code> </code>The <b>mso-text-combine-brackets</b>
+style attribute specifies the style of the surrounding brackets used for
+Warichu.<code> </code>If this style is not specified or if <b>none</b> is
+specified, no brackets are used.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the second and third words in the paragraph are
+formatted as Warichu in square brackets.
+<pre class="C"><code>
+One &lt;Span style='text-combine: lines; mso-text-combine-id: 1; 
+mso-text-combine-brackets: square'&gt;uno dos&lt;/Span&gt; 
+Two
+</code></pre>
+<h4 class="RH4">Tatenakayoko</h4>
+<p class="T">Tatenakayoko is a type of East Asian character formatting that can
+be applied to any number of half-width characters, which ensures that the
+characters are laid out horizontally regardless of the line's rotation (vertical
+or horizontal).</p>
+<p class="T"><img height="133" src="images/tatenakayoko.gif" width="56"></p>
+<p class="T">The <b>layout-flow</b> style attribute is used in a <b>Li</b>, <b>P</b>,
+or <b>Span</b> element to specify Tatenakayoko.<code> </code>The <b>mso-tny-compress</b>
+style attribute specifies whether horizontal text in vertical text should be
+compressed so as to fit within the vertical column it appears in.<code> </code>If
+this style is not specified or if <b>no</b> is specified, the text is not
+compressed.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In the following example, the second word is formatted as
+Tatenakayoko and compressed.</p>
+<pre class="C"><code>
+One &lt;Span style='layout-flow: horizontal; mso-tny-compress: yes'&gt;two&lt;/Span&gt; three
+</code></pre>
+<h4 class="RH4">Distributed characters</h4>
+<p class="T">In Microsoft Word, text can be distributed (condensed) to fit a
+specified amount of space. If the specified space is greater than the minimum
+space required to display the text, the characters are evenly distributed across
+the available space in a way analogous to distributed paragraph alignment.
+However, if the space is less than the minimum amount required, character
+spacing and width are reduced to make the text fit within the space.</p>
+<p class="T">The <b>text-fit</b> style attribute is used to specify distributed
+text.<code> </code>If this style is not specified or if <b>auto</b> is
+specified, the text is not distributed. The style specifies the size of the
+space in ems. A unique index is also specified with the <b>text-fit</b> style.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In the following example, the second word in the phrase is
+distributed over the space of 5 characters (ems):
+<pre class="C"><code>
+One &lt;Span style='text-fit: 5em; mso-text-fit-id: 1'&gt;two&lt;/Span&gt; three
+</code></pre>
+<h4 class="RH4">Emphasis</h4>
+<p class="T">Emphasis is a type of character formatting used in East Asian
+languages. Individual characters are marked with a special, user-defined symbol.
+The <b>font-emphasize-style</b> style attribute specifies the symbol.<code> </code>If
+this style is not specified or if <b>none</b> is specified, the default is no
+emphasis applied. The other constants represent various symbols.</p>
+<p class="T">The symbol can appear above or below the character depending on the
+language. The <b>font-emphasize-position</b> style attribute specifies the
+position of a symbol.<code> </code>If this style is not specified or if <b>above</b>
+is specified, the default position is above the character.</p>
+<p class="T">The <b>font-emphasize</b> style attribute can be specified as a
+shorthand notation for the emphasis styles.
+<p class="RL"><b>Example</b></p>
+<p class="T">In the following example, the second word of the phrase has a dot
+displayed below each character.</p>
+<pre class="C"><code>
+One &lt;Span style='font-emphasize: dot below'&gt;two&lt;/Span&gt; three
+</code></pre>
+<h4 class="RH4">Ruby</h4>
+<p class="T">A pronunciation guide for East Asian language characters, Ruby is a
+commonly used name for a description that appears near the base text.</p>
+<p class="T"><img height="87" src="images/ruby.gif" width="57"></p>
+<p class="T">The text that the Ruby is associated with is usually referred to as
+the &quot;base.&quot; The base and the Ruby text are enclosed within a <b>Ruby</b>
+element. The base text is enclosed within the <b>RB</b> element, which is a
+subelement of the <b>Ruby</b> element. The <b>RB</b> element is optional, and
+any text appearing inside the <b>Ruby</b> element is assumed to be in the <b>RB</b>
+subelement.</p>
+<p class="T">To set it apart from the base text, the Ruby text must be enclosed
+within the <b>RT</b> element. The opening <b>RT</b> tag is required but the
+closing tag is optional. A closing <b>Ruby</b> tag implies the end of a <b>RT</b>
+element.</p>
+<p class="T">The following example shows base text and Ruby text.</p>
+<pre class="C"><code>
+&lt;Ruby&gt;This is Ruby base text&lt;RT&gt;This is Ruby text&lt;/Ruby&gt;
+</code></pre>
+<p class="T">Inline Ruby requires parentheses around the Ruby text. Since all
+Ruby will appear inline in Web browsers that do not support this feature,
+parentheses need to be specified. However, each parenthesis must be enclosed
+within a <b>RP</b> element to enable Web browsers to easily remove them. The
+closing <b>RP</b> tag is optional. The following example shows base text and
+inline Ruby text.</p>
+<pre class="C"><code>
+&lt;Ruby&gt;This is Ruby base text&lt;RP&gt;(&lt;RT&gt;This is Ruby text&lt;RP&gt;)&lt;/Ruby&gt;
+</code></pre>
+<p class="T">The Ruby text can be on top or to the right of the base text. When
+it is to the right of the base, it can either be vertical or horizontal
+(inline). The <b>ruby-position</b> style attribute specifies the position.<code>
+</code>If this style is not specified or if <b>above</b> is specified, the Ruby
+text appears above the base text by default.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the text &quot;ABC&quot; has the inline Ruby text
+&quot;de&quot;.</p>
+<pre class="C"><code>
+&lt;P&gt;&lt;Ruby style='ruby-position: inline'&gt;ABC&lt;RP&gt;(&lt;RT&gt;de&lt;RP&gt;)&lt;/Ruby&gt;&lt;/P&gt;
+</code></pre>
+<p class="T">Ruby text can have alignment formatting, much like a paragraph.
+Ruby, however, supports more possible alignment positions than a paragraph. The
+alignment values apply to non-inline Ruby text only. The <b>ruby-align</b> style
+attribute specifies the alignment.<code> </code>If this style is not specified
+or if <b>auto</b> is specified, the default position is automatically
+determined.</p>
+<p class="T">The constants <b>right</b>, <b>left</b>, and <b>center</b> specify
+the alignment of the text. The following table defines the remaining style
+constants.
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Constant</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>distribute-letter</b></td>
+    <td class="T" width="66%">Ruby characters are separated by equal amounts of
+      space from each other and there is no space before the first character and
+      after the last one (also called &quot;0-1-0&quot;).</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>distribute-space</b></td>
+    <td class="T" width="66%">A space appears before the first character and
+      after the last character, and there are 2 spaces between each pair of Ruby
+      characters (also called &quot;1-2-1&quot;).</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>line-edge</b></td>
+    <td class="T" width="66%">Similar to centered Ruby, but if the Ruby is wider
+      than the base and it appears at the beginning or end of a line of text,
+      its edge that extends to the line's end is aligned with the corresponding
+      edge of the base text so that there is no white space between the base's
+      side and the line's end.</td>
+  </tr>
+</table>
+<p class="RL"><b>Example</b></p>
+<p class="T">The following example shows the Ruby text &quot;de&quot; aligned
+1-2-1.</p>
+<pre class="C"><code>
+&lt;Ruby style='ruby-align: distribute-space'&gt;ABC&lt;RP&gt;(&lt;RT&gt;de&lt;RP&gt;)&lt;/Ruby&gt;
+</code></pre>
+<p class="T">If the Ruby text is wider than the base text, there are different
+ways in which the width can be accommodated in a line of text. The <b>ruby-overhang</b>
+style attribute is used to specify whether white space is added.<code> </code>If
+the style is not specified or if <b>auto</b> is specified, the Ruby text can
+extend over neighboring characters without the addition of white space. The
+constant <b>whitespace</b> specifies that the Ruby text can be displayed over
+white space only, and the constant <b>none</b> specifies that white space is
+added to the base text to compensate for the extra width of the Ruby text.</p>
+<p class="RL"><b>Examples</b></p>
+<p class="T">In the following example, Ruby text for the base text &quot;A&quot;
+is allowed to appear over neighboring characters whose base text is also
+&quot;A&quot;. The next character is &quot;B&quot;.</p>
+<pre class="C"><code>
+&lt;Ruby&gt;A&lt;RP&gt;(&lt;RT&gt;aa&lt;RP&gt;)&lt;/Ruby&gt;B
+</code></pre>
+<p class="T">In the next example, Ruby text is not allowed above neighboring
+characters.</p>
+<pre class="C"><code>
+&lt;Ruby style='ruby-overhang: none'&gt;A&lt;RP&gt;(&lt;RT&gt;aa&lt;RP&gt;)&lt;/Ruby&gt;B
+</code></pre>
+<p class="T">The font size of the Ruby text can be specified using the <b>font-size</b>
+style in the <b>RT</b> element.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the Ruby text &quot;de&quot; has a font size of
+5pt.
+<pre class="C"><code>
+&lt;Ruby&gt;&lt;RB&gt;ABC&lt;/RB&gt;&lt;RP&gt;(&lt;/RP&gt;&lt;RT style='font-size: 5pt'&gt;de&lt;/RT&gt;&lt;RP&gt;)&lt;/RP&gt;&lt;/Ruby&gt;
+</code></pre>
+<p class="T">Character formatting cannot be applied to parts of inline Ruby
+text.</p>
+<h4 class="RH4">Text orientation and flow</h4>
+<p class="T">CSS styles are used to specify language-related text orientation
+and flow in Office Web pages. For Web browsers that do not support rotated text,
+text is displayed horizontally. There are several text flow and orientation
+formats that can be specified. In Microsoft Word, the formats can be applied to
+a document <b>Body</b> element, a section <b>Div</b> element, or a table cell <b>TD</b>
+element. In Microsoft Excel, the formats can be applied to a cell <b>TD</b>
+element. In Microsoft PowerPoint, the formats can be applied to the elements
+used for text boxes.</p>
+<p class="T">The <b>layout-flow</b> style attribute is used to specify text
+orientation.<code> </code>If this style is not specified or if <b>horizontal</b>
+is specified, the default flow is horizontal.</p>
+<p class="T">The <b>mso-rotate</b> style attribute is used to specify text
+rotation.<code> </code>If this style is not specified, the default rotation is 0
+degrees.</p>
+<p class="T">The following tables show text orientation modes and the
+corresponding style constants and values for each Office program.</p>
+<h5 class="RH5">Microsoft Excel</h5>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="25%" align="left"><b>Orientation mode</b></td>
+    <td class="I" width="25%" align="left"><b>Appearance</b></td>
+    <td class="I" width="25%" align="left"><b>layout-flow</b></td>
+    <td class="I" width="25%" align="left"><b>mso-rotate</b></td>
+  </tr>
+  <tr>
+    <td class="T">Horizontal</td>
+    <td class="T"><img height="26" src="images/wdHorizontal.gif" width="24"></td>
+    <td class="T">horizontal</td>
+    <td class="T">0</td>
+  </tr>
+  <tr>
+    <td class="T">Downward</td>
+    <td class="T"><img height="24" src="images/wdDownward.gif" width="26"></td>
+    <td class="T">horizontal</td>
+    <td class="T">-90</td>
+  </tr>
+  <tr>
+    <td class="T">Vertical</td>
+    <td class="T"><img height="29" src="images/wdVertical.gif" width="19"></td>
+    <td class="T">vertical</td>
+    <td class="T">0</td>
+  </tr>
+  <tr>
+    <td class="T">Upward</td>
+    <td class="T"><img height="24" src="images/wdUpward.gif" width="26"></td>
+    <td class="T">horizontal</td>
+    <td class="T">90</td>
+  </tr>
+  <tr>
+    <td class="T">arbitrary angle</td>
+    <td class="T">&nbsp;</td>
+    <td class="T">horizontal</td>
+    <td class="T"><em>angle</em></td>
+  </tr>
+</table>
+<h5 class="RH5">Microsoft PowerPoint</h5>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="25%" align="left"><b>Orientation mode</b></td>
+    <td class="I" width="25%" align="left"><b>Appearance</b></td>
+    <td class="I" width="25%" align="left"><b>layout-flow</b></td>
+    <td class="I" width="25%" align="left"><b>mso-rotate</b></td>
+  </tr>
+  <tr>
+    <td class="T">arbitrary angle</td>
+    <td class="T">&nbsp;</td>
+    <td class="T">horizontal</td>
+    <td class="T"><em>angle</em></td>
+  </tr>
+</table>
+<h5 class="RH5">Microsoft Word</h5>
+<table border="1" cellpadding="5" cols="3" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="25%" align="left"><b>Orientation mode</b></td>
+    <td class="I" width="25%" align="left"><b>Appearance</b></td>
+    <td class="I" width="25%" align="left"><b>layout-flow</b></td>
+    <td class="I" width="25%" align="left"><b>mso-rotate</b></td>
+  </tr>
+  <tr>
+    <td class="T">Horizontal</td>
+    <td class="T"><img height="26" src="images/wdHorizontal.gif" width="24"></td>
+    <td class="T">horizontal</td>
+    <td class="T">0</td>
+  </tr>
+  <tr>
+    <td class="T">Upward</td>
+    <td class="T"><img height="24" src="images/wdUpward.gif" width="26"></td>
+    <td class="T">horizontal</td>
+    <td class="T">-90</td>
+  </tr>
+  <tr>
+    <td class="T">Downward</td>
+    <td class="T"><img height="24" src="images/wdDownward.gif" width="26"></td>
+    <td class="T">horizontal</td>
+    <td class="T">90</td>
+  </tr>
+  <tr>
+    <td class="T">HorizontalRotatedFE</td>
+    <td class="T"><img height="26" src="images/wdHorizontalRotatedFE.gif" width="24"></td>
+    <td class="T">horizontal-ideographic</td>
+    <td class="T">0</td>
+  </tr>
+  <tr>
+    <td class="T">VerticalFE</td>
+    <td class="T"><img height="24" src="images/wdVerticalFE.gif" width="26"></td>
+    <td class="T">vertical-ideographic</td>
+    <td class="T">0</td>
+  </tr>
+</table>
+<p class="RL"><b>Example</b></p>
+<p class="T">In the following example, a table cell in Microsoft Word is
+oriented in the vertical ideographic position.</p>
+<pre class="T"><code>
+&lt;TD style='layout-flow: vertical-ideographic'&gt;...&lt;/TD&gt;
+</code></pre>
+<h4 class="RH4">Displaying rotated text in a Web browser</h4>
+<p class="T">In Microsoft PowerPoint, rotated text is displayed instead as an
+image if the Web browser does not support rotated text. The image is specified
+using an <b>Img</b> element inside an <b>Ignore</b> element. The <b>Ignore</b>
+element is specified with the <b>IF=supportRotatedText</b> attribute. After the <b>Img</b>
+element, HTML markup is specified for the rotated text. The markup is contained
+inside an HTML comment so that only the image is visible in Web browsers that do
+not support rotated text.</p>
+<p class="RL"><b>Examples</b></p>
+<p class="T">In this example, the text is rotated.</p>
+<pre class="T"><code>
+&lt;Ignore IF=supportRotatedText&gt;
+&lt;Img src=&quot;RotatedTextImageName.gif&quot;&gt;
+&lt;!--&lt;/Ignore&gt;
+&lt;Div style='mso-rotate:...; layout-flow:...'&gt;
+Rotated text
+&lt;/Div&gt;
+&lt;Ignore IF=supportRotatedText&gt;--&gt;&lt;/Ignore&gt;
+</code></pre>
+<p class="T">In the next example, the text is rotated 90 degrees
+counterclockwise.</p>
+<pre class="T"><code>
+&lt;Ignore IF=supportRotatedText&gt;
+&lt;Img src=&quot;example.gif&quot;&gt;&lt;!--
+&lt;/Ignore&gt;
+&lt;Div style='mso-rotate: 90'&gt;&lt;P&gt;
+The text is rotated 90 degrees.
+&lt;/P&gt;
+&lt;/Div&gt;
+&lt;Ignore IF=supportRotatedText&gt;--&gt;&lt;/Ignore&gt;
+</code></pre>
+<h4 class="RH4">Grids</h4>
+<p class="T">The <b>layout-grid-type</b> style attribute of the <b>Div</b>
+element specifies whether the grid is for Japanese or &quot;genko&quot; in a
+section of a grid.<code> </code>If this style is not specified or if <b>loose</b>
+is specified, the default grid type is <b>loose</b>, specifying Japanese. If <b>strict</b>
+is specified, the grid type for &quot;genko&quot; is used.
+<p class="T">In a paragraph or fragment of text, the grid can be made visible or
+hidden by specifying the <b>layout-grid-mode</b> style.<code> </code>In a <b>P</b>
+element if <b>char</b> is specified, the line grid is hidden, but if the style
+is not specified or if <b>both</b> is specified, the line grid is visible. If <b>none</b>
+is specified, both the vertical paragraph grid and horizontal character grid are
+hidden, and if <b>line</b> is specified, the vertical paragraph grid is visible
+but the horizontal character grid is hidden.
+<p class="T">In a <b>Span</b> element if <b>line</b> is specified, the character
+grid is hidden, but if <b>char</b> is specified, the line grid is hidden. If <b>both</b>
+is specified, the grid is visible, but if <b>none</b> is specified, the grid is
+hidden.</p>
+<p class="RL"><b>Examples</b></p>
+<p class="T">In the following example, a &quot;genko&quot; grid is specified for
+a section.
+<pre class="T"><code>
+&lt;Div style='layout-grid-type: strict'&gt;...&lt;/Div&gt;
+</code></pre>
+<p class="T">In the following example, the character grid is hidden for the
+second word.
+<pre class="C"><code>
+&lt;P&gt;One &lt;Span style='layout-grid-mode: line'&gt;two&lt;/Span&gt; three&lt;/P&gt;
+</code></pre>
+<p class="T">In this example, the line grid is hidden.
+<pre class="C"><code>
+&lt;P style='layout-grid-mode: char'&gt;Paragraph text...&lt;/P&gt;
+</code></pre>
+<h4 class="RH4">Grid size</h4>
+<p class="T">In Microsoft Word, the dimensions of the grid sections can be
+specified according to how characters and lines in the section will be laid out
+on the page. The grid has two dimensions. The width of a horizontal (character)
+grid section is specified using the <b>layout-grid-char</b> style attribute.<code>
+</code>If the style is not specified or if <b>none</b> is specified, the
+horizontal character grid is hidden. The value specifies the horizontal width
+used for each character in the section.</p>
+<p class="T">The height of a vertical grid section is specified using the <b>layout-grid-line</b>
+style attribute.<code> </code>If the style is not specified or if <b>none</b> is
+specified, the vertical grid is hidden. The value specifies the vertical height
+used for each line in the section.</p>
+<p class="T">The <b>layout-grid</b> style attribute can be specified as a
+shorthand notation for the grid style.<code> </code>The value of the first
+numerical value specifies the horizontal grid width and the second value
+specifies the vertical grid height. If the second value is not specified, the
+appearance of the content is the same as if the <b>layout-grid-char: none</b>
+style was applied.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the section has a &quot;genko&quot; grid. Each
+horizontal grid section has a width of 16 points, and each vertical grid section
+has a height of 12 points.
+<pre class="C"><code>
+&lt;Div style='layout-grid: strict 16pt 12pt'&gt;...&lt;/Div&gt;</code></pre>
+<h4 class="RH4">Character units</h4>
+<p class="T">In East Asian language versions of Microsoft Word, the width of
+paragraph layout-related properties such as the left margin can be specified in
+terms of the number of characters, rather than in other units such as inches.
+The em unit is used to specify the width of objects in many CSS styles; however,
+the em is not appropriate for specifying width in East Asian language documents
+because the size of the em unit depends on the font size of the HTML element.
+East Asian languages require a character unit measurement that is independent of
+the font size used in the parent element.</p>
+<p class="T">The character unit size used in East Asian language documents is
+based on the section grid size, if a grid is defined. The size is specified in
+grid units (gd). However, if the section grid is not defined, Microsoft Word
+uses the font size of the Normal style to determine the size of the character
+unit. In both cases, the character unit size is independent of the font size
+used in the element.</p>
+<p class="T">The <b>margin-left</b>, <b>margin-right</b>, <b>margin-top</b>, and
+<b>margin-bottom</b> style attributes specifies the left, right, top, and bottom
+margin sizes of a paragraph in grid units.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the left margin is 3 characters wide.</p>
+<pre class="C"><code>
+&lt;P style='margin-left: 3gd'&gt;Hello world.&lt;/P&gt;
+</code></pre>
+<p class="T">In Microsoft Word, a paragraph can be aligned with a section grid.
+For example, if a paragraph is aligned to the left, the lines can be aligned
+with the left edge on a grid line. The <b>mso-layout-grid-align</b> style
+attribute specifies the alignment.<code> </code>If this style is not specified
+or if <b>none</b> is specified, the lines are not aligned with the grid.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In the following example, the paragraph is aligned with the grid.</p>
+<pre class="C"><code>
+&lt;P style='mso-layout-grid-align: auto'&gt;Hello World&lt;/P&gt;
+</code></pre>
+
+</body>
+
+</html>

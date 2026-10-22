@@ -1,0 +1,81 @@
+<html><head>
+<title>Tables</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Tables</H1>
+
+<p class=T>To the extent possible, Microsoft Word saves tables using standard HTML elements and their
+attributes.</p>
+<H4 class=RH4>Cellpadding
+and cellspacing</h4>
+<p class=T>Word imports cell padding settings, but exports this information using the
+<b>style</b>
+attribute in the <b>TD</b> element. Word saves the table cell padding options
+using the <b>mso-padding-alt</b>  style attribute in the <b>Table</b> element.</p>
+<H4 class=RH4>Row
+height</h4>
+<p class=T>In Word, the user can set the row height, which is stored using standard HTML
+in the <b>style</b> attribute of the <b>TR </b>element. To store the <b>At least</b>
+and <b>Exactly</b> settings for the row height, Word uses the <b>mso-height-rule</b>
+ style attribute. In some cases, the <b>height</b>  attribute of the <b>TR </b>element
+contains row height data for browsers that do not support this information in
+the <b>style</b>  attribute.</p>
+<H4 class=RH4>Cell
+width</h4>
+<p class=T>In Word, the user can set the cell width, which is stored using standard HTML
+in the <b>style</b> attribute of the <b>TD </b>element. In some cases, the <b>width</b>
+attribute of the <b>TD </b>element contains cell width data for browsers that do
+not support this information in the <b>style</b>  attribute.</p>
+<H4 class=RH4>AutoFit</h4>
+<p class=T>The AutoFit setting allows table columns to resize automatically according to
+their contents. This option is automatically enabled for Web tables, but Word
+still saves the cell width value to HTML. Word uses the <b>mso-table-layout-alt</b>
+style attribute to save AutoFit settings in HTML.</p>
+<H4 class=RH4>No
+wrapping</h4>
+<p class=T>If a Word table cell has the cell wrapping disabled, the standard HTML
+<b>nowrap</b>
+attribute saves this to HTML.</p>
+<H4 class=RH4>Nested
+tables</h4>
+<p class=T>Word uses standard HTML to save nested table information.</p>
+<H4 class=RH4>Diagonal
+borders</h4>
+<p class=T>Word allows diagonal border lines in a cell. Since HTML has no mechanism for
+displaying these lines, Word uses the <b>mso-diagonal-up</b> and <b>mso-diagonal-down</b> 
+ style attributes to preserve them.</p>
+<H4 class=RH4>Table
+captions</h4>
+<p class=T>When saved as HTML, table captions are contained in <b>P</b> elements
+before or after the table depending on the location specified.</p>
+<H4 class=RH4>Heading
+rows</h4>
+<p class=T>In Word it is possible to
+designate one or more top table rows as the table heading. Such rows will appear at
+the top of every printed page if the table takes up more than one page. Word uses
+the <b>Thead</b> element to designate these rows.</p>
+<h4 class="RH4">Absolutely
+positioned tables</h4>
+<p class=T>In Word, it is possible to position a table arbitrarily on the page. Word
+does not attempt to duplicate this positioning in the browser; however, it does
+save this information to HTML. Word uses the following
+style attributes to store table positioning information.</p>
+<ul>
+  <li><b>mso-table-anchor-horizontal</b></li>
+  <li><b>mso-table-anchor-vertical</b></li>
+  <li><b>mso-table-left</b></li>
+  <li><b>mso-table-top</b></li>
+  <li><b>mso-table-lspace</b></li>
+  <li><b>mso-table-rspace</b></li>
+  <li><b>mso-table-bspace</b></li>
+  <li><b>mso-table-tspace</b></li>
+</ul>
+
+<p class="T">For information about the style attributes that Office uses and
+their possible values, see the <a href="../concepts/ofconStyleTable.htm">Style
+Attributes</a> topic.</p>
+
+
+</body></html>

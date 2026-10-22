@@ -1,0 +1,128 @@
+<html><head>
+<title>CustomDocumentProperties Element (Microsoft Office)</title>
+<style>@import url(msdn_ie4.css);</style><link disabled rel="stylesheet" href="msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>CustomDocumentProperties Element (Microsoft Office)</H1>
+<p class=T>Specifies a document's custom properties.</p>
+<!--
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+
+<TR valign=top>
+<TD class=T width=33%><A HREF="ofatt.htm"><B>A</B></A></TD>
+<TD class=T width=66%>Description</TD>
+</TR>
+
+</TABLE>
+-->
+<p class=RL><b>Contained In</b></p>
+<p class=RL><a HREF="../Shared/ofeleXML.htm"><b>XML</b></a>
+</p>
+
+<p class=RL><b>Subelements</b></p>
+<p class="T">Each subelement is determined by a custom document property
+name, type, and value.</p>
+
+<p class=RL><b>Remarks</b></p>
+
+<p class=RL>This element contains information about the user-defined custom
+document properties. Office applications provide preset names for custom document
+properties but also allow users to create their own names. For each custom document
+property, the user selects the data type from a drop-down list (such as <b>Text</b> or
+<b>Number</b>, and
+then enters a value for the custom document property.</p>
+
+<p class=RL>Each <b>CustomDocumentProperties</b> subelement contains information from an individual custom document property defined for the
+document. <b>CustomDocumentProperties</b> subelements have the following
+attributes:</p>
+
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I align=left><B>Attribute</B></TD>
+<TD class=I align=left><B>Description</B></TD>
+</TR>
+<tr>
+<TD class=T><b>dt:dt</b></TD>
+<TD class=T>Specifies the data type for the custom document
+  property. The possible values for this attribute are:
+  <ul>
+    <li> <b> boolean</b></li>
+    <li> <b> date</b></li>
+    <li><b>float</b></li>
+    <li><b>string</b></li>
+  </ul>
+</TD>
+</tr>
+<tr>
+<TD class=T><b><span style="color: black; mso-bidi-font-family: Arial">link</span></b></TD>
+<TD class=T>Specifies the custom document property value's link to
+  specific contents in a file. For example, the value might be linked to bookmarked
+  text in the document.</TD>
+</tr>
+</TABLE>
+
+<p class=T> The
+following syntax shows how a <b>CustomDocumentProperties</b> subelement is
+formed, where <i>Name</i> is the custom document property name, <i>Type</i> is
+its type, and <i>Value</i> is its value:</p>
+
+<b>&lt;o:</b><i>Name</i> <b> dt:dt=&quot;</b><i>Type</i><b>&quot;&gt;</b><i>Value</i><b>&lt;/o:</b><i>Name</i><b>&gt;</b>
+<p><b>See Also</b></p>
+
+<p class=RL><a href="ofeleDocumentProperties.htm"><b>DocumentProperties</b></a></p>
+
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+
+<p class=T>This example shows a Microsoft Word document with the following four
+custom document properties defined.
+
+<p>&nbsp;
+
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I align=left><b>Name</b></TD>
+<TD class=I align=left><b>Type</b></TD>
+<TD class=I align=left><b>Value</b></TD>
+</TR>
+<tr>
+<TD class=T>Group (preset name)</TD>
+<TD class=T>Text</TD>
+<TD class=T>Marketing</TD>
+</tr>
+<tr>
+<TD class=T>Date
+  Submitted</TD>
+<TD class=T>Date</TD>
+<TD class=T>6/30/1999</TD>
+</tr>
+<tr>
+<TD class=T>Approved</TD>
+<TD class=T>Yes or No</TD>
+<TD class=T>Yes</TD>
+</tr>
+<tr>
+<TD class=T>Client (preset name)</TD>
+<TD class=T>Text</TD>
+<TD class=T>Microsoft Corporation<br>
+  Linked to content in the document by a bookmark called &quot;ClientName.&quot;</TD>
+</tr>
+</TABLE>
+
+
+
+
+<PRE class=C><CODE> &lt;o:CustomDocumentProperties&gt;
+  &lt;o:Group dt:dt=&quot;string&quot;&gt;Marketing&lt;/o:Group&gt;
+  &lt;o:Date_x0020_Submitted dt:dt=&quot;date&quot;&gt;1999-06-30T07:00:00Z&lt;/o:Date_x0020_Submitted&gt;
+  &lt;o:Approved dt:dt=&quot;boolean&quot;&gt;1&lt;/o:Approved&gt;
+  &lt;o:Client dt:dt=&quot;string&quot; link=&quot;ClientName&quot;&gt;Microsoft Corporation&lt;/o:Client&gt;
+ &lt;/o:CustomDocumentProperties&gt;</CODE></PRE><p class=T>Any character spaces in
+the <b>CustomDocumentProperties</b> subelement tag names are replaced with the string &quot;<CODE>_x0020_&quot;</CODE>
+to prevent compiler misinterpretation. 
+
+</body></html>

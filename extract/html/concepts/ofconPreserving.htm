@@ -1,0 +1,813 @@
+<html>
+
+<head>
+<title>Saving and Opening HTML Files</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1>Saving and Opening HTML Files</h1>
+<p class="T">When a Microsoft Office program opens an HTML file, the document is
+formatted according to the elements, attributes, and styles in the file. When
+the document is saved as a Web page, things such as white space and the order of
+elements might appear differently than in the original file.</p>
+
+<h4 class=RH4>Styles</h4>
+
+<p class=RH1>In Microsoft Word, Office CSS styles are used for text formatting and layout.
+If the user changes a style that Word created, the new style is defined in the <B>Style</B> element of the document.</p>
+
+<H4 class=RH4>Example</H4>
+ 
+<p class=T>In this example, the user defined the <B>strong</B> style as red, Times New Roman
+text.&nbsp;</p>
+
+<PRE class=C><CODE>
+&lt;style&gt;&lt;!--
+strong {
+color: red;
+font-face: &quot;Times New Roman&quot;;
+}
+...
+--&gt;&lt;/style&gt;
+</CODE></PRE>
+
+<p class=T>In Microsoft Excel, text formatting is applied to table elements.</p>
+
+<p class=T>In Microsoft PowerPoint, formatting is applied to textual content within elements.
+
+Some types of formatting, such as first line indents and margin adjustment, cannot be represented by PowerPoint. Thus, PowerPoint will apply only the formatting that it can when
+it encounters unused HTML elements.</p>
+
+<h4 class=RH4>id attributes</h4>
+<p class=T>Like other atttributes that are not used by Office, <b>id</b> attributes are
+preserved.</p>
+<p class=T>In Microsoft Word, when a document is saved as a Web page, and if there's
+more than one instance of the <b>id</b> attribute, only the first instance is
+specified.</p>
+
+<h4 class=RH4>Nested tags</h4>
+<p class=T>When character formatting elements contain paragraph/block-level
+elements, the character formatting elements are repeated for each paragraph
+instead.</p>
+
+<p class=T>If the HTML in the following example is opened,</p>
+
+<PRE class=C><CODE>
+&lt;strong&gt;
+&lt;p&gt;Here is a paragraph.&lt;/p&gt;
+&lt;p&gt;Here is another.&lt;/p&gt;
+&lt;p&gt;Wait! There's another.&lt;/p&gt;
+&lt;table&gt;&lt;tr&gt;
+&lt;td&gt;One cell&lt;/td&gt;
+&lt;td&gt;Two cells&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;
+&lt;/strong&gt;
+</CODE></PRE>
+
+<p class=T>the Office program specifies the following HTML when the document is saved as a Web
+page:</p>
+
+<PRE class=C><CODE>
+&lt;p&gt;&lt;b&gt;Here is a paragraph.&lt;o:p&gt;&lt;/o:p&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Here is another.&lt;o:p&gt;&lt;/o:p&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Wait! There's another.&lt;o:p&gt;&lt;/o:p&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;table border=0 cellpadding=0 style='mso-cellspacing:1.5pt'&gt;
+ &lt;tr&gt;
+  &lt;td style='padding:.75pt .75pt .75pt .75pt'&gt;
+  &lt;p class=MsoNormal&gt;One cell&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td style='padding:.75pt .75pt .75pt .75pt'&gt;
+  &lt;p class=MsoNormal&gt;Two cells&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+</CODE></PRE>
+
+<H4 class=RH4>Nested block-level elements</H4>
+
+<p class=T>If an Office program encounters a block-level element inside another block-level element, the current
+element is closed before starting the new one. When the new element is closed, the
+parent element contains the remainder of the text span.</p>
+
+<p class=T>If the HTML in the following example is opened,</p>
+
+<PRE class=C><CODE>
+&lt;p&gt;This is a paragraph.
+&lt;address&gt;This is an address inside of the paragraph.&lt;/address&gt;
+And this is the rest of the paragraph.&lt;/p&gt;
+</CODE></PRE>
+
+<p class=T>the Office program specifies the following HTML when the document is saved as a Web
+page:</p>
+
+<PRE class=C><CODE>
+&lt;p&gt;This is a paragraph. &lt;/p&gt;
+&lt;address&gt;This is an address inside of the paragraph.&lt;/address&gt;
+&lt;p class=MsoNormal&gt;And this is the rest of the paragraph.&lt;/p&gt;
+</CODE></PRE>
+
+
+<h4 class=RH4>Improperly nested elements</h4>
+<p class="T">If the file contains elements that are improperly nested, the
+elements are saved in the proper nesting order. The following example shows an <b>I</b>
+start tag inside a <b>B</b> element.</p>
+<pre><code>&lt;b&gt;Here are &lt;i&gt;some HTML&lt;/b&gt; elements&lt;/i&gt;
+</code></pre>
+<p class="T">When the document is saved, an <b>I</b> end tag is specified within
+the parent <b>B</b> element to close the <b>I</b> start tag, and a new <b>I</b>
+start tag is specified outside the <b>B</b> element to match the original <b>I</b>
+end tag.</p>
+<pre><code>&lt;b&gt;Here are &lt;i&gt;some HTML&lt;/i&gt;&lt;/b&gt;&lt;i&gt; elements&lt;/i&gt;
+</code></pre>
+<p class="T">If the improperly nested element has an <b>id</b> attribute, the
+identifier is preserved. This example shows an <b>I</b> element with an <b>id</b>
+attribute.</p>
+<pre><code>&lt;b&gt;Here are &lt;i id=id001&gt;some HTML&lt;/b&gt; elements&lt;/i&gt;
+</code></pre>
+<p class="T">When the document is saved, the <b>id</b> attribute is specified.</p>
+<pre><code>&lt;b&gt;Here are &lt;i id=id001&gt;some HTML&lt;/i&gt;&lt;/b&gt;&lt;i&gt; elements&lt;/i&gt;
+</code></pre>
+
+<h4 class=RH4>HTML elements and styles</h4>
+
+<p class=T>When a Web page is opened in Microsoft Word, a Word style is created.
+Character styles use the underlying font and the specified formatting.
+Paragraph styles use the Normal style and the specified formatting.
+Microsoft Excel and PowerPoint apply direct formatting.</p>
+
+<p class=T>When the document is saved, the style is specified using the appropriate
+element and style attribute.</p>
+
+<p class=T>The following table describes what a Microsoft Office program does when it encounters an element while opening a Web page, and how some Web browsers display the elements saved by Office.</p>
+
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Element</B></TD>
+<TD class=I width=66% align=left><b>Comments</b></TD>
+</TR>
+
+  <tr valign=top>
+    <td width="19%"><b>Address</b></td>
+    <td width="81%">Apply italics to the text contained within the element and
+      apply a paragraph break before and after the text.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Basefont</b></td>
+    <td width="81%">Sets a default font size for a section of the document. Only
+      the <b>size</b> attribute is allowed in this element, but it is not
+      required. If the size is not specified, the default font size is 3. 
+      If the close tag is not used, this means that the base font size is in effect 
+      until either the
+      document's end is reached or a <b>Basefont</b> start tag is
+      encountered.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Big</b></td>
+    <td width="81%">The text contained in this element increases in size by one HTML font size increment.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Blockquote</b></td>
+    <td width="81%">The text contained in this element is indented 0.25 inches on the left
+      and right. Each nested <b>Blockquote</b> element adds 0.25 inches to
+      the existing indent. <b>Blockquote</b> start tags increase the indent and closing <b>Blockquote</b> tags reduce the
+      indent.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Center</b></td>
+    <td width="81%">Center
+      alignment is applied to the text and elements contained in this element.
+      No style is created. When the document is saved, direct alignment formatting is used.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Cite</b></td>
+    <td width="81%">The text contained in this element appears italicized.
+      The size of the text
+      depends on the size of surrounding text.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Code</b></td>
+    <td width="81%">The size of the text contained in this element depends
+      on the size of surrounding text.
+      Note that Microsoft Internet Explorer 3.0 and Netscape Navigator 3.0
+      and 4.0 display slightly smaller text of the same face and color. Internet
+      Explorer 4.0 displays Courier New text that is slightly smaller than the
+      surrounding text.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Comment</b></td>
+    <td width="81%">The text contained in this element does not appear in Web browsers.
+      The text is not displayed in the Office program, but is preserved.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Dfn</b></td>
+    <td width="81%">Not supported by Netscape Navigator 3.0 and 4.0. Microsoft
+      Internet Explorer 3.0 and 4.0 display the text using an italic font variant.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Dd</b></td>
+    <td width="81%">Used to create a definition list. Text contained in a <b>Dd</b>
+      element nested inside the <b>Dl</b> element is indented 0.25 inches from the
+      left margin. The text has a first line indent of 0.25 inches and is directly 
+      formatted. No style is created. 
+
+      Text contained in a <b>Dt</b> element is aligned with the left margin.
+
+      When a <b>Dd</b> element appears after a <b>Dt</b> element, a line break
+      is used, but a new paragraph is not created.
+
+      Text contained in a <b>Dd</b> element that is not nested in a <b>Dl</b>
+      element is rendered as a paragraph with a first line indent of 0.25 in.
+      The text is directly formatted and no style is created. 
+
+      If the <b>Dd</b> element is nested within a <b>Dl</b> element, the text
+      enclosed by the <b>Dd</b> element is directly formatted with a first
+      line indent of 0.25 inches and no style is created. 
+
+      All other combinations of definition
+      list tags are displayed as regular paragraphs.
+
+      When the document is saved, all formatting is applied as direct margin or
+      first line indent formatting. Note that the <B>compact</B> attribute 
+      is not preserved.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Dl</b></td>
+    <td width="81%">Used in a definition list. Contains the <b>Dd</b> and
+      <b>Dt</b> elements. Text located inside the <b>Dl</b> element but outside
+      the <b>Dd</b> and <b>Dt</b> elements is displayed as if it were inside a <b>P</b> element.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Dt</b></td>
+    <td width="81%">Used in a definition list. Text within a <b>Dt</b>
+      element that is not nested within a <b>Dl</b> element is displayed as if it
+      were inside a <b>P</b> element.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Iframe</b></td>
+    <td width="81%">The text contained in this element appears in a separate window.
+      The text is not displayed in the Office program, but it is preserved.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Italics</b></td>
+    <td width="81%">The text contained in this element is italicized.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Kbd</b></td>
+    <td width="81%">The size of the text contained in this element depends
+      on the size of surrounding text.
+      Note that Microsoft Internet Explorer 3.0 and Netscape Navigator 3.0
+      and 4.0 display slightly smaller text of the same face and color. Internet
+      Explorer 4.0 displays Courier New text that is slightly smaller than the
+      surrounding text.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Listing</b></td>
+    <td width="81%">The text contained in this element is displayed as code
+      and does not wrap as the window is sized.
+      See the description of the <B>Pre</B> element.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Marquee</b></td>
+    <td width="81%">Text scrolls across the screen.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Nobr</b></td>
+    <td width="81%">Suppresses line breaks within a section of text.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Plaintext</b></td>
+    <td width="81%">The text and elements contained in this element are displayed using 
+      Courier font.
+      See the description of the <b>Pre</b> element. The closing tag is not required.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Pre</b></td>
+    <td width="81%">The text contained in this element is displayed as code
+      and does not wrap as the window is sized.
+      Note that in Microsoft Internet
+      Explorer 3.0 and Netscape Navigator 3.0 and 4.0, the text is displayed using the
+      current font but in a slightly smaller font size. In Internet Explorer 4.0,
+      the text is displayed using Courier font.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Q</b></td>
+    <td width="81%">The quotation text contained in this HTML 4.0 element is indented.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Samp</b></td>
+    <td width="81%">Text is displayed using a slightly smaller font than the current font.
+      Internet Explorer 4.0 displays the text using Courier New in a slightly smaller font
+      size.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Small</b></td>
+    <td width="81%">The text contained in this element is decreased in size by one HTML font
+      increment.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Spacer</b></td>
+    <td width="81%">Causes a blank space to appear in the browser window.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Tt</b></td>
+    <td width="81%">The text contained in this element is displayed using a slightly smaller font.
+      In Internet Explorer 4.0, the
+      text is displayed using Courier font in a size slightly smaller than the current font size.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%">Unknown elements</td>
+    <td width="81%">The contents of the element are displayed as a paragraph in Normal
+      style.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Var</b></td>
+    <td width="81%">The text contained in this element
+      is displayed as italic in the current font. In Internet Explorer 3.0, the
+      text is displayed using the same font but in a slightly smaller size.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Wbr</b></td>
+    <td width="81%">Specifies where a line should break. This element is typically used 
+      within a <b>Nobr</b> element and does not have a closing tag.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%"><b>Xmp</b></td>
+    <td width="81%">The text contained in this element is displayed as code
+      and does not wrap as the window is sized. See the description of the <b>Pre</b> element.</td>
+  </tr>
+</table>
+
+<p class=T>Note that formatting is applied to the rest of the
+document as direct formatting. If an element has been redefined in the style
+sheet using CSS style attributes and the document is saved as a Web page, the
+element is not used and the formatting is specified as direct formatting.</p>
+
+<p class=T>The <b>Nobr</b> and <b>Wbr</b> elements are treated in the same way as unknown 
+HTML elements in Microsoft Word and PowerPoint. In Microsoft Excel, the <b>Nobr</b>
+element disables wordwrap within a cell and <b>Wbr</b> enables wrapping.
+If there is more than one <b>Nobr</b> and <b>Wbr</b>  element within a cell, the last one 
+is used. When the document is saved in Microsoft Word or PowerPoint, the original 
+syntax of the element is specified. In Excel, direct formatting for suppressing wordwrap is specified and the elements are not
+used.</p>
+
+<p class=T>For information about table elements, see the Excel <A HREF="../Excel/xlconTables.htm">Worksheets</A> and <A HREF="../Word/wdconTables.htm">Tables</A> topics.</p>
+
+
+<h4 class=RH4>Missing close tags</h4>
+<p class="T">When a file is opened, the
+elements in the following table have optional close tags that are specified when the document is
+saved and one
+of the following tags is encountered.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows" width="650">
+  <tr valign="top">
+    <td class="I" width="170" align="left"><b>If the start tag is</b></td>
+    <td class="I" width="448" align="left"><b>The end tag is specified before</b></td>
+  </tr>
+  <tr>
+    <td class="T" width="170" align="left"><b>&lt;DD&gt;</b></td>
+    <td class="T" width="448" align="left"><b>&lt;DD&gt;</b>, <b>&lt;DT&gt;</b>,
+      <b>&lt;/DL&gt;</b></td>
+  </tr>
+  <tr>
+    <td class="T" width="170" align="left"><b>&lt;DT&gt;</b></td>
+    <td class="T" width="448" align="left"><b>&lt;DD&gt;</b>, <b>&lt;DT&gt;</b>,
+      <b>&lt;/DL&gt;</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="170" align="left"><b>&lt;LI&gt;</b></td>
+    <td class="T" width="448" align="left"><b>&lt;LI&gt;</b>, <b>&lt;/UL&gt;</b>,
+      <b>&lt;/OL&gt;</b>, <b>&lt;/Menu&gt;</b>, <b>&lt;/Dir&gt;</b></td>
+  </tr>
+  <tr>
+    <td class="T" width="170" align="left"><b>&lt;Option&gt;</b></td>
+    <td class="T" width="448" align="left"><b>&lt;Option&gt;</b>, <b>&lt;/Select&gt;</b></td>
+  </tr>
+  <tr>
+    <td class="T" width="170" align="left"><b>&lt;TD&gt;</b></td>
+    <td class="T" width="448" align="left"><b>&lt;TD&gt;</b>, <b>&lt;TH&gt;</b>,
+      <b>&lt;TR&gt;</b>, <b>&lt;/TR&gt;</b>, <b>&lt;/Table&gt;</b>, <b>&lt;/Select&gt;</b></td>
+  </tr>
+  <tr>
+    <td class="T" width="170" align="left"><b>&lt;TH&gt;</b></td>
+    <td class="T" width="448" align="left"><b>&lt;TD&gt;</b>, <b>&lt;TH&gt;</b>,
+      <b>&lt;TR&gt;</b>, <b>&lt;/TR&gt;</b>, <b>&lt;/Table&gt;</b>, <b>&lt;/Menu&gt;</b>,
+      <b>&lt;/Dir&gt;</b></td>
+  </tr>
+  <tr>
+    <td class="T" width="170" align="left"><b>&lt;TR&gt;</b></td>
+    <td class="T" width="448" align="left"><b>&lt;TR&gt;</b>, <b>&lt;/Table&gt;</b></td>
+  </tr>
+</table>
+<p class="T">If a <b>Table</b> element contains text outside of cell elements,
+cell elements are not automatically added when the document is saved. In the
+following example, the elements required to make the text appear inside the
+table are not specified. Depending on the Web browser used, the text appears outside
+the
+table.</p>
+<pre><code>&lt;table border&gt;
+outside
+&lt;/table&gt; 
+</code></pre>
+<h4 class="RH4">White space, margins, and missing paragraph end tags</h4>
+<p class="T">The following table shows the lines of white space around
+block-level elements.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows" width="602">
+  <tr valign="top">
+    <td class="I" width="392" align="left"><b>Element</b></td>
+    <td class="I" width="178" align="left"><b>Lines of white space</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="392" align="left">Headings (<b>H1</b>...<b>H6</b>), <b>P</b>,
+      <b>Blockquote</b>, <b>Pre</b>, <b>IsIndex</b>, <b> Form</b></td>
+    <td class="T" width="178" align="left">1</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="392" align="left"><b>UL</b>, <b>OL</b>, <b>Dir</b>, <b>Menu</b>,
+      <b> DL</b></td>
+    <td class="T" width="178" align="left">1 for top-level lists, or 0 for lists
+      inside lists</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="392" align="left"><b>DT</b>, <b>DD</b>, <b>BR</b>, <b>HR</b>,
+      <b>LI</b>, <b> Address</b></td>
+    <td class="T" width="178" align="left">0</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="392" align="left"><b>NoFrames</b>, <b>NoScript</b>, <b>Div</b>,
+      <b>Center</b>, <b> Fieldset</b></td>
+    <td class="T" width="178" align="left">0</td>
+  </tr>
+</table>
+<p class="T">The paragraph end tag is optional. However, the bottom margin of
+the paragraph is determined by where the end tag is used. If the paragraph
+end tag is not used, the default margin of a paragraph is 1 em
+above and 0 em below. The <b>margin</b> style attribute specifies the margin. In
+this example, the paragraph has a two-line margin.</p>
+<pre><code>&lt;p style=&quot;margin: 2em&quot;&gt;A paragraph with 2 lines around it</code></pre>
+<p class="T">If the bottom margin of a block-level element and the top margin of
+an adjacent block-level element are positive, the white space displayed in the browser is the greater of the two.
+Otherwise, the white space is the sum of the two margins.</p>
+<p class="T">When the document is saved, paragraph end tags are used. If
+the end tag is missing from the original document, an end tag is added before the start tag of any block-level elements in the preceding table.</p>
+<h4 class=RH4>Missing close tags for block-level elements in table cells</h4>
+<p class="T">A file can contain block-level elements in a table cell, and if the
+close tags of those elements are missing, the document is saved with end tags
+applied before the end tag of the cell.</p>
+<h4 class=RH4>Empty elements</h4>
+<p class="T">To reduce file size, the following empty elements are not specified
+when the document is saved: <b>B</b>, <b>Big</b>, <b>Blink</b>, <b>Center</b>, <b>Cite</b>,
+<b>Code</b>, <b>Comment</b>, <b>DFN</b>, <b>EM</b>, <b>Font</b>, <b>I</b>, <b>KBD</b>,
+<b>Pre</b>, <b>Q</b>, <b>S</b>, <b>Samp</b>, <b>Small</b>, <b>Span</b>, <b>Strike</b>,
+<b>Strong</b>, <b>Sub</b>, <b>Sup</b>, <b>TT</b>, <b>U</b>, <b>Var</b>, and <b>Xmp</b>.</p>
+<p class="T">An element is empty if it contains no text, spaces, or other
+non-empty elements. An empty element can have attributes.</p>
+<h4 class=RH4>Order of Body and Head elements</h4>
+<p class="T">In an HTML file, the <b>Head</b> element can be specified after the
+<b>Body</b> element. However, when the document is saved, the head always
+precedes the body.</p>
+<h4 class=RH4>Uppercase HTML tags</h4>
+<p class="T">When a document is saved, all HTML tags and attributes are
+specified in lowercase characters. For elements and attributes that are not used,
+the capitalization is preserved.</p>
+<h4 class=RH4>Line spacing</h4>
+<p class="T">There are 6 styles automatically used by Office to specify elements.</p>
+<p class="T">Style 1: Text and elements are in the same line.</p>
+<pre><code>....here is some &lt;b&gt;bold&lt;/b&gt; text... 
+</code></pre>
+<p class="T">Style 2: One or more instances of an element appear in the parent
+element.</p>
+<pre><code>&lt;ul&gt; 
+&lt;li&gt;here is a list element&lt;/li&gt; 
+&lt;li&gt;and here is another&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<p class="T">Style 3: Blank lines appear between elements.</p>
+<pre><code>...example above.&lt;/p&gt; 
+
+&lt;h1&gt;In Conclusion&lt;/h1&gt; 
+
+&lt;p&gt;So, we see that... 
+</code></pre>
+<p class="T">Style 4: Various elements appear in the parent element.</p>
+<pre><code>&lt;table&gt; 
+&lt;tr&gt; 
+&lt;td&gt;a cell&lt;/td&gt; 
+&lt;/tr&gt; 
+&lt;/table&gt; 
+</code></pre>
+<p class="T">Style 5: Blank lines appear around the parent element.</p>
+<pre><code>...Office 9.&lt;/p&gt; 
+
+&lt;table&gt; 
+&lt;tr&gt; 
+&lt;td&gt;a cell&lt;/td&gt; 
+&lt;/tr&gt; 
+&lt;/table&gt; 
+
+&lt;p&gt;In the table above... 
+</code></pre>
+<p class="T">Style 6: No line break before the <b>BR</b> tag, but one after.</p>
+<pre><code>...Office 9.&lt;/p&gt; 
+
+&lt;p&gt;This is a paragraph&lt;br&gt; 
+that has several breaks&lt;br&gt; 
+in the middle&lt;/p&gt; 
+
+&lt;p&gt;In conclusion...
+</code></pre>
+<p class="T">The following table shows the style used to specify an element.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="90%" align="left"><b>Element</b></td>
+    <td class="I" width="10%" align="left"><b>Style</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="90%" align="left"><b>A</b>, <b>Acronym</b>, <b>B</b>, <b>Big</b>,
+      <b>Button</b>, <b>Cite</b>, <b>Code</b>, <b>Comment</b>, <b>Del</b>, <b>DFN</b>,
+      <b>Em</b>, <b>Font</b>, <b>I</b>, <b>Ignore</b>, <b>Img</b>, <b>Input</b>,
+      <b>Ins</b>, <b>KBD</b>, <b>Listing</b>, <b>Nobr</b>, <b>Pre</b>, <b>Q</b>,
+      <b>S</b>, <b>Samp</b>, <b>Small</b>, <b>Span</b>, <b>Strike</b>, <b>Strong</b>,
+      <b>Sub</b>, <b>Sup</b>, <b>Textarea</b>, <b>TT</b>, <b>U</b>, <b>Var</b>, <b>Wbr</b>,
+      <b>Xml</b>, <b>Xmp</b>, any tags not used by Microsoft Office</td>
+    <td class="T" width="10%" align="left">1</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="90%" align="left"><b>Area</b>, <b>Base</b>, <b>Basefont</b>,
+      <b>Caption</b>, <b>Col</b>, <b>Colgroup</b>, <b>DD</b>, <b>DT</b>, <b>Frame</b>,
+      <b>Legend</b>, <b>Li</b>, <b>Link</b>, <b>Meta</b>, <b>Option</b>, <b>Plaintext</b>,
+      <b>TD</b>, <b>TH</b>, <b>Title</b></td>
+    <td class="T" width="10%" align="left">2</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="90%" align="left"><b>Address</b>, <b>Bgsound</b>, <b>Blockquote</b>,
+      <b>Center</b>, comments (<b>&lt;!--</b>...<b>--&gt;</b>), <b>Div</b>, <b>H1</b>...<b>H6</b>,
+      <b>Marquee</b>, <b>P</b>, <b>Spacer</b></td>
+    <td class="T" width="10%" align="left">3</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="90%" align="left"><b>Html</b>, <b>Noframes</b>, <b>TR</b></td>
+    <td class="T" width="10%" align="left">4</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="90%" align="left"><b>Body</b>, <b>Dir</b>, <b>DL</b>, <b>Fieldset</b>,
+      <b>Form</b>, <b>Frameset</b>, <b>Head</b>, <b>HR</b>, <b>Iframe</b>, <b>Layer</b>,
+      <b>Map</b>, <b>Menu</b>, <b>Object</b>, <b>OL</b>, <b>Script</b>, <b>Select</b>,
+      <b>Style</b>, <b>Table</b>, <b>UL</b></td>
+    <td class="T" width="10%" align="left">5</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="90%" align="left"><b>BR</b></td>
+    <td class="T" width="10%" align="left">6</td>
+  </tr>
+</table>
+<p class="T">If two style 3 or style 5 elements are next to each other, only one blank line
+is specified between them, not two.</p>
+<p class="T">If
+contained in other elements, style 5 elements are implemented the same was as style 4
+elements.</p>
+<h4 class=RH4>Wordwrap</h4>
+<p class="T">A line feed is specified if the text is longer than 80 characters
+and if the line can be broken. The line feed is specified between words in the
+content. If the line must be broken inside an element, the line feed is specified
+between attributes or in spaces within the attribute values. The following example
+shows two line feeds specified in an attribute value.</p>
+<pre><code>&lt;td style=&quot;border-top: 0.0in none rgb(0,0,0); border-left: 
+0.0in none rgb(0,0,0); border-bottom: 0.0in none rgb(0,0,0); 
+border-right: 0.0in none rgb(0,0,0)&quot;&gt; 
+</code></pre>
+<h4 class=RH4>Indenting lines</h4>
+<p class="T">The following elements are indented one space from the current
+indent level: <b>TR</b>, <b>Dir</b>, <b>DL</b>, <b>Form</b>, <b>Frameset</b>, <b>Layer</b>,
+<b>Map</b>, <b>Menu</b>, <b>Object</b>, <b>OL</b>, <b>Select</b>, <b>Table</b>, and
+<b>UL</b>. A line can be indented up to
+40 characters.</p>
+<p class="T">In the following example, the table elements are indented.</p>
+<pre><code>&lt;table&gt;
+ &lt;tr&gt;
+  &lt;td&gt;First cell&lt;/td&gt; 
+  &lt;td&gt;Second Cell&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<h4 class=RH4>Indenting list items</h4>
+<p class="T">Each line
+after the first line of a list element is indented 4 spaces from the current
+indent level. In this example, the list item is indented.</p>
+<pre><code>&lt;li&gt;&lt;font size=&quot;2&quot; face=&quot;Verdana&quot;&gt;Changes to HTML pages we 
+    automatically generate (the table of contents pane, for 
+    example)&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;&lt;font size=&quot;2&quot; face=&quot;Verdana&quot;&gt;Other changes&lt;/font&gt;&lt;/li&gt;
+</code></pre>
+<h4 class=RH4>Formatting and indenting CSS definitions</h4>
+<p class="T">If the definition has only one style attribute and value, it is
+specified on one line. A space is added after the name, opening brace,
+colon, semicolon, and closing brace. The following examples show style
+definitions.</p>
+<pre><code>h1 { color: blue; } 
+body { background: url(texture.gif) white; } 
+.pastoral { color: green; } 
+</code></pre>
+<p class="T">If the definition specifies more than one style attribute and value,
+each pair is specified on a line. This example shows a paragraph formatting
+definition.</p>
+<pre><code>p { 
+    font-size: 12pt; 
+    float: left; 
+} 
+</code></pre>
+<p class="T">The semicolon is always specified after the last attribute and
+value pair.</p>
+<h4 class=RH4>Capitalization of CSS style definitions</h4>
+<p class="T">The definitions, CSS style attribute names, and values are
+specified in lowercase. The case of class names, URLs, anything in quotes, and
+anything not used by Microsoft Office programs is preserved. The definitions
+inside the <b>Style</b> element are placed in a comment.<code><br>
+</code></p>
+<h4 class=RH4>Quoting values</h4>
+<p class="T">A CSS value is put in quotation marks if it has a space in the
+value or if it is longer than 256 characters.</p>
+<p class="T">Double quotation marks in the attribute value are specified as &quot;\0022&quot;,
+and single quotation marks are specified as
+&quot;\0027&quot;. In this example, double quotation marks surround the date
+value.</p>
+<pre><code>msoffice-field-code: &quot;DATE \0022MM\/DD\/YY\0022&quot; 
+</code></pre>
+<p class="T">The forward slash is specified as a backward slash followed by a
+forward slash.&nbsp;</p>
+<h4 class=RH4>style attribute</h4>
+<p class="T">Unlike other attribute values that are specified in double quotation
+marks,
+inline CSS styles are specified in single marks allowing double marks to
+appear inside the attribute value as a single character instead of &quot;<code>\0022&quot;</code>.</p>
+<p class="T">For a single attribute, one space is added after the colon.</p>
+<pre><code>&lt;span style='border: solid'&gt; 
+</code></pre>
+<p class="T">If more than one attribute is specified, one space is added after each
+colon and semicolon.</p>
+<pre><code>&lt;span style='border: solid; font: arial'&gt; 
+</code></pre>
+<h4 class=RH4>XML, script, and preformatted text</h4>
+<p class="T">Unlike HTML, white space is significant in XML. Blocks of XML that
+are not used by Microsoft Office programs and the white space in those blocks
+are preserved. Likewise, the formatting of script blocks and the content of <b> Pre</b>
+elements are also preserved.</p>
+<h4 class=rh4>Styles not used by Microsoft Office</h4>
+<p class="T">Style names and attributes that are not placed by Microsoft Office
+programs are preserved. When a document is saved, these styles are specified
+after the styles used by Office programs. @ keywords are placed after the @
+keywords that must start the block of style definitions, followed by the style
+definitions and unused style definitions.</p>
+<p class="T">If an invalid style value is encountered when the file is opened,
+the value is either preserved or the value used by the Office program is
+specified. If a priority is specified after a style attribute value, the
+priority is not preserved when the document is saved. Comments in the style
+element are also not preserved.</p>
+<p class="T">For more information about how Web browsers handle CSS properties
+and values, see the CSS Level 1 Recommendation.</p>
+<h4 class=RH4> Attributes not used by Microsoft Office</h4>
+<p class="T">Attributes that are not used by Microsoft Office programs are
+preserved as long as the parent element is specified.</p>
+<p class="T">In Microsoft PowerPoint and Microsoft Word, the attributes in
+consecutive elements are combined if the elements are combined. In the following
+example, the two <b> B</b> elements have <b> id</b> attributes.</p>
+<pre><code>...some text &lt;b id=1&gt;&lt;i&gt;&lt;b id=2&gt;hi there!&lt;/b&gt;&lt;/i&gt;&lt;/b&gt;... 
+</code></pre>
+<p class="T">When the document is saved, the attributes are specified in a
+single <b> B</b> element.</p>
+<pre><code>...some text &lt;b id=1 id=2&gt;&lt;i&gt;hi there!&lt;/i&gt;&lt;/b&gt;... 
+</code></pre>
+<p class="T">If an invalid attribute value is encountered when the file is
+opened, the value is either preserved or the value used by the Office program is
+specified.&nbsp;</p>
+<h4 class=RH4>Tags not used by Microsoft Office</h4>
+<p class="T">Tags and comments that are not used by Microsoft Office programs
+are preserved as long as the parent element can contain elements. Unused tags
+are usually written at the end of the parent element.</p>
+<p class="T">Any content that appears before or after the <b>Html</b> element is
+preserved. If the <b>Html</b> start and end tags are absent, the <b>Html</b>
+element is assumed to contain the entire document. If the <b>Head</b> and <b>Body</b>
+elements are absent, the <b>Body</b> element is assumed to contain
+everything in the <b>Html</b> element. If the <b>Head</b> element has been specified
+but not the <b>Body</b> element, everything in the <b>Html</b>
+element after the <b>Head</b> element is assumed to be in a <b>Body</b> element.</p>
+<p class="T">If a <b>Body</b> or <b>Frameset</b> element has been specified, but the
+<b>
+Head</b> element is absent, everything in the <b> Html</b> element before the <b>Body</b>
+or <b>Frameset</b> element is assumed to be in a <b>Head</b> element. Content
+within the <b>Html</b> element but outside the <b>Head</b>, <b>Body</b>, and <b>Frameset</b>
+elements is preserved.</p>
+<p class="T">If unused elements have been specified in a <b>Frameset</b>, <b>Head</b>,
+or <b>Map</b> element, those elements are preserved and placed at the end of
+the parent element when the document is saved. If <b>Head</b> is the parent
+element, the textual content of those elements is not preserved.</p>
+<h4 class=RH4>Images</h4>
+<p class="T">Images are included in a page using the <b>Img</b> element and an associated
+image file. When a document is opened, the image file is linked. If the image is
+a hyperlink,
+the hyperlink is preserved.</p>
+<h4 class=RH4>src attribute</h4>
+<p class="T">The <b>src</b> attribute can contain a URL, UNC, or local file path
+and file name. The path can be absolute or relative. If the path is relative,
+the URL specified in the <b>Base</b> element is used. If the <b>Base</b> element
+is absent, the URL of the document is used as the base path.</p>
+<p class="T">If the <b>src</b> attribute is absent, a picture placeholder
+is created when the document is opened in a Microsoft Office program.</p>
+<h4 class=RH4> height and width attributes</h4>
+<p class="T"> If both <b>height</b> and <b>width</b> attribute values have been specified, the image is scaled. If both values are
+absent, the actual size of the image is used. If only one value has been specified,
+the other value is calculated so that the aspect ratio of
+the picture is preserved. Both <b>height</b> and <b>width</b> attributes are
+specified when the document is saved.</p>
+<h4 class=RH4>alt attribute</h4>
+<p class="T">The alternate text for an image is preserved.</p>
+<h4 class=RH4>usemap and ismap attributes</h4>
+<p class="T">A mapping table is created containing all the <b>Map</b>
+elements, and a shape is created for each <b>Area</b> element in a <b>Map</b>
+element. Different images can reference the same <b>Map</b>  element; however, a
+separate <b>Map</b> element is specified for each image when the document is
+saved. The <b>name</b> and any <b>id</b> attributes of the <b>Map</b> element
+are not preserved.&nbsp;</p>
+<p class="T">For floating images, the <b>ismap</b> attribute is preserved. If both
+<b>ismap</b> and <b>usemap</b> attributes have been specified, the <b> usemap</b> attribute is
+used.</p>
+<h4 class=RH4>align attribute</h4>
+<p class="T">In Microsoft Word, images that are aligned to the left or right are
+opened as floating images, while other images are opened as inline images.
+Attribute values other than <b>left</b> and <b>right</b> are preserved.
+Microsoft Excel and Microsoft PowerPoint do not support inline images or
+text wrapping around images. In Excel and PowerPoint, an image is opened as a floating
+picture object and the surrounding text does not wrap around the picture.</p>
+<h4 class=RH4>hspace and vspace attributes</h4>
+<p class="T">In Word, the <b> hspace</b> and <b> vspace</b> attributes specify the
+spacing around the image in pixels. Excel and PowerPoint do
+not support
+text wrapping around images.</p>
+<h4 class=RH4>dynsrc, controls, loop, and start attributes</h4>
+<p class="T">In Word, images having a <b>dynsrc</b> attribute are
+opened using an ActiveX control instead of being importing as a picture. If the <b>controls</b>,
+<b>loop</b>, or <b>start</b> attributes have been specified without a <b>dynsrc</b>
+attribute, it is preserved. These attributes are not supported by the other
+Microsoft Office programs.</p>
+<h4 class=RH4>Area element</h4>
+<p class="T">When a document containing an image map is opened, an Office Art
+shape is created for each <b>Area</b> element. The shape has a hyperlink and is
+sized and positioned on top of the picture object to represent an image map. The
+shape has no border and fill to make it hidden.</p>
+<h4 class=RH4>shape and coords attributes</h4>
+<p class="T">The <b> shape</b> attribute contains one of the following string constants
+specifying the shape: <b>rect</b>, <b>rectangle</b>, <b>circ</b>, <b>circle</b>,
+<b>poly</b>, or <b>polygon</b>. The value
+of the <b> coords</b> attribute depends on the type of shape. For rectangles, the
+<b> coords</b>
+attribute contains <b>left</b>, <b>right</b>, <b>top</b>, or <b>bottom</b>. For circles, the
+<b> coords</b>
+attribute contains <b> centerx</b> or <b>centery</b>. For polygons, the <b> coords</b> attribute
+contains <b>x1</b>, <b>y1</b>, <b>x2</b>, or <b>y2</b>. The values are specified in pixels.</p>
+<p class="T">In Microsoft Word, shapes are anchored immediately before the image
+by means of character-relative anchoring.</p>
+<h4 class=RH4>href and nohref attributes</h4>
+<p class="T">If the <b>href</b> attribute has been specified, a hyperlink is created
+for the shape. If both <b>href</b> and <b>nohref</b> are specified, the <b>href</b>
+attribute is used but the <b>nohref</b> attribute is ignored.</p>
+<h4 class=RH4>title attribute</h4>
+<p class="T">If the <b>title</b> attribute is specified, a ScreenTip is created
+for the shape.</p>
+<h4 class=RH4>Background color and images</h4>
+<p class="T">The <b>bgcolor</b> attribute of the <b>Body</b> element specifies the
+background color of a page, sheet, or slide, and the fill color of Office Art
+background shapes on the page. If the <b> background-color</b> style attribute
+is specified in the <b>Body</b> element, the style value is used instead of the <b>bgcolor</b>
+attribute value, and when the document is saved, the <b>bgcolor</b> attribute is
+not preserved.</p>
+<p class="T">The <b>background</b> attribute of the <b>Body</b> element
+specifies the image used as the background texture fill of a page, sheet, or
+slide. In Microsoft Excel, a device-dependent bitmap is created from the image. If the <b>background</b> style
+attribute is specified in the <b>Body</b> element, the style value is used
+instead of the <b>background</b> attribute value, and when the document is saved,
+the <b>background</b> attribute is not preserved.</p>
+<p class="T">In Excel, if both <b>bgcolor</b> and <b>background</b>
+attributes are specified, the <b>background</b> attribute is used and the <b>bgcolor</b>
+attribute is ignored. If the <b>bgcolor</b> attribute is specified but not the <b>background</b>
+attribute, the fill color of all cells is set to the value of the <b>bgcolor</b>
+attribute. If the <b>background</b> attribute is specified but not the <b>bgcolor</b>
+attribute, the specified image is embedded and tiled across the sheet background.</p>
+<p class="T">The <b>background</b>, <b>background-color</b>, and <b>background-tile
+</b> 
+style attribute values take precedence over the corresponding element
+attribute values. When the document is saved, the element attributes are
+specified, not the style attributes. The color of the default master cell is
+specified in the <b>bgcolor</b> attribute. The <b>mso-ignore: bgcolor</b> style
+is also specified, along with a style class designating the default master cell
+style. If the background is tiled, the <b>bgcolor</b> attribute specifies the
+color white and the <b>background</b> attribute contains the name of the image
+file. The <b>mso-ignore:bgcolor</b> style is also specified.</p>
+<h4 class=RH4>HR tags</h4>
+<p class="T">In Microsoft Word, the <b>HR</b> tag produces a horizontal
+line object. In Excel and PowerPoint, the <b>HR</b> tag is ignored and not
+preserved.</p>
+
+</body>
+
+</html>

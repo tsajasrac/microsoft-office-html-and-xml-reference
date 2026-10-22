@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<title>Guide Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Guide Element (Microsoft PowerPoint)</h1>
+<p class="T">Specifies the guides that are saved with the presentation. Guides
+are horizontal and vertical lines that are used to position objects on a slide.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>position</b></td>
+    <td class="T" width="66%">Defines the position of the guide (in pixels) from
+      the top or left corner of the slide depending on the value of the <B>type</B> attribute.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>type</b></td>
+    <td class="T" width="66%">Contains one of the following string constants
+      specifying the orientation of the guide: <b>horizontal</b> or <b>vertical</b>.
+    </td>
+  </tr>
+</table>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><a href="ppelePresentation.htm"><b>Presentation</b></a></p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">One <b>Guide</b> element is saved for each guide in the
+presentation.</p>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">This example shows three horizontal guides and four vertical
+guides.<br>
+<pre class=C><code>
+&lt;p:guide type=&quot;horizontal&quot; position=&quot;1715&quot; /&gt;
+&lt;p:guide type=&quot;horizontal&quot; position=&quot;2160&quot; /&gt;
+&lt;p:guide type=&quot;horizontal&quot; position=&quot;2606&quot; /&gt;
+&lt;p:guide type=&quot;vertical&quot; position=&quot;2880&quot; /&gt;
+&lt;p:guide type=&quot;vertical&quot; position= &quot;2871&quot; /&gt;
+&lt;p:guide type=&quot;vertical&quot; position= &quot;4198&quot; /&gt;
+&lt;p:guide type=&quot;vertical&quot; position= &quot;1562&quot;/&gt;
+</code></pre>
+
+</body>
+
+</html>

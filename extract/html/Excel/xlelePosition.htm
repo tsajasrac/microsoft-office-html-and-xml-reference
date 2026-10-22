@@ -1,0 +1,71 @@
+<html><head>
+<title>Position Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Position Element (Microsoft Excel)</H1>
+<!-- *** -->
+<p class=T>Contains the index position of a PivotTable field within its current orientation, or specifies the position of a PivotTable field on an axis, the position of a chart title or data label, or the base position of a label entry.</p>
+<!-- *** -->
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleDataLabels.htm"><B>DataLabels</B></A>,
+<A HREF="xleleLabelEntry.htm"><B>LabelEntry</B></A>,
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A>,
+<A HREF="xleleTitle.htm"><B>Title</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>For a PivotTable field, this element contains an integer index.
+If this element is not specified, the default index is 1.</p>
+<!-- *** -->
+<p class=T>For a PivotTable field on a PivotList component, this element contains one of the following string constants specifying the field position on the axis: <B>Column</B>, <B>Data</B>, <B>Page</B>, or <B>Row</B>.
+If this element is not specified, the field is not on an axis.</p>
+<!-- *** -->
+<p class=T>For a chart title, this element is used only with the Chart component, and only when the <B>Title</B> element is a subelement of the <A HREF="xleleChart.htm"><B>Chart</B></A> or <A HREF="xleleWebChart.htm"><B>WebChart</B></A> element. The <B>Position</B> element contains one of the following string constants specifying the position of the title in relation to the chart: <B>Automatic</B>, <B>Bottom</B>, <B>Left</B>, <B>Right</B>, or <B>Top</B>. If this element is omitted, the default position is <B>Automatic</B> and the Chart component determines the position of the title.</p>
+<p class=T>For a label entry, this element specifies the base position of the entry.
+The <A HREF="xleleDX.htm"><B>DX</B></A> and <A HREF="xleleDY.htm"><B>DY</B></A> elements can be used to specify an offset to this position.
+The <B>Position</B> element contains one of the following string constants depending on chart type.
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Chart Type</B></TD>
+<TD class=I width=66% align=left><B>Constant</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Column or bar</TD>
+<TD class=T width=66%>
+<B>Center</B>, <B>InsideBase</B>, <B>InsideEnd</B>, <B>InsideLeft</B>, <B>InsideRight</B>, <B>OutsideBase</B> (Chart component only), <B>OutsideEnd</B>, <B>OutsideLeft</B>, or <B>OutsideRight</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Pie</TD>
+<TD class=T width=66%><B>BestFit</B>, <B>Center</B>, <B>InsideEnd</B>, or <B>OutsideEnd</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Other</TD>
+<TD class=T width=66%><B>Center</B>, <B>OutsideBottom</B>, <B>OutsideLeft</B>, <B>OutsideRight</B>, or <B>OutsideTop</B></TD>
+</TR>
+</TABLE>
+</p>
+<p class=T>If the <B>Position</B> element is not specified, the default position is one of the following string constants depending on the chart type.
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Chart Type</B></TD>
+<TD class=I width=66% align=left><B>Constant</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Column or bar</TD>
+<TD class=T width=66%><B>OutsideEnd</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Pie</TD>
+<TD class=T width=66%><B>BestFit</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Other</TD>
+<TD class=T width=66%><B>OutsideRight</B></TD>
+</TR>
+</TABLE>
+</p>
+<p class=T>If the constant <B>OutsideBase</B> is specified and the Web page is opened in Microsoft Excel, the default value <B>OutsideEnd</B> is used instead.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xlelePivotTable.htm#Example"><B>PivotTable</B></A> element topic.</p>
+</body></html>

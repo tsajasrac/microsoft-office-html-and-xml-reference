@@ -1,0 +1,32 @@
+<html><head>
+<title>Crn Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Crn Element (Microsoft Excel)</H1>
+<p class=T>Contains a description of formula operands located in another workbook.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleXct.htm"><B>Xct</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleBoolean.htm"><B>Boolean</B></A>,
+<A HREF="xleleColFirst.htm"><B>ColFirst</B></A>,
+<A HREF="xleleColLast.htm"><B>ColLast</B></A>,
+<A HREF="xleleError.htm"><B>Error</B></A>,
+<A HREF="xleleNumber.htm"><B>Number</B></A>,
+<A HREF="xleleRow.htm"><B>Row</B></A>,
+<A HREF="xleleText.htm"><B>Text</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>ColFirst</B>, <B>ColLast</B>, <B>Number</B>, <B>Row</B>, and <B>Text</B> subelements are required, but all other subelements are optional.</p>
+<p class=T>If the operand references more than one row, there is one <B>Crn</B> element specified for each row.
+For example, if the array formula <CODE>=EXT.XLS!A1:A4*4</CODE> is entered on a worksheet, there will be four <B>Crn</B> elements in an <B>Xct</B> element.</p>
+<p class=T>If a worksheet contains two different formulas and each formula has multiple operands that reference another workbook, one or more <B>Crn</B> elements can be specified depending on where the referenced cells are located.
+For example, suppose that a worksheet contains the following two formulas in different cells: <CODE>=EXT.XLS!A1*2</CODE> and <CODE>=EXT.XLS!B1*2</CODE>.
+Because the operands are in the same row and not separated by an empty cell, one <B>Crn</B> element can be specified containing information about cells A1 and B1.
+However, if the operands are in different rows and separated by an empty cell, two <B>Crn</B> elements are specified.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xleleSupBook.htm#Example"><B>SupBook</B></A> element topic.</p>
+</body></html>

@@ -1,0 +1,20 @@
+<html><head>
+<title>CrossesAt Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>CrossesAt Element (Microsoft Excel)</H1>
+<p class=T>Contains the x or y value at which a primary axis crosses its orthogonal primary axis.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleAxis.htm"><B>Axis</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>CrossesAt</B> element allows users to place the origin of the two primary axes at a point other than (0,0).</p>
+<p class=T>This element contains a numeric value, or one of the following string constants specifying the maximum or minimum point on the axis: <B>Maximum</B> or <B>Minimum</B>.
+If a numeric value is specified, the value is in the range of the displayed units of the axis as defined by the <A HREF="xleleDisplayUnits.htm"><B>DisplayUnits</B></A> element.</p>
+<p class=T>The <B>CrossesAt</B> element can also contain the string constant <B>Automatic</B>, which means that Microsoft Excel automatically determines the crossing point.
+If this element is not specified, the default crossing point is <B>Automatic</B>.</p>
+<p class=T>For 100% stacked charts, the <B>CrossesAt</B> element contains a number from 0 to 1 representing a percentage.
+For example, a crossing value of 50% would be specified as 0.5.</p>
+</body></html>

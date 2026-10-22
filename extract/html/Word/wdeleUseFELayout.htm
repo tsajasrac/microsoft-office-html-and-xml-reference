@@ -1,0 +1,50 @@
+<html><head>
+<title>UseFELayout Element (Microsoft Word)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>UseFELayout Element (Microsoft Word)</H1>
+<p class=T>Specifies whether the document uses East Asian layout settings.</p>
+<!--
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+
+<TR valign=top>
+<TD class=TT width=33%><A HREF="wdatt.htm"><B>A</B></A></TD>
+<TD class=TT width=66%>Description</TD>
+</TR>
+
+</TABLE>
+-->
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="wdeleWordCompatibility.htm"><b>WordCompatibility</b></A>
+</p>
+
+<p class=RL><b>Remarks</b></p>
+<p class=T>If <CODE>&lt;w:UseFELayout/&gt;</CODE> is specified, the
+document was created on an East Asian system or the Word Web settings require
+that the document be saved with East Asian encoding.</p>
+
+
+<p class=T>This element is used only when East Asian language support is
+installed and enabled.</p>
+
+
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<pre class="C"><code> &lt;w:WordDocument&gt;
+  &lt;w:PunctuationKerning/&gt;
+  &lt;w:PrintTwoOnOne/&gt;
+  &lt;w:Compatibility&gt;
+   &lt;w:UseFELayout/&gt;
+  &lt;/w:Compatibility&gt;
+  &lt;w:NoLineBreaksAfter Lang=&quot;JA&quot;&gt;([\{£¥‘“&lt;/w:NoLineBreaksAfter&gt;
+  &lt;w:NoLineBreaksBefore Lang=&quot;JA&quot;&gt;!%),.:;?]}¢°’”‰&amp;#8242;&amp;#8243;&lt;/w:NoLineBreaksBefore&gt;
+ &lt;/w:WordDocument&gt;</code></pre>
+
+
+</body></html>

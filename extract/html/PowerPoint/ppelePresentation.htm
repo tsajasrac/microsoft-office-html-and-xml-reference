@@ -1,0 +1,111 @@
+<html>
+
+<head>
+<title>Presentation Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Presentation Element (Microsoft PowerPoint)</h1>
+<p class="T">Defines the basic properties of a presentation.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>advisor</b></td>
+    <td class="T" width="66%">Defines the advisor number of the presentation.
+      The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>envelopevisible</b></td>
+    <td class="T" width="66%">Determines whether the envelope is visible. The
+      default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>firstslidenumber</b></td>
+    <td class="T" width="66%">Defines the first slide number.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>hasautolinks</b></td>
+    <td class="T" width="66%">Determines whether the presentation has
+      automatically updated links. The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>hasenvelope</b></td>
+    <td class="T" width="66%">Determines whether the presentation has an
+      envelope. The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>hidecomments</b></td>
+    <td class="T" width="66%">Determines whether the comments are hidden. The
+      default value is <b>False</b>. Note that PowerPoint comments are saved as
+      VML <b>Rect</b> elements and identified with the <a href="ppeleIscomment.htm"><b>IsComment</b></a>
+      element.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>notessizex</b></td>
+    <td class="T" width="66%">Defines the width of the notes pane in pixels.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>notessizey</b></td>
+    <td class="T" width="66%">Defines the height of the notes pane in pixels.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>omittitleplace</b></td>
+    <td class="T" width="66%">Determines whether the title placeholder is
+      omitted. The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>righttoleft</b></td>
+    <td class="T" width="66%">Determines whether the slide text is oriented from
+      right to left. The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>savewithfonts</b></td>
+    <td class="T" width="66%">Determines whether fonts are saved with the
+      presentation. The default value is <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>slidesizex</b></td>
+    <td class="T" width="66%">Defines the width of a slide in pixels.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>slidesizey</b></td>
+    <td class="T" width="66%">Defines the height of a slide in pixels.</td>
+  </tr>
+</table>
+<p class="RL"><b>Subelements</b></p>
+<p class="T"><a href="ppeleBroadcastinfo.htm"><b>Broadcastinfo</b></a>, <a href="ppeleFont.htm"><b>Font</b></a>,
+<a href="ppeleGuide.htm"><b>Guide</b></a>, <a href="ppeleHeadersfooters.htm"><b>Headersfooters</b></a>,
+<a href="ppeleHtmlpublishsettings.htm"><b>Htmlpublishsettings</b></a>, <a href="ppeleKinsoku.htm"><b>Kinsoku</b></a>,
+<a href="ppeleMaster.htm"><b>Master</b></a>, <a href="ppeleNamedshow.htm"><b>Namedshow</b></a>,
+<a href="ppeleNotes.htm"><b>Notes</b></a>, <a href="ppelePptdocumentsettings.htm"><b>Pptdocumentsettings</b></a>,
+<a href="ppelePrintoptions.htm"><b>Printoptions</b></a>, <a href="ppeleRecolorinfo.htm"><b>Recolorinfo</b></a>,
+<a href="ppeleRoutingslip.htm"><b>Routingslip</b></a>, <a href="ppeleSlide.htm"><b>Slide</b></a>,
+<a href="ppeleSlideshowsettings.htm"><b>Slideshowsettings</b></a>, <a href="ppeleTag.htm"><b>Tag</b></a>,
+<a href="ppeleViewstate.htm"><b>Viewstate</b></a></p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">A presentation is the top-level document for a PowerPoint
+application. All other elements are contained between the start and end tags of
+a presentation.</p>
+<p class="T">All subelements are optional. The <b>Broadcastinfo</b>, <b>Font</b>,
+<b>Guide</b>, <b>Kinsoku</b>, <b>Master</b>, <b>Namedshow</b>, <b>Notes</b>, <b>Slide</b>,
+and <b>Tag</b> subelements can be specified more than once.</p>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">This example shows the start and end tags for a presentation. Many
+other elements could be contained between the two tags for any presentation.
+<pre class="C"><code>
+&lt;p:presentation savewithfonts=&quot;t&quot; hasautolinks=&quot;t&quot; advisor=&quot;80&quot;&gt;
+&lt;/p:presentation&gt;
+
+</code></pre>
+
+</body>
+
+</html>

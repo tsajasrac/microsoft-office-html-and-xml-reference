@@ -1,0 +1,106 @@
+<html><head>
+<title>Graph Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Graph Element (Microsoft Excel)</H1>
+<p class=T>Contains the definition of a graph within the plot area of a chart.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xlelePlotArea.htm"><B>PlotArea</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleBlank.htm"><B>Blank</B></A>,
+<A HREF="xleleBorder.htm"><B>Border</B></A>,
+<A HREF="xleleBubbleScale.htm"><B>BubbleScale</B></A>,
+<A HREF="xleleCustomSplit.htm"><B>CustomSplit</B></A>,
+<A HREF="xleleDBSeries.htm"><B>DBSeries</B></A>,
+<A HREF="xleleDataLabels.htm"><B>DataLabels</B></A>,
+<A HREF="xleleDataSource.htm"><B>DataSource</B></A>,
+<A HREF="xleleDropLines.htm"><B>DropLines</B></A>,
+<A HREF="xleleFirstSliceAngle.htm"><B>FirstSliceAngle</B></A>,
+<A HREF="xleleGapDepth.htm"><B>GapDepth</B></A>,
+<A HREF="xleleGapWidth.htm"><B>GapWidth</B></A>,
+<A HREF="xleleHiLowLines.htm"><B>HiLowLines</B></A>,
+<A HREF="xleleHoleSize.htm"><B>HoleSize</B></A>,
+<A HREF="xleleInterior.htm"><B>Interior</B></A>,
+<A HREF="xleleLine.htm"><B>Line</B></A>,
+<A HREF="xleleNegativeBubbles.htm"><B>NegativeBubbles</B></A>,
+<A HREF="xleleOverlap.htm"><B>Overlap</B></A>,
+<A HREF="xlelePie2HasShadow.htm"><B>Pie2HasShadow</B></A>,
+<A HREF="xlelePie2Size.htm"><B>Pie2Size</B></A>,
+<A HREF="xlelePlotVisible.htm"><B>PlotVisible</B></A>,
+<A HREF="xleleScaleID.htm"><B>ScaleID</B></A>,
+<A HREF="xleleSeries.htm"><B>Series</B></A>,
+<A HREF="xleleShade3D.htm"><B>Shade3D</B></A>,
+<A HREF="xleleSizeRepresents.htm"><B>SizeRepresents</B></A>,
+<A HREF="xleleSplitPos.htm"><B>SplitPos</B></A>,
+<A HREF="xleleSplitType.htm"><B>SplitType</B></A>,
+<A HREF="xleleSplitValue.htm"><B>SplitValue</B></A>,
+<A HREF="xleleSubType.htm"><B>SubType</B></A>,
+<A HREF="xleleType.htm"><B>Type</B></A>,
+<A HREF="xleleVaryColors.htm"><B>VaryColors</B></A>,
+<A HREF="xleleWaterLevel.htm"><B>WaterLevel</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>SubType</B>, <B>Type</B>, and at least two <B>ScaleID</B> subelements are required, but all other subelements are optional.
+The <B>Type</B> and <B>SubType</B> subelements specify the chart type.
+If more than one <B>Series</B> subelement is specified, each subelement corresponds to a series in the order specified.</p>
+<p class=T>Each graph contains two or more <B>ScaleID</B> subelements specifying the horizontal and vertical layout and scale format properties, such as for color or transparencies.
+The first two <B>ScaleID</B> subelements correspond to the graph's horizontal and vertical (or <em>r</em> and <em>&theta;</em> for radar) scalings, respectively.</p>
+<p class=T>The following table lists the subelements that can be specified for each type of chart.</p>
+<p class=T><TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Chart Type</B></TD>
+<TD class=I width=66% align=left><B>Subelements</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Column<br>Bar</TD>
+<TD class=T width=66%><B>Overlap</B> (2-D only)<br><B>GapWidth</B><br><B>GapDepth</B> (3-D only)<br><B>VaryColors</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Line</TD>
+<TD class=T width=66%><B>DropLines</B><br><B>HiLowLines</B><br><B>GapDepth</B> (3-D only)<br><B>VaryColors</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Stock</TD>
+<TD class=T width=66%><B>HiLowLines</B><br><B>DropLines</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Area</TD>
+<TD class=T width=66%><B>DropLines</B><br><B>GapDepth</B> (3-D only)</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Pie</TD>
+<TD class=T width=66%><B>FirstSliceAngle</B><br><B>Explode</B><br><B>VaryColors</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Radar</TD>
+<TD class=T width=66%><B>CatLabels</B><br><B>VaryColors</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Surface</TD>
+<TD class=T width=66%><B>Shade3D</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Scatter<br>Polar</TD>
+<TD class=T width=66%><B>VaryColors</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Doughnut</TD>
+<TD class=T width=66%><B>FirstSliceAngle</B><br><B>Explode</B><br><B>HoleSize</B><br><B>VaryColors</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Bubble</TD>
+<TD class=T width=66%><B>SizeRepresents</B><br><B>BubbleScale</B><br><B>NegativeBubble</B><br><B>VaryColors</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Pie of Pie<br>Bar of Pie</TD>
+<TD class=T width=66%><B>SplitType</B><br><B>SplitPos</B><br><B>Pie2Size</B><br><B>Pie2HasShadow</B><br><B>GapWidth</B><br><B>CustomSplit</B><br><B>VaryColors</B></TD>
+</TR>
+</table>
+</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xleleWebChart.htm#Example"><B>WebChart</B></A> element topic.</p>
+</body></html>

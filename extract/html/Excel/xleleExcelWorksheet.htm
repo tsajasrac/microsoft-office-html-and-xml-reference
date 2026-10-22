@@ -1,0 +1,32 @@
+<html><head>
+<title>ExcelWorksheet Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>ExcelWorksheet Element (Microsoft Excel)</H1>
+<p class=T>Contains the name, properties, and source of a worksheet.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleExcelWorksheets.htm"><B>ExcelWorksheets</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleName.htm"><B>Name</B></A>,
+<A HREF="xleleQueryTable.htm"><B>QueryTable</B></A>,
+<A HREF="xlelePageBreaks.htm"><B>PageBreaks</B></A>,
+<A HREF="xlelePivotTable.htm"><B>PivotTable</B></A>,
+<A HREF="xlelePublishObjects.htm"><B>PublishObjects</B></A>,
+<A HREF="xleleWorksheetOptions.htm"><B>WorksheetOptions</B></A>,
+<A HREF="xleleWorksheetSource.htm"><B>WorksheetSource</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<!-- *** -->
+<p class=T>In a workbook, you can have zero or more <B>PivotTable</B> and <B>QueryTable</B> subelements.
+When the data comes from a PivotList component, the <B>Name</B>, <B>PivotTable</B>, and <B>WorksheetOptions</B> subelements are required.</p>
+<!-- *** -->
+<p class=T>When a workbook contains a single worksheet, the <B>Name</B>, <B>WorksheetOptions</B>, and <B>WorksheetSource</B> subelements are required and stored in the workbook HTML file.</p>
+<p class=T>When a workbook contains multiple worksheets, only the <B>Name</B> and <B>WorksheetSource</B> subelements are required in the workbook HTML file.
+The <B>WorksheetOptions</B> element is specified in the corresponding worksheet HTML file as a subelement of the <B>XML</B> element.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xleleExcelWorkbook.htm#Example"><B>ExcelWorkbook</B></A> element topic.</p>
+</body></html>

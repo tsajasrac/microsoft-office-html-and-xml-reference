@@ -1,0 +1,79 @@
+<html>
+
+<head>
+<title>Slidetransition Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Slidetransition Element (Microsoft PowerPoint)</h1>
+<p class="T">Defines the slide transitions for a presentation.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>advancetime</b></td>
+    <td class="T" width="66%">Determines the amount of time between slides in
+      milliseconds. The default delay is 4,294,967,295 milliseconds.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>autoadvance</b></td>
+    <td class="T" width="66%">Determines whether the transition will
+      automatically advance (without needing mouse clicks). The default value is
+      <b>False</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>direction</b></td>
+    <td class="T" width="66%">Contains one of the following string constants
+      specifying the direction of the transition effect: <b>Across</b>, <b>Bottom</b>,
+      <b>Center</b>, <b>Down</b>, <b>Effect</b>, <b>Fast</b>, <b>Horizontal</b>,
+      <b>InSlightly</b>, <b>In</b>, <b>LeftDown</b>, <b>Left</b>, <b>LeftUp</b>,
+      <b>Medium</b>, <b>NoBlack</b>, <b>OutSlightly</b>, <b>Out</b>, <b>RightDown</b>,
+      <b>Right</b>, <b>RightUp</b>, <b>Slow</b>, <b>ToBlack</b>, <b>Transition</b>,
+      <b>Up</b>, or <b>Vertical</b>. An empty string specifies no direction.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>effect</b></td>
+    <td class="T" width="66%">Contains one of the following string constants
+      specifying the slide transition effect: <b>Blinds</b>, <b>Checker</b>, <b>Cover</b>,
+      <b>Crawl</b>, <b>Cut</b>, <b>Dissolve</b>, <b>Fade</b>, <b>Flash</b>, <b>Fly</b>,
+      <b>Peek</b>, <b>Pull</b>, <b>Random</b>, <b>RandomBar</b>, <b>Rotate</b>, <b>Spiral</b>,
+      <b>SplitIn</b>, <b>SplitOut</b>, <b>Stretch</b>, <b>Strips</b>, <b>Wipe</b>,
+      <b>Zoom</b>, or <b>ZoomFly</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>flag</b></td>
+    <td class="T" width="66%">Reserved.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>speed</b></td>
+    <td class="T" width="66%">Defines the speed of the transition. The values
+      are 0, 1, or&nbsp;2,&nbsp;representing slow, medium, or fast.</td>
+  </tr>
+</table>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><b>Body</b> (HTML) or any other element that surrounds content.</p>
+<p class="RL"><b>Subelements</b></p>
+<p class="T"><a href="ppeleSound.htm"><b>Sound</b></a></p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">All subelements are optional.</p>
+<p class="T">Each slide can have its own transition, or you can create one
+transition for all slides.</p>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">This example shows a downward wipe transition that plays a cash
+register sound.<br>
+<pre class="C"><code>
+&lt;p:slidetransition advancetime=&quot;0&quot; speed=&quot;1&quot; effect=&quot;wipe&quot; direction=&quot;down&quot; flag=&quot;1105&quot;&gt;
+ &lt;p:sound id=&quot;2&quot; builtinid=&quot;100&quot; name=&quot;cashreg.wav&quot; href=&quot;sound002.wav&quot;/&gt;
+ &lt;/p:slidetransition&gt;
+</code></pre>
+
+</body>
+
+</html>

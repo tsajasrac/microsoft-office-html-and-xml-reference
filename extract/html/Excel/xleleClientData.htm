@@ -1,0 +1,52 @@
+<html><head>
+<title>ClientData Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>ClientData Element (Microsoft Excel)</H1>
+<p class=T>This element contains a the properties and data of an ActiveX control, Office Art graphic, or Microsoft Office Web component.</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>ObjectType</B></TD>
+<TD class=T width=66%>Specifies the type of component.</TD>
+</TR>
+</TABLE>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<B>Body</B> (HTML) or any other element that surrounds content.
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleWebChart.htm"><B>WebChart</B></A>
+</p>
+<p class=RL><b>Example</b></p>
+<p class=T>This example shows a Chart component displayed in a table on a Web page.
+</p>
+<PRE class=T><CODE>
+  &lt;td colspan=6 rowspan=15 height=255 width=384 style='mso-ignore:colspan-rowspan;
+  height:191.25pt;width:288pt'&gt;&lt;v:shapetype id="_x0000_t201" coordsize="21600,21600"
+   o:spt="201" path="m0,0l0,21600,21600,21600,21600,0xe"&gt;
+   &lt;v:stroke joinstyle="miter"/&gt;
+   &lt;v:path shadowok="f" o:extrusionok="f" strokeok="f" fillok="f"
+    o:connecttype="rect"/&gt;
+   &lt;o:lock v:ext="edit" shapetype="t"/&gt;
+  &lt;/v:shapetype&gt;&lt;v:shape id="_x0000_s1025" type="#_x0000_t201" style='position:absolute;
+   margin-left:20.25pt;margin-top:.75pt;width:247.5pt;height:179.25pt;
+   z-index:1' fillcolor="window [78]" strokecolor="windowText [77]"
+   o:insetmode="auto"&gt;
+   &lt;v:fill color2="windowText [77]"/&gt;
+   &lt;o:lock v:ext="edit" rotation="t" text="t"/&gt;
+   &lt;!--[if mso]&gt;&lt;x:ClientData ObjectType="Chart"&gt;
+    &lt;x:WebChart&gt;
+    .
+    .
+    .
+    &lt;/x:WebChart&gt;
+   &lt;/x:ClientData&gt;
+   &lt;![endif]--&gt;&lt;/v:shape&gt;&lt;![if !vml]&gt;&lt;span style='mso-ignore:vglayout'&gt;
+</CODE></PRE>
+</body></html>

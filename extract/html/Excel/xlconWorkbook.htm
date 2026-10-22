@@ -1,0 +1,121 @@
+<html>
+
+<head>
+<title>Workbooks</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1 class="RH1">Workbooks</h1>
+<p class="T">A Microsoft Excel workbook that contains data in more than one
+worksheet, or contains blank worksheets before the worksheet containing data, is
+stored as a frameset of two frames: a worksheet frame and a worksheet navigation
+tab frame. The frameset HTML file contains information about the workbook, links
+to supporting documents, and the frameset definition. The worksheet frame
+contains the active worksheet HTML file. Each worksheet is stored in an HTML
+file. The tab frame is stored in an HTML file and contains the tabs that allow
+the user to display each worksheet.</p>
+<p class="T">A workbook is saved in a single HTML file if the first worksheet
+contains data and all other worksheets are blank. In both cases, additional
+supporting files such as images might be created when the workbook is saved as a
+Web page. The structure of the workbook and worksheet HTML files is described in
+the <a href="../Concepts/ofconFileFormat.htm">Office HTML and XML File Format</a> topic.
+Worksheet tables are described in the <a href="xlconTables.htm">Worksheets</a>
+topic. For a list of supporting files and where they are saved, see the <a href="../Concepts/ofconFolderandFileNames.htm">Folder
+and File Names</a> topic.</p>
+<p class="T">Workbook properties are contained in the <a href="xleleExcelWorkbook.htm"><b>ExcelWorkbook</b></a>
+element. Worksheet properties are contained in the <a href="xleleExcelWorksheet.htm"><b>ExcelWorksheet</b></a>
+element, either in the <b>ExcelWorkbook</b> element in a single HTML file, or in
+the worksheet frame HTML file. If worksheet properties are specified but no data
+is specified, the worksheet is blank when the workbook is opened in Excel.</p>
+<p class="T">The following example shows the general structure of the frameset
+elements in a workbook frameset file.</p>
+<pre class="C"><code>
+&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot;
+xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot;
+xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;
+&lt;head&gt;
+&lt;meta name=&quot;Excel Workbook Frameset&quot;&gt;
+&lt;meta http-equiv=Content-Type content=&quot;text/html; charset=windows-1252&quot;&gt;
+&lt;meta name=ProgId content=Excel.Sheet&gt;
+&lt;meta name=Generator content=&quot;Microsoft Excel 9&quot;&gt;
+&lt;link rel=File-List href=&quot;./Book1/filelist.xml&quot;&gt;
+&lt;link rel=Edit-Time-Data href=&quot;./Book1/editdata.mso&quot;&gt;
+&lt;link rel=OLE-Object-Data href=&quot;./Book1/oledata.mso&quot;&gt;
+.
+.
+.
+&lt;link id=&quot;shLink&quot; href=&quot;./Book1/sheet001.htm&quot;&gt;
+&lt;link id=&quot;shLink&quot; href=&quot;./Book1/sheet002.htm&quot;&gt;
+&lt;link id=&quot;shLink&quot; href=&quot;./Book1/sheet003.htm&quot;&gt;
+.
+.
+.
+&lt;/head&gt;
+&lt;frameset rows=&quot;*,39&quot; border=0 width=0 frameborder=no framespacing=0&gt;
+ &lt;frame src=&quot;./Book1/sheet001.htm&quot; name=&quot;frSheet&quot;&gt;
+ &lt;frame src=&quot;./Book1/tabstrip.htm&quot; name=&quot;frTabs&quot; marginwidth=0 marginheight=0&gt;
+ &lt;noframes&gt;
+  &lt;body&gt;
+   &lt;p&gt;This page uses frames, but your browser doesn't support them.&lt;/p&gt;
+  &lt;/body&gt;
+ &lt;/noframes&gt;
+&lt;/frameset&gt;
+&lt;/html&gt;
+</code></pre>
+<p class="T">If the user attempts to open a worksheet or tab frame HTML file in
+a Web browser or Excel, the workbook frameset HTML file is opened. Script
+directs the Web browser or Excel to the frameset only when the worksheet file is
+opened outside the worksheet frame. When a worksheet file is opened in Excel
+using the File Open dialog box, the parent workbook is opened with the specified
+worksheet as the current worksheet. The parent document is specified by an HTML <b>Link</b>
+element.</p>
+<p class="T">The following example shows the script used in the sheet001.htm
+worksheet file to direct the Web browser or Excel to open Book1.htm.</p>
+<pre class="C"><code>
+&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot;
+xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot;
+xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=Content-Type content=&quot;text/html; charset=windows-1252&quot;&gt;
+&lt;meta name=ProgId content=Excel.Sheet&gt;
+&lt;meta name=Generator content=&quot;Microsoft Excel 9&quot;&gt;
+&lt;link id=Main-File rel=Main-File href=&quot;../Book1.htm&quot;&gt;
+&lt;link rel=File-List href=filelist.xml&gt;
+&lt;link rel=Edit-Time-Data href=editdata.mso&gt;
+&lt;link rel=Stylesheet href=st.css&gt;
+&lt;style&gt;
+.
+.
+.
+&lt;/style&gt;
+&lt;![if !supportTabStrip]&gt;&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+.
+.
+.
+if (window.name!=&quot;frSheet&quot;)
+ window.location.replace(&quot;../Book1.htm&quot;);
+else
+ fnUpdateTabs();
+//--&gt;
+&lt;/script&gt;
+.
+.
+.
+&lt;/head&gt;
+&lt;body link=blue vlink=purple&gt;
+.
+.
+.
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</body>
+
+</html>

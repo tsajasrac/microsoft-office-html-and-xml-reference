@@ -1,0 +1,134 @@
+<html><head>
+<title>PivotCache Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>PivotCache Element (Microsoft Excel)</H1>
+<p class=T>Contains the table schema and records of a PivotTable cache.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="../Shared/ofeleXML.htm"><B>XML</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleCacheIndex.htm"><B>CacheIndex</B></A>,
+<A HREF="xleleData.htm"><B>Data</B></A>,
+<A HREF="xleleSchema.htm"><B>Schema</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>CacheIndex</B> and <B>Schema</B> subelements are required, but all other subelements are optional.</p>
+<p class=T>This element is contained in a file named cachedata.xml.
+For more information about the syntax of elements in the <B>PivotCache</B> element, see <em>Specification for XML-Data</em>.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example shows rowset data from a database and data properties in a PivotTable cache.
+The schema is called "RowsetSchema", and "row" is the unique name of the row schema description.
+The data comes from the alpha, beta, gamma, delta, epsilon, lambda, Sales, and Cost columns in a database table.
+The column names are aliased "Col1" through "Col8".</p>
+<PRE class=C><CODE>
+&lt;xml xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"
+ xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema"&gt;
+ &lt;x:PivotCache&gt;
+  &lt;x:CacheIndex&gt;1&lt;/x:CacheIndex&gt;
+  &lt;s:Schema id="RowsetSchema"&gt;
+   &lt;s:ElementType name="row" content="eltOnly"&gt;
+    &lt;s:attribute type="Col1"/&gt;
+    &lt;s:attribute type="Col2"/&gt;
+    &lt;s:attribute type="Col3"/&gt;
+    &lt;s:attribute type="Col4"/&gt;
+    &lt;s:attribute type="Col5"/&gt;
+    &lt;s:attribute type="Col6"/&gt;
+    &lt;s:attribute type="Col7"/&gt;
+    &lt;s:attribute type="Col8"/&gt;
+    &lt;s:extends type="rs:rowbase"/&gt;
+   &lt;/s:ElementType&gt;
+   &lt;s:AttributeType name="Col1" rs:name="alpha"&gt;
+    &lt;s:datatype dt:maxLength="255"/&gt;
+   &lt;/s:AttributeType&gt;
+   &lt;s:AttributeType name="Col2" rs:name="beta"&gt;
+    &lt;s:datatype dt:maxLength="255"/&gt;
+   &lt;/s:AttributeType&gt;
+   &lt;s:AttributeType name="Col3" rs:name="gamma"&gt;
+    &lt;s:datatype dt:maxLength="255"/&gt;
+   &lt;/s:AttributeType&gt;
+   &lt;s:AttributeType name="Col4" rs:name="delta"&gt;
+    &lt;s:datatype dt:maxLength="255"/&gt;
+   &lt;/s:AttributeType&gt;
+   &lt;s:AttributeType name="Col5" rs:name="epsilon"&gt;
+    &lt;s:datatype dt:maxLength="255"/&gt;
+   &lt;/s:AttributeType&gt;
+   &lt;s:AttributeType name="Col6" rs:name="lambda"&gt;
+    &lt;s:datatype dt:type="int"/&gt;
+   &lt;/s:AttributeType&gt;
+   &lt;s:AttributeType name="Col7" rs:name="Sales"&gt;
+    &lt;s:datatype dt:type="float"/&gt;
+   &lt;/s:AttributeType&gt;
+   &lt;s:AttributeType name="Col8" rs:name="Cost"&gt;
+    &lt;s:datatype dt:type="float"/&gt;
+   &lt;/s:AttributeType&gt;
+  &lt;/s:Schema&gt;
+  &lt;rs:data&gt;
+   &lt;z:row Col1="February" Col2="Saturday" Col3="Mark" Col4="Pearson" Col5="Q2"
+    Col6="21" Col7="10215.04846" Col8="62840.440119999999"/&gt;
+   &lt;z:row Col1="January" Col2="Saturday" Col3="Robin" Col4="O'Day" Col5="Q1"
+    Col6="48" Col7="56330.955119999999" Col8="42159.760150000002"/&gt;
+   &lt;z:row Col1="February" Col2="Saturday" Col3="Nikki" Col4="Hunter" Col5="Q2"
+    Col6="45" Col7="38614.544479999997" Col8="49290.886960000003"/&gt;
+   &lt;z:row Col1="February" Col2="Monday" Col3="Mark" Col4="Catalina" Col5="Q4"
+    Col6="37" Col7="48952.146050000003" Col8="24875.895229999998"/&gt;
+   &lt;z:row Col1="February" Col2="Saturday" Col3="Robin" Col4="O'Day" Col5="Q2"
+    Col6="35" Col7="65243.590400000001" Col8="48150.805659999998"/&gt;
+   &lt;z:row Col1="January" Col2="Saturday" Col3="Robin" Col4="Pearson" Col5="Q1"
+    Col6="25" Col7="5714.6423949999999" Col8="39352.483769999999"/&gt;
+   &lt;z:row Col1="February" Col2="Monday" Col3="Nikki" Col4="Ranger" Col5="Q4"
+    Col6="21" Col7="51864.558219999999" Col8="52675.811500000003"/&gt;
+   &lt;z:row Col1="January" Col2="Monday" Col3="Nikki" Col4="Catalina" Col5="Q3"
+    Col6="47" Col7="54711.446109999997" Col8="36961.763359999997"/&gt;
+   &lt;z:row Col1="January" Col2="Saturday" Col3="Mark" Col4="Catalina" Col5="Q1"
+    Col6="19" Col7="14117.174360000001" Col8="60618.878550000001"/&gt;
+   &lt;z:row Col1="February" Col2="Saturday" Col3="Robin" Col4="Hunter" Col5="Q2"
+    Col6="12" Col7="8039.8275750000003" Col8="74996.134179999994"/&gt;
+   &lt;z:row Col1="January" Col2="Saturday" Col3="Nikki" Col4="Hunter" Col5="Q1"
+    Col6="38" Col7="7586.6178950000003" Col8="49023.87412"/&gt;
+   &lt;z:row Col1="January" Col2="Monday" Col3="Nikki" Col4="Pearson" Col5="Q3"
+    Col6="38" Col7="65675.985879999993" Col8="19706.812580000002"/&gt;
+   &lt;z:row Col1="January" Col2="Saturday" Col3="Mark" Col4="Pearson" Col5="Q1"
+    Col6="40" Col7="69236.584400000007" Col8="38344.907740000002"/&gt;
+   &lt;z:row Col1="January" Col2="Monday" Col3="Robin" Col4="Catalina" Col5="Q3"
+    Col6="23" Col7="37130.125749999999" Col8="20814.51715"/&gt;
+   &lt;z:row Col1="January" Col2="Monday" Col3="Nikki" Col4="Ranger" Col5="Q3"
+    Col6="42" Col7="10459.76952" Col8="66245.936419999998"/&gt;
+   &lt;z:row Col1="February" Col2="Saturday" Col3="Nikki" Col4="Catalina" Col5="Q2"
+    Col6="45" Col7="49977.242530000003" Col8="42348.372600000002"/&gt;
+   &lt;z:row Col1="February" Col2="Monday" Col3="Robin" Col4="Pearson" Col5="Q4"
+    Col6="33" Col7="19291.287189999999" Col8="25581.025900000001"/&gt;
+   &lt;z:row Col1="January" Col2="Monday" Col3="Mark" Col4="O'Day" Col5="Q3"
+    Col6="48" Col7="8405.4466960000009" Col8="65741.52648"/&gt;
+   &lt;z:row Col1="February" Col2="Saturday" Col3="Robin" Col4="Ranger" Col5="Q2"
+    Col6="43" Col7="56146.377829999998" Col8="29426.169089999999"/&gt;
+   &lt;z:row Col1="January" Col2="Saturday" Col3="Mark" Col4="Hunter" Col5="Q1"
+    Col6="28" Col7="66655.138590000002" Col8="35965.620799999997"/&gt;
+   &lt;z:row Col1="January" Col2="Monday" Col3="Robin" Col4="Hunter" Col5="Q3"
+    Col6="41" Col7="56155.70753" Col8="46053.20678"/&gt;
+   &lt;z:row Col1="January" Col2="Monday" Col3="Mark" Col4="Ranger" Col5="Q3"
+    Col6="39" Col7="62537.978419999999" Col8="26335.56525"/&gt;
+   &lt;z:row Col1="February" Col2="Monday" Col3="Robin" Col4="Catalina" Col5="Q4"
+    Col6="40" Col7="18426.04753" Col8="3062.3442420000001"/&gt;
+   &lt;z:row Col1="February" Col2="Monday" Col3="Mark" Col4="Hunter" Col5="Q4"
+    Col6="18" Col7="51408.913209999999" Col8="2786.1561620000002"/&gt;
+   &lt;z:row Col1="February" Col2="Monday" Col3="Nikki" Col4="O'Day" Col5="Q4"
+    Col6="11" Col7="22368.189989999999" Col8="18843.458900000001"/&gt;
+   &lt;z:row Col1="January" Col2="Saturday" Col3="Robin" Col4="Ranger" Col5="Q1"
+    Col6="37" Col7="44358.443780000001" Col8="60125.905129999999"/&gt;
+   &lt;z:row Col1="February" Col2="Monday" Col3="Mark" Col4="O'Day" Col5="Q4"
+    Col6="29" Col7="65592.305970000001" Col8="22886.48619"/&gt;
+   &lt;z:row Col1="February" Col2="Saturday" Col3="Mark" Col4="Ranger" Col5="Q2"
+    Col6="14" Col7="53038.055220000002" Col8="27589.842349999999"/&gt;
+   &lt;z:row Col1="January" Col2="Saturday" Col3="Nikki" Col4="O'Day" Col5="Q1"
+    Col6="10" Col7="54862.435100000002" Col8="19824.645680000001"/&gt;
+  &lt;/rs:data&gt;
+ &lt;/x:PivotCache&gt;
+&lt;/xml&gt;
+</CODE></PRE>
+</body></html>

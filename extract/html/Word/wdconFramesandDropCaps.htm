@@ -1,0 +1,93 @@
+<html><head>
+<title>Frames and Drop Caps</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Frames and Drop Caps</H1>
+
+<p class=T>Word allows the creation of floating frames in Web documents, even though there
+are currently no HTML elements to support this functionality. Drop caps use the
+Word frame feature with few special settings. Word stores the frame or drop cap
+settings in the HTML
+file using styles and emulates the appearance of the frame or drop cap in the
+browser using HTML tables.</p>
+<h4 class=RH4>Frames</h4>
+<p class=T>When saving as HTML, Word inserts the contents of the frame into a single-cell
+<b>Table</b> element for appropriate browser display. This <b>Table</b> element is contained in a
+<b>Div</b>  element that stores most of the frame settings.</p>
+<p class=T>In order to associate the
+frame with its anchor paragraph, the frame's <b>Table</b> element
+appears directly before the anchor paragraph's <b>P</b> element.&nbsp;</p>
+<p class=T>When the frame does not allow text to wrap around it , Word inserts <code>&lt;br clear=ALL></code>
+ after the <b>Div</b> element. This is necessary to turn off text
+wrapping in the browser display.</p>
+<p class=T>Word uses the following styles to save frame settings to HTML:&nbsp;</p>
+<ul>
+  <li>
+    <p class="T"><b>mso-element:frame</b></li>
+  <li>
+<b>
+mso-element-wrap</b></li>
+  <li>
+    <p class="T"><b>mso-element-left</b></li>
+  <li>
+<b>
+mso-element-top</b></li>
+  <li>
+    <p class="T"><b>mso-element-frame-width</b></li>
+  <li>
+<b>
+mso-element-frame-height</b></li>
+  <li>
+    <p class="T"><b>mso-element-frame-hspace</b></li>
+  <li>
+<b>
+mso-element-frame-vspace</b></li>
+  <li>
+    <p class="T"><b>mso-element-anchor-horizontal</b></li>
+  <li>
+<b>
+mso-element-anchor-vertical</b></li>
+  <li>
+    <p class="T"><b>mso-element-anchor-lock</b></li>
+</ul>
+<p class=T>Where appropriate, Word uses the <b>padding-right</b>, <b>padding-left</b>, <b>padding-top</b>,
+and <b>padding-bottom</b> attributes in the <b>TD</b> element to display a
+frame's horizontal or vertical distance from text in the browser.</p>
+<p class=T>To display the height and width of the frame in the browser, Word uses the
+<b>height</b>
+and <b>width</b> attributes of the <b>Table</b> element. If the height or width
+of the frame is set to <b>Auto</b>, the corresponding <b>height</b> or <b>width</b>
+ attribute is not used.</p>
+<p class=T>The frame's vertical <b>Move with text</b>
+setting is not saved to HTML. If the vertical position of the frame is set
+relative to paragraph, Word automatically assumes that the frame should move
+with the text.</p>
+<p class=T>In
+Word it is possible to create a paragraph style that stores frame settings. Word
+saves this type of style using its
+standard approach for saving styles. For more information about how Office
+saves styles to HTML, see the <a href="../concepts/ofconStyle.htm">Styles</a> topic.</p>
+<h4 class=RH4>Drop Caps</h4>
+<p class=T>A Word drop cap is one or more characters at the beginning of a paragraph that are
+larger than the surrounding text and possess special formatting characteristics.
+Word uses the frames feature to implement this functionality, saves drop caps to
+HTML in the same way it saves frames to HTML. Word uses standard HTML paragraph
+and character formatting rules to display the text formatting in the browser.</p>
+<p class=T>Drop cap settings are saved to HTML using the frame styles described above.
+Word uses the following styles to save drop cap settings to HTML:</p>
+<ul>
+  <li>
+    <p class="T"><b>mso-element: drop cap-in-margin</b></li>
+  <li>
+    <p class="T"><b>mso-element: drop cap-dropped</b></li>
+  <li>
+    <p class="T"><b>mso-element-linespan</b></li>
+</ul>
+<p class=T>&nbsp;For information about the style attributes that Office uses and
+their possible values, see the <a href="../concepts/ofconStyleTable.htm">Style
+Attributes</a> topic.</p>
+
+
+</body></html>

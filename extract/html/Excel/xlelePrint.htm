@@ -1,0 +1,50 @@
+<html><head>
+<title>Print Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Print Element (Microsoft Excel)</H1>
+<p class=T>Contains workbook and worksheet print options.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleWorksheetOptions.htm"><B>WorksheetOptions</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleBlackAndWhite.htm"><B>BlackAndWhite</B></A>,
+<A HREF="xleleCommentsLayout.htm"><B>CommentsLayout</B></A>,
+<A HREF="xleleDraftQuality.htm"><B>DraftQuality</B></A>,
+<A HREF="xleleFitHeight.htm"><B>FitHeight</B></A>,
+<A HREF="xleleFitWidth.htm"><B>FitWidth</B></A>,
+<A HREF="xleleGridlines.htm"><B>Gridlines</B></A>,
+<A HREF="xleleLeftToRight.htm"><B>LeftToRight</B></A>,
+<A HREF="xleleHorizontalResolution.htm"><B>HorizontalResolution</B></A>,
+<A HREF="xleleNumberOfCopies.htm"><B>NumberOfCopies</B></A>,
+<A HREF="xlelePaperSizeIndex.htm"><B>PaperSizeIndex</B></A>,
+<A HREF="xleleRowColHeadings.htm"><B>RowColHeadings</B></A>,
+<A HREF="xleleScale.htm"><B>Scale</B></A>,
+<A HREF="xleleValidPrinterInfo.htm"><B>ValidPrinterInfo</B></A>,
+<A HREF="xleleVerticalResolution.htm"><B>VerticalResolution</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>All subelements are optional.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example fits the print area to 3 pages wide by 4 pages long on legal-sized paper.
+The worksheet is printed in black and white using draft quality.
+The row and column headings are printed, and comments are printed at the end of the worksheet.
+The horizontal and vertical resolution is set to 600 dots per inch.</p>
+<PRE class=C><CODE>
+  &lt;x:Print&gt;
+   &lt;x:FitWidth&gt;3&lt;/x:FitWidth&gt;
+   &lt;x:FitHeight&gt;4&lt;/x:FitHeight&gt;
+   &lt;x:ValidPrinterInfo/&gt;
+   &lt;x:BlackAndWhite/&gt;
+   &lt;x:CommentsLayout&gt;SheetEnd&lt;/x:CommentsLayout&gt;
+   &lt;x:RowColHeadings/&gt;
+   &lt;x:DraftQuality/&gt;
+   &lt;x:PaperSizeIndex&gt;5&lt;/x:PaperSizeIndex&gt;
+   &lt;x:HorizontalResolution&gt;600&lt;/x:HorizontalResolution&gt;
+   &lt;x:VerticalResolution&gt;600&lt;/x:VerticalResolution&gt;
+  &lt;/x:Print&gt;
+</CODE></PRE>
+</body></html>

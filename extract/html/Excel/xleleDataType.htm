@@ -1,0 +1,38 @@
+<html><head>
+<title>DataType Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>DataType Element (Microsoft Excel)</H1>
+<!-- *** -->
+<p class=T>Specifies either the data type of a column in a PivotTable cache, or the data type of a PivotTable field for non-OLAP data sources.</p>
+<!-- *** -->
+<p class=T>For a PivotTable cache, the following attributes can be specified.</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>dt:type</B></TD>
+<TD class=T width=66%>Optional. Contains one of the following string constants specifying the base data type of the field: <B>Bin.Hex</B>, <B>Boolean</B>, <B>DateTime</B>, <B>Float</B>, <B>I1</B>, <B>I2</B>, <B>I8</B>, <B>Int</B>, <B>String</B>, <B>UI1</B>, <B>UI2</B>, <B>UI4</B>, or <B>UI8</B>.
+If this attribute is not specified, the default type is <B>String</B>.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>dt:maxLength</B></TD>
+<TD class=T width=66%>Optional. Length of a string field. If this attribute is not specified, the default length for string fields is 255.</TD>
+</TR>
+</TABLE>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleAttributeType.htm"><B>AttributeType</B></A>,
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A>,
+<A HREF="xlelePLPivotField.htm"><B>PLPivotField</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>For a PivotTable field, this element contains one of the following string constants specifying the data type: <B>Boolean</B>, <B>Date</B>, <B>Integer</B>, <B>Number</B>, or <B>Text</B>.
+<B>Boolean</B> can be specified only when the <A HREF="xlelePLExport.htm"><B>PLExport</B></A> element is specified for the PivotTable report and the report data comes from a PivotList component.
+If the <B>DataType</B> element is not specified, the default data type is <B>Text</B>.</p>
+<p class=RL><A NAME="Example"><b>Examples</b></A></p>
+<p class=T>See the examples in the <A HREF="xlelePivotCache.htm#Example"><B>PivotCache</B></A> and <A HREF="xlelePivotTable.htm#Example"><B>PivotTable</B></A> element topics.</p>
+</body></html>

@@ -1,0 +1,21 @@
+<html><head>
+<title>Source Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Source Element (Microsoft Excel)</H1>
+<p class=T>Contains the name of a published item or range, or specifies the character set of a text data source.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xlelePublishObject.htm"><B>PublishObject</B></A>,
+<A HREF="xleleTextWizardSettings.htm"><B>TextWizardSettings</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>For a published item, this element contains the unique name of the item if the <B>SourceType</B> element contains the constant <B>AutoFilter</B> or <B>PrintArea</B>.
+If the <B>SourceType</B> element contains the constant <B>Range</B>, the <B>Source</B> element contains an A1-style range reference or a defined name.
+If the <B>SourceType</B> element contains the string constant <B>Chart</B>, <B>PivotTable</B>, or <B>Query</B>, the <B>Source</B> element contains the name of the object.</p>
+<p class=T>For the text wizard, this element contains one of the following string constants corresponding to the character set: <B>ANSI</B>, <B>MAC</B>, or <B>PC8</B>.
+If this element is not specified, the default character set is <B>ANSI</B>.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xlelePublishObjects.htm#Example"><B>PublishObjects</B></A> element topic.</p>
+</body></html>

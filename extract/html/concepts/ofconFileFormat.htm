@@ -1,0 +1,180 @@
+<html><head>
+<title>Office HTML and XML File Formats</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Office HTML and XML File Formats</H1>
+
+<p class=T>When a Microsoft Office document is saved as a Web page, a main HTML file and a number of related files are created.
+The format of HTML files conforms to the HTML standard and allows the document to be opened and viewed in a variety of Web browsers.
+In Microsoft Excel, HTML framesets are created to display workbooks that contain several worksheets, and in Microsoft PowerPoint, to display slides and notes simultaneously.
+</p>
+
+<H4 class=RH4>The Main, Slide, and Worksheet HTML Files</H4>
+
+<p class=T>The main HTML document file contains the following structure.</p>
+
+<PRE class=C><CODE>
+&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+</CODE></PRE>
+<p class=T>The <B>Head</B> HTML element contains <B>Meta</B> elements that specify the content type, language, programmatic identifier, generator, title, and themes, a <B>Base</B> element that specifies the base path, and <B>Link</B> elements that specify paths to supporting files such as the stylesheet, header and footer text, and binary edit data files. The programmatic identifier specifies the Office application used to edit the page. When a supporting file is opened in an Office application, the <B>Link</B> element that specifies the main file name directs the application to open the main file.</p>
+<PRE class=C><CODE>
+&lt;style&gt;
+</CODE></PRE>
+<p class=T>The <B>Style</B> HTML element contains CSS style definitions.</p>
+<PRE class=C><CODE>
+&lt;xml&gt;
+</CODE></PRE>
+<p class=T>The <B>XML</B> element specifies the beginning of a block of XML elements in the document.</p>
+<PRE class=C><CODE>
+&lt;o:DocumentProperties&gt;
+&lt;o:CustomDocumentProperties&gt;
+</CODE></PRE>
+<p class=T>The <A HREF="../Shared/ofeleDocumentProperties.htm"><B>DocumentProperties</B></A> and <A HREF="../Shared/ofeleCustomDocumentProperties.htm"><B>CustomDocumentProperties</B></A> XML elements contain subelements that describe data for the document's <B>Properties</B> dialog box and user-defined custom properties. The properties differ between Office applications.</p>
+<PRE class=C><CODE>
+&lt;o:OfficeDocumentSettings&gt;
+</CODE></PRE>
+<p class=T>The <A HREF="../Shared/ofeleOfficeDocumentSettings.htm"><B>OfficeDocumentSettings</B></A> XML element contains shared document settings and Web options.</p>
+<PRE class=C><CODE>
+&lt;script&gt;
+</CODE></PRE>
+<p class=T>The <B>Script</B> HTML element contains the script behind the navigation controls and frameset, and for supporting files, the script to redirect the Web browser to open the main file.</p>
+<PRE class=C><CODE>
+&lt;x:ExcelWorkbook&gt;
+</CODE></PRE>
+<p class=T>In Microsoft Excel documents, the <A HREF="../Excel/xleleExcelWorkbook.htm"><B>ExcelWorkbook</B></A> XML element contains a description of the workbook and workbook properties.
+The <A HREF="../Excel/xleleExcelWorksheet.htm"><B>ExcelWorksheet</B></A> subelement is specified and contains a description of the worksheets and their properties.
+If the workbook contains a single worksheet, the <A HREF="../Excel/xleleWorksheetOptions.htm"><B>WorksheetOptions</B></A> subelement specifies the worksheet options.
+If the workbook contains more than one worksheet, the worksheet options for each worksheet are stored in a separate worksheet HTML file.</p>
+<PRE class=C><CODE>
+&lt;p:Presentation&gt;
+</CODE></PRE>
+<p class=T>In Microsoft PowerPoint documents, the <A HREF="../PowerPoint/ppelePresentation.htm"><B>Presentation</B></A> XML element contains a description of the presentation.</p>
+<PRE class=C><CODE>
+&lt;w:WordDocument&gt;
+</CODE></PRE>
+<p class=T>In Microsoft Word documents, the <A HREF="../Word/wdeleWordDocument.htm"><B>WordDocument</B></A> XML element contains a description of the document.</p>
+<PRE class=C><CODE>
+&lt;/xml&gt;
+&lt;link&gt;
+</CODE></PRE>
+<p class=T>The <B>Link</B> HTML element specifies the paths to supporting files such as the worksheet and slide frame HTML files.</p>
+<PRE class=C><CODE>
+&lt;/head&gt;
+
+&lt;body&gt;
+</CODE></PRE>
+<p class=T>The <B>Body</B> HTML element contains the content, such as a single worksheet or slide, that is displayed when the page is viewed in a Web browser, or the frameset elements that specify the supporting files.</p>
+<PRE class=C><CODE>
+&lt;/body&gt;
+&lt;/html&gt;
+</CODE></PRE>
+
+<H4 class=RH4>The Header and Footer HTML File</H4>
+
+<p class=T>The header and footer HTML file contains the following structure.</p>
+
+<PRE class=C><CODE>
+&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+</CODE></PRE>
+<p class=T>The <B>Head</B> HTML element contains <B>Meta</B> elements that specify the content type, language, programmatic identifier, generator, title, and themes, in addition to <B>Link</B> elements that specify paths to the main file and supporting files such as the stylesheet and binary edit data files.</p>
+<PRE class=C><CODE>
+&lt;style&gt;
+</CODE></PRE>
+<p class=T>The <B>Style</B> HTML element contains CSS style definitions specific to headers and footers.</p>
+<PRE class=C><CODE>
+&lt;script&gt;
+</CODE></PRE>
+<p class=T>The <B>Script</B> HTML element contains script to redirect the Web browser to open the main file.</p>
+<PRE class=C><CODE>
+&lt;/head&gt;
+&lt;body&gt;
+</CODE></PRE>
+<p class=T>The <B>Body</B> HTML element contains the header and footer data. Each header and footer is contained in a <B>Div</B> element having a unique <B>ID</B> attribute corresponding to its reference in the main HTML document.</p>
+<p class=T>The following <B>Div</B> HTML elements are examples of a section 1 primary header, primary footer, and even header.</p>
+<PRE class=C><CODE>
+&lt;div id="h1"&gt;
+.
+.
+.
+&lt;/div&gt;
+&lt;div id="f1"&gt;
+.
+.
+.
+&lt;/div&gt;
+&lt;div id="eh1"&gt;
+.
+.
+.
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</CODE></PRE>
+
+<H4 class=RH4>The Worksheet Tab Strip and Navigation Frame HTML Files</H4>
+
+<p class=T>Worksheet tabs are implemented as cells in a single-row HTML table.
+Each cell contains the worksheet's name, which is a hyperlink to the worksheet HTML file that is displayed in the worksheet frame.
+The following example shows a tabstrip.htm file for a workbook called master.htm that contains 2 worksheets called Sheet1 and Sheet2. The tabstrip.htm file contains <B>Meta</B> HTML elements that specify the content type, programmatic identifier, and generator, in addition to a <B>Link</B> element that specifies the path and name of the main file. The script redirects the browser to the main file, and the <B>Style</B> element contains an inline style definition for the <B>Anchor</B> elements that contain the table cell text.</p>
+
+<PRE class=C><CODE>
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=Content-Type content="text/html; charset=shift_jis"&gt;
+&lt;meta name=ProgId content=Excel.Sheet&gt;
+&lt;meta name=Generator content="Microsoft Excel 9"&gt;
+&lt;link id=Main-File rel=Main-File href="../master.htm"&gt;
+
+&lt;script language="JavaScript"&gt;
+&lt;!--
+if (window.name!="frTabs")
+ window.location.replace(document.all.item("Main-File").href);
+//--&gt;
+&lt;/script&gt;
+&lt;style&gt;
+&lt;!--
+A {
+    text-decoration:none;
+    color:#000000;
+    font-size:9pt;
+}
+--&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body topmargin=0 leftmargin=0 bgcolor="#808080"&gt;
+&lt;table border=0 cellspacing=1&gt;
+ &lt;tr&gt;
+ &lt;td bgcolor="#FFFFFF" nowrap&gt;&lt;b&gt;
+  &lt;small&gt;&lt;a href="sheet001.htm" target="frSheet"&gt;
+   &lt;font face="‚l‚r ‚oƒSƒVƒbƒN"
+    color="#000000"&gt;Sheet1&lt;/font&gt;
+  &lt;/a&gt;&lt;/small&gt;&lt;/b&gt;&lt;/td&gt;
+ &lt;td bgcolor="#FFFFFF" nowrap&gt;&lt;b&gt;
+  &lt;small&gt;&lt;a href="sheet002.htm" target="frSheet"&gt;
+   &lt;font face="‚l‚r ‚oƒSƒVƒbƒN"
+    color="#000000"&gt;Sheet2&lt;/font&gt;
+  &lt;/a&gt;&lt;/small&gt;&lt;/b&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</CODE></PRE>
+
+<p class=T>Navigation frame files use a similar structure and mechanism for implementing controls and hyperlinks to worksheet and slide HTML files.</p>
+
+<H4 class=RH4>The PivotTable Cache Data XML File</H4>
+
+<p class=T>The structure and syntax of elements in the cachedata.xml file comply with the Specification for XML-Data. For an example of a cachedata.xml file, see the <A HREF="../Excel/xlelePivotCache.htm"><B>PivotCache</B></A> element topic.</p>
+
+<H4 class=RH4>The File List XML File</H4>
+
+<p class=T>For an example of a filelist.xml file, see the <A HREF="../Shared/ofeleMainFile.htm"><B>MainFile</B></A> element topic.</p>
+
+</body></html>

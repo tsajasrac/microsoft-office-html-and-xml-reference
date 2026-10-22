@@ -1,0 +1,31 @@
+<html><head>
+<title>Positioning</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#ffffff" TEXT="#000000">
+
+<H1 class=RH1>Positioning</H1>
+
+<p>Objects on a page will be positioned using cascading style sheet (CSS) styles whenever possible, especially for text objects. Graphical objects will be stored using <A href="../Concepts/ofconOfficeArt.htm">VML</a> in Microsoft 
+Internet Explorer 5.0 or higher, or as metafiles and bitmaps in other Web browsers. Graphics are positioned absolutely, but text can be relative or absolute. Text and graphics will be positioned inside <b>Div</b> tags whenever possible.
+<p>If more than one shape is on the page, the <b>Z-Order </b>tag will not be used and z-order will be done strictly by the logical flow of elements on the page.
+<p>Bulleted lists use the <b>mso-special-format</b>  tag with the value <b>bullet</b>.
+
+<P>For Internet Explorer 3 and NetScape 3, text and art is positioned by a three-step process of decomposing the objects on the slide, putting them into layers, and partitioning.
+
+<h4>Decomposing</h4>
+<p>In the first step, text is broken down into lines, and images are sorted into native images (such as gif) or converted to metafiles. 
+<h4>Layers</h4>
+<P>The decomposed lines and images are then divided into the layers that make up a slide, which are the master slide or the slide face. Hyperlinks are promoted to the slide face layer. To preserve information, overlapped items will be demoted to the master slide layer.
+
+<h4>Partitions</h4>
+<P>The last step is to divide up the Web page by using 
+tables and to position all the objects into table cells. Groups of overlapping 
+images are placed in order&nbsp;into a single cell so that the images are 
+preserved. The final result is a collection of table cells that positions all 
+the objects exactly.</P>                                                     
+
+
+
+
+</body></html>

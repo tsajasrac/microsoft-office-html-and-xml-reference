@@ -1,0 +1,61 @@
+<html><head>
+<title>DisplayVerticalDrawingGridEvery&nbsp;Element (Microsoft Word)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>DisplayVerticalDrawingGridEvery&nbsp;Element (Microsoft Word)</H1>
+<p class=T>Specifies&nbsp;that vertical gridlines be displayed with a designated
+amount of space between them.</p>
+<!--
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+
+<TR valign=top>
+<TD class=TT width=33%><A HREF="wdatt.htm"><B>A</B></A></TD>
+<TD class=TT width=66%>Description</TD>
+</TR>
+
+</TABLE>
+-->
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+ <a HREF="wdeleWordDocument.htm"><b>WordDocument</b></a>
+</p>
+
+
+
+<p class=RL><b>Remarks</b></p>
+<p class="T">This element contains an integer value between 0 and 30
+that determines the amount of space between vertical gridlines. The default value is
+1.
+
+<p class=RL><b>See Also</b></p>
+
+<p class=T><a href="wdeleDisplayHorizontalDrawingGridEvery.htm"><b>DisplayHorizontalDrawingGridEvery</b></a>,
+<a href="wdeleDrawingGridHorizontalOrigin.htm"><b>DrawingGridHorizontalOrigin</b></a>,
+<a href="wdeleDrawingGridHorizontalSpacing.htm"><b>DrawingGridHorizontalSpacing</b></a>,
+<a href="wdeleDrawingGridVerticalOrigin.htm"><b>DrawingGridVerticalOrigin</b></a>,
+<a href="wdeleDrawingGridVerticalSpacing.htm"><b>DrawingGridVerticalSpacing</b></a>,
+<a href="wdeleUseMarginsForDrawingGridOrigin.htm"><b>UseMarginsForDrawingGridOrigin</b></a>
+</p>
+
+
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example shows a document with drawing grid features enabled.</p>
+<PRE class=C><CODE> &lt;w:WordDocument&gt;
+  &lt;w:View&gt;Print&lt;/w:View&gt;
+  &lt;w:DrawingGridHorizontalSpacing&gt;14.4 pt&lt;/w:DrawingGridHorizontalSpacing&gt;
+  &lt;w:DrawingGridVerticalSpacing&gt;14.4 pt&lt;/w:DrawingGridVerticalSpacing&gt;
+  &lt;w:DisplayHorizontalDrawingGridEvery&gt;2&lt;/w:DisplayHorizontalDrawingGridEvery&gt;
+  &lt;w:DisplayVerticalDrawingGridEvery&gt;2&lt;/w:DisplayVerticalDrawingGridEvery&gt;
+  &lt;w:UseMarginsForDrawingGridOrigin/&gt;
+  &lt;w:DrawingGridHorizontalOrigin&gt;144 pt&lt;/w:DrawingGridHorizontalOrigin&gt;
+  &lt;w:DrawingGridVerticalOrigin&gt;144 pt&lt;/w:DrawingGridVerticalOrigin&gt;
+ &lt;/w:WordDocument&gt;</CODE></PRE>
+
+
+</body></html>

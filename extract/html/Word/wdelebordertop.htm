@@ -1,0 +1,61 @@
+<html><head>
+<title>BorderTop Element (Microsoft Word)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>BorderTop Element (Microsoft Word)</H1>
+<p class=T>Specifies whether there is a top border line for a picture or
+horizontal line object.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td class="T" width="33%"><b>shadow</b></td>
+    <td class="T" width="66%">Specifies the effects for the border line.</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%"><b>type</b></td>
+    <td class="T" width="66%">Specifies the type of border line.</td>
+  </tr>
+  <tr>
+    <td class="T" width="33%"><b><span style="color: black; mso-bidi-font-family: Arial">width</span></b></td>
+    <td class="T" width="66%">Specifies the width of the border line.</td>
+  </tr>
+</table>
+
+
+<p class=RL><b>Remarks</b></p>
+<p class="T">If <code>&lt;w:bordertop/&gt;</code>  is specified, the picture or horizontal line
+object has a top
+border. This element also specifies the display characteristics
+of the top border line.
+
+
+
+<p class=RL><b>See Also</b></p>
+<p class="T"><b><a href="wdeleborderbottom.htm">BorderBottom</a></b>, <b><a href="wdeleborderleft.htm">BorderLeft</a></b>,
+<b><a href="wdeleborderright.htm">BorderRight</a></b>
+
+
+
+
+
+<p class=RL>
+<A NAME="Example"><b>Example</b></A>
+</p>
+<p class=T>This example shows an inserted picture with border lines that have a
+shadow effect on all sides.</p>
+
+<PRE class=C><CODE>&lt;v:shape id=&quot;_x0000_i1026&quot; type=&quot;#_x0000_t75&quot; style='width:274.5pt; height:273pt' o:ole=&quot;&quot; o:bordertopcolor=&quot;#396&quot; o:borderleftcolor=&quot;#396&quot; o:borderbottomcolor=&quot;#396&quot; o:borderrightcolor=&quot;#396&quot;&gt;
+ &lt;v:imagedata src=&quot;wordart_image001.wmz&quot; o:title=&quot;&quot;/&gt;
+ &lt;w:bordertop type=&quot;single&quot; width=&quot;8&quot; shadow=&quot;t&quot;/&gt;
+ &lt;w:borderleft type=&quot;single&quot; width=&quot;8&quot; shadow=&quot;t&quot;/&gt;
+ &lt;w:borderbottom type=&quot;single&quot; width=&quot;8&quot; shadow=&quot;t&quot;/&gt;
+ &lt;w:borderright type=&quot;single&quot; width=&quot;8&quot; shadow=&quot;t&quot;/&gt;
+&lt;/v:shape&gt;</CODE></PRE>
+
+
+</body></html>

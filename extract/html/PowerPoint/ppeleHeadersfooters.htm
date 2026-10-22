@@ -1,0 +1,91 @@
+<html>
+
+<head>
+<title>Headersfooters Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Headersfooters Element (Microsoft PowerPoint)</h1>
+<p class="T">Defines the header and footer data for presentations.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td width="33%" valign="top"><b>Attribute</b></td>
+    <td width="66%" valign="top"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>footerstr</b></td>
+    <td width="66%" valign="top">Defines the footer string.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>formatid</b></td>
+    <td width="66%" valign="top">Defines the format ID of the headers and
+      footers.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>headerstr</b></td>
+    <td width="66%" valign="top">Defines the header string.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>nodate</b></td>
+    <td width="66%" valign="top">Determines whether a date is used.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>nofooter</b></td>
+    <td width="66%" valign="top">Determines whether a footer string is used.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>noheader</b></td>
+    <td width="66%" valign="top">Determines whether a header string is used.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>notes</b></td>
+    <td width="66%" valign="top">Determines whether the header and footer data
+      applies to printed slide notes.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>nouserdate</b></td>
+    <td width="66%" valign="top">Determines whether a user-supplied date is
+      used.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>slidenumber</b></td>
+    <td width="66%" valign="top">Determines whether the slide number is
+      displayed.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>todaydate</b></td>
+    <td width="66%" valign="top">Determines whether the current date is used.</td>
+  </tr>
+  <tr valign="top">
+    <td width="33%" valign="top"><b>userdatastr</b></td>
+    <td width="66%" valign="top">Defines a string for the date supplied by the
+      user.</td>
+  </tr>
+</table>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><a href="ppelePresentation.htm"><b>Presentation</b></a></p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">The <b>Headersfooters</b> element is specified once for slides and
+once for printed slide notes.</p>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">The following example specifies that slide numbers and the current
+date are displayed on a slide and sets the footer string to
+&quot;myfooter&quot;. It also specifies that no header or user-supplied date
+is displayed.</p>
+<pre class=C><code>
+&lt;p:headersfooters slidenumber=&quot;t&quot; footerstr=&quot;myfooter&quot; nouserdate=&quot;t&quot; noheader=&quot;t&quot; todaydate=&quot;t&quot; /&gt; 
+</code></pre>
+<p class="T">This example specifies that slide numbers are displayed in the
+slide notes. The header is set to &quot;myheader&quot; and the footer is set to
+&quot;myfooter&quot;.</p>
+<pre class=C><code>&lt;p:headersfooters notes=&quot;t&quot; slidenumber=&quot;t&quot; headerstr=&quot;myheader&quot; footerstr=&quot;myfooter&quot; /&gt;
+</code></pre>
+
+</body>
+
+</html>

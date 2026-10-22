@@ -1,0 +1,38 @@
+<html><head>
+<title>ParameterType Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>ParameterType Element (Microsoft Excel)</H1>
+<p class=T>Specifies a parameter type.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleParameter.htm"><B>Parameter</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>This element contains one of the following string constants:</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Constant</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>Prompt</B></TD>
+<TD class=T width=66%>Prompt the user for a parameter.
+Use the <A HREF="xlelePromptString.htm"><B>PromptString</B></A> element to specify the prompt string.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>Value</B></TD>
+<TD class=T width=66%>The parameter is a value.
+Use the <A HREF="xleleParameterValue.htm"><B>ParameterValue</B></A> element to specify the data type of the value.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>Formula</B></TD>
+<TD class=T width=66%>The parameter is the result of a formula.
+The <A HREF="xleleFormula.htm"><B>Formula</B></A> element specifies the formula.</TD>
+</TR>
+</TABLE>
+<p class=T>If this element is not specified, the default type is <B>Prompt</B>.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xlelePivotTable.htm#Example"><B>PivotTable</B></A> element topic.</p>
+</body></html>

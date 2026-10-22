@@ -1,0 +1,49 @@
+<html><head>
+<title>OfficeDocumentSettings Element (Microsoft Office)</title>
+<style>@import url(msdn_ie4.css);</style><link disabled rel="stylesheet" href="msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>OfficeDocumentSettings Element (Microsoft Office)</H1>
+<p class=T>Contains the Web publishing and save options for a document.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="ofeleXML.htm"><B>XML</B></A>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="ofeleAllowPNG.htm"><B>AllowPNG</B></A>,
+<A HREF="ofeleColors.htm"><B>Colors</B></A>,
+<A HREF="ofeleDoNotOrganizeInFolder.htm"><B>DoNotOrganizeInFolder</B></A>,
+<A HREF="ofeleDoNotRelyOnCSS.htm"><B>DoNotRelyOnCSS</B></A>,
+<A HREF="ofeleDoNotUpdateLinks.htm"><B>DoNotUpdateLinks</B></A>,
+<A HREF="ofeleDoNotUseLongFilenames.htm"><B>DoNotUseLongFilenames</B></A>,
+<A HREF="ofeleDownloadComponents.htm"><B>DownloadComponents</B></A>,
+<A HREF="ofeleLocationOfComponents.htm"><B>LocationOfComponents</B></A>,
+<A HREF="ofelePixelsPerInch.htm"><B>PixelsPerInch</B></A>,
+<A HREF="ofeleReadOnlyRecommended.htm"><B>ReadOnlyRecommended</B></A>,
+<A HREF="ofeleRelyOnVML.htm"><B>RelyOnVML</B></A>,
+<A HREF="ofeleTargetScreenSize.htm"><B>TargetScreenSize</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>All subelements are optional.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example specifies that Vector Markup Language (VML) and Portable Network Graphics (PNG) are used, but not cascading style sheets (CSS) or long file names.
+Hyperlinks and file paths are not updated before the document is saved as a Web page.
+The supporting files are stored in the same folder as the Web page.
+Components are downloaded from the file //o9serv/o2000/msowc.cab.
+</p>
+<PRE class=C><CODE>
+ &lt;o:OfficeDocumentSettings&gt;
+  &lt;o:RelyOnVML/&gt;
+  &lt;o:AllowPNG/&gt;
+  &lt;o:DoNotOrganizeInFolder/&gt;
+  &lt;o:DoNotRelyOnCSS/&gt;
+  &lt;o:DoNotUpdateLinks/&gt;
+  &lt;o:DoNotUseLongFilenames/&gt;
+  &lt;o:DownloadComponents/&gt;
+  &lt;o:LocationOfComponents HRef="file://o9serv/o2000/msowc.cab"/&gt;
+  &lt;o:TargetScreenSize&gt;640x480&lt;/o:TargetScreenSize&gt;
+  &lt;o:PixelsPerInch&gt;72&lt;/o:PixelsPerInch&gt;
+ &lt;/o:OfficeDocumentSettings&gt;
+</CODE></PRE></p>
+</body></html>

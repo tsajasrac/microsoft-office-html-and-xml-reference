@@ -1,0 +1,45 @@
+<html><head>
+<title>ExcelName Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>ExcelName Element (Microsoft Excel)</H1>
+<p class=T>Contains the name of a range of cells, usually represented by a formula.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="../Shared/ofeleXML.htm"><B>XML</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleFormula.htm"><B>Formula</B></A>,
+<A HREF="xleleFunctionGroup.htm"><B>FunctionGroup</B></A>,
+<A HREF="xleleHidden.htm"><B>Hidden</B></A>,
+<A HREF="xleleKeyboardShortcut.htm"><B>KeyboardShortcut</B></A>,
+<A HREF="xleleMacro.htm"><B>Macro</B></A>,
+<A HREF="xleleName.htm"><B>Name</B></A>,
+<A HREF="xleleSheetIndex.htm"><B>SheetIndex</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>Name</B> and <B>Formula</B> subelements are required, and all other subelements are optional.</p>
+<p class=RL><A NAME="Example"><b>Examples</b></A></p>
+<p class=T>This example assigns the name &quot;Rates&quot; to the range E1:E4 on Sheet1.
+The name does not appear in the <B>Define Name</B> dialog box in Microsoft Excel.<BR>
+<PRE class=C><CODE>
+ &lt;x:ExcelName&gt;
+  &lt;x:Name&gt;Rates&lt;/x:Name&gt;
+  &lt;x:Formula&gt;=Sheet1!$E$1:$E$4&lt;/x:Formula&gt;
+  &lt;x:Hidden/&gt;
+  &lt;x:SheetIndex&gt;1&lt;/x:SheetIndex&gt;
+ &lt;/x:ExcelName&gt;
+</CODE></PRE></p>
+<p class=T>This example assigns the name &quot;States&quot; to the range B1:B5 on Sheet1.
+The name does not appear in the <B>Define Name</B> dialog box in Microsoft Excel.<BR>
+<PRE class=C><CODE>
+ &lt;x:ExcelName&gt;
+  &lt;x:Name&gt;States&lt;/x:Name&gt;
+  &lt;x:Formula&gt;=Sheet1!$B$1:$B$5&lt;/x:Formula&gt;
+  &lt;x:Hidden/&gt;
+  &lt;x:SheetIndex&gt;1&lt;/x:SheetIndex&gt;
+ &lt;/x:ExcelName&gt;
+</CODE></PRE></p>
+</body></html>

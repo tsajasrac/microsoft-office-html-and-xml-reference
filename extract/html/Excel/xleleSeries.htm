@@ -1,0 +1,126 @@
+<html><head>
+<title>Series Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Series Element (Microsoft Excel)</H1>
+<p class=T>Contains the definition of a data series in a chart that is based on data from a cell table.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleDataLabels.htm"><B>DataLabels</B></A>,
+<A HREF="xleleGraph.htm"><B>Graph</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xlele3DBubble.htm"><B>3DBubble</B></A>,
+<A HREF="xleleBorder.htm"><B>Border</B></A>,
+<A HREF="xleleBubbleSize.htm"><B>BubbleSize</B></A>,
+<A HREF="xleleCaption.htm"><B>Caption</B></A>,
+<A HREF="xleleCategory.htm"><B>Category</B></A>,
+<A HREF="xleleClose.htm"><B>Close</B></A>,
+<A HREF="xleleDataLabels.htm"><B>DataLabels</B></A>,
+<A HREF="xleleDataPoint.htm"><B>DataPoint</B></A>,
+<A HREF="xleleErrorBars.htm"><B>ErrorBars</B></A>,
+<A HREF="xleleExplode.htm"><B>Explode</B></A>,
+<A HREF="xleleHigh.htm"><B>High</B></A>,
+<A HREF="xleleIndex.htm"><B>Index</B></A>,
+<A HREF="xleleInterior.htm"><B>Interior</B></A>,
+<A HREF="xleleLine.htm"><B>Line</B></A>,
+<A HREF="xleleLow.htm"><B>Low</B></A>,
+<A HREF="xleleMarker.htm"><B>Marker</B></A>,
+<A HREF="xleleName.htm"><B>Name</B></A>,
+<A HREF="xleleOpen.htm"><B>Open</B></A>,
+<A HREF="xleleShape.htm"><B>Shape</B></A>,
+<A HREF="xleleSmooth.htm"><B>Smooth</B></A>,
+<A HREF="xleleTrendline.htm"><B>Trendline</B></A>,
+<A HREF="xleleUpDownBars.htm"><B>UpDownBars</B></A>,
+<A HREF="xleleValue.htm"><B>Value</B></A>,
+<A HREF="xleleXValue.htm"><B>XValue</B></A>,
+<A HREF="xleleYValue.htm"><B>YValue</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>This element can contain one or more <B>Category</B> subelements depending on the type of chart.
+Whether a subelement is required depends on the type of chart.
+If one is specified that is not appropriate for a particular type, it is ignored.</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Type of Chart</B></TD>
+<TD class=I width=66% align=left><B>Optional Subelements</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Line</TD>
+<TD class=T width=66%><B>Smooth</B> and <B>UpDownBars</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Scatter</TD>
+<TD class=T width=66%><B>SecondaryAxis</B> and <B>Smooth</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Stock</TD>
+<TD class=T width=66%><B>UpDownBars</B></TD>
+</TR>
+</TABLE>
+<p class=T>The <B>BubbleSize</B>, <B>Caption</B>, <B>Category</B>, <B>Close</B>, <B>High</B>, <B>Low</B>, <B>Open</B>, <B>Value</B>, <B>XValue</B>, and <B>YValue</B> subelements contain either a string or subelements depending on whether the chart was saved from Microsoft Excel or the Chart component. For Excel, these subelements contain an A1-style cell reference or a literal data string such as <CODE>{1, 2, 3,...}</CODE>, <CODE>{"a", "b", "c",...}</CODE>, or <CODE>apples</CODE>. For the Chart component, these subelements contain the <A HREF="xleleData.htm"><B>Data</B></A> and <A HREf="xleleDataSource.htm"><B>DataSource</B></A> subelements.</p>
+<p class=T>Whether the <B>Border</B> and <B>Line</B> subelements can be specified depends on the type of chart as shown in the following table.</p>
+<TABLE border=1 cellpadding=5 cols=3 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>If the type of chart is</B></TD>
+<TD class=I width=33% align=left><B>the <B>Border</B> subelement</B></TD>
+<TD class=I width=33% align=left><B>the <B>Line</B> subelement</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Area</TD>
+<TD class=T width=33%>specifies the formatting of the outline.</TD>
+<TD class=T width=33%>is not specified.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Bar or Column</TD>
+<TD class=T width=33%>specifies the formatting of the bar or column's border.</TD>
+<TD class=T width=33%>specifies the formatting of the series line, if visible.
+A <B>Line</B> subelement is specified for each series. When the Web page is opened in Microsoft Excel, the <A HREF="xleleSubType.htm"><B>SubType</B></A> subelement specifies a stacked or 100% stacked chart, and the <B>Line</B> subelement is specified for several series, the formatting specified in the first <B>Line</B> subelement is used to format all series lines in the chart.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Bubble</TD>
+<TD class=T width=33%>specifies the formatting of each bubble's outline.</TD>
+<TD class=T width=33%>specifies the formatting of lines for bubble charts that have lines.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Doughnut or Pie</TD>
+<TD class=T width=33%>specifies the formatting of each slice's outline.</TD>
+<TD class=T width=33%>is not specified.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Line</TD>
+<TD class=T width=33%>specifies the formatting of 3-D line chart outlines.</TD>
+<TD class=T width=33%>specifies the formatting of lines.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Radar</TD>
+<TD class=T width=33%>is not specified.</TD>
+<TD class=T width=33%>specifies the formatting of lines.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Stock High/Low/Close</TD>
+<TD class=T width=33%>is not specified.</TD>
+<TD class=T width=33%>specifies the formatting of the high and low line.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Stock Open/High/Low/Close</TD>
+<TD class=T width=33%>is not specified.</TD>
+<TD class=T width=33%>specifies the formatting of the open and close line.
+The <B>UpDownBars</B> subelement specifies the formatting of the up-down bars.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>Surface</TD>
+<TD class=T width=33%>specifies the formatting of the outline.</TD>
+<TD class=T width=33%>is not specified.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>XY (Scatter)</TD>
+<TD class=T width=33%>is not specified.</TD>
+<TD class=T width=66%>specifies the formatting of lines for scatter charts that have lines.</TD>
+</TR>
+</TABLE>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xleleWebChart.htm#Example"><B>WebChart</B></A> element topic.</p>
+</body></html>

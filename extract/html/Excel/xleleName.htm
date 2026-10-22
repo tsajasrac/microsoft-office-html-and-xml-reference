@@ -1,0 +1,66 @@
+<html><head>
+<title>Name Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Name Element (Microsoft Excel)</H1>
+<p class=T>Contains the user-defined name of an object, range, or reference to another workbook, the location and name of a text file, or the built-in name of a range.</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>Href</B></TD>
+<TD class=T width=66%>When <B>Name</B> is a subelement of the <A HREF="xleleColumnInfo.htm"><B>ColumnInfo</B></A> element, this attribute contains the name of a text file that textual data is imported from.</TD>
+</TR>
+</TABLE>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleAxis.htm"><B>Axis</B></A>,
+<A HREF="xleleChart.htm"><B>Chart</B></A>,
+<A HREF="xleleColumnInfo.htm"><B>ColumnInfo</B></A>,
+<A HREF="xleleConsolidationReference.htm"><B>ConsolidationReference</B></A>,
+<A HREF="xleleExcelName.htm"><B>ExcelName</B></A>,
+<A HREF="xleleExcelWorksheet.htm"><B>ExcelWorksheet</B></A>,
+<A HREF="xleleExternName.htm"><B>ExternName</B></A>,
+<A HREF="xleleParameter.htm"><B>Parameter</B></A>,
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A>,
+<A HREF="xlelePivotItem.htm"><B>PivotItem</B></A>,
+<A HREF="xlelePivotTable.htm"><B>PivotTable</B></A>,
+<A HREF="xlelePLPivotField.htm"><B>PLPivotField</B></A>,
+<A HREF="xlelePLTotal.htm"><B>PLTotal</B></A>,
+<A HREF="xleleQueryTable.htm"><B>QueryTable</B></A>,
+<A HREF="xleleSeries.htm"><B>Series</B></A>,
+<A HREF="xleleTextWizardSettings.htm"><B>TextWizardSettings</B></A>,
+<A HREF="xleleTrendline.htm"><B>Trendline</B></A>,
+<A HREF="xleleWorksheetOptions.htm"><B>WorksheetOptions</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The name is a text string.</p>
+<p class=T>For a consolidation reference, this element contains the name of the data source range.</p>
+<p class=T>For a series in Microsoft Excel, the name contained in the <A HREF="xleleCaption.htm"><B>Caption</B></A> and <B>Name</B> elements are the same.
+In the Chart component, the names in these elements can be different.</p>
+<p class=T>For the Text Import Wizard, this element contains the location and name of a text file.</p>
+<p class=T>For a name definition, if a built-in range name is specified, this element contains one of the following string constants that identifies the corresponding range: <B>Consolidate_Area</B>,
+<B>Auto_Open</B>, <B>Auto_Close</B>, <B>Extract</B>, <B>Database</B>,
+<B>Criteria</B>, <B>Print_Area</B>, <B>Print_Titles</B>, <B>Recorder</B>,
+<B>Data_Form</B>, <B>Auto_Activate</B>, <B>Auto_Deactivate</B>, or
+<B>Sheet_Title</B>.</p>
+<p class=T>For a named range of cells, the same name can appear more than once in a workbook; however, the name must be unique to a worksheet.
+You can use the name of a range of cells as the target of a hyperlink.
+In the HTML table containing the spreadsheet, the name is specified by the <B>name</B> attribute of an HTML <B>Anchor</B> element that contains the top-left cell of the range.</p>
+<!-- *** -->
+<p class=T>When the data comes from a PivotList component, the <B>Name</B> element contains the caption of the component and PivotTable report.</p>
+<p class=T>For a PivotTable field, field set, or total, the <B>Name</B> element contains a unique, non-empty string based on the caption contained in the <A HREF="xlelePLCaption.htm"><B>PLCaption</B></A> element.
+For data fields, the <B>Name</B> element contains the string <B>Data</B> (appearing in the language of the version of Microsoft Excel).</p>
+<p class=T>For a PivotTable item, if the <B>PivotItem</B> element represents a member, the <B>Name</B> element contains the caption of the member and the <A HREF="xleleSourceName.htm"><B>SourceName</B></A> element contains the unique name.
+If the <B>PivotItem</B> represents a string filter value, the <B>Name</B> element contains the filter string and the <B>SourceName</B> element is not specified.
+Otherwise, the <B>Name</B> element contains the caption and the <B>SourceName</B> element contains a text version of the caption.
+If the value is a date or time, the string is in ISO 8601 format.
+The <B>SourceName</B> element is not specified if the caption is the same as the content of the <B>Name</B> element.</p>  
+<!-- *** -->
+<p class=T>For all other objects, this element contains the name of the object.</p>
+<p class=RL><A NAME="Example"><b>Examples</b></A></p>
+<p class=T>See the examples in the <A HREF="xleleExcelName.htm#Example"><B>ExcelName</B></A>, <A HREF="xleleExcelWorkbook.htm#Example"><B>ExcelWorkbook</B></A>, <A HREF="xlelePivotTable.htm#Example"><B>PivotTable</B></A>, <A HREF="xleleQueryTable.htm#Example"><B>QueryTable</B></A>, <A HREF="xleleSupBook.htm#Example"><B>SupBook</B></A>, and <A HREF="xleleWebChart.htm#Example"><B>WebChart</B></A> element topics.</p>
+</body></html>

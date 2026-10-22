@@ -1,0 +1,43 @@
+<html><head>
+<title>Caption Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Caption Element (Microsoft Excel)</H1>
+<!-- *** -->
+<p class=T>Contains the displayed name of a PivotTable field, the title of a chart, or the caption of a data label, series, Spreadsheet component, or trendline.
+For a PivotList component, contains the axis label, displayed name of a total, or the current filter value or page name.</p>
+<!-- *** -->
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleCubeField.htm"><B>CubeField</B></A>,
+<A HREF="xleleLabel.htm"><B>Label</B></A>,
+<A HREF="xleleLabelEntry.htm"><B>LabelEntry</B></A>,
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A>,
+<A HREF="xlelePLPivotField.htm"><B>PLPivotField</B></A>,
+<A HREF="xlelePLTotal.htm"><B>PLTotal</B></A>,
+<A HREF="xleleSeries.htm"><B>Series</B></A>,
+<A HREF="xleleTrendline.htm"><B>Trendline</B></A>,
+<A HREF="xleleTitle.htm"><B>Title</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>For a chart:
+<A HREF="xleleData.htm"><B>Data</B></A>,
+<A HREF="xleleDataSource.htm"><B>DataSource</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>For a chart title or label entry, all subelements are required.
+For all other objects, this element contains a text string caption.
+The <B>DataSource</B> subelement is required by the Chart component.</p>
+<p class=T>A chart title caption string can be formatted as rich text.
+If the <B>Caption</B> element is not specified, Microsoft Excel automatically generates a title caption using the string constant <B>Chart</B> and the chart index number as the suffix.
+Likewise, the default caption of a trendline is the string constant <B>Trendline</B> and the trendline index number suffix.</p>
+<p class=T>For a series in Microsoft Excel, the name contained in the <B>Caption</B> and <A HREF="xleleName.htm"><B>Name</B></A> elements are the same.
+In the Chart component, the names in these elements can be different.</p>
+<!-- *** -->
+<p class=T>For a PivotList component, the caption is contained in the <B>Name</B> and <A HREF="xlelePLCaption.htm"><B>PLCaption</B></A> elements.
+The <B>Caption</B> subelement is not specified if the name is the same as the content of the <B>Name</B> subelement of the same parent element.</p>
+<!-- *** -->
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xleleWebChart.htm#Example"><B>WebChart</B></A> element topic.</p>
+</body></html>

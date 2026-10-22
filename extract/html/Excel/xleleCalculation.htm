@@ -1,0 +1,40 @@
+<html><head>
+<title>Calculation Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Calculation Element (Microsoft Excel)</H1>
+<p class=T>Specifies the type of calculation for a PivotTable field or the mode of calculation for a workbook.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleExcelWorkbook.htm"><B>ExcelWorkbook</B></A>,
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>For a PivotTable field, this element contains one of the following string constants specifying the type of calculation: <B>DifferenceFrom</B>, <B>Index</B>, <B>Normal</B>, <B>PercentDifferenceFrom</B>, <B>PercentOf</B>, <B>PercentOfColumn</B>, <B>PercentOfRow</B>, <B>PercentOfTotal</B>, or <B>RunningTotalIn</B>.
+If this element is not specified, the default value is <B>Normal</B>.</p>
+<p class=T>For a workbook, this element contains one of the following string constants:</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Constant</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>AutomaticCalculation</B></TD>
+<TD class=T width=33%>All dependent formulas are calculated every time a value, formula, or name is changed.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>ManualCalculation</B></TD>
+<TD class=T width=33%>All open workbooks are calculated when a calculation is requested.
+The <A HREF="xleleDoNotCalculateBeforeSave.htm"><B>DoNotCalculateBeforeSave</B></A> element cannot be specified when manual calculation is enabled.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>SemiAutomaticCalculation</B></TD>
+<TD class=T width=33%>All dependent formulas except data tables are calculated every time a change is made to a value, formula, or name.
+To calculate data tables, a calculation must be requested.</TD>
+</TR>
+</TABLE>
+<p class=T>If this element is not specified, the default value is <B>AutomaticCalculation</B>.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xleleExcelWorkbook.htm#Example"><B>ExcelWorkbook</B></A> element topic.</p>
+</body></html>

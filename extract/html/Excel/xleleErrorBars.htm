@@ -1,0 +1,28 @@
+<html><head>
+<title>ErrorBars Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>ErrorBars Element (Microsoft Excel)</H1>
+<p class=T>Contains a definition of error bars for a series.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleSeries.htm"><B>Series</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleBarType.htm"><B>BarType</B></A>,
+<A HREF="xleleErrorMarker.htm"><B>ErrorMarker</B></A>,
+<A HREF="xleleErrorType.htm"><B>ErrorType</B></A>,
+<A HREF="xleleLine.htm"><B>Line</B></A>,
+<A HREF="xleleMinus.htm"><B>Minus</B></A>,
+<A HREF="xleleOrientation.htm"><B>Orientation</B></A>,
+<A HREF="xlelePlus.htm"><B>Plus</B></A>,
+<A HREF="xleleValue.htm"><B>Value</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>BarType</B>, <B>ErrorType</B>, <B>Orientation</B>, and either the <B>Plus</B> and <B>Minus</B> or the <B>Value</B> subelements are required.
+All other subelements are optional.</p>
+<p class=T>The <B>Value</B> subelement is required if the <B>ErrorType</B> subelement contains the string constant <B>StdErr</B>.
+If the <B>ErrorType</B> element contains the string constant <B>Custom</B>, the <B>Plus</B> and <B>Minus</B> elements are required, depending on the type of bar specified in the <B>BarType</B> element.</p>
+</body></html>

@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<title>Recolorinfo Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Recolorinfo Element (Microsoft PowerPoint)</h1>
+<p class="T">Specifies the information saved when a metafile is recolored.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>ignoredcolors</b></td>
+    <td class="T" width="66%">Specifies whether a metafile has any ignored
+      colors.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>missingcolors</b></td>
+    <td class="T" width="66%">Specifies whether a metafile has any missing
+      colors.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>missingfills</b></td>
+    <td class="T" width="66%">Specifies whether a metafile has any missing
+      fills.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>monocolor</b></td>
+    <td class="T" width="66%">Specifies the value of a monocolor.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>monorecolor</b></td>
+    <td class="T" width="66%">Specifies whether a metafile has been recolored
+      with a monocolor.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>nomodify</b></td>
+    <td class="T" width="66%">Specifies whether a metafile has been modified.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>numcolors</b></td>
+    <td class="T" width="66%">Specifies the number of colors in the metafile.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>numfills</b></td>
+    <td class="T" width="66%">Specifies the number of fills in the metafile.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>recolorstate</b></td>
+    <td class="T" width="66%">Specifies whether a metafile has been recolored.</td>
+  </tr>
+</table>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><a href="ppelePresentation.htm"><b>Presentation</b></a></p>
+<p class="RL"><b>Subelements</b></p>
+<p class="T"><a href="ppelerecolorinfoentry.htm"><b>Recolorinfoentry</b></a></p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">All subelements are optional.</p>
+<p class="T">PowerPoint allows a metafile to be recolored and can keep track of
+the changes in color. Each color change is given a <b>Recolorinfoentry</b>
+subelement.</p>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">The following example shows two color changes, each contained in a
+separate <b>Recolorinfoentry</b> element. Both changes are contained in a <b>Recolorinfo</b>
+element.</p>
+<pre class="C"><code>
+&lt;p:recolorinfo numcolors=&quot;2&quot; recolorstate=&quot;t&quot;&gt;
+&lt;p:recolorinfoentry fromcolor=&quot;rgb(0,0,0)&quot; tocolor=&quot;schemeFill&quot;&gt;
+&lt;/p:recolorinfoentry&gt;
+&lt;p:recolorinfoentry fromcolor=&quot;rgb(255,239,209)&quot; tocolor=&quot;schemeHyperlink&quot;&gt;
+&lt;/p:recolorinfoentry&gt;
+&lt;/p:recolorinfo&gt;
+</code></pre>
+
+</body>
+
+</html>

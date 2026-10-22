@@ -1,0 +1,129 @@
+<html><head>
+<title>Worksheets</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Worksheets</h1>
+
+<p class=T>Worksheets are saved as a table. In Microsoft Excel, the table
+contains the smallest rectangular range of cells that contain data and
+formatting, including cell A1. HTML 3.2 is used for the basic table, while formatting, alignment, and
+sizing are specified using a combination of CSS and HTML. The table is contained
+in a <b>Table</b> element placed immediately after the <b>Body</b> element.
+The <b>border</b>, <b>cellspacing</b>, <b>cellpadding</b>, <b>width</b>, and <b>style</b>
+attributes are specified in the <b>Table</b> element so that the table more
+closely resembles a worksheet when viewed in a Web browser.</p>
+
+<pre class=C><code>
+&lt;table x:str border=0 cellpadding=0 cellspacing=0 width=64
+  style='border-collapse:collapse;table-layout:fixed;width:48pt'&gt;
+</code></pre>
+
+<p class=T>A <b>Col</b> element is placed immediately after the <b>Table</b>
+element for each column of the table. The <b>width</b>  attribute and <b>width</b>
+style
+attribute specify the width of the column in pixels, and the <b>style</b>
+attribute specifies the column style. If consecutive columns contain the same attributes, the
+<b>span</b> attribute can be used to apply the attributes to the columns: for example, <code>&lt;col
+class=XL4 width=216 span=2&gt;</code> instead of
+<code>&lt;col class=XL4 width=216&gt;&lt;col class=XL4 width=216&gt;</code> is specified. Hidden columns are specified with
+the <b>display:none</b> style.
+</p>
+
+<p class=T> Each row is contained in a <b>TR</b> element. The <b>height</b>
+attribute and <b>height</b> style attribute specify the height of the row in pixels. Hidden
+rows are specified with the <b>display:none</b> style.</p>
+
+<p class=T>Each cell is contained in a <b>TD</b> element. In every cell of the
+first row and in every cell that has wordwrap enabled, the <b>width</b>
+attribute specifies the width of the column in pixels. In the first cell of each
+row, the <b>height</b> attribute specifies the height of the row in pixels. Empty cells
+contain a single non-breaking space (<b>&amp;nbsp;</b>) in the <b>TD</b> element.</p>
+
+<p class=T>Both an element attribute and a style attribute are used to specify row
+height and column width. If the element attribute value differs from the style
+attribute value, Excel uses the greater value. The default height and width are specified by the <b>mso-default-height</b> and <b>mso-default-width</b> style
+attributes of the <b>Table</b> element. The <b>mso-space-above</b>, <b>mso-space-below</b>,
+<b>mso-unsynced</b>, and <b>mso-zero-height</b> style attributes are also used.</p>
+
+<p class=T>If the default height is set by the user, the <b>mso-height-source:
+userset</b> style is used in the <b>TR</b> element. If the height is
+automatically set, the <b>mso-height-source: auto</b> style is used. For
+files that were not created by Excel, rows that have a height specified but do
+not include a <b>mso-height-source</b> style attribute have a default style
+attribute value of <b>userset</b>.</p>
+
+<p class=T>The user-defined height must also be specified using the <b>mso-height-alt</b>
+style attribute of the <b> TR</b> element. The <b>mso-height-alt</b> style
+attribute specifies the height in the units used by Excel.</p>
+
+<h4 class=RH4>Alignment</h4>
+
+<p class=T>The <b>align</b> attribute of the <b>TD</b> element and the <b>text-align</b>
+style attribute specify the horizontal alignment of a cell. The <b>valign</b>
+attribute of the <b>TD</b> element and the <b>vertical-align</b> style attribute
+specify the vertical alignment.</p>
+
+<p class=T> When a cell containing text has general horizontal alignment or is
+aligned to the left, the <b> align</b> attribute is not specified. The vertical alignment
+of a row is specified for each <b>TR</b> element. If no formatting has
+been applied, the cell is aligned towards the bottom by default.</p>
+
+<h4 class=RH4>Merged cells</h4>
+
+<p class=T>The <b>colspan</b> and <b>rowspan</b> attributes are used to specify
+merged cells. For horizontally merged cells, the <b>colspan</b> attribute is
+used in the <b>TD</b> element of the leftmost cell. For vertically merged
+cells, the <b>rowspan</b> attribute is used in the <b>TD</b> element of the
+topmost cell. For cells merged in both directions, the attributes are used in the <b>TD</b> element of the top left cell. The <b>mso-ignore: colspan</b>
+style is used when the contents of a cell can be displayed over adjacent
+empty cells that do not contain visible formatting such as backgrounds, patterns, and
+borders. The style specifies that the cells should not be merged when the file
+is opened in Excel. If the empty cells have formatting applied, the <b>mso-spanned-cells</b>
+style attribute is used containing a list of classes used by the cells in
+the table. A class name is specified for each cell, and each class name is
+separated by a space. If the cell has no formatting, <b>none</b> is specified.</p>
+
+<p class=T>If the adjacent cells are not empty or contain visible formatting, a <b>Span</b>
+element and the <b>display: none</b> style are specified. The <b>Span</b>
+element contains the fragment of content clipped by the content of the
+adjacent cell.</p>
+
+<h4 class=RH4>Hidden data</h4>
+
+<p class=T>Columns and rows in the table are hidden by specifying a height or width
+of 0 (zero) and, if the Web browser supports styles, by specifying the <b>display:
+none</b> style in the <b>Col</b> or <b>TR</b> element. The <b>mso-height</b>, <b>mso-height-alt</b>,
+<b>mso-width</b>, <b>mso-width-alt</b>, and <b> mso-height-source:
+userset</b> style attributes and styles specify the height and width of the
+column or row when visible in Excel. Width is assumed to be
+user-defined for hidden columns.</p>
+
+<p class=T>A worksheet is hidden by not specifying a link to the file in the
+workbook frameset and by specifying the <b>display: none</b> style in the <b>Body</b>
+element of the worksheet file. The workbook tab strip file contains tabs for
+visible worksheets only.</p>
+
+<h4 class=RH4>Empty columns and rows</h4>
+
+<p class=T>If a table contains two or more adjacent empty columns or rows
+that are not formatted, the <b>colspans</b> and <b>xlrowspans</b> attributes and
+the <b>mso-ignore</b> style attribute are used to display them. These attributes are
+specified when the document is saved and not when it is published. The <b>xlrowspan</b>
+attribute can be used in the first <b>TR</b> element containing the top
+row. The <b>colspan</b> attribute is used in the <b>Col</b> element for the
+leftmost column. The attributes contain a value specifying the total number of
+adjacent empty columns or rows.</p>
+
+<h4 class=RH4>Page breaks in tables</h4>
+
+<p class=T>Page breaks are saved using the subelements of the XML <A HREF="../Excel/xlelePageBreaks.htm"><b>PageBreaks</b></A>
+element. Horizontal page breaks are specified using the <b>page-break-before:
+always</b> style of the <b>TR</b> element following the break.</p>
+
+<h4 class=RH4>Worksheet background</h4>
+<p class=T>The <B>background</B> attribute of the <B>Body</B> element specifies the background image of a worksheet.</p>
+
+</body>
+</html>

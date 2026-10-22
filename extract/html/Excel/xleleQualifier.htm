@@ -1,0 +1,41 @@
+<html><head>
+<title>Qualifier Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Qualifier Element (Microsoft Excel)</H1>
+<p class=T>Contains the qualifier of a condition in conditional text formatting and data validation.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleCondition.htm"><B>Condition</B></A>,
+<A HREF="xleleDataValidation.htm"><B>DataValidation</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>For conditional formatting, this element can contain one of the following string constants:</p>
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+<TR valign=top>
+<TD class=T width=33%><B>Between</B></TD>
+<TD class=T width=66%><B>NotBetween</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>Equal</B></TD>
+<TD class=T width=66%><B>NotEqual</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>Greater</B></TD>
+<TD class=T width=66%><B>Less</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>GreaterOrEqual</B></TD>
+<TD class=T width=66%><B>LessOrEqual</B></TD>
+</TR>
+</TABLE>
+<p class=T>When a <B>Qualifier</B> element is specified, the value of a cell in the specified range is compared to the values or results of formulas specified by the <A HREF="xleleValue1.htm"><B>Value1</B></A> and <A HREF="xleleValue2.htm"><B>Value2</B></A> elements.
+If the <B>Qualifier</B> element is not specified, a formula specified by the <B>Value1</B> element is used as a condition, and the formula must return a Boolean value.
+In both cases, the formatting is applied only if the condition is true.</p>
+<p class=T>For data validation, this element can contain one of the string constants in the previous list or <B>N/A</B>.
+The default value is <B>Between</B>.
+</p>
+<p class=RL><A NAME="Example"><b>Examples</b></A></p>
+<p class=T>See the examples in the <A HREF="xleleConditionalFormatting.htm#Example"><B>ConditionalFormatting</B></A> and <A HREF="xleleDataValidation.htm#Example"><B>DataValidation</B></A> element topics.</p>
+</body></html>

@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<title>Kinsoku Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Kinsoku Element (Microsoft PowerPoint)</h1>
+<p class="T">Specifies the style of line breaking for Asian languages.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="T">
+    <td class="T" width="33%"><b>following</b></td>
+    <td class="T" width="66%">Contains one of the following string constants
+      specifying the type of break after the character.
+      <table cellpadding="4" cellspacing="4" border="1">
+        <tr valign="top">
+          <td><em>custom</em></td>
+          <td>Custom string that defines the break.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>loose</b></td>
+          <td>Loose breaking.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>none</b></td>
+          <td>No breaks. Default.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>strict</b></td>
+          <td>Strict breaking.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>language</b></td>
+    <td class="T" width="66%">Name of Asian language that line-breaking
+      applies to.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>leading</b></td>
+    <td class="T" width="66%">Contains one of the following string constants
+      specifying the type of break before the character.
+      <table cellpadding="4" cellspacing="4" border="1">
+        <tr valign="top">
+          <td><em>custom</em></td>
+          <td>Custom string that defines the break.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>loose</b></td>
+          <td>Loose breaking.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>none</b></td>
+          <td>No breaks. Default.</td>
+        </tr>
+        <tr valign="top">
+          <td><b>strict</b></td>
+          <td>Strict breaking.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>level</b></td>
+    <td class="T" width="66%">Contains a string constant specifying the level
+      that breaking occurs on: <b>levelOne</b>, <b>levelTwo</b>, or <b>levelThree</b>.
+      The default level is <b>levelOne</b>.</td>
+  </tr>
+</table>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><a href="ppelePresentation.htm"><b>Presentation</b></a></p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T"><em>Kinsoku </em>is a Japanese term for the style of breaking lines
+in Asian languages.</p>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">This example shows a Japanese level 1 Kinsoku element.<pre class=C><code>
+&lt;p:kinsoku language=&quot;Japanese&quot; level=&quot;levelOne&quot;/&gt;  
+
+</code></pre>
+
+</body>
+
+</html>

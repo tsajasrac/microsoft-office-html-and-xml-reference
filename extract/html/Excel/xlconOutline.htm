@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Grouping and Outlines</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body bgcolor=FFFFFF text=000000>
+<h1 class="RH1">Grouping and Outlines</h1>
+<p class="T">An outline is applied to a worksheet and stored in the worksheet
+table within the body of an HTML file. Information about the outline is stored using
+style attributes in the <b>Col</b> and <b>TR</b> elements. For example, rows and
+columns that are hidden by the outline use the <b>display:none</b> style.</p>
+<p class="T">The information stored about an outline includes which columns and
+rows are grouped together, and which are hidden or visible. The <b>mso-outline-level</b>
+style attribute specifies the grouping of column and row elements in an outline.
+An index number specifies the grouping level. Lower numbers specify more
+general groups, higher numbers specify more precise groupings, and the highest
+number specifies all data. These numbers are also specified in the top and left
+margins in Microsoft Excel.
+<p class="T">The <b>mso-outline-parent</b> style attribute specifies whether the
+column or row is hidden or visible but also the location of the parent column or
+row. This style attribute can be used with the <b>mso-outline-level</b>
+style attribute in the same column and row element.</p>
+<p class="T">The <b>mso-outline-parent</b> style attribute can also be used in the <b>Table</b> element along with other style attributes. The <b>mso-outline-parent-col</b>
+and <b>mso-outline-parent-row</b> style attributes specify where the parent
+columns and rows are located. The <b>mso-outline-parent-visibility</b> style
+attribute specifies whether the parent columns or rows are hidden or
+visible.&nbsp;The <b>mso-outline-style</b> style attribute specifies whether an
+automatic style is used. If the style attribute is not used, the default
+constant is <b>userset</b> (manual styles).</p>
+<p class=T>For more information about style attributes, see the <A HREF="../Concepts/ofconStyleTable.htm">Style Attributes</A> topic.</p>
+</body>
+</html>

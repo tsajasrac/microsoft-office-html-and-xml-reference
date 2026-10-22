@@ -1,0 +1,39 @@
+<html><head>
+<title>FreezePanes Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>FreezePanes Element (Microsoft Excel)</H1>
+<p class=T>Specifies whether the panes of a worksheet window are frozen.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleWorksheetOptions.htm"><B>WorksheetOptions</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The panes can be frozen or split depending on whether the <CODE>&lt;FreezePanes/&gt;</CODE> or <CODE>&lt;FrozenNoSplit/&gt;</CODE> element is specified.</p>
+<TABLE border=1 cellpadding=5 cols=3 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>If &lt;FreezePanes/&gt; is</B></TD>
+<TD class=I width=33% align=left><B>And &lt;FrozenNoSplit/&gt; is</B></TD>
+<TD class=I width=33% align=left><B>Then</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>specified</TD>
+<TD class=T width=33%>not specified</TD>
+<TD class=T width=33%>the panes are frozen, but may be split if the <A HREF="xleleSplitHorizontal.htm"><B>SplitHorizontal</B></A> or <A HREF="xleleSplitVertical.htm"><B>SplitVertical</B></A> element is specified.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>not specified</TD>
+<TD class=T width=33%>specified</TD>
+<TD class=T width=33%>the panes are frozen but not split.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%>not specified</TD>
+<TD class=T width=33%>not specified</TD>
+<TD class=T width=33%>the panes are not frozen, but may be split if the <B>SplitHorizontal</B> or <B>SplitVertical</B> element is specified.</TD>
+</TR>
+</TABLE>
+<p class=T>You cannot specify both elements for a single worksheet at the same time.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xleleExcelWorkbook.htm#Example"><B>ExcelWorkbook</B></A> element topic.</p>
+</body></html>

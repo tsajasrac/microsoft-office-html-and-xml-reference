@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<title>IsComment Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">IsComment Element (Microsoft PowerPoint)</h1>
+<p class="T">Determines whether a text box in PowerPoint will be a comment or
+not. Comments are tracked so that they can be turned on or off as a group.</p>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><b>Rect</b> (VML)</p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">When saved to HTML, a master VML <b>Rect</b> element will be
+created with the <b>IsComment </b>element embedded within it. For example:</p>
+<pre class=C><code>
+
+&lt;v:rect id=&quot;_x0000_s2052&quot;
+style='position:absolute;left:1.25pt;top:1.25pt;width:208.75pt;height:56.125pt;' fillcolor=&quot;#fcff91&quot;&gt;
+&lt;v:shadow on=&quot;t&quot; obscured=&quot;t&quot; offset=&quot;6pt,6pt&quot;/&gt;
+&lt;v:textbox style='mso-fit-shape-to-text:t'/&gt;
+&lt;p:iscomment/&gt;
+&lt;/v:rect&gt;
+
+</code></pre>
+<p class="T">Then a shape is created using the <b>Rect</B> ID value with the
+actual data from the comment in it. For example:<pre class=C><code>
+
+&lt;div v:shape=&quot;_x0000_s2052&quot; class=O&gt;
+&lt;div style='mso-line-spacing:&quot;100 50 0&quot;;position:absolute;top:1.2%;left:1.26%;
+height:3.61%'&gt;
+&lt;span style= 'font-family:Arial;font-size:67%;color:black'&gt;
+&lt;b&gt;Veronica:&lt;/b&gt;
+&lt;/span&gt;
+&lt;span style= 'font-family:Arial;font-size:67%;color:black;display:none'&gt;&amp;#13;&lt;/span&gt;&lt;/div&gt;
+&lt;div style='mso-line-spacing:&quot;100 50 0&quot;;position:absolute;top:6.5%;left:1.26%;
+height:3.61%'&gt;
+&lt;span style='font-family:Arial;font-size:67%;color:black'&gt;
+This is my comment.
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+<p>Note that the name of the commenter (&quot;Veronica&quot;) is set off in
+bold, while the comment (&quot;This is my comment.&quot;) is not.</p>
+
+</body>
+
+</html>

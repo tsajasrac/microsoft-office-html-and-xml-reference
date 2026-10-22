@@ -1,0 +1,27 @@
+<html><head>
+<title>CustomSplit Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>CustomSplit Element (Microsoft Excel)</H1>
+<p class=T>Specifies the user-defined placement of points between a pie chart and its bar or secondary pie chart.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleGraph.htm"><B>Graph</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleFirstSecond.htm"><B>FirstSecond</B></A>,
+<A HREF="xlelePointCount.htm"><B>PointCount</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>All subelements are required.</p>
+<p class=T>This element is specified when the <B>SplitType</B> element contains the string constant <B>Custom</B>.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example specifies the position of 8 data points.
+The first 3 points and the eighth point are on the primary pie chart, while the fourth through seventh points are on the bar or secondary pie chart.</p>
+<PRE class=C><CODE>
+&lt;x:CustomSplit&gt;&lt;x:PointCount&gt;8&lt;/x:PointCount&gt;
+&ltx:FirstSecond&gt;11122221&lt;/x:FirstSecond&gt;&lt;/x:CustomSplit&gt;
+</CODE></PRE>
+</body></html>

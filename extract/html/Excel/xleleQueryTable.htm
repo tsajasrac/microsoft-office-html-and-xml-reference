@@ -1,0 +1,340 @@
+<html><head>
+<title>QueryTable Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>QueryTable Element (Microsoft Excel)</H1>
+<p class=T>Contains the properties of a query table in a worksheet.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleExcelWorksheet.htm"><B>ExcelWorksheet</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleAutoFormatAlignment.htm"><B>AutoFormatAlignment</B></A>,
+<A HREF="xleleAutoFormatBorder.htm"><B>AutoFormatBorder</B></A>,
+<A HREF="xleleAutoFormatFont.htm"><B>AutoFormatFont</B></A>,
+<A HREF="xleleAutoFormatName.htm"><B>AutoFormatName</B></A>,
+<A HREF="xleleAutoFormatNumber.htm"><B>AutoFormatNumber</B></A>,
+<A HREF="xleleAutoFormatPatterns.htm"><B>AutoFormatPatterns</B></A>,
+<A HREF="xleleAutoFormatWidth.htm"><B>AutoFormatWidth</B></A>,
+<A HREF="xleleDisableEdit.htm"><B>DisableEdit</B></A>,
+<A HREF="xleleDisableRefresh.htm"><B>DisableRefresh</B></A>,
+<A HREF="xleleFilled.htm"><B>Filled</B></A>,
+<A HREF="xleleInsertEntireRows.htm"><B>InsertEntireRows</B></A>,
+<A HREF="xleleName.htm"><B>Name</B></A>,
+<A HREF="xleleNewAsync.htm"><B>NewAsync</B></A>,
+<A HREF="xleleNoAutoFit.htm"><B>NoAutoFit</B></A>,
+<A HREF="xleleNoPreserveFormatting.htm"><B>NoPreserveFormatting</B></A>,
+<A HREF="xleleNoSaveData.htm"><B>NoSaveData</B></A>,
+<A HREF="xleleNoTitles.htm"><B>NoTitles</B></A>,
+<A HREF="xleleOverwriteCells.htm"><B>OverwriteCells</B></A>,
+<A HREF="xleleQuerySource.htm"><B>QuerySource</B></A>,
+<A HREF="xleleRefreshInfo.htm"><B>RefreshInfo</B></A>,
+<A HREF="xleleRefreshOnFileOpen.htm"><B>RefreshOnFileOpen</B></A>,
+<A HREF="xleleRowNumbers.htm"><B>RowNumbers</B></A>,
+<A HREF="xleleSynchronous.htm"><B>Synchronous</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>AutoFormatName</B>, <B>Location</B>, <B>Name</B>, <B>RefreshInfo</B>, and <B>QuerySource</B> subelements are required, but all other subelements are optional.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example obtains 6 currency rates from a Web page.
+The number, border, font, pattern, alignment, and width settings are affected when the predefined Color3 cell format is applied.
+Editing and background refreshes are disabled.
+The query table is refreshed when the workbook is opened, and automatically refreshed every 20 minutes.
+<BR>
+<PRE class=C><CODE>
+ &lt;x:QueryTable&gt;
+  &lt;x:RefreshOnFileOpen/&gt;
+  &lt;x:DisableEdit/&gt;
+  &lt;x:DisableRefresh/&gt;
+  &lt;x:Filled/&gt;
+  &lt;x:InsertEntireRows/&gt;
+  &lt;x:NoSaveData/&gt;
+  &lt;x:Name&gt;Currency Rates&lt;/x:Name&gt;
+  &lt;x:AutoFormatNumber/&gt;
+  &lt;x:AutoFormatBorder/&gt;
+  &lt;x:AutoFormatFont/&gt;
+  &lt;x:AutoFormatPatterns/&gt;
+  &lt;x:AutoFormatAlignment/&gt;
+  &lt;x:AutoFormatWidth/&gt;
+  &lt;x:AutoFormatName&gt;Color3&lt;/x:AutoFormatName&gt;
+  &lt;x:QuerySource&gt;
+   &lt;x:QueryType&gt;Web&lt;/x:QueryType&gt;
+   &lt;x:EntirePage/&gt;
+   &lt;x:URLString
+    HRef="http://stocks/quotes.asp?symbol=/ADY,/BPY,/CDY,/ZEY,/DMY,/SFY"/&gt;
+   &lt;x:RefreshTimeSpan&gt;20&lt;/x:RefreshTimeSpan&gt;
+  &lt;/x:QuerySource&gt;
+ &lt;/x:QueryTable&gt;
+</CODE></PRE></p>
+<p class=T>The next example creates a query table containing the product ID, name, supplier, and price from the Alphabetical List of Products table in the Northwind database of Microsoft Access.
+The font and pattern formats are affected when a predefined cell format is applied.
+Row numbers are included in the query.
+The query table is refreshed when the workbook is opened, and automatically refreshed every 30 minutes.
+Formulas to the left of the query table are filled down if more rows are returned during the refresh.
+The extra rows are deleted if less rows are returned.<BR>
+<PRE class=C><CODE>
+ &lt;x:QueryTable&gt;
+  &lt;x:RowNumbers/&gt;
+  &lt;x:RefreshOnFileOpen/&gt;
+  &lt;x:Filled/&gt;
+  &lt;x:NewAsync/&gt;
+  &lt;x:Name&gt;Products&lt;/x:Name&gt;
+  &lt;x:AutoFormatFont/&gt;
+  &lt;x:AutoFormatPatterns/&gt;
+  &lt;x:NoTitles/&gt;
+  &lt;x:Synchronous/&gt;
+  &lt;x:QuerySource&gt;
+   &lt;x:Connection&gt;DSN=MS Access Database;DBQ=C:\Program Files\Microsoft &lt;/x:Connection&gt;
+   &lt;x:Connection&gt;Office\Office\Samples\Northwind.mdb;DefaultDir=C:\Program Files\&lt;/x:Connection&gt;
+   &lt;x:Connection&gt;Microsoft Office\Office\Samples;DriverId=25;FIL=MS &lt;/x:Connection&gt;
+   &lt;x:Connection&gt;Access;MaxBufferSize=2048;PageTimeout=5;&lt;/x:Connection&gt;
+   &lt;x:CommandText&gt;SELECT ProductID, SupplierID, ProductName, UnitPrice, UnitsInStock &lt;/x:CommandText&gt;
+   &lt;x:CommandText&gt;FROM `C:\Program Files\Microsoft Office\Office\&lt;/x:CommandText&gt;
+   &lt;x:CommandText&gt;Samples\Northwind`.`Alphabetical List of Products` &lt;/x:CommandText&gt;
+   &lt;x:CommandText&gt;WHERE (ProductID&gt;10) ORDER BY ProductName&lt;/x:CommandText&gt;
+   &lt;x:RefreshTimeSpan&gt;30&lt;/x:RefreshTimeSpan&gt;
+  &lt;/x:QuerySource&gt;
+  &lt;x:RefreshInfo&gt;
+   &lt;x:NextId&gt;13&lt;/x:NextId&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:RowNumbers/&gt;
+    &lt;x:Id&gt;12&lt;/x:Id&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;1&lt;/x:Id&gt;
+    &lt;x:Name&gt;ProductID&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;2&lt;/x:Id&gt;
+    &lt;x:Name&gt;ProductName&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;3&lt;/x:Id&gt;
+    &lt;x:Name&gt;SupplierID&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;6&lt;/x:Id&gt;
+    &lt;x:Name&gt;UnitPrice&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;7&lt;/x:Id&gt;
+    &lt;x:Name&gt;UnitsInStock&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+  &lt;/x:RefreshInfo&gt;
+ &lt;/x:QueryTable&gt;
+</CODE></PRE></p>
+<p class=T>The following example imports data from the text file called pp2028h.txt.
+The font and pattern formats are affected when a predefined cell format is applied.
+The decimal separator is a comma, and the thousand separator is a period.
+The third and seventh columns contain dates, the fourth column is skipped,
+the fifth column contains data of various data types, and the remaining columns are text.
+Tabs, space characters, commas, semicolons, and vertical bars (|) are used as delimiters.
+Consecutive delimiters are treated as one.
+The query table is refreshed when the workbook is opened, and automatically refreshed every 60 minutes.<BR>
+<PRE class=C><CODE>
+ &lt;x:QueryTable&gt;
+  &lt;x:RefreshOnFileOpen/&gt;
+  &lt;x:Name&gt;pp2028h&lt;/x:Name&gt;
+  &lt;x:AutoFormatFont/&gt;
+  &lt;x:AutoFormatPatterns/&gt;
+  &lt;x:OverwriteCells/&gt;
+  &lt;x:NoAutoFit/&gt;
+  &lt;x:NoSaveData/&gt;
+  &lt;x:NoPreserveFormatting/&gt;
+  &lt;x:QuerySource&gt;
+   &lt;x:QueryType&gt;Text&lt;/x:QueryType&gt;
+   &lt;x:DoNotPromptForFile/&gt;
+   &lt;x:TextWizardSettings&gt;
+    &lt;x:Name HRef="C:\My Documents\pp2028h.txt"/&gt;
+    &lt;x:Decimal&gt;,&lt;/x:Decimal&gt;
+    &lt;x:ThousandSeparator&gt;.&lt;/x:ThousandSeparator&gt;
+    &lt;x:FormatSettings&gt;
+     &lt;x:FieldType&gt;Text&lt;/x:FieldType&gt;
+     &lt;x:FieldType&gt;Text&lt;/x:FieldType&gt;
+     &lt;x:FieldType&gt;MDY&lt;/x:FieldType&gt;
+     &lt;x:FieldType&gt;Skip&lt;/x:FieldType&gt;
+     &lt;x:FieldType&gt;AutoFormat&lt;/x:FieldType&gt;
+     &lt;x:FieldType&gt;Text&lt;/x:FieldType&gt;
+     &lt;x:FieldType&gt;DYM&lt;/x:FieldType&gt;
+    &lt;/x:FormatSettings&gt;
+    &lt;x:Delimiters&gt;
+     &lt;x:Tab/&gt;
+     &lt;x:Space/&gt;
+     &lt;x:Comma/&gt;
+     &lt;x:Semicolon/&gt;
+     &lt;x:Consecutive/&gt;
+     &lt;x:Custom&gt;|&lt;/x:Custom&gt;
+    &lt;/x:Delimiters&gt;
+   &lt;/x:TextWizardSettings&gt;
+   &lt;x:RefreshTimeSpan&gt;60&lt;/x:RefreshTimeSpan&gt;
+  &lt;/x:QuerySource&gt;
+ &lt;/x:QueryTable&gt;
+</CODE></PRE></p>
+<p class=T>The next example imports stock quotes from a Web page into a query table called Stock Quotes.
+The query originates from Excel 97.
+Data from table1, table2, and the first through the third tables in the Web page are imported.
+All HTML formatting is imported, but the text data is not converted to columns.
+The column widths are affected when the predefined Simple format is applied.
+Column titles are not included and formatting is not preserved.<BR>
+<PRE class=C><CODE>
+ &lt;x:QueryTable&gt;
+  &lt;x:NoTitles/&gt;
+  &lt;x:NoPreserveFormatting/&gt;
+  &lt;x:Name&gt;Stock Quotes&lt;/x:Name&gt;
+  &lt;x:AutoFormatName&gt;Simple&lt;/x:AutoFormatName&gt;
+  &lt;x:AutoFormatWidth/&gt;
+  &lt;x:QuerySource&gt;
+   &lt;x:QueryType&gt;Web&lt;/x:QueryType&gt;
+   &lt;x:NoTextToColumns/&gt;
+   &lt;x:Query97/&gt;
+   &lt;x:HTMLFormat&gt;All&lt;/x:HTMLFormat&gt;
+   &lt;x:URLString HRef="http://stocks/cgi-bin/exceldow.exe?"/&gt;
+   &lt;x:HTMLTables&gt;
+    &lt;x:Text&gt;table1&lt;/x:Text&gt;
+    &lt;x:Number&gt;1&lt;/x:Number&gt;
+    &lt;x:Text&gt;table2&lt;/x:Text&gt;
+    &lt;x:Number&gt;2&lt;/x:Number&gt;
+    &lt;x:Number&gt;3&lt;/x:Number&gt;
+   &lt;/x:HTMLTables&gt;
+  &lt;/x:QuerySource&gt;
+ &lt;/x:QueryTable&gt;
+</CODE></PRE></p>
+<p class=T>The following example obtains data from an OLE DB provider.
+The SQL query returns all columns from the authors table on server MSDASQL.1, and the connection is maintained after refresh.
+The data goes into a query table called oledb.
+The cell alignment, border, font, number, pattern, and widths are affected when the predefined Classic3 format is applied.
+Column titles are included and formatting is not preserved.
+Formulas to the left of the query table are filled down or deleted if more or less rows are returned during the refresh.<BR>
+<PRE class=C><CODE>
+ &lt;x:QueryTable&gt;
+  &lt;x:Filled/&gt;
+  &lt;x:NoPreserveFormatting/&gt;
+  &lt;x:Name&gt;oledb&lt;/x:Name&gt;
+  &lt;x:AutoFormatName&gt;Classic3&lt;/x:AutoFormatName&gt;
+  &lt;x:AutoFormatNumber/&gt;
+  &lt;x:AutoFormatBorder/&gt;
+  &lt;x:AutoFormatFont/&gt;
+  &lt;x:AutoFormatPatterns/&gt;
+  &lt;x:AutoFormatAlignment/&gt;
+  &lt;x:AutoFormatWidth/&gt;
+  &lt;x:QuerySource&gt;
+   &lt;x:QueryType&gt;OLEDB&lt;/x:QueryType&gt;
+   &lt;x:CommandText&gt;select * from authors&lt;/x:CommandText&gt;
+   &lt;x:CommandType&gt;SQL&lt;/x:CommandType&gt;
+   &lt;x:Connection&gt;Provider=MSDASQL.1;Extended Properties=&quot;&lt;DRIVER=SQL Server;/x:Connection&gt;
+   &lt;x:Connection&gt;SERVER=xltsql;UID=auto;DATABASE=dbtest&quot;&lt;/x:Connection&gt;
+   &lt;x:Maintain/&gt;
+  &lt;/x:QuerySource&gt;
+  &lt;x:RefreshInfo&gt;
+   &lt;x:NextId&gt;11&lt;/x:NextId&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;1&lt;/x:Id&gt;
+    &lt;x:Name&gt;au_id&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;2&lt;/x:Id&gt;
+    &lt;x:Name&gt;au_lname&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;3&lt;/x:Id&gt;
+    &lt;x:Name&gt;au_fname&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;4&lt;/x:Id&gt;
+    &lt;x:Name&gt;phone&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:User/&gt;
+    &lt;x:FillDown/&gt;
+    &lt;x:Id&gt;10&lt;/x:Id&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;5&lt;/x:Id&gt;
+    &lt;x:Name&gt;address&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;6&lt;/x:Id&gt;
+    &lt;x:Name&gt;city&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;7&lt;/x:Id&gt;
+    &lt;x:Name&gt;state&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;8&lt;/x:Id&gt;
+    &lt;x:Name&gt;zip&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;9&lt;/x:Id&gt;
+    &lt;x:Name&gt;contract&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+  &lt;/x:RefreshInfo&gt;
+ &lt;/x:QueryTable&gt;
+</CODE></PRE></p>
+<p class=T>The following example obtains data from Microsoft SQL Server using Microsoft Query.
+The SQL query returns the specified columns from the authors table on server xltsql where the state parameter matches what the user enters.
+The data goes into a query table called Query from xltsql.
+The cell font and pattern are affected when a predefined format is applied.<BR>
+<PRE class=C><CODE>
+ &lt;x:QueryTable&gt;
+  &lt;x:Name&gt;Query from xltsql&lt;/x:Name&gt;
+  &lt;x:AutoFormatFont/&gt;
+  &lt;x:AutoFormatPatterns/&gt;
+  &lt;x:QuerySource&gt;
+   &lt;x:Connection&gt;DRIVER=SQL Server;SERVER=xltsql;&lt;/x:Connection&gt;
+   &lt;x:Connection&gt;UID=tester;;APP=Microsoft® Query;WSID=XLTYM9000&lt;/x:Connection&gt;
+   &lt;x:CommandText&gt;SELECT authors.au_id, authors.au_lname, authors.au_fname, &lt;/x:CommandText&gt;
+   &lt;x:CommandText&gt;authors.phone, authors.address, authors.city, &lt;/x:CommandText&gt;
+   &lt;x:CommandText&gt;authors.state, authors.zip, authors.contract &lt;/x:CommandText&gt;
+   &lt;x:CommandText&gt;FROM pubs2.dbo.authors authors WHERE (authors.state=?)&lt;/x:CommandText&gt;
+   &lt;x:Parameter&gt;
+    &lt;x:Name&gt;Enter state&lt;/x:Name&gt;
+    &lt;x:SQLType&gt;Character&lt;/x:SQLType&gt;
+    &lt;x:PromptString&gt;Enter State&lt;/x:PromptString&gt;
+    &lt;x:NonDefaultName/&gt;
+   &lt;/x:Parameter&gt;
+  &lt;/x:QuerySource&gt;
+  &lt;x:RefreshInfo&gt;
+   &lt;x:NextId&gt;10&lt;/x:NextId&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;1&lt;/x:Id&gt;
+    &lt;x:Name&gt;au_id&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;2&lt;/x:Id&gt;
+    &lt;x:Name&gt;au_lname&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;3&lt;/x:Id&gt;
+    &lt;x:Name&gt;au_fname&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;4&lt;/x:Id&gt;
+    &lt;x:Name&gt;phone&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;5&lt;/x:Id&gt;
+    &lt;x:Name&gt;address&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;6&lt;/x:Id&gt;
+    &lt;x:Name&gt;city&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;7&lt;/x:Id&gt;
+    &lt;x:Name&gt;state&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;8&lt;/x:Id&gt;
+    &lt;x:Name&gt;zip&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+   &lt;x:ColumnInfo&gt;
+    &lt;x:Id&gt;9&lt;/x:Id&gt;
+    &lt;x:Name&gt;contract&lt;/x:Name&gt;
+   &lt;/x:ColumnInfo&gt;
+  &lt;/x:RefreshInfo&gt;
+ &lt;/x:QueryTable&gt;
+</CODE></PRE></p>
+</body></html>

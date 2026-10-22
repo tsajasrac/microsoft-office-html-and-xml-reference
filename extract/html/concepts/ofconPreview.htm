@@ -1,0 +1,498 @@
+<html><head>
+<title>Previewing HTML in a Web Browser</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Previewing HTML in a Web Browser</H1>
+
+<p class=T>Microsoft Office 2000 uses the following technologies when saving documents as Web pages.</P>
+
+<TABLE border=0 cellpadding=5 cols=2 frame=below rules=none>
+
+  <tr valign=top>
+    <td width="19%">HTML 3.2</td>
+    <td width="81%">Hypertext Markup Language version 3.2 allows tables, paragraphs,
+      images, and basic text formatting to be displayed, in addition to structural style definitions such as headings.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%">CSS 1.0</td>
+    <td width="81%">Cascading style sheets Level 1 allows more extensive 
+      formatting and layout relative to elements in the page.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%">CSS 2.0</td>
+    <td width="81%">Level 2 allows even more control over text layout and positioning
+      of elements
+      within the page. CSS 2.0 allows arbitrary 2-D positioning within the page,
+      rather than relative to existing elements.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%">DHTML</td>
+    <td width="81%">Dynamic HTML allows for dynamic scripting of content within the page.
+      DHTML is used to provide run-time changes to the document when viewed in the
+      browser, including animations and navigation for Microsoft PowerPoint and some
+      visual effects for Microsoft Excel.</td>
+  </tr>
+  <tr valign=top>
+    <td width="19%">XML</td>
+    <td width="81%">Extensible Markup Langauge (XML) provides structured data storage 
+      within HTML and allows manipulation of objects in the page based on the content.
+      For example, Office Art is displayed using Vector Markup Language (VML), 
+      a subset of XML.</td>
+  </tr>
+</table>
+<p class=T>Some Web browsers do not support the complete set of these technologies, and some formatting and functions might not
+be displayed properly.
+For example, the following table shows the technologies supported in versions of Microsoft Internet Explorer.</P>
+
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+  <tr valign=top>
+    <td width="16%">
+      <p align="left"><b>Internet Explorer</b></td>
+    <td width="16%">
+      <p align="center"><b>HTML 3.2</b></td>
+    <td width="17%">
+      <p align="center"><b>CSS 1.0</b></td>
+    <td width="17%">
+      <p align="center"><b>CSS 2.0</b></td>
+    <td width="17%">
+      <p align="center"><b>DHTML</b></td>
+    <td width="17%">
+      <p align="center"><b>XML</b></td>
+  </tr>
+  <tr valign=top>
+    <td width="16%">3.02</td>
+    <td width="16%">
+      <p align="center">X</td>
+    <td width="17%">
+      <p align="center">X</td>
+    <td width="17%">&nbsp;</td>
+    <td width="17%">&nbsp;</td>
+    <td width="17%">&nbsp;</td>
+  </tr>
+  <tr valign=top>
+    <td width="16%">4.01</td>
+    <td width="16%">
+      <p align="center">X</td>
+    <td width="17%">
+      <p align="center">X</td>
+    <td width="17%">
+      <p align="center">X</td>
+    <td width="17%">
+      <p align="center">X</td>
+    <td width="17%">&nbsp;</td>
+  </tr>
+  <tr valign=top>
+    <td width="16%">5</td>
+    <td width="16%">
+      <p align="center">X</td>
+    <td width="17%">
+      <p align="center">X</td>
+    <td width="17%">
+      <p align="center">X</td>
+    <td width="17%">
+      <p align="center">X</td>
+    <td width="17%">
+      <p align="center">X</td>
+  </tr>
+</table>
+
+<h4 class=RH4>Conditional comments</h4>
+
+<p class=T>Conditional comments are used to control the display of elements in order to create a more consistent viewing experience. 
+In order to make a number of features visible in a Web browser, Office specifies HTML elements that are used only by Web browsers to display content. Conditional comments are specified around these elements.</P>
+
+<p class=T>A conditional comment can have one of two forms.
+The downlevel-revealed form reveals the contents of the comment in Web browsers.
+The downlevel-hidden form hides the contents of the comment.</P> 
+
+<TABLE border=0 cellpadding=5 cols=2 frame=below rules=none>
+<TR valign=top>
+<TD><b>Expression</b></TD>
+<TD><b>Consists of</b>
+<TR valign=top>
+<TD>downlevel-revealed</TD>
+<TD><b>&lt;![if </b><i>expression</i><b>]&gt;</b>...<b>&lt;![endif]&gt;</b>
+<TR valign=top>
+<TD>downlevel-hidden</TD>
+<TD><b>&lt;!--[if </b><i>expression</i><b>]&gt;</b>...<b>&lt;![endif]--&gt;</b></TD>
+</TR>
+<TR valign=top>
+<TD><i>expression</i></TD>
+<TD><i>term</i></TD>
+</TR>
+<TR valign=top>
+<TD><i>expression</i></TD>
+<TD><i>expression </i> | <i> term</i></TD>
+</TR>
+<TR valign=top>
+<TD><i>term</i></TD>
+<TD><i>value</i></TD>
+</TR> 
+<TR valign=top>
+<TD><i>term</i></TD>
+<TD><i>term</i> &amp; <i> value</i></TD>
+</TR> 
+<TR valign=top>
+<TD><i>value</i></TD>
+<TD><b>true</b></TD>
+</TR> 
+<TR valign=top>
+<TD><i>value</i></TD>
+<TD><b>false</b></TD>
+</TR> 
+<TR valign=top>
+<TD><i>value</i></TD>
+<TD><b>!</b><i>value</i></TD>
+</TR> 
+<TR valign=top>
+<TD><i>value</i></TD>
+<TD><b>(</b><i>expression</i><b>)</b></TD>
+</TR> 
+<TR valign=top>
+<TD><i>value</i></TD>
+<TD><i>comparison</i></TD>
+</TR> 
+<TR valign=top>
+<TD><i>comparison</i></TD>
+<TD><i>feature</i></TD>
+</TR> 
+<TR valign=top>
+<TD><i>comparison</i></TD>
+<TD><i>feature</i> <i> version</i></TD>
+</TR> 
+<TR valign=top>
+<TD><i>comparison</i></TD>
+<TD><b>lt</b> <i> feature version</i></TD>
+</TR> 
+<TR valign=top>
+<TD><i>comparison</i></TD>
+<TD><b>lte</b> <i> feature version</i></TD>
+</TR> 
+<TR valign=top>
+<TD><i>comparison</i></TD>
+<TD><b>gt</b><i> feature version</i></TD>
+</TR> 
+<TR valign=top>
+<TD><i>comparison</i></TD>
+<TD><b>lte</b> <i> feature version</i></TD>
+</TR> 
+<TR valign=top>
+<TD><i>feature</i></TD>
+<TD>[A-Za-z][A-Za-z0-9]*</TD>
+</TR> 
+<TR valign=top>
+<TD><i>version</i></TD>
+<TD>[0-9][A-Za-z0-9.]*</TD>
+</TR> 
+</TABLE>
+
+<p class=T>Like an ordinary HTML comment, a conditional comment is not recognized when used inside literal HTML text, such as in text
+within a <b>Script</b> element.</P>
+
+<p class=T>Conditional comments can be nested. 
+The results are undefined if <b> &lt;![if]&gt;</b> and <b> &lt;![endif]&gt;</b> statements are not matched, or if the syntax of the expression in an
+<b> &lt;![if]&gt;</b> statement is ill-formed. Note that Internet Explorer 5 closes unmatched
+<b> &lt;![if]&gt;</b> statements at the end of a file, and any unmatched <b> &lt;![endif]&gt;</b> statements and
+<b> &lt;![if]&gt;</b> statements with ill-formed expressions are displayed as text.</P> 
+
+<p class=T>Expressions follow normal precedence rules: parentheses and prefix operators are evaluated first, followed by
+<b> &amp;</b> operators and <b> |</b> operators.</P> 
+
+<H4 class=RH4>Version numbers</H4> 
+
+<p class=T>A version number consists of releases separated by dots, with the most significant release
+appearing first.</p>
+
+<p class=T><CODE>5.010beta.3032</CODE> specifies the releases 5, 01beta, and 3032.<BR>
+<CODE>5.999.a</CODE> specifies the releases 5, 999, and a.</p>
+
+<p class=T>Compared from left to right, since 5 equals 5 and 010beta is less than 999, 5.010beta.3032 comes before 5.999.a.</P> 
+
+<p class=T>An exact version number (such as the actual version number of a product) is assumed to have infinite precision in the sense that a specified version string of 5.2b is interpreted to mean 5.2b.0.0.0.0.0.0…</P>
+
+<p class=T>Each release string consists of letters and digits; these are separated into runs of just letters and runs of just digits. Again, the most significant part is on the left.</P> 
+
+<P class=T><CODE>10alpha2</CODE> specifies the releases 10, alpha, and 2.<BR>
+<CODE>010beta</CODE> specifies the releases 010 and beta.</p>
+
+<p class=T>Compared from left to right, since 10 equals 010 numerically and alpha is less than beta, 01alpha2 comes before 010beta.</P> 
+
+<p class=T>Individual parts of a release are compared as follows:</P>   
+<OL>
+<LI>Words precede numbers.</LI>
+<LI>Words are ordered in case-insensitive alphabetical order.</LI>
+<LI>Numbers are ordered in integer decimal order.</LI>
+</OL>
+
+<p class=T>The following example shows the order of several releases.</P> 
+
+<p class=T>4.a &lt; 4.a0 &lt; 4.aa &lt; 4 = 4.0 &lt; 4.0a &lt; 4.1 &lt; 4.5 &lt; 4.510</P> 
+
+<p class=T>The version number inside an expression refers to the entire set of versions represented by the specified
+release. For example, the expression
+<CODE>&lt;![if IE 5.2m ]&gt;</CODE> matches all versions of Internet Explorer in the release 5.2m, including 5.2m.beta1, 5.2m.0, and 5.2m.6.r3, but not 5.2 or 5. 
+An expression can be made more exact by specifying more parts on the version number.</P> 
+
+<p class=T>When inequalities are evaluated, the comparison is only done to the specified precision. So, for example, both <CODE>&lt;![if gt IE 5.2m ]&gt;</CODE> and <CODE>&lt;![if lt IE 5.2m ]&gt;</CODE> are false if the actual version number is 5.2m.6.r3, but both <CODE>&lt;![if gte IE 5.2m ]&gt;</CODE> and <CODE>&lt;![if lte IE 5.2m ]&gt;</CODE> are true.</P> 
+
+<H4 class=RH4>Behavior</H4>
+ 
+<H5 class=RH5>Uplevel-begin and uplevel-end comments</H5> 
+
+<p class=T>When the Web browser encounters an uplevel-begin comment, it evaluates the expression. If the expression is true, the content between the uplevel-begin and uplevel-end comments is displayed. If the expression is false, the content between the uplevel-begin and uplevel-end comments is ignored.</P> 
+
+<H5 class=RH5>Downlevel-begin and downlevel-end comments</H5> 
+
+<p class=T>When the Web browser encounters a downlevel-begin comment, it evaluates the expression. If the expression is true, the content between the downlevel-begin and downlevel-end comments is displayed. If the expression is false, the content between the downlevel-begin and downlevel-end comments is ignored.</P> 
+
+<H4 class=RH4>Expressions</H4>
+ 
+<p class=T>Logical operators behave as follows:</P>
+
+<TABLE border=0 cellpadding=5 cols=2 frame=below rules=none>
+<TR valign=top>
+<TD><b>a &amp; b</b></TD>
+<TD>True if a and b are true.</TD>
+</TR>
+<TR valign=top>
+<TD><b>a | b</b></TD>
+<TD>True if either a or b are true.</TD> 
+</TR>
+<TR valign=top>
+<TD><b>!a</b></TD>
+<TD>True if a is false.</TD>
+</TR>
+</TABLE>
+  
+<p class=T>Comparison operators behave as follows:</P> 
+
+<TABLE border=0 cellpadding=5 cols=2 frame=below rules=none>
+<TR valign=top>
+<TD><b>lt <em>a</em>.<em>ver</em></b></TD>
+<TD>True if a version less than <em>ver</em> of feature <em>a</em> is installed.</TD>
+</TR>
+
+<TR valign=top>
+<TD><b>lte <em>a</em>.<em>ver</em></b></TD>
+<TD>True if a version less than or equal to <em>ver</em> of feature <em>a</em> is installed.</TD>
+</TR>
+
+<TR valign=top>
+<TD><b>gt <em>a</em>.<em>ver</em></b></TD>
+<TD>True if a version greater than <em>ver</em> of feature <em>a</em> is installed.</TD>
+</TR>
+
+<TR valign=top>
+<TD><b>gte <em>a</em>.<em>ver</em></b></TD>
+<TD>True if a version greater than or equal to <em>ver</em> of feature <em>a</em> is installed.</TD>
+</TR>
+</TABLE>
+
+<H4 class=RH4>Examples</H4> 
+
+<p class=T>
+In the following example, the content is displayed if the browser is a version of Internet Explorer 5 or later.</P> 
+
+<PRE class=c><CODE>
+&lt;!-- [if IE]&gt;
+Here is some content
+&lt;![endif]--&gt; 
+</CODE></PRE>
+
+<p class=T>This example displays the content in Internet Explorer 5, but not in later versions.</P> 
+
+<PRE class=c><CODE> 
+&lt;!-- [if IE 5]&gt;
+Here is some content
+&lt;![endif]--&gt; 
+</CODE></PRE>
+
+<p class=T>The next example displays the content in browsers other than Internet Explorer.</P> 
+
+<PRE class=c><CODE> 
+&lt;!-- [if !IE]&gt;
+Here is some content
+&lt;![endif]--&gt; 
+</CODE></PRE>
+
+<p class=T>This example displays the content if any version of the VG component is installed.</P> 
+
+<PRE class=c><CODE> 
+&lt;!-- [if VG]&gt;
+Here is some content
+&lt;![endif]--&gt; 
+</CODE></PRE>
+
+<p class=T>The following example displays the content if version 6 of the VG component is not installed.</P> 
+
+<PRE class=c><CODE> 
+&lt;!-- [if !VG 6]&gt;
+Here is some content
+&lt;![endif]--&gt; 
+</CODE></PRE>
+
+<p class=T>The next example displays the content if the VG component is installed and
+its version number is greater than 6.</P> 
+
+<PRE class=c><CODE> 
+&lt;!-- [if gt VG 6]&gt;
+Here is some content
+&lt;![endif]--&gt; 
+</CODE></PRE>
+
+<p class=T>This example displays the content if version 6 of the VG component is installed on
+the Macintosh.</P> 
+
+<PRE class=c><CODE> 
+&lt;!-- [if MAC &amp; VG 6]&gt;
+Here is some content
+&lt;![endif]--&gt; 
+</CODE></PRE>
+
+<p class=T>The next example displays the content in Internet Explorer if the VG component is installed and
+its version number is less than 8.</P> 
+
+<PRE class=c><CODE> 
+&lt;!-- [if IE &amp; lt VG 8]&gt;
+Here is some content
+&lt;![endif]--&gt; 
+</CODE></PRE>
+
+<H4 class=RH4>If values</H4>
+
+<p class=T>The following table shows the <b>If</b> values used by Microsoft Office programs.</P>
+
+<TABLE border=0 cellpadding=5 cols=2 frame=below rules=none>
+
+  <tr valign=top>
+    <td width="20%"><b>If value</b></td>
+    <td width="7%"><b>Word</b></td>
+    <td width="7%"><b>Excel</b></td>
+    <td width="7%"><b>PPT</b></td>
+    <td width="59%"><b>Description</b></td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportMisalignedColumns</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="59%"> Used around special &quot;template&quot; rows of empty cells that make cells whose vertical borders do not line up look fine in the
+      browser.</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportMisalignedRows</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="59%"> Used around special empty &quot;template column&quot; cells that make cells whose horizontal borders do not line up look fine in the
+      browser.</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportFields</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="7%">
+      <p align="center"></td>
+    <td width="59%"> Used around certain commented-out field markup.</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportLists</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="59%"> Used for various list presentation elements (textual list numbers).</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportAnnotations</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="59%"> Used for various comment markup elements.</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportTextWrap</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="59%"> Used around <b> BR CLEAR=ALL</b> elements following Word frame table elements with wrapping disabled.</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportEndnotes</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="59%"> Used for various endnote-related markup.</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportFootnotes</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="59%">Used for various footnote-related markup.</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportIrregularTables</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="59%"> Used around special empty &quot;placeholder&quot; cells that make indented rows look fine in browsers.</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportRevisionMarks</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="59%"> Used for certain pieces of revision markup.</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportTabStrip</b></td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">
+      <p align="center">X</td>
+    <td width="59%"> Used around scripts for framesets to represent tab stribs.</td>
+  </tr>
+  <tr valign=top>
+    <td width="20%"><b> 
+supportRotatedText</b></td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">&nbsp;</td>
+    <td width="7%">&nbsp;</td>
+    <td width="59%"> Used to show rotated text in browsers.</td>
+  </tr>
+</table>
+
+</body>
+</html>

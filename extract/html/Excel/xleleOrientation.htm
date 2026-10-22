@@ -1,0 +1,48 @@
+<html><head>
+<title>Orientation Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Orientation Element (Microsoft Excel)</H1>
+<p class=T>Specifies whether the PivotTable properties in a <B>PTLineItems</B> element apply to a row or column, or specifies the orientation of a PivotTable field or a cube field axis.
+</p>For an axis scale, specifies whether the direction of the axis is from minimum to maximum or maximum to minimum.
+For an error bar, specifies whether this error bar is horizontal or vertical.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleCubeField.htm"><B>CubeField</B></A>,
+<A HREF="xleleErrorBars.htm"><B>ErrorBars</B></A>,
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A>,
+<A HREF="xlelePTLineItems.htm"><B>PTLineItems</B></A>,
+<A HREF="xleleScaling.htm"><B>Scaling</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>For a cube field, this element contains one of the following string constants specifying the axis the field is on or whether the field is hidden: <B>Column</B>, <B>Data</B>, <B>Hidden</B>, <B>Page</B>, or <B>Row</B>.
+If this element is not specified, the default value is <B>Hidden</B>.</p>
+<p class=T>For an error bar, this element contains one of the following string constants specifying the direction: <B>X</B> for horizontal or <B>Y</B> for vertical.</p>
+<p class=T>For a PivotTable field, this element contains one of the following string constants specifying the field orientation: <B>Column</B>, <B>Data</B>, <B>Hidden</B>, <B>Page</B>, or <B>Row</B>.
+If this element is not specified, the default orientation is <B>Hidden</B>.</p>
+<!-- *** -->
+<p class=T>For a PivotTable field on a PivotList component, this element contains one of the following string constants specifying the field orientation: <B>Column</B>, <B>Data</B>, <B>Page</B>, or <B>Row</B>.
+If this element is not specified, the field is not on an axis.</p>
+<!-- *** -->
+<p class=T>For a <B>PTLineItems</B> element, the <B>Orientation</B> element contains one of the following string constants: <B>Row</B> or <B>Column</B>.
+If the <B>Orientation</B> element is not specified, the properties in the <B>PTLineItems</B> element apply to a row.</p>
+<p class=T>For an axis scale, this element contains one of the following string constants.
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Constant</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>MinMax</B></A></TD>
+<TD class=T width=66%>For horizontal axes, the values are arranged least to greatest from left to right. For vertical axes, the values are arranged least to greatest from bottom to top. For polar axes, the values are arranged least to greatest from the center to the outer circumference.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>MaxMin</B></A></TD>
+<TD class=T width=66%>For horizontal axes, the values are arranged least to greatest from right to left. For vertical axes, the values are arranged least to greatest from top to bottom. For polar axes, the values are arranged least to greatest from the outer circumference to the center.</TD>
+</TR>
+</TABLE>
+</p>
+<p class=RL><A NAME="Example"><b>Examples</b></A></p>
+<p class=T>See the examples in the <A HREF="xlelePivotTable.htm#Example"><B>PivotTable</B></A> and <A HREF="xleleWebChart.htm#Example"><B>WebChart</B></A> element topics.</p>
+</body></html>

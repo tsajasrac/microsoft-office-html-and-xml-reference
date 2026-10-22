@@ -1,0 +1,50 @@
+<html><head>
+<title>DocumentProtection Element (Microsoft Word)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>DocumentProtection Element (Microsoft Word)</H1>
+<p class=T>Specifies whether a document is protected and describes the type of
+protection.&nbsp;</p>
+<!--
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+
+<TR valign=top>
+<TD class=TT width=33%><A HREF="wdatt.htm"><B>A</B></A></TD>
+<TD class=TT width=66%>Description</TD>
+</TR>
+
+</TABLE>
+-->
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+ <a HREF="wdeleWordDocument.htm"><b>WordDocument</b></a>
+</p>
+
+
+
+<p class=RL><b>Remarks</b></p>
+<p class=T> This element may contain one of the following values:</p>
+<ul>
+  <li> <b>Comments</b></li>
+  <li> <b>Forms</b></li>
+  <li> <b>None</b> (default)</li>
+  <li> <b>TrackedChanges</b></li>
+</ul>
+
+
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example shows a document protected as a form; it is set up to not display 
+form field shading and to print only the form data, not the form.</p>
+<PRE class=C><code> &lt;w:WordDocument&gt;
+  &lt;w:PrintFormsData/&gt;
+  &lt;w:DocumentProtection&gt;Forms&lt;/w:DocumentProtection&gt;
+  &lt;w:DoNotShadeFormData/&gt;
+ &lt;/w:WordDocument&gt;</code></PRE>
+
+</body></html>

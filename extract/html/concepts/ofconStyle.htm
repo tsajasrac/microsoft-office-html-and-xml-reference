@@ -1,0 +1,43 @@
+<html><head>
+<title>CSS Styles</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#ffffff" TEXT="#000000">
+
+<h1 class=RH1>CSS Styles</h1>
+<p>Whenever possible, Microsoft Office saves and loads cascading style sheets (CSS) styles to preserve formatting.
+<h4>CSS Styles and Office Styles</h4>
+
+<p>CSS creates shared text formatting styles by defining 
+styles in the <STRONG>Style </STRONG>element and applying styles using the 
+<STRONG>class </STRONG>attribute. 
+When Office reads in an HTML document with styles applied 
+through the class attribute, it will attempt to create equivalent named styles 
+for Microsoft Word and Microsoft Excel.
+<P> When Word and Excel write out a document to HTML, they will preserve 
+named styles by creating&nbsp;style definitions in the style element and 
+applying those styles with the <STRONG>class </STRONG>attribute whenever 
+possible.&nbsp;
+<P> CSS styles that are applied to paragraphs will be directly imported as 
+named paragraph styles. If a style is applied to a <STRONG>Span 
+</STRONG>element, it will be imported as a character style. 
+
+
+
+<h4>External Style Sheets</h4>
+
+<p>Microsoft Word will attempt to read in HTML documents that 
+have external CSS stylesheets, but it will not write them back out again. The 
+style values of multiple style sheets will be merged whenever possible. However, 
+when Office writes out HTML, it does not create external CSS stylesheets.
+<P> The style values of multiple style sheets will be 
+merged whenever possible. For example, if one style sheet defines a style named 
+mystyle as italic and another sheet defines a style also named mystyle as 
+underlined, when imported into Office the combined mystyle value will be italic 
+and underlined. Conflicting values will be resolved in favor of the last linked style 
+sheet.</P>           
+
+
+
+
+</body></html>

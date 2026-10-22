@@ -1,0 +1,109 @@
+<html><head>
+<title>Text</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#ffffff" TEXT="#000000">
+
+<H1 class=RH1>Text</H1>
+
+<p class=T>Microsoft Office saves text to HTML by using cascading style sheets (CSS) style attributes whenever possible.
+
+<h4>Paragraph Styles</h4>
+<p>All paragraphs are converted to the <b>P</b> element and all styles are mapped to CSS styles that are then attached to paragraphs with the <b>class</b> attribute.
+<p>Elements that cannot be covered by standard HTML CSS style attributes are covered by Microsoft Office specific attributes such as <b>mso-style-parent</b>, <b>mso-pagination</b>, <b>mso-fareast-font-family</b>, etc.
+<p>Hyphenation is covered by the <b>mso-hyphenate</b> attribute.
+<p>Paragraph alignment is covered by standard HTML alignment attributes.
+<p>Spacing above and below paragraphs is covered by <b>margin-top</b> and <b>margin-bottom</b> attributes.
+<p>Empty paragraphs are supported by checking whether the browser supports empty paragraphs. If it does not, a &amp;nbsp; (non-breaking space) is inserted. Also, an empty set of <b>o:p</b> tags is inserted.
+<p>Hanging indents are created with the <b>margin-left</b> and <b>text-indent</b> attributes.
+<p>Line spacing is respresented by the <b>line-height</b> attribute for exact line spacing and by the <b>mso-line-height-rule</b> attribute for the "at least" property of Word with <b>mso-line-height-alt</b> for small line heights.
+<p><b>mso-pagination</b> is used to store pagination properties.
+<h4>Fonts</h4>
+<p>Fonts are saved as part of the style. If a font is not on a particular machine, a similar font will be used. 
+<p>Embedded fonts are saved using the<b> @font-face </b>attribute.
+<p>Font properties are mapped to HTML in the following way: 
+Values include:
+    <!--subtable-->
+      <TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+        
+        <TR>
+          <TD><B>Font Property</B></TD>
+          <TD><STRONG>HTML Element</STRONG></TD>
+        </TR>
+        
+        <TR>
+          <TD>Bold</TD>
+          <TD><STRONG>b</STRONG></TD>
+        </TR>
+      <TR>
+          <TD>Italic</TD>
+          <TD><STRONG>i</STRONG></TD>
+        </TR>
+        <TR>
+          <TD>Underline (single)</TD>
+          <TD><STRONG>u</STRONG></TD>
+        </TR>
+        <TR>
+          <TD>Subscript</TD>
+          <TD><STRONG>sub</STRONG></TD>
+        </TR>
+        <TR>
+          <TD>Superscript</TD>
+          <TD><STRONG>sup</STRONG></TD>
+        </TR>
+        <TR>
+          <TD>Strikethrough</TD>
+          <TD><STRONG>s </STRONG>or 
+  <STRONG>strike</STRONG>  </TD>
+        </TR>
+        <TR>
+          <TD>Double strikethrough</TD>
+          <TD><STRONG>s </STRONG>or 
+  <STRONG>strike</STRONG>  </TD>
+        </TR>
+        <TR>
+          <TD>Color</TD>
+          <TD><STRONG> font-color</STRONG></TD>
+        </TR>
+        <TR>
+          <TD>Size</TD>
+          <TD><STRONG>font-size</STRONG></TD>
+        </TR>
+        <TR>
+          <TD>Language</TD>
+          <TD><STRONG> 
+lang</STRONG></TD>
+        </TR>
+  <TR>
+           <TD>Character spacing</TD>
+          <TD><STRONG>letter-spacing</STRONG></TD></TR>
+  <TR>
+           <TD>Small caps</TD>
+          <TD><STRONG> 
+font-variant</STRONG></TD></TR>
+  <TR>
+          <TD>All caps</TD>
+          <TD><STRONG>text-transform</STRONG></TD></TR>
+  <TR>
+          <TD>Highlight</TD>
+          <TD><STRONG> 
+background</STRONG></TD></TR>
+  <TR>
+          <TD>Underline (in style)</TD>
+          <TD><STRONG>text-decoration</STRONG></TD></TR>
+  <TR>
+          <TD>Strikethrough (in style)</TD>
+          <TD><STRONG>text-decoration</STRONG></TD></TR>
+  <TR>
+          <TD>Text color</TD>
+          <TD><STRONG> 
+windowtext</STRONG></TD></TR>
+        
+        </TABLE></p>
+        
+<h4>Tabs</h4>
+<P>Tabs are represented by the <b>mso-tab-count</b> attribute.</P> 
+
+
+
+</body></html>

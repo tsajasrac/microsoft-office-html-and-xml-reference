@@ -1,0 +1,57 @@
+<html><head>
+<title>Change Tracking</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<h1 class="RH1">Change Tracking</h1>
+<p>In Word, some change-tracking features are displayed in the browser, while others
+are stored in the HTML.</p>
+<h4>Change Tracking</h4>
+<p>Word uses the following elements to mark document-level revision settings: <a href="wdeleTrackRevisions.htm"><b>TrackRevisions</b></a><b>,
+<a href="wdeleShowRevisions.htm">DoNotShowRevisions</a>,
+</b><a href="wdelePrintRevisions.htm"><b>DoNotPrintRevisions</b></a>.</p>
+<p>Word uses the <b>Ins</b> element to contain inserted text and
+the <b>Del</b> element to contain deleted text. Both of these
+elements use the <b>cite</b> attribute to list the author who made the change in
+the form of a mailto url. Both elements also use the <b>datetime</b> attribute
+to list the date and time the author made the change in ISO format.</p>
+<h4>Change Tracking Presentation</h4>
+<p>To enable proper browser display of change tracking, Word uses the <b>msoIns</b>, <b>msoDel</b>, and <b>msoChangeProp</b>
+style classes. These style classes emulate the document's change tracking display
+settings, and Word applies them to changed text using <b>Span</b> elements that immediately
+contain the changed text. To store information about the change in HTML, Word
+uses the <b>mso-prop-change</b> attribute.</p>
+<p>If deleted text is displayed using the &quot;#&quot; or
+&quot;^&quot; characters, Word inserts the appropriate deletion display character before the
+<b>Del</b> element.</p>
+<h4>Numbered Lists</h4>
+<p>To mark list items with changed numbering but no changed text in HTML, Word uses the <b>mso-list-change</b>
+ attribute. To mark inserted list paragraphs in HTML, Word uses the <b>mso-list-ins</b> 
+attribute.</p>
+<h4>Change Tracking for Tables</h4>
+<p>When tables rows are inserted, deleted, or their
+properties are changed, Word uses the <b>mso-table-inserted</b>, <b>mso-table-deleted</b>,
+or <b>mso-table-prop-change</b> attributes to save the change in HTML. Word inserts change information in the <b>style</b>
+attribute of the <b>Tr</b> element using the following syntax.</p>
+<p class="MsoNormal"><b>&lt;tr style='mso-table-inserted:&quot;</b><i>AuthorName</i><b>&quot;
+</b><i>DateTime</i><b>'&gt;</b></p>
+<h4>Change
+Tracking for Changed Formatting </h4>
+<p>Word tracks and marks certain formatting changes to text. To display
+formatting changes in HTML, Word uses the <b>msoChangeProp</b>  style class in a <b>Span</b> element.
+To store change information such as author name and date, Word uses the <b>mso-prop-change</b> 
+style attribute.</p>
+
+
+<h4>Change Tracking for LISTNUM Fields</h4>
+<p>Word uses the <b>mso-field-change</b> style attribute to mark changes to a
+LISTNUM field value.</p>
+
+
+<p class=T>For information about the style attributes that Office uses and their possible values, see the
+<a href="../concepts/ofconStyleTable.htm">Style Attributes</a> 
+topic.</p>
+
+
+</body></html>

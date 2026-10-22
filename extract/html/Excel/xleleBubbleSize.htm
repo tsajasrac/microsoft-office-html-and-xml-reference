@@ -1,0 +1,22 @@
+<html><head>
+<title>BubbleSize Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>BubbleSize Element (Microsoft Excel)</H1>
+<p class=T>Specifies the values determining the radius of bubbles on a bubble chart.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleSeries.htm"><B>Series</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>For the Chart component:
+<A HREF="xleleData.htm"><B>Data</B></A>,
+<A HREF="xleleDataSource.htm"><B>DataSource</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>This element contains either a string or subelements depending on whether the chart was saved from Microsoft Excel or the Chart component.
+For Excel, this element contains an A1-style cell reference or a literal data string such as <CODE>{1, 2, 3,...}</CODE>, <CODE>{"a", "b", "c",...}</CODE>, or <CODE>apples</CODE>.
+For the Chart component, the <B>Data</B> and <B>DataSource</B> subelements are required.</p>
+<p class=T>Bubbles are always drawn as circles, regardless of the scaling on the category (x) axis and value (y) axis.</p>
+</body></html>

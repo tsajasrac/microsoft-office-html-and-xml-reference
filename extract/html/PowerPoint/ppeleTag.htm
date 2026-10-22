@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<title>Tag Element (Microsoft PowerPoint)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#ffffff" text="#000000">
+
+<h1 class="RH1">Tag Element (Microsoft PowerPoint)</h1>
+<p class="T">Defines custom data stored with a presentation.</p>
+<table border="1" cellpadding="5" cols="2" frame="below" rules="rows">
+  <tr valign="top">
+    <td class="I" width="33%" align="left"><b>Attribute</b></td>
+    <td class="I" width="66%" align="left"><b>Description</b></td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>datasize</b></td>
+    <td class="T" width="66%">Defines the size of the binary data. The default
+      size is 0.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>dataoffset</b></td>
+    <td class="T" width="66%">Defines the starting location of the data in the <b>value</b>
+      attribute. The default offset is -1. This attribute is specified if the
+      size of the data is greater than 0.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>name</b></td>
+    <td class="T" width="66%">Defines the name of the data.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>type</b></td>
+    <td class="T" width="66%">Contains one of the following string constants
+      specifying the type of data: <b>binary </b>or <b>string</b>.</td>
+  </tr>
+  <tr valign="top">
+    <td class="T" width="33%"><b>value</b></td>
+    <td class="T" width="66%">Defines the actual string data.</td>
+  </tr>
+</table>
+<p class="RL"><b>Contained In</b></p>
+<p class="T"><a href="ppeleMaster.htm"><b>Master</b></a></p>
+<p class="RL"><b>Remarks</b></p>
+<p class="T">This element corresponds to the <b>Tag </b>object in PowerPoint
+Visual Basic for Applications (VBA). String values can be created using the <b>Tag
+</b>object in VBA, and binary values can be created with a COM-compatible
+language through the <b>IDispatch </b>interface.</p>
+<p class="RL"><a name="Example"><b>Example</b></a></p>
+<p class="T">A set of tags can be used for custom data. For example, the
+following tags could be used to store names and professions.</p>
+<pre class=C><code>
+&lt;p:tag name=&quot;Laure&quot; type=&quot;string&quot; value= &quot;SheepHerder&quot;/&gt;
+&lt;p:tag name=&quot;Seth&quot; type=&quot;string&quot; value=&quot;Space Pilot&quot;/&gt;
+</code></pre>
+
+</body>
+
+</html>

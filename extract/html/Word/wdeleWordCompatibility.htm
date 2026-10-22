@@ -1,0 +1,121 @@
+<html><head>
+<title>WordCompatibility Element (Microsoft Word)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>WordCompatibility Element (Microsoft Word)</H1>
+<p class=T>Specifies a document's compatibility settings.</p>
+<!--
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+
+<TR valign=top>
+<TD class=TT width=33%><A HREF="wdatt.htm"><B>A</B></A></TD>
+<TD class=TT width=66%>Description</TD>
+</TR>
+
+</TABLE>
+-->
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+ <a HREF="wdeleWordDocument.htm"><b>WordDocument</b></a>
+</p>
+
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<a HREF="wdeleAdjustLineHeightInTable.htm"><b>AdjustLineHeightInTable</b></a>, 
+<a href="wdeleAlignTablesRowByRow.htm"><b>AlignTablesRowByRow</b></a>, 
+<a HREF="wdeleAutoSpaceLikeWord95.htm"><b>AutoSpaceLikeWord95</b></a>, 
+<a HREF="wdeleDontBalanceSingleByteDoubleByteWidth.htm"><b>BalanceSingleByteDoubleByteWidth</b></a>, 
+<a HREF="wdeleConvMailMergeEsc.htm"><b>ConvMailMergeEsc</b></a>, 
+<a HREF="wdeleExpandShiftReturn.htm"><b>DoNotExpandShiftReturn</b></a>, 
+<a HREF="wdeleLeaveBackslashAlone.htm"><b>DoNotLeaveBackslashAlone</b></a>, 
+<a HREF="wdeleDoNotUseHTMLParagraphAutoSpacing.htm"><b>DoNotUseHTMLParagraphAutoSpacing</b></a>, 
+<a HREF="wdeleFootnoteLayoutLikeWW8.htm"><b>FootnoteLayoutLikeWW8</b></a>, 
+<a HREF="wdeleForgetLastTabAlignement.htm"><b>ForgetLastTabAlignment</b></a>, 
+<a href="wdeleLayoutRawTableWidth.htm"><b>LayoutRawTableWidth</b></a>, 
+<a href="wdeleLayoutTableRowsApart.htm"><b>LayoutTableRowsApart</b></a>, 
+<a HREF="wdeleLineWrapLikeWord6.htm"><b>LineWrapLikeWord6</b></a>, 
+<a HREF="wdeleMWSmallCaps.htm"><b>MWSmallCaps</b></a>, 
+<a HREF="wdeleNoColumnBalance.htm"><b>NoColumnBalance</b></a>, 
+<a HREF="wdeleNoExtraLineSpacing.htm"><b>NoExtraLineSpacing</b></a>, 
+<a HREF="wdeleNoLeading.htm"><b>NoLeading</b></a>, 
+<a HREF="wdeleNoSpaceRaiseLower.htm"><b>NoSpaceRaiseLower</b></a>, 
+<a HREF="wdeleNoTabHangIndent.htm"><b>NoTabHangIndent</b></a>, 
+<a HREF="wdeleOrigWordTableRules.htm"><b>OrigWordTableRules</b></a>, 
+<a HREF="wdelePrintBodyTextBeforeHeader.htm"><b>PrintBodyTextBeforeHeader</b></a>, 
+<a HREF="wdelePrintColBlack.htm"><b>PrintColBlack</b></a>, 
+<a HREF="wdeleShapeLayoutAnchorRect.htm"><b>ShapeLayoutLikeWW8</b></a>, 
+<a HREF="wdeleShowBreaksInFrames.htm"><b>ShowBreaksInFrames</b></a>, 
+<a HREF="wdeleNoSpaceForUL.htm"><b>SpaceForUL</b></a>, 
+<a HREF="wdeleSpacingInWholePoints.htm"><b>SpacingInWholePoints</b></a>, 
+<a HREF="wdeleSubFontBySize.htm"><b>SubFontBySize</b></a>, 
+<a HREF="wdeleSupressBottomSpacing.htm"><b>SuppressBottomSpacing</b></a>, 
+<a HREF="wdeleSupressSpBfAfterPgBrk.htm"><b>SuppressSpBfAfterPgBrk</b></a>, 
+<a HREF="wdeleSupressTopSpacing.htm"><b>SuppressTopSpacing</b></a>, 
+<a HREF="wdeleSupressTopSpacingMac5.htm"><b>SuppressTopSpacingMac5</b></a>, 
+<a href="wdeleSupressTopSpacingWP.htm"><b>SuppressTopSpacingWP</b></a>, 
+<a HREF="wdeleSwapBordersFacingPages.htm"><b>SwapBordersFacingPages</b></a>, 
+<a HREF="wdeleTransparentMetafiles.htm"><b>TransparentMetafiles</b></a>, 
+<a HREF="wdeleTruncateFontHeight.htm"><b>TruncateFontHeight</b></a>, 
+<a HREF="wdeleDontULTrailSpace.htm"><b>ULTrailSpace</b></a>, 
+<a href="wdeleUseFELayout.htm"><b>UseFELayout</b></a>, 
+<a HREF="wdeleUsePrinterMetrics.htm"><b>UsePrinterMetrics</b></a>, 
+<a HREF="wdeleUseWord97LineBreakingRules.htm"><b>UseWord97LineBreakingRules</b></a>, 
+<a HREF="wdeleWPJustification.htm"><b>WPJustification</b></a>, 
+<a HREF="wdeleWPSpaceWidth.htm"><b>WPSpaceWidth</b></a>, 
+<a HREF="wdeleWW6BorderRules.htm"><b>WW6BorderRules</b></a>, 
+<a HREF="wdeleWrapTrailSpaces.htm"><b>WrapTrailSpaces</b></a>
+</p>
+
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+This example shows the <b> WordCompatibility</b> element and some of its subelements.
+<PRE class=C><CODE> &lt;w:Compatibility&gt;
+  &lt;w:OrigWordTableRules/&gt;
+  &lt;w:WPJustification/&gt;
+  &lt;w:NoTabHangIndent/&gt;
+  &lt;w:NoLeading/&gt;
+  &lt;w:SpaceForUL/&gt;
+  &lt;w:NoColumnBalance/&gt;
+  &lt;w:BalanceSingleByteDoubleByteWidth/&gt;
+  &lt;w:TransparentMetafiles/&gt;
+  &lt;w:NoExtraLineSpacing/&gt;
+  &lt;w:DoNotLeaveBackslashAlone/&gt;
+  &lt;w:ULTrailSpace/&gt;
+  &lt;w:DoNotExpandShiftReturn/&gt;
+  &lt;w:SpacingInWholePoints/&gt;
+  &lt;w:LineWrapLikeWord6/&gt;
+  &lt;w:PrintBodyTextBeforeHeader/&gt;
+  &lt;w:PrintColBlack/&gt;
+  &lt;w:WPSpaceWidth/&gt;
+  &lt;w:ShowBreaksInFrames/&gt;
+  &lt;w:SubFontBySize/&gt;
+  &lt;w:SuppressBottomSpacing/&gt;
+  &lt;w:SuppressTopSpacing/&gt;
+  &lt;w:SuppressTopSpacingMac5/&gt;
+  &lt;w:SuppressTopSpacingWP/&gt;
+  &lt;w:SuppressSpBfAfterPgBrk/&gt;
+  &lt;w:SwapBordersFacingPages/&gt;
+  &lt;w:ConvMailMergeEsc/&gt;
+  &lt;w:TruncateFontHeight/&gt;
+  &lt;w:MWSmallCaps/&gt;
+  &lt;w:UsePrinterMetrics/&gt;
+  &lt;w:WW6BorderRules/&gt;
+  &lt;w:WrapTrailSpaces/&gt;
+  &lt;w:FootnoteLayoutLikeWW8/&gt;
+  &lt;w:ShapeLayoutLikeWW8/&gt;
+  &lt;w:AlignTablesRowByRow/&gt;
+  &lt;w:ForgetLastTabAlignment/&gt;
+  &lt;w:AdjustLineHeightInTable/&gt;
+  &lt;w:AutoSpaceLikeWord95/&gt;
+  &lt;w:NoSpaceRaiseLower/&gt;
+  &lt;w:LayoutRawTableWidth/&gt;
+  &lt;w:LayoutTableRowsApart/&gt;
+ &lt;/w:Compatibility&gt;</CODE></PRE>
+
+
+</body></html>

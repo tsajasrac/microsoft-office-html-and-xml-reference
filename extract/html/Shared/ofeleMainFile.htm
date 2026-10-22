@@ -1,0 +1,35 @@
+<html><head>
+<title>MainFile Element (Microsoft Office)</title>
+<style>@import url(msdn_ie4.css);</style><link disabled rel="stylesheet" href="msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>MainFile Element (Microsoft Office)</H1>
+<p class=T>Specifies the path and file name of the parent Web page.</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width=33% align=left><B>Attribute</B></TD>
+<TD class=I width=66% align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width=33%><B>HRef</B></TD>
+<TD class=T width=66%>Required. Specifies the path and file name of the parent Web page.</TD>
+</TR>
+</TABLE>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="ofeleXML.htm"><B>XML</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>MainFile</B> element is empty.
+This element is contained in a file named filelist.xml.
+The <A HREF="ofeleFile.htm"><B>File</B></A> element specifies each supporting file.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example lists the main file, print.htm, and its two supporting files, img001.png and filelist.xml.<BR>
+<PRE class=C><CODE>
+ &lt;xml xmlns:o="urn:schemas-microsoft-com:office:office"&gt;
+  &lt;o:MainFile HRef="../print.htm"/&gt;
+  &lt;o:File HRef="img001.png"/&gt;
+  &lt;o:File HRef="filelist.xml"/&gt;
+ &lt;/xml&gt;
+</CODE></PRE></p>
+</body></html>

@@ -1,0 +1,79 @@
+<html><head>
+<title>DataValidation Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>DataValidation Element (Microsoft Excel)</H1>
+<p class=T>Contains the data validation criteria, input message, and error message elements of the specified range.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="../Shared/ofeleXML.htm"><B>XML</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>
+<A HREF="xleleCellRangeList.htm"><B>CellRangeList</B></A>,
+<A HREF="xleleComboHide.htm"><B>ComboHide</B></A>,
+<A HREF="xleleErrorHide.htm"><B>ErrorHide</B></A>,
+<A HREF="xleleErrorMessage.htm"><B>ErrorMessage</B></A>,
+<A HREF="xleleErrorStyle.htm"><B>ErrorStyle</B></A>,
+<A HREF="xleleErrorTitle.htm"><B>ErrorTitle</B></A>,
+<A HREF="xleleIMEMode.htm"><B>IMEMode</B></A>,
+<A HREF="xleleInputHide.htm"><B>InputHide</B></A>,
+<A HREF="xleleInputMessage.htm"><B>InputMessage</B></A>,
+<A HREF="xleleInputTitle.htm"><B>InputTitle</B></A>,
+<A HREF="xleleMax.htm"><B>Max</B></A>,
+<A HREF="xleleMin.htm"><B>Min</B></A>,
+<A HREF="xleleQualifier.htm"><B>Qualifier</B></A>,
+<A HREF="xleleRange.htm"><B>Range</B></A>,
+<A HREF="xleleType.htm"><B>Type</B></A>,
+<A HREF="xleleUseBlank.htm"><B>UseBlank</B></A>,
+<A HREF="xleleValue.htm"><B>Value</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>You must specify the <B>Min</B> subelement, the <B>Max</B> subelement, both the <B>Min</B> and <B>Max</B> subelements, or the <B>Value</B> subelement and an optional <B>ComboHide</B> subelement.</p>
+<p class=T>The <B>Range</B> element is required, but all other subelements are optional.
+<B>CellRangeList</B> can be specified only when the data validation is performed against a list.</p>
+<p class=RL><A NAME="Example"><b>Examples</b></A></p>
+<p class=T>This example prompts the user to enter a part number value that is validated against a list of available part numbers in the range Z1:Z6.
+Any blank cells in this range are used in the validation.
+A drop-down arrow and combo box are not displayed in the cell, and the Input Method Editor is turned off.
+If the data is valid, the part number is stored in cell B4, but if the data is not in the list, an error message is displayed.<BR>
+<PRE class=C><CODE>
+ &lt;x:DataValidation&gt;
+  &lt;x:Range&gt;B4&lt;/x:Range&gt;
+  &lt;x:Type&gt;List&lt;/x:Type&gt;
+  &lt;x:UseBlank/&gt;
+  &lt;x:Value&gt;$Z$1:$Z$6&lt;/x:Value&gt;
+  &lt;x:ComboHide/&gt;
+  &lt;x:IMEMode&gt;2&lt;/x:IMEMode&gt;
+  &lt;x:InputMessage&gt;Enter part number&lt;/x:InputMessage&gt;
+  &lt;x:InputTitle&gt;Check Inventory&lt;/x:InputTitle&gt;
+  &lt;x:ErrorMessage&gt;Part not found in inventory&lt;/x:ErrorMessage&gt;
+  &lt;x:ErrorTitle&gt;Not Found&lt;/x:ErrorTitle&gt;
+  &lt;x:ErrorStyle&gt;Info&lt;/x:ErrorStyle&gt;
+ &lt;/x:DataValidation&gt;
+</CODE></PRE></p>
+<p class=T>This example requires the user to enter a decimal number from 5 to 15, which is stored in cell A4 if it is within this range.
+Neither the input message nor the error message are displayed.<BR>
+<PRE class=C><CODE>
+ &lt;x:DataValidation&gt;
+  &lt;x:Range&gt;A4&lt;/x:Range&gt;
+  &lt;x:Type&gt;Decimal&lt;/x:Type&gt;
+  &lt;x:Qualifier&gt;Between&lt;/x:Qualifier&gt;
+  &lt;x:Min&gt;5&lt;/x:Min&gt;
+  &lt;x:Max&gt;15&lt;/x:Max&gt;
+  &lt;x:InputHide/&gt;
+  &lt;x:ErrorHide/&gt;
+ &lt;/x:DataValidation&gt;
+</CODE></PRE></p>
+<p class=T>This example validates an input value against a list of integer numbers from 1 to 4.
+The number is stored in cell B2 if it is within this range.<BR>
+<PRE class=C><CODE>
+ &lt;x:DataValidation&gt;
+  &lt;x:Range&gt;B2&lt;/x:Range&gt;
+  &lt;x:Type&gt;List&lt;/x:Type&gt;
+  &lt;x:CellRangeList/&gt;
+  &lt;x:Value&gt;&amp;quot;1,2,3,4&amp;quot;&lt;/x:Value&gt;
+ &lt;/x:DataValidation&gt;
+</CODE></PRE></p>
+</body></html>

@@ -1,0 +1,4078 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="FrameName" value="main">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Microsoft Office HTML and XML Reference">
+		<param name="Local" value="html/Concepts/default.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Getting Started with Microsoft Office 2000 HTML and XML">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Format and Language">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Office HTML and XML">
+				<param name="Local" value="html/Concepts/ofconOffice2000andXML.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Office XML Syntax">
+				<param name="Local" value="html/Concepts/ofconOfficeXMLSyntax.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Office HTML and XML File Formats">
+				<param name="Local" value="html/Concepts/ofconFileFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Script">
+				<param name="Local" value="html/Concepts/ofconScript.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="File Naming and Handling">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Saving and Publishing Office Documents">
+				<param name="Local" value="html/Concepts/ofconSavingandPublishing.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Folder and File Names">
+				<param name="Local" value="html/Concepts/ofconFolderandFileNames.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Saving and Opening HTML Files">
+				<param name="Local" value="html/Concepts/ofconPreserving.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Security, Protection, and VBA Projects">
+				<param name="Local" value="html/Concepts/ofconSecurity.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Previewing HTML in a Web Browser">
+				<param name="Local" value="html/Concepts/ofconPreview.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Copying and Pasting HTML Using the Clipboard">
+				<param name="Local" value="html/Concepts/ofconClipboard.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="International Documents">
+				<param name="Local" value="html/Concepts/ofconInternational.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="OLE Objects">
+				<param name="Local" value="html/Concepts/ofconOLEObjects.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Office Art">
+				<param name="Local" value="html/Concepts/ofconOfficeArt.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Standard and Custom Document Properties">
+				<param name="Local" value="html/Concepts/ofconDocumentProperties.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Page Setup">
+				<param name="Local" value="html/Concepts/ofconPageSetup.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Command Bars">
+				<param name="Local" value="html/Concepts/ofconCommandBars.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Hyperlinks">
+				<param name="Local" value="html/Concepts/ofconHyperlinks.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Formatting and Style">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CSS Styles">
+				<param name="Local" value="html/Concepts/ofconStyle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Style Attributes">
+				<param name="Local" value="html/Concepts/ofconStyleTable.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Backgrounds">
+				<param name="Local" value="html/Concepts/ofconBackgrounds.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Borders and Shading">
+				<param name="Local" value="html/Concepts/ofconBordersShading.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Text">
+				<param name="Local" value="html/Concepts/ofconText.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Bullets and Numbered Lists">
+				<param name="Local" value="html/Concepts/ofconBullets.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Paragraphs">
+				<param name="Local" value="html/Concepts/ofconParagraphs.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Headers and Footers">
+				<param name="Local" value="html/Concepts/ofconHeadersFootersStyle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Comments">
+				<param name="Local" value="html/Word/wdconComments.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="White Space">
+				<param name="Local" value="html/Concepts/ofconWhiteSpace.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Microsoft Excel">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Saving and Opening HTML Files">
+				<param name="Local" value="html/Excel/xlconLoadingHTML.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Workbooks">
+				<param name="Local" value="html/Excel/xlconWorkbook.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Worksheets">
+				<param name="Local" value="html/Excel/xlconTables.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Formulas and Data Types">
+				<param name="Local" value="html/Excel/xlconFormulas.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Cell Formatting">
+				<param name="Local" value="html/Excel/xlconCellFormatting.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Conditional Styles">
+				<param name="Local" value="html/Excel/xlconStyleAttribute.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoFilter">
+				<param name="Local" value="html/Excel/xlconAutoFilter.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Grouping and Outlines">
+				<param name="Local" value="html/Excel/xlconOutline.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PivotTable Reports">
+				<param name="Local" value="html/Excel/xlconPivotTables.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Microsoft PowerPoint">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Files">
+				<param name="Local" value="html/PowerPoint/ppconFiles.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Animations, Builds, and Transitions">
+				<param name="Local" value="html/PowerPoint/ppconAnimations.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Actions">
+				<param name="Local" value="html/PowerPoint/ppconActions.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Positioning">
+				<param name="Local" value="html/PowerPoint/ppconPositioning.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Text">
+				<param name="Local" value="html/PowerPoint/ppconText.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Meta Tags">
+				<param name="Local" value="html/PowerPoint/ppconMetaTags.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Browser Support">
+				<param name="Local" value="html/PowerPoint/ppconBrowsers.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Microsoft Word">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Change Tracking">
+				<param name="Local" value="html/Word/wdconChangeTracking.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Fields">
+				<param name="Local" value="html/Word/wdconFields.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Footnotes and Endnotes">
+				<param name="Local" value="html/Word/wdconFootnotesandEndnotes.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Frames and Drop Caps">
+				<param name="Local" value="html/Word/wdconFramesandDropCaps.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Horizontal Lines">
+				<param name="Local" value="html/Word/wdconHorizontalLines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Master Documents">
+				<param name="Local" value="html/Word/wdconMasterDocuments.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Paragraph Spacing">
+				<param name="Local" value="html/Word/wdconParagraphSpacing.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Page Layout and Section Breaks">
+				<param name="Local" value="html/Word/wdconSectionBreaks.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Tables">
+				<param name="Local" value="html/Word/wdconTables.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Microsoft Office XML Reference">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="A">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AllowPNG">
+				<param name="Local" value="html/Shared/ofeleAllowPNG.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Author">
+				<param name="Local" value="html/Shared/ofeleAuthor.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="B">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Bytes">
+				<param name="Local" value="html/Shared/ofeleBytes.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="C">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Category">
+				<param name="Local" value="html/Shared/ofeleCategory.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Characters">
+				<param name="Local" value="html/Shared/ofeleCharacters.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CharactersWithSpaces">
+				<param name="Local" value="html/Shared/ofeleCharactersWithSpaces.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Color">
+				<param name="Local" value="html/Shared/ofeleColor.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Colors">
+				<param name="Local" value="html/Shared/ofeleColors.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Company">
+				<param name="Local" value="html/Shared/ofeleCompany.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Created">
+				<param name="Local" value="html/Shared/ofeleCreated.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CustomDocumentProperties">
+				<param name="Local" value="html/Shared/ofeleCustomDocumentProperties.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="D">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Description">
+				<param name="Local" value="html/Shared/ofeleDescription.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DocumentProperties">
+				<param name="Local" value="html/Shared/ofeleDocumentProperties.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotOrganizeInFolder">
+				<param name="Local" value="html/Shared/ofeleDoNotOrganizeInFolder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotRelyOnCSS">
+				<param name="Local" value="html/Shared/ofeleDoNotRelyOnCSS.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotUpdateLinks">
+				<param name="Local" value="html/Shared/ofeleDoNotUpdateLinks.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotUseLongFilenames">
+				<param name="Local" value="html/Shared/ofeleDoNotUseLongFilenames.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DownloadComponents">
+				<param name="Local" value="html/Shared/ofeleDownloadComponents.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="F">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="File">
+				<param name="Local" value="html/Shared/ofeleFile.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="H">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HiddenSlides">
+				<param name="Local" value="html/Shared/ofeleHiddenSlides.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="I">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Index">
+				<param name="Local" value="html/Shared/ofeleIndex.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="K">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Keywords">
+				<param name="Local" value="html/Shared/ofeleKeywords.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="L">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LastAuthor">
+				<param name="Local" value="html/Shared/ofeleLastAuthor.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LastPrinted">
+				<param name="Local" value="html/Shared/ofeleLastPrinted.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LastSaved">
+				<param name="Local" value="html/Shared/ofeleLastSaved.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lines">
+				<param name="Local" value="html/Shared/ofeleLines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LocationOfComponents">
+				<param name="Local" value="html/Shared/ofeleLocationOfComponents.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="M">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MainFile">
+				<param name="Local" value="html/Shared/ofeleMainFile.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Manager">
+				<param name="Local" value="html/Shared/ofeleManager.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MultimediaClips">
+				<param name="Local" value="html/Shared/ofeleMultimediaClips.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="N">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Notes">
+				<param name="Local" value="html/Shared/ofeleNotes.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="O">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="OfficeDocumentSettings">
+				<param name="Local" value="html/Shared/ofeleOfficeDocumentSettings.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="OLEObject">
+				<param name="Local" value="html/Shared/ofeleOleObject.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="P">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Pages">
+				<param name="Local" value="html/Shared/ofelePages.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Paragraphs">
+				<param name="Local" value="html/Shared/ofeleParagraphs.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PixelsPerInch">
+				<param name="Local" value="html/Shared/ofelePixelsPerInch.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PresentationFormat">
+				<param name="Local" value="html/Shared/ofelePresentationFormat.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="R">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ReadOnlyRecommended">
+				<param name="Local" value="html/Shared/ofeleReadOnlyRecommended.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RelyOnVML">
+				<param name="Local" value="html/Shared/ofeleRelyOnVML.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Revision">
+				<param name="Local" value="html/Shared/ofeleRevision.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RGB">
+				<param name="Local" value="html/Shared/ofeleRGB.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="S">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Slides">
+				<param name="Local" value="html/Shared/ofeleSlides.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Subject">
+				<param name="Local" value="html/Shared/ofeleSubject.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="T">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TargetScreenSize">
+				<param name="Local" value="html/Shared/ofeleTargetScreenSize.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Template">
+				<param name="Local" value="html/Shared/ofeleTemplate.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TotalTime">
+				<param name="Local" value="html/Shared/ofeleTotalTime.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="V">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Version">
+				<param name="Local" value="html/Shared/ofeleVersion.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="W">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Words">
+				<param name="Local" value="html/Shared/ofeleWords.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="X">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="XML">
+				<param name="Local" value="html/Shared/ofeleXML.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Microsoft Excel XML Reference">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="0-9">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="1904Date">
+				<param name="Local" value="html/Excel/xlele1904Date.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3DBubble">
+				<param name="Local" value="html/Excel/xlele3DBubble.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="97Query">
+				<param name="Local" value="html/Excel/xlele97Query.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="A">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ActiveChart">
+				<param name="Local" value="html/Excel/xleleActiveChart.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ActiveCol">
+				<param name="Local" value="html/Excel/xleleActiveCol.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ActivePane">
+				<param name="Local" value="html/Excel/xleleActivePane.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ActiveRow">
+				<param name="Local" value="html/Excel/xleleActiveRow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ActiveSheet">
+				<param name="Local" value="html/Excel/xleleActiveSheet.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AlertVersion">
+				<param name="Local" value="html/Excel/xleleAlertVersion.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Alignment">
+				<param name="Local" value="html/Excel/xleleAlignment.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AllItemName">
+				<param name="Local" value="html/Excel/xleleAllItemName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AlternateExpressionEvaluation">
+				<param name="Local" value="html/Excel/xleleAlternateExpressionEvaluation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AlternateFormulaEntry">
+				<param name="Local" value="html/Excel/xleleAlternateFormulaEntry.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AlternateMethod">
+				<param name="Local" value="html/Excel/xleleAlternateMethod.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ApplyAutomaticOutlineStyles">
+				<param name="Local" value="html/Excel/xleleApplyAutomaticOutlineStyles.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Attribute">
+				<param name="Local" value="html/Excel/xleleAttribute.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AttributeType">
+				<param name="Local" value="html/Excel/xleleAttributeType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoFormatAlignment">
+				<param name="Local" value="html/Excel/xleleAutoFormatAlignment.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoFormatBorder">
+				<param name="Local" value="html/Excel/xleleAutoFormatBorder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoFormatFont">
+				<param name="Local" value="html/Excel/xleleAutoFormatFont.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoFormatName">
+				<param name="Local" value="html/Excel/xleleAutoFormatName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoFormatNumber">
+				<param name="Local" value="html/Excel/xleleAutoFormatNumber.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoFormatPattern">
+				<param name="Local" value="html/Excel/xleleAutoFormatPattern.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoFormatPatterns">
+				<param name="Local" value="html/Excel/xleleAutoFormatPatterns.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoFormatWidth">
+				<param name="Local" value="html/Excel/xleleAutoFormatWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoScale">
+				<param name="Local" value="html/Excel/xleleAutoScale.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoShowCount">
+				<param name="Local" value="html/Excel/xleleAutoShowCount.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoShowField">
+				<param name="Local" value="html/Excel/xleleAutoShowField.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoShowRange">
+				<param name="Local" value="html/Excel/xleleAutoShowRange.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoShowType">
+				<param name="Local" value="html/Excel/xleleAutoShowType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoSortField">
+				<param name="Local" value="html/Excel/xleleAutoSortField.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoSortOrder">
+				<param name="Local" value="html/Excel/xleleAutoSortOrder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Axis">
+				<param name="Local" value="html/Excel/xleleAxis.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AxisID">
+				<param name="Local" value="html/Excel/xleleAxisID.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="B">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="B">
+				<param name="Local" value="html/Excel/xleleB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Background">
+				<param name="Local" value="html/Excel/xleleBackground.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BackgroundQuery">
+				<param name="Local" value="html/Excel/xleleBackgroundQuery.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Backward">
+				<param name="Local" value="html/Excel/xleleBackward.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BarType">
+				<param name="Local" value="html/Excel/xleleBarType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BaseField">
+				<param name="Local" value="html/Excel/xleleBaseField.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BaseItem">
+				<param name="Local" value="html/Excel/xleleBaseItem.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BaseUnit">
+				<param name="Local" value="html/Excel/xleleBaseUnit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BGColorIndex">
+				<param name="Local" value="html/Excel/xleleBGColorIndex.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BlackAndWhite">
+				<param name="Local" value="html/Excel/xleleBlackAndWhite.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Blank">
+				<param name="Local" value="html/Excel/xleleBlank.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BlankLineAfterItems">
+				<param name="Local" value="html/Excel/xleleBlankLineAfterItems.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BlockTotal">
+				<param name="Local" value="html/Excel/xleleBlockTotal.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Boolean">
+				<param name="Local" value="html/Excel/xleleBoolean.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Border">
+				<param name="Local" value="html/Excel/xleleBorder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BoundField">
+				<param name="Local" value="html/Excel/xleleBoundField.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Bubble3D">
+				<param name="Local" value="html/Excel/xleleBubble3D.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BubbleColumn">
+				<param name="Local" value="html/Excel/xleleBubbleColumn.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BubbleScale">
+				<param name="Local" value="html/Excel/xleleBubbleScale.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BubbleSize">
+				<param name="Local" value="html/Excel/xleleBubbleSize.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BuiltInFormat">
+				<param name="Local" value="html/Excel/xleleBuiltInFormat.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="C">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CacheDetails">
+				<param name="Local" value="html/Excel/xleleCacheDetails.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CacheFile">
+				<param name="Local" value="html/Excel/xleleCacheFile.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CacheIndex">
+				<param name="Local" value="html/Excel/xleleCacheIndex.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CachePosition">
+				<param name="Local" value="html/Excel/xleleCachePosition.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Calculation">
+				<param name="Local" value="html/Excel/xleleCalculation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CantGetUniqueItems">
+				<param name="Local" value="html/Excel/xleleCantGetUniqueItems.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Caption">
+				<param name="Local" value="html/Excel/xleleCaption.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CaptionAlignment">
+				<param name="Local" value="html/Excel/xleleCaptionAlignment.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CaseSensitive">
+				<param name="Local" value="html/Excel/xleleCaseSensitive.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Category">
+				<param name="Local" value="html/Excel/xleleCategory.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CategoryColumn">
+				<param name="Local" value="html/Excel/xleleCategoryColumn.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Cell">
+				<param name="Local" value="html/Excel/xleleCell.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CellRangeList">
+				<param name="Local" value="html/Excel/xleleCellRangeList.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CellsExpanded">
+				<param name="Local" value="html/Excel/xleleCellsExpanded.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CellsExpandedSeqNum">
+				<param name="Local" value="html/Excel/xleleCellsExpandedSeqNum.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CellsNotExpanded">
+				<param name="Local" value="html/Excel/xleleCellsNotExpanded.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Cf">
+				<param name="Local" value="html/Excel/xleleCf.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Chart">
+				<param name="Local" value="html/Excel/xleleChart.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ChartDepth">
+				<param name="Local" value="html/Excel/xleleChartDepth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ChartGrowth">
+				<param name="Local" value="html/Excel/xleleChartGrowth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ChartLayout">
+				<param name="Local" value="html/Excel/xleleChartLayout.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ChartSize">
+				<param name="Local" value="html/Excel/xleleChartSize.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ChartWrapCount">
+				<param name="Local" value="html/Excel/xleleChartWrapCount.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ClientData">
+				<param name="Local" value="html/Excel/xleleClientData.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Clipped">
+				<param name="Local" value="html/Excel/xleleClipped.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Close">
+				<param name="Local" value="html/Excel/xleleClose.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CodeName">
+				<param name="Local" value="html/Excel/xleleCodeName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ColBreak">
+				<param name="Local" value="html/Excel/xleleColBreak.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ColBreaks">
+				<param name="Local" value="html/Excel/xleleColBreaks.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ColFirst">
+				<param name="Local" value="html/Excel/xleleColFirst.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ColLast">
+				<param name="Local" value="html/Excel/xleleColLast.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Color">
+				<param name="Local" value="html/Excel/xleleColor.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ColorIndex">
+				<param name="Local" value="html/Excel/xleleColorIndex.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Column">
+				<param name="Local" value="html/Excel/xleleColumn.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ColumnInfo">
+				<param name="Local" value="html/Excel/xleleColumnInfo.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ColumnInputCell">
+				<param name="Local" value="html/Excel/xleleColumnInputCell.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ComboHide">
+				<param name="Local" value="html/Excel/xleleComboHide.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Comma">
+				<param name="Local" value="html/Excel/xleleComma.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CommandText">
+				<param name="Local" value="html/Excel/xleleCommandText.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CommandTextOriginal">
+				<param name="Local" value="html/Excel/xleleCommandTextOriginal.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CommandType">
+				<param name="Local" value="html/Excel/xleleCommandType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CommentsLayout">
+				<param name="Local" value="html/Excel/xleleCommentsLayout.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Condition">
+				<param name="Local" value="html/Excel/xleleCondition.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ConditionalFormatting">
+				<param name="Local" value="html/Excel/xleleConditionalFormatting.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Connection">
+				<param name="Local" value="html/Excel/xleleConnection.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ConnectionString">
+				<param name="Local" value="html/Excel/xleleConnectionString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Consecutive">
+				<param name="Local" value="html/Excel/xleleConsecutive.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ConsolidationReference">
+				<param name="Local" value="html/Excel/xleleConsolidationReference.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Count">
+				<param name="Local" value="html/Excel/xleleCount.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CountOfSameItems">
+				<param name="Local" value="html/Excel/xleleCountOfSameItems.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CreateBackup">
+				<param name="Local" value="html/Excel/xleleCreateBackup.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Crn">
+				<param name="Local" value="html/Excel/xleleCrn.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CrossBetween">
+				<param name="Local" value="html/Excel/xleleCrossBetween.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CrossesAt">
+				<param name="Local" value="html/Excel/xleleCrossesAt.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CrossingAxis">
+				<param name="Local" value="html/Excel/xleleCrossingAxis.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CubeField">
+				<param name="Local" value="html/Excel/xleleCubeField.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CubeSource">
+				<param name="Local" value="html/Excel/xleleCubeSource.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CurrentPage">
+				<param name="Local" value="html/Excel/xleleCurrentPage.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Custom">
+				<param name="Local" value="html/Excel/xleleCustom.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CustomSplit">
+				<param name="Local" value="html/Excel/xleleCustomSplit.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="D">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Data">
+				<param name="Local" value="html/Excel/xleleData.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataAxisEmpty">
+				<param name="Local" value="html/Excel/xleleDataAxisEmpty.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataField">
+				<param name="Local" value="html/Excel/xleleDataField.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataLabels">
+				<param name="Local" value="html/Excel/xleleDataLabels.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataMember">
+				<param name="Local" value="html/Excel/xleleDataMember.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataPoint">
+				<param name="Local" value="html/Excel/xleleDataPoint.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataSource">
+				<param name="Local" value="html/Excel/xleleDataSource.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataTable">
+				<param name="Local" value="html/Excel/xleleDataTable.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataType">
+				<param name="Local" value="html/Excel/xleleDataType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataValidation">
+				<param name="Local" value="html/Excel/xleleDataValidation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DBSeries">
+				<param name="Local" value="html/Excel/xleleDBSeries.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Decimal">
+				<param name="Local" value="html/Excel/xleleDecimal.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DefaultColumnWidth">
+				<param name="Local" value="html/Excel/xleleDefaultColumnWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DefaultItem">
+				<param name="Local" value="html/Excel/xleleDefaultItem.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DefaultRowHeight">
+				<param name="Local" value="html/Excel/xleleDefaultRowHeight.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Delete">
+				<param name="Local" value="html/Excel/xleleDelete.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DeletedTitle">
+				<param name="Local" value="html/Excel/xleleDeletedTitle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Delimiters">
+				<param name="Local" value="html/Excel/xleleDelimiters.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Descending">
+				<param name="Local" value="html/Excel/xleleDescending.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DetailFormat">
+				<param name="Local" value="html/Excel/xleleDetailFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DetailMaxHeight">
+				<param name="Local" value="html/Excel/xleleDetailMaxHeight.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DetailMaxWidth">
+				<param name="Local" value="html/Excel/xleleDetailMaxWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DetailRowHeight">
+				<param name="Local" value="html/Excel/xleleDetailRowHeight.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DetailSortOrder">
+				<param name="Local" value="html/Excel/xleleDetailSortOrder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DetailWidth">
+				<param name="Local" value="html/Excel/xleleDetailWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Dimension">
+				<param name="Local" value="html/Excel/xleleDimension.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisableDrillDown">
+				<param name="Local" value="html/Excel/xleleDisableDrillDown.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisableEdit">
+				<param name="Local" value="html/Excel/xleleDisableEdit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisableFieldDialog">
+				<param name="Local" value="html/Excel/xleleDisableFieldDialog.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisableRefresh">
+				<param name="Local" value="html/Excel/xleleDisableRefresh.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisableWizard">
+				<param name="Local" value="html/Excel/xleleDisableWizard.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayDrawingObjects">
+				<param name="Local" value="html/Excel/xleleDisplayDrawingObjects.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayEmptyMembers">
+				<param name="Local" value="html/Excel/xleleDisplayEmptyMembers.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayEq">
+				<param name="Local" value="html/Excel/xleleDisplayEq.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayErrorString">
+				<param name="Local" value="html/Excel/xleleDisplayErrorString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayFieldList">
+				<param name="Local" value="html/Excel/xleleDisplayFieldList.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayFormulas">
+				<param name="Local" value="html/Excel/xleleDisplayFormulas.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayRightToLeft">
+				<param name="Local" value="html/Excel/xleleDisplayRightToLeft.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayRSqr">
+				<param name="Local" value="html/Excel/xleleDisplayRSqr.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayUnits">
+				<param name="Local" value="html/Excel/xleleDisplayUnits.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DivID">
+				<param name="Local" value="html/Excel/xleleDivID.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotAcceptLabelsInFormulas">
+				<param name="Local" value="html/Excel/xleleDoNotAcceptLabelsInFormulas.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotCalculateBeforeSave">
+				<param name="Local" value="html/Excel/xleleDoNotCalculateBeforeSave.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotDisplayGridlines">
+				<param name="Local" value="html/Excel/xleleDoNotDisplayGridlines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotDisplayHeadings">
+				<param name="Local" value="html/Excel/xleleDoNotDisplayHeadings.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotDisplayOutline">
+				<param name="Local" value="html/Excel/xleleDoNotDisplayOutline.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotDisplayZeros">
+				<param name="Local" value="html/Excel/xleleDoNotDisplayZeros.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotJoinDelimiters">
+				<param name="Local" value="html/Excel/xleleDoNotJoinDelimiters.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotPersist">
+				<param name="Local" value="html/Excel/xleleDoNotPersist.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotPersistAF">
+				<param name="Local" value="html/Excel/xleleDoNotPersistAF.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotPersistSort">
+				<param name="Local" value="html/Excel/xleleDoNotPersistSort.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotPromptForFile">
+				<param name="Local" value="html/Excel/xleleDoNotPromptForFile.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotSaveLinkValues">
+				<param name="Local" value="html/Excel/xleleDoNotSaveLinkValues.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoubleUnderline">
+				<param name="Local" value="html/Excel/xleleDoubleUnderline.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DownBars">
+				<param name="Local" value="html/Excel/xleleDownBars.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Draft">
+				<param name="Local" value="html/Excel/xleleDraft.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DraftQuality">
+				<param name="Local" value="html/Excel/xleleDraftQuality.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DrilledLevel">
+				<param name="Local" value="html/Excel/xleleDrilledLevel.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DrilledMember">
+				<param name="Local" value="html/Excel/xleleDrilledMember.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DropLines">
+				<param name="Local" value="html/Excel/xleleDropLines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DX">
+				<param name="Local" value="html/Excel/xleleDX.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DY">
+				<param name="Local" value="html/Excel/xleleDY.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="E">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ElementType">
+				<param name="Local" value="html/Excel/xleleElementType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Elevation">
+				<param name="Local" value="html/Excel/xleleElevation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="EntirePage">
+				<param name="Local" value="html/Excel/xleleEntirePage.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Entry">
+				<param name="Local" value="html/Excel/xleleEntry.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Error">
+				<param name="Local" value="html/Excel/xleleError.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ErrorBars">
+				<param name="Local" value="html/Excel/xleleErrorBars.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ErrorHide">
+				<param name="Local" value="html/Excel/xleleErrorHide.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ErrorMarker">
+				<param name="Local" value="html/Excel/xleleErrorMarker.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ErrorMessage">
+				<param name="Local" value="html/Excel/xleleErrorMessage.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ErrorString">
+				<param name="Local" value="html/Excel/xleleErrorString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ErrorStyle">
+				<param name="Local" value="html/Excel/xleleErrorStyle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ErrorTitle">
+				<param name="Local" value="html/Excel/xleleErrorTitle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ErrorType">
+				<param name="Local" value="html/Excel/xleleErrorType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ExcelName">
+				<param name="Local" value="html/Excel/xleleExcelName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ExcelType">
+				<param name="Local" value="html/Excel/xleleExcelType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ExcelWorkbook">
+				<param name="Local" value="html/Excel/xleleExcelWorkbook.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ExcelWorksheet">
+				<param name="Local" value="html/Excel/xleleExcelWorksheet.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ExcelWorksheets">
+				<param name="Local" value="html/Excel/xleleExcelWorksheets.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ExcelWorksheetType">
+				<param name="Local" value="html/Excel/xleleExcelWorksheetType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Expanded">
+				<param name="Local" value="html/Excel/xleleExpanded.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Explode">
+				<param name="Local" value="html/Excel/xleleExplode.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Extends">
+				<param name="Local" value="html/Excel/xleleExtends.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ExternName">
+				<param name="Local" value="html/Excel/xleleExternName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ExtraLeftColumns">
+				<param name="Local" value="html/Excel/xleleExtraLeftColumns.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ExtraRightColumns">
+				<param name="Local" value="html/Excel/xleleExtraRightColumns.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="F">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FieldLabelFormat">
+				<param name="Local" value="html/Excel/xleleFieldLabelFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FieldListBottom">
+				<param name="Local" value="html/Excel/xleleFieldListBottom.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FieldListLeft">
+				<param name="Local" value="html/Excel/xleleFieldListLeft.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FieldListRight">
+				<param name="Local" value="html/Excel/xleleFieldListRight.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FieldListTop">
+				<param name="Local" value="html/Excel/xleleFieldListTop.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FieldStart">
+				<param name="Local" value="html/Excel/xleleFieldStart.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FieldType">
+				<param name="Local" value="html/Excel/xleleFieldType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FileName">
+				<param name="Local" value="html/Excel/xleleFileName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FillDown">
+				<param name="Local" value="html/Excel/xleleFillDown.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Filled">
+				<param name="Local" value="html/Excel/xleleFilled.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FillEffect">
+				<param name="Local" value="html/Excel/xleleFillEffect.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FilterCaption">
+				<param name="Local" value="html/Excel/xleleFilterCaption.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FilterOn">
+				<param name="Local" value="html/Excel/xleleFilterOn.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FirstSecond">
+				<param name="Local" value="html/Excel/xleleFirstSecond.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FirstSliceAngle">
+				<param name="Local" value="html/Excel/xleleFirstSliceAngle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FitHeight">
+				<param name="Local" value="html/Excel/xleleFitHeight.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FitToPage">
+				<param name="Local" value="html/Excel/xleleFitToPage.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FitWidth">
+				<param name="Local" value="html/Excel/xleleFitWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Floor">
+				<param name="Local" value="html/Excel/xleleFloor.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Font">
+				<param name="Local" value="html/Excel/xleleFont.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FontName">
+				<param name="Local" value="html/Excel/xleleFontName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Format">
+				<param name="Local" value="html/Excel/xleleFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FormatSettings">
+				<param name="Local" value="html/Excel/xleleFormatSettings.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FormatString">
+				<param name="Local" value="html/Excel/xleleFormatString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FormatType">
+				<param name="Local" value="html/Excel/xleleFormatType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Formula">
+				<param name="Local" value="html/Excel/xleleFormula.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FormulaIndex">
+				<param name="Local" value="html/Excel/xleleFormulaIndex.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Forward">
+				<param name="Local" value="html/Excel/xleleForward.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FreezePanes">
+				<param name="Local" value="html/Excel/xleleFreezePanes.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FrozenNoSplit">
+				<param name="Local" value="html/Excel/xleleFrozenNoSplit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Function">
+				<param name="Local" value="html/Excel/xleleFunction.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FunctionGroup">
+				<param name="Local" value="html/Excel/xleleFunctionGroup.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FunctionGroupIndex">
+				<param name="Local" value="html/Excel/xleleFunctionGroupIndex.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FuturePersist">
+				<param name="Local" value="html/Excel/xleleFuturePersist.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="G">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GapDepth">
+				<param name="Local" value="html/Excel/xleleGapDepth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GapWidth">
+				<param name="Local" value="html/Excel/xleleGapWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GrandTotalString">
+				<param name="Local" value="html/Excel/xleleGrandTotalString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Graph">
+				<param name="Local" value="html/Excel/xleleGraph.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GridlineColorIndex">
+				<param name="Local" value="html/Excel/xleleGridlineColorIndex.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Gridlines">
+				<param name="Local" value="html/Excel/xleleGridlines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GroupBy">
+				<param name="Local" value="html/Excel/xleleGroupBy.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GroupedWidth">
+				<param name="Local" value="html/Excel/xleleGroupedWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GroupEnd">
+				<param name="Local" value="html/Excel/xleleGroupEnd.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GroupEndAuto">
+				<param name="Local" value="html/Excel/xleleGroupEndAuto.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GroupStart">
+				<param name="Local" value="html/Excel/xleleGroupStart.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GroupStartAuto">
+				<param name="Local" value="html/Excel/xleleGroupStartAuto.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GroupType">
+				<param name="Local" value="html/Excel/xleleGroupType.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="H">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HasNoAutoFormat">
+				<param name="Local" value="html/Excel/xleleHasNoAutoFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HasNoRecords">
+				<param name="Local" value="html/Excel/xleleHasNoRecords.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HeaderRow">
+				<param name="Local" value="html/Excel/xleleHeaderRow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Height">
+				<param name="Local" value="html/Excel/xleleHeight.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HeightPercentage">
+				<param name="Local" value="html/Excel/xleleHeightPercentage.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Hidden">
+				<param name="Local" value="html/Excel/xleleHidden.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HideDetail">
+				<param name="Local" value="html/Excel/xleleHideDetail.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HideHorizontalScrollBar">
+				<param name="Local" value="html/Excel/xleleHideHorizontalScrollBar.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HideTotalsAnnotation">
+				<param name="Local" value="html/Excel/xleleHideTotalsAnnotation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HideVerticalScrollBar">
+				<param name="Local" value="html/Excel/xleleHideVerticalScrollBar.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HideWorkbookTabs">
+				<param name="Local" value="html/Excel/xleleHideWorkbookTabs.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="High">
+				<param name="Local" value="html/Excel/xleleHigh.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HiLowLines">
+				<param name="Local" value="html/Excel/xleleHiLowLines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HoleSize">
+				<param name="Local" value="html/Excel/xleleHoleSize.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Horizontal">
+				<param name="Local" value="html/Excel/xleleHorizontal.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HorizontalResolution">
+				<param name="Local" value="html/Excel/xleleHorizontalResolution.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HorzGrowth">
+				<param name="Local" value="html/Excel/xleleHorzGrowth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HTMLFormat">
+				<param name="Local" value="html/Excel/xleleHTMLFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HTMLTables">
+				<param name="Local" value="html/Excel/xleleHTMLTables.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HTMLType">
+				<param name="Local" value="html/Excel/xleleHTMLType.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="I">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="I">
+				<param name="Local" value="html/Excel/xleleI.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ID">
+				<param name="Local" value="html/Excel/xleleID.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IDWrapped">
+				<param name="Local" value="html/Excel/xleleIDWrapped.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IMEMode">
+				<param name="Local" value="html/Excel/xleleIMEMode.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Index">
+				<param name="Local" value="html/Excel/xleleIndex.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IndividualCellBorders">
+				<param name="Local" value="html/Excel/xleleIndividualCellBorders.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="InputHide">
+				<param name="Local" value="html/Excel/xleleInputHide.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="InputMessage">
+				<param name="Local" value="html/Excel/xleleInputMessage.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="InputTitle">
+				<param name="Local" value="html/Excel/xleleInputTitle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="InsertEntireRows">
+				<param name="Local" value="html/Excel/xleleInsertEntireRows.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Intercept">
+				<param name="Local" value="html/Excel/xleleIntercept.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Interior">
+				<param name="Local" value="html/Excel/xleleInterior.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IntlMacro">
+				<param name="Local" value="html/Excel/xleleIntlMacro.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Invert">
+				<param name="Local" value="html/Excel/xleleInvert.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="InvertedColumnMember">
+				<param name="Local" value="html/Excel/xleleInvertedColumnMember.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="InvertedRowMember">
+				<param name="Local" value="html/Excel/xleleInvertedRowMember.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IsNotFiltered">
+				<param name="Local" value="html/Excel/xleleIsNotFiltered.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Item">
+				<param name="Local" value="html/Excel/xleleItem.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ItemType">
+				<param name="Local" value="html/Excel/xleleItemType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Iteration">
+				<param name="Local" value="html/Excel/xleleIteration.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="K">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="KeyboardShortcut">
+				<param name="Local" value="html/Excel/xleleKeyboardShortcut.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="L">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Label">
+				<param name="Local" value="html/Excel/xleleLabel.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LabelEntry">
+				<param name="Local" value="html/Excel/xleleLabelEntry.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LabelOffset">
+				<param name="Local" value="html/Excel/xleleLabelOffset.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LabelSeparator">
+				<param name="Local" value="html/Excel/xleleLabelSeparator.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LayoutForm">
+				<param name="Local" value="html/Excel/xleleLayoutForm.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LayoutPageBreak">
+				<param name="Local" value="html/Excel/xleleLayoutPageBreak.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LayoutSubtotalLocation">
+				<param name="Local" value="html/Excel/xleleLayoutSubtotalLocation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LeaderLines">
+				<param name="Local" value="html/Excel/xleleLeaderLines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LeafColumnMember">
+				<param name="Local" value="html/Excel/xleleLeafColumnMember.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LeafRowMember">
+				<param name="Local" value="html/Excel/xleleLeafRowMember.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Left">
+				<param name="Local" value="html/Excel/xleleLeft.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LeftColumnRightPane">
+				<param name="Local" value="html/Excel/xleleLeftColumnRightPane.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LeftToRight">
+				<param name="Local" value="html/Excel/xleleLeftToRight.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Legend">
+				<param name="Local" value="html/Excel/xleleLegend.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LegendEntry">
+				<param name="Local" value="html/Excel/xleleLegendEntry.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LegendKey">
+				<param name="Local" value="html/Excel/xleleLegendKey.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Line">
+				<param name="Local" value="html/Excel/xleleLine.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LineStyle">
+				<param name="Local" value="html/Excel/xleleLineStyle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LocalConnection">
+				<param name="Local" value="html/Excel/xleleLocalConnection.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Location">
+				<param name="Local" value="html/Excel/xleleLocation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LogBase">
+				<param name="Local" value="html/Excel/xleleLogBase.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Low">
+				<param name="Local" value="html/Excel/xleleLow.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="M">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Macro">
+				<param name="Local" value="html/Excel/xleleMacro.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Maintain">
+				<param name="Local" value="html/Excel/xleleMaintain.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MajorGridlines">
+				<param name="Local" value="html/Excel/xleleMajorGridlines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MajorTick">
+				<param name="Local" value="html/Excel/xleleMajorTick.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MajorUnit">
+				<param name="Local" value="html/Excel/xleleMajorUnit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MajorUnitType">
+				<param name="Local" value="html/Excel/xleleMajorUnitType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MapChildItems">
+				<param name="Local" value="html/Excel/xleleMapChildItems.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Marker">
+				<param name="Local" value="html/Excel/xleleMarker.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Max">
+				<param name="Local" value="html/Excel/xleleMax.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MaxChange">
+				<param name="Local" value="html/Excel/xleleMaxChange.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MaxHeight">
+				<param name="Local" value="html/Excel/xleleMaxHeight.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Maximum">
+				<param name="Local" value="html/Excel/xleleMaximum.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MaxIterations">
+				<param name="Local" value="html/Excel/xleleMaxIterations.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MaxWidth">
+				<param name="Local" value="html/Excel/xleleMaxWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Measure">
+				<param name="Local" value="html/Excel/xleleMeasure.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Member">
+				<param name="Local" value="html/Excel/xleleMember.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MemberExpand">
+				<param name="Local" value="html/Excel/xleleMemberExpand.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MemberFormat">
+				<param name="Local" value="html/Excel/xleleMemberFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MergeLabels">
+				<param name="Local" value="html/Excel/xleleMergeLabels.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Min">
+				<param name="Local" value="html/Excel/xleleMin.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Minimum">
+				<param name="Local" value="html/Excel/xleleMinimum.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MinorGridlines">
+				<param name="Local" value="html/Excel/xleleMinorGridlines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MinorTick">
+				<param name="Local" value="html/Excel/xleleMinorTick.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MinorUnit">
+				<param name="Local" value="html/Excel/xleleMinorUnit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MinorUnitType">
+				<param name="Local" value="html/Excel/xleleMinorUnitType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Minus">
+				<param name="Local" value="html/Excel/xleleMinus.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Missing">
+				<param name="Local" value="html/Excel/xleleMissing.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Moper">
+				<param name="Local" value="html/Excel/xleleMoper.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="N">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Name">
+				<param name="Local" value="html/Excel/xleleName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NegativeBubbles">
+				<param name="Local" value="html/Excel/xleleNegativeBubbles.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NewAsync">
+				<param name="Local" value="html/Excel/xleleNewAsync.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NewItemsHidden">
+				<param name="Local" value="html/Excel/xleleNewItemsHidden.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NextID">
+				<param name="Local" value="html/Excel/xleleNextId.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoAllowDetails">
+				<param name="Local" value="html/Excel/xleleNoAllowDetails.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoAllowFiltering">
+				<param name="Local" value="html/Excel/xleleNoAllowFiltering.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoAllowGrouping">
+				<param name="Local" value="html/Excel/xleleNoAllowGrouping.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoAllowPropertyToolbox">
+				<param name="Local" value="html/Excel/xleleNoAllowPropertyToolbox.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoAutoFit">
+				<param name="Local" value="html/Excel/xleleNoAutoFit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoAutoFormatWidth">
+				<param name="Local" value="html/Excel/xleleNoAutoFormatWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoAutoPage">
+				<param name="Local" value="html/Excel/xleleNoAutoPage.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoColumnGrand">
+				<param name="Local" value="html/Excel/xleleNoColumnGrand.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoDetailAutoFit">
+				<param name="Local" value="html/Excel/xleleNoDetailAutoFit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoDisplayAlerts">
+				<param name="Local" value="html/Excel/xleleNoDisplayAlerts.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoDisplayExpandIndicator">
+				<param name="Local" value="html/Excel/xleleNoDisplayExpandIndicator.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoDisplayNullString">
+				<param name="Local" value="html/Excel/xleleNoDisplayNullString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoDisplayToolbar">
+				<param name="Local" value="html/Excel/xleleNoDisplayToolbar.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoDragToColumn">
+				<param name="Local" value="html/Excel/xleleNoDragToColumn.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoDragToData">
+				<param name="Local" value="html/Excel/xleleNoDragToData.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoDragToHide">
+				<param name="Local" value="html/Excel/xleleNoDragToHide.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoDragToPage">
+				<param name="Local" value="html/Excel/xleleNoDragToPage.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoDragToRow">
+				<param name="Local" value="html/Excel/xleleNoDragToRow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NonDefaultName">
+				<param name="Local" value="html/Excel/xleleNonDefaultName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoPreserveFormatting">
+				<param name="Local" value="html/Excel/xleleNoPreserveFormatting.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoPrintRepeatItems">
+				<param name="Local" value="html/Excel/xleleNoPrintRepeatItems.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoRefreshCube">
+				<param name="Local" value="html/Excel/xleleNoRefreshCube.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoRowGrand">
+				<param name="Local" value="html/Excel/xleleNoRowGrand.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoSaveData">
+				<param name="Local" value="html/Excel/xleleNoSaveData.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoSummaryColumnsRightDetail">
+				<param name="Local" value="html/Excel/xleleNoSummaryColumnsRightDetail.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoSummaryRowsBelowDetail">
+				<param name="Local" value="html/Excel/xleleNoSummaryRowsBelowDetail.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoTextToColumns">
+				<param name="Local" value="html/Excel/xleleNoTextToColumns.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NotInverted">
+				<param name="Local" value="html/Excel/xleleNotInverted.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoTitles">
+				<param name="Local" value="html/Excel/xleleNoTitles.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoToggleDataHeader">
+				<param name="Local" value="html/Excel/xleleNoToggleDataHeader.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NotVisible">
+				<param name="Local" value="html/Excel/xleleNotVisible.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NullString">
+				<param name="Local" value="html/Excel/xleleNullString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Number">
+				<param name="Local" value="html/Excel/xleleNumber.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NumberFormat">
+				<param name="Local" value="html/Excel/xleleNumberFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NumberOfCopies">
+				<param name="Local" value="html/Excel/xleleNumberOfCopies.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="O">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="OLELink">
+				<param name="Local" value="html/Excel/xleleOLELink.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Open">
+				<param name="Local" value="html/Excel/xleleOpen.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Operator">
+				<param name="Local" value="html/Excel/xleleOperator.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="OptimizeCache">
+				<param name="Local" value="html/Excel/xleleOptimizeCache.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Options">
+				<param name="Local" value="html/Excel/xleleOptions.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Order">
+				<param name="Local" value="html/Excel/xleleOrder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Orientation">
+				<param name="Local" value="html/Excel/xleleOrientation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Outline">
+				<param name="Local" value="html/Excel/xleleOutline.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Overlap">
+				<param name="Local" value="html/Excel/xleleOverlap.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="OverwriteCells">
+				<param name="Local" value="html/Excel/xleleOverwriteCells.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="OWCVersion">
+				<param name="Local" value="html/Excel/xleleOWCVersion.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="P">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PageBreaks">
+				<param name="Local" value="html/Excel/xlelePageBreaks.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PageBreakZoom">
+				<param name="Local" value="html/Excel/xlelePageBreakZoom.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PageFieldOrder">
+				<param name="Local" value="html/Excel/xlelePageFieldOrder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PageFieldStyle">
+				<param name="Local" value="html/Excel/xlelePageFieldStyle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PageFieldWrapCount">
+				<param name="Local" value="html/Excel/xlelePageFieldWrapCount.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PageSetup">
+				<param name="Local" value="html/Excel/xlelePageSetup.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Palette">
+				<param name="Local" value="html/Excel/xlelePalette.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Pane">
+				<param name="Local" value="html/Excel/xlelePane.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Panes">
+				<param name="Local" value="html/Excel/xlelePanes.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PaperSizeIndex">
+				<param name="Local" value="html/Excel/xlelePaperSizeIndex.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Parameter">
+				<param name="Local" value="html/Excel/xleleParameter.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ParameterType">
+				<param name="Local" value="html/Excel/xleleParameterType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ParameterValue">
+				<param name="Local" value="html/Excel/xleleParameterValue.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ParentField">
+				<param name="Local" value="html/Excel/xleleParentField.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Path">
+				<param name="Local" value="html/Excel/xlelePath.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Perspective">
+				<param name="Local" value="html/Excel/xlelePerspective.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PictureFormat">
+				<param name="Local" value="html/Excel/xlelePictureFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PicturePlacement">
+				<param name="Local" value="html/Excel/xlelePicturePlacement.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PictureStackUnit">
+				<param name="Local" value="html/Excel/xlelePictureStackUnit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Pie2HasShadow">
+				<param name="Local" value="html/Excel/xlelePie2HasShadow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Pie2Size">
+				<param name="Local" value="html/Excel/xlelePie2Size.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PivotAxis">
+				<param name="Local" value="html/Excel/xlelePivotAxis.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PivotCache">
+				<param name="Local" value="html/Excel/xlelePivotCache.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PivotData">
+				<param name="Local" value="html/Excel/xlelePivotData.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PivotField">
+				<param name="Local" value="html/Excel/xlelePivotField.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PivotItem">
+				<param name="Local" value="html/Excel/xlelePivotItem.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PivotTable">
+				<param name="Local" value="html/Excel/xlelePivotTable.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PivotTableRef">
+				<param name="Local" value="html/Excel/xlelePivotTableRef.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PivotView">
+				<param name="Local" value="html/Excel/xlelePivotView.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Placement">
+				<param name="Local" value="html/Excel/xlelePlacement.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PLCaption">
+				<param name="Local" value="html/Excel/xlelePLCaption.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PLDataOrientation">
+				<param name="Local" value="html/Excel/xlelePLDataOrientation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PLExport">
+				<param name="Local" value="html/Excel/xlelePLExport.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PLGroupType">
+				<param name="Local" value="html/Excel/xlelePLGroupType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PLName">
+				<param name="Local" value="html/Excel/xlelePLName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PlotArea">
+				<param name="Local" value="html/Excel/xlelePlotArea.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PlotVisible">
+				<param name="Local" value="html/Excel/xlelePlotVisible.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PLPivotField">
+				<param name="Local" value="html/Excel/xlelePLPivotField.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PLPosition">
+				<param name="Local" value="html/Excel/xlelePLPosition.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PLSubtotal">
+				<param name="Local" value="html/Excel/xlelePLSubtotal.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PLTotal">
+				<param name="Local" value="html/Excel/xlelePLTotal.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Plus">
+				<param name="Local" value="html/Excel/xlelePlus.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PointCount">
+				<param name="Local" value="html/Excel/xlelePointCount.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Position">
+				<param name="Local" value="html/Excel/xlelePosition.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PrecisionAsDisplayed">
+				<param name="Local" value="html/Excel/xlelePrecisionAsDisplayed.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Print">
+				<param name="Local" value="html/Excel/xlelePrint.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PrintSetTitles">
+				<param name="Local" value="html/Excel/xlelePrintSetTitles.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PromptString">
+				<param name="Local" value="html/Excel/xlelePromptString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ProtectContents">
+				<param name="Local" value="html/Excel/xleleProtectContents.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ProtectObjects">
+				<param name="Local" value="html/Excel/xleleProtectObjects.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ProtectScenarios">
+				<param name="Local" value="html/Excel/xleleProtectScenarios.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ProtectStructure">
+				<param name="Local" value="html/Excel/xleleProtectStructure.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ProtectWindows">
+				<param name="Local" value="html/Excel/xleleProtectWindows.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PTFormat">
+				<param name="Local" value="html/Excel/xlelePTFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PTFormula">
+				<param name="Local" value="html/Excel/xlelePTFormula.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PTLineItem">
+				<param name="Local" value="html/Excel/xlelePTLineItem.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PTLineItems">
+				<param name="Local" value="html/Excel/xlelePTLineItems.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PTRule">
+				<param name="Local" value="html/Excel/xlelePTRule.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PTSource">
+				<param name="Local" value="html/Excel/xlelePTSource.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PublishObject">
+				<param name="Local" value="html/Excel/xlelePublishObject.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PublishObjects">
+				<param name="Local" value="html/Excel/xlelePublishObjects.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Q">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Qualifier">
+				<param name="Local" value="html/Excel/xleleQualifier.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Quality">
+				<param name="Local" value="html/Excel/xleleQuality.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="QuerySource">
+				<param name="Local" value="html/Excel/xleleQuerySource.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="QueryTable">
+				<param name="Local" value="html/Excel/xleleQueryTable.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="QueryType">
+				<param name="Local" value="html/Excel/xleleQueryType.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="R">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Range">
+				<param name="Local" value="html/Excel/xleleRange.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RangeSelection">
+				<param name="Local" value="html/Excel/xleleRangeSelection.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ReadingOrder">
+				<param name="Local" value="html/Excel/xleleReadingOrder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Reference">
+				<param name="Local" value="html/Excel/xleleReference.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RefModeR1C1">
+				<param name="Local" value="html/Excel/xleleRefModeR1C1.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RefreshDate">
+				<param name="Local" value="html/Excel/xleleRefreshDate.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RefreshInfo">
+				<param name="Local" value="html/Excel/xleleRefreshInfo.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RefreshName">
+				<param name="Local" value="html/Excel/xleleRefreshName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RefreshOnChange">
+				<param name="Local" value="html/Excel/xleleRefreshOnChange.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RefreshOnFileOpen">
+				<param name="Local" value="html/Excel/xleleRefreshOnFileOpen.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RefreshTimeSpan">
+				<param name="Local" value="html/Excel/xleleRefreshTimeSpan.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Repeat">
+				<param name="Local" value="html/Excel/xleleRepeat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RightAngleAxes">
+				<param name="Local" value="html/Excel/xleleRightAngleAxes.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Rotation">
+				<param name="Local" value="html/Excel/xleleRotation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RoundedCorners">
+				<param name="Local" value="html/Excel/xleleRoundedCorners.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Row">
+				<param name="Local" value="html/Excel/xleleRow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RowBreak">
+				<param name="Local" value="html/Excel/xleleRowBreak.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RowBreaks">
+				<param name="Local" value="html/Excel/xleleRowBreaks.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RowColHeadings">
+				<param name="Local" value="html/Excel/xleleRowColHeadings.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RowInputCell">
+				<param name="Local" value="html/Excel/xleleRowInputCell.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RowLast">
+				<param name="Local" value="html/Excel/xleleRowLast.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RowNumbers">
+				<param name="Local" value="html/Excel/xleleRowNumbers.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Rule">
+				<param name="Local" value="html/Excel/xleleRule.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RuleType">
+				<param name="Local" value="html/Excel/xleleRuleType.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="S">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="S">
+				<param name="Local" value="html/Excel/xleleS.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Scale">
+				<param name="Local" value="html/Excel/xleleScale.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ScaleID">
+				<param name="Local" value="html/Excel/xleleScaleId.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Scaling">
+				<param name="Local" value="html/Excel/xleleScaling.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Schema">
+				<param name="Local" value="html/Excel/xleleSchema.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Selected">
+				<param name="Local" value="html/Excel/xleleSelected.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SelectedSheets">
+				<param name="Local" value="html/Excel/xleleSelectedSheets.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Selection">
+				<param name="Local" value="html/Excel/xleleSelection.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Semicolon">
+				<param name="Local" value="html/Excel/xleleSemiColon.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SeqNum">
+				<param name="Local" value="html/Excel/xleleSeqNum.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Series">
+				<param name="Local" value="html/Excel/xleleSeries.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SeriesColumn">
+				<param name="Local" value="html/Excel/xleleSeriesColumn.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ServerBased">
+				<param name="Local" value="html/Excel/xleleServerBased.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ServerSortOrder">
+				<param name="Local" value="html/Excel/xleleServerSortOrder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Shade3D">
+				<param name="Local" value="html/Excel/xleleShade3D.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Shadow">
+				<param name="Local" value="html/Excel/xleleShadow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Shape">
+				<param name="Local" value="html/Excel/xleleShape.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SheetIndex">
+				<param name="Local" value="html/Excel/xleleSheetIndex.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SheetName">
+				<param name="Local" value="html/Excel/xleleSheetName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowAllItems">
+				<param name="Local" value="html/Excel/xleleShowAllItems.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowBubbleSize">
+				<param name="Local" value="html/Excel/xleleShowBubbleSize.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowCategoryName">
+				<param name="Local" value="html/Excel/xleleShowCategoryName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowChartTipNames">
+				<param name="Local" value="html/Excel/xleleShowChartTipNames.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowChartTipValues">
+				<param name="Local" value="html/Excel/xleleShowChartTipValues.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowHorzBorder">
+				<param name="Local" value="html/Excel/xleleShowHorzBorder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowKeys">
+				<param name="Local" value="html/Excel/xleleShowKeys.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowLeaderLines">
+				<param name="Local" value="html/Excel/xleleShowLeaderLines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowLegendKey">
+				<param name="Local" value="html/Excel/xleleShowLegendKey.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowOutline">
+				<param name="Local" value="html/Excel/xleleShowOutline.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowPageBreakZoom">
+				<param name="Local" value="html/Excel/xleleShowPageBreakZoom.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowPercent">
+				<param name="Local" value="html/Excel/xleleShowPercent.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowSeriesName">
+				<param name="Local" value="html/Excel/xleleShowSeriesName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowValue">
+				<param name="Local" value="html/Excel/xleleShowValue.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowVertBorder">
+				<param name="Local" value="html/Excel/xleleShowVertBorder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Size">
+				<param name="Local" value="html/Excel/xleleSize.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SizeRepresents">
+				<param name="Local" value="html/Excel/xleleSizeRepresents.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SizeWithWindow">
+				<param name="Local" value="html/Excel/xleleSizeWithWindow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SmallGrid">
+				<param name="Local" value="html/Excel/xleleSmallGrid.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Smooth">
+				<param name="Local" value="html/Excel/xleleSmooth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Sort">
+				<param name="Local" value="html/Excel/xleleSort.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Sorting">
+				<param name="Local" value="html/Excel/xleleSorting.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SortKey">
+				<param name="Local" value="html/Excel/xleleSortKey.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SortOrder">
+				<param name="Local" value="html/Excel/xleleSortOrder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Source">
+				<param name="Local" value="html/Excel/xleleSource.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SourceConsolidation">
+				<param name="Local" value="html/Excel/xleleSourceConsolidation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SourceHierarchy">
+				<param name="Local" value="html/Excel/xleleSourceHierarchy.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SourceHierarchyLevel">
+				<param name="Local" value="html/Excel/xleleSourceHierarchyLevel.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SourceLinked">
+				<param name="Local" value="html/Excel/xleleSourceLinked.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SourceName">
+				<param name="Local" value="html/Excel/xleleSourceName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SourceType">
+				<param name="Local" value="html/Excel/xleleSourceType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Space">
+				<param name="Local" value="html/Excel/xleleSpace.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SplitHorizontal">
+				<param name="Local" value="html/Excel/xleleSplitHorizontal.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SplitPos">
+				<param name="Local" value="html/Excel/xleleSplitPos.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SplitScale">
+				<param name="Local" value="html/Excel/xleleSplitScale.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SplitType">
+				<param name="Local" value="html/Excel/xleleSplitType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SplitValue">
+				<param name="Local" value="html/Excel/xleleSplitValue.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SplitVertical">
+				<param name="Local" value="html/Excel/xleleSplitVertical.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SQLType">
+				<param name="Local" value="html/Excel/xleleSQLType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="StandardWidth">
+				<param name="Local" value="html/Excel/xleleStandardWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="StartRow">
+				<param name="Local" value="html/Excel/xleleStartRow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Sub">
+				<param name="Local" value="html/Excel/xleleSub.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Subtotal">
+				<param name="Local" value="html/Excel/xleleSubtotal.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SubtotalFormat">
+				<param name="Local" value="html/Excel/xleleSubtotalFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SubtotalHiddenPageItems">
+				<param name="Local" value="html/Excel/xleleSubtotalHiddenPageItems.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SubtotalName">
+				<param name="Local" value="html/Excel/xleleSubtotalName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SubType">
+				<param name="Local" value="html/Excel/xleleSubType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Sup">
+				<param name="Local" value="html/Excel/xleleSup.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SupBook">
+				<param name="Local" value="html/Excel/xleleSupBook.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Symbol">
+				<param name="Local" value="html/Excel/xleleSymbol.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Synchronous">
+				<param name="Local" value="html/Excel/xleleSynchronous.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="T">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Tab">
+				<param name="Local" value="html/Excel/xleleTab.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TableStyle">
+				<param name="Local" value="html/Excel/xleleTableStyle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TabRatio">
+				<param name="Local" value="html/Excel/xleleTabRatio.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Tag">
+				<param name="Local" value="html/Excel/xleleTag.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Text">
+				<param name="Local" value="html/Excel/xleleText.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TextQualifier">
+				<param name="Local" value="html/Excel/xleleTextQualifier.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TextWizardSettings">
+				<param name="Local" value="html/Excel/xleleTextWizardSettings.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ThousandSeparator">
+				<param name="Local" value="html/Excel/xleleThousandSeparator.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TickLabelPosition">
+				<param name="Local" value="html/Excel/xleleTickLabelPosition.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TickLabelSkip">
+				<param name="Local" value="html/Excel/xleleTickLabelSkip.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TickMarkSkip">
+				<param name="Local" value="html/Excel/xleleTickMarkSkip.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Title">
+				<param name="Local" value="html/Excel/xleleTitle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Top">
+				<param name="Local" value="html/Excel/xleleTop.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TopRowBottomPane">
+				<param name="Local" value="html/Excel/xleleTopRowBottomPane.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TopRowVisible">
+				<param name="Local" value="html/Excel/xleleTopRowVisible.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TotalAlignment">
+				<param name="Local" value="html/Excel/xleleTotalAlignment.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TotalAllMembers">
+				<param name="Local" value="html/Excel/xleleTotalAllMembers.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TotalCaptionAlignment">
+				<param name="Local" value="html/Excel/xleleTotalCaptionAlignment.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TotalFormat">
+				<param name="Local" value="html/Excel/xleleTotalFormat.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TotalWidth">
+				<param name="Local" value="html/Excel/xleleTotalWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TransitionExpressionEvaluation">
+				<param name="Local" value="html/Excel/xleleTransitionExpressionEvaluation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TransitionFormulaEntry">
+				<param name="Local" value="html/Excel/xleleTransitionFormulaEntry.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Trendline">
+				<param name="Local" value="html/Excel/xleleTrendline.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Type">
+				<param name="Local" value="html/Excel/xleleType.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="U">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="U">
+				<param name="Local" value="html/Excel/xleleU.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Uncalced">
+				<param name="Local" value="html/Excel/xleleUncalced.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UniqueName">
+				<param name="Local" value="html/Excel/xleleUniqueName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UpBars">
+				<param name="Local" value="html/Excel/xleleUpBars.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UpDownBars">
+				<param name="Local" value="html/Excel/xleleUpDownBars.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="URLString">
+				<param name="Local" value="html/Excel/xleleURLString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UseBlank">
+				<param name="Local" value="html/Excel/xleleUseBlank.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UseLocalConnection">
+				<param name="Local" value="html/Excel/xleleUseLocalConnection.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="User">
+				<param name="Local" value="html/Excel/xleleUser.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UseSameSettings">
+				<param name="Local" value="html/Excel/xleleUseSameSettings.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="V">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VacatedStyle">
+				<param name="Local" value="html/Excel/xleleVacatedStyle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ValidPrinterInfo">
+				<param name="Local" value="html/Excel/xleleValidPrinterInfo.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Value">
+				<param name="Local" value="html/Excel/xleleValue.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Value1">
+				<param name="Local" value="html/Excel/xleleValue1.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Value2">
+				<param name="Local" value="html/Excel/xleleValue2.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ValueColumn">
+				<param name="Local" value="html/Excel/xleleValueColumn.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VaryColors">
+				<param name="Local" value="html/Excel/xleleVaryColors.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VersionLastEdit">
+				<param name="Local" value="html/Excel/xleleVersionLastEdit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VersionLastRefresh">
+				<param name="Local" value="html/Excel/xleleVersionLastRefresh.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VersionLastUpdate">
+				<param name="Local" value="html/Excel/xleleVersionLastUpdate.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VersionRefreshableMin">
+				<param name="Local" value="html/Excel/xleleVersionRefreshableMin.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VersionUpdateableMin">
+				<param name="Local" value="html/Excel/xleleVersionUpdateableMin.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VertGrowth">
+				<param name="Local" value="html/Excel/xleleVertGrowth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Vertical">
+				<param name="Local" value="html/Excel/xleleVertical.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VerticalResolution">
+				<param name="Local" value="html/Excel/xleleVerticalResolution.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="View3D">
+				<param name="Local" value="html/Excel/xleleView3D.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Visible">
+				<param name="Local" value="html/Excel/xleleVisible.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="W">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Walls">
+				<param name="Local" value="html/Excel/xleleWalls.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Walls2D">
+				<param name="Local" value="html/Excel/xleleWalls2D.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WantAdvise">
+				<param name="Local" value="html/Excel/xleleWantAdvise.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WantPict">
+				<param name="Local" value="html/Excel/xleleWantPict.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WaterLevel">
+				<param name="Local" value="html/Excel/xleleWaterLevel.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WebChart">
+				<param name="Local" value="html/Excel/xleleWebChart.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WebPostString">
+				<param name="Local" value="html/Excel/xleleWebPostString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Weight">
+				<param name="Local" value="html/Excel/xleleWeight.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Width">
+				<param name="Local" value="html/Excel/xleleWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WindowHeight">
+				<param name="Local" value="html/Excel/xleleWindowHeight.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WindowHidden">
+				<param name="Local" value="html/Excel/xleleWindowHidden.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WindowIconic">
+				<param name="Local" value="html/Excel/xleleWindowIconic.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WindowTopX">
+				<param name="Local" value="html/Excel/xleleWindowTopX.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WindowTopY">
+				<param name="Local" value="html/Excel/xleleWindowTopY.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WindowWidth">
+				<param name="Local" value="html/Excel/xleleWindowWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WorksheetOptions">
+				<param name="Local" value="html/Excel/xleleWorksheetOptions.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WorksheetSource">
+				<param name="Local" value="html/Excel/xleleWorksheetSource.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="X">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Xct">
+				<param name="Local" value="html/Excel/xleleXct.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="XValue">
+				<param name="Local" value="html/Excel/xleleXValue.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="XValueColumn">
+				<param name="Local" value="html/Excel/xleleXValueColumn.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Y">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="YValue">
+				<param name="Local" value="html/Excel/xleleYValue.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="YValueColumn">
+				<param name="Local" value="html/Excel/xleleYValueColumn.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Z">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Zoom">
+				<param name="Local" value="html/Excel/xleleZoom.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Microsoft PowerPoint XML Reference">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="A">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Animation">
+				<param name="Local" value="html/PowerPoint/ppeleAnimation.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="B">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Broadcastinfo">
+				<param name="Local" value="html/PowerPoint/ppeleBroadcastinfo.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="C">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Colorscheme">
+				<param name="Local" value="html/PowerPoint/ppeleColorscheme.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="F">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Font">
+				<param name="Local" value="html/PowerPoint/ppeleFont.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="G">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Guide">
+				<param name="Local" value="html/PowerPoint/ppeleGuide.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="H">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Headersfooters">
+				<param name="Local" value="html/PowerPoint/ppeleHeadersfooters.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Htmlpublishsettings">
+				<param name="Local" value="html/PowerPoint/ppeleHtmlpublishsettings.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="I">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IsComment">
+				<param name="Local" value="html/PowerPoint/ppeleIsComment.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="K">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Kinsoku">
+				<param name="Local" value="html/PowerPoint/ppeleKinsoku.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="M">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Master">
+				<param name="Local" value="html/PowerPoint/ppeleMaster.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Media">
+				<param name="Local" value="html/PowerPoint/ppeleMedia.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="N">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Namedshow">
+				<param name="Local" value="html/PowerPoint/ppeleNamedshow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Notes">
+				<param name="Local" value="html/PowerPoint/ppeleNotes.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="O">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Oleclientdata">
+				<param name="Local" value="html/PowerPoint/ppeleOleclientdata.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="P">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Placeholder">
+				<param name="Local" value="html/PowerPoint/ppelePlaceholder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Pptdocumentsettings">
+				<param name="Local" value="html/PowerPoint/ppelePptdocumentsettings.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Presentation">
+				<param name="Local" value="html/PowerPoint/ppelePresentation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Printoptions">
+				<param name="Local" value="html/PowerPoint/ppelePrintoptions.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="R">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Recolorinfo">
+				<param name="Local" value="html/PowerPoint/ppeleRecolorinfo.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Recolorinfoentry">
+				<param name="Local" value="html/PowerPoint/ppeleRecolorinfoentry.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Routingslip">
+				<param name="Local" value="html/PowerPoint/ppeleRoutingslip.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="S">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Schemes">
+				<param name="Local" value="html/PowerPoint/ppeleSchemes.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Slide">
+				<param name="Local" value="html/PowerPoint/ppeleSlide.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Slideshowsettings">
+				<param name="Local" value="html/PowerPoint/ppeleSlideshowsettings.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Slidetransition">
+				<param name="Local" value="html/PowerPoint/ppeleSlidetransition.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Sound">
+				<param name="Local" value="html/PowerPoint/ppeleSound.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="T">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Tag">
+				<param name="Local" value="html/PowerPoint/ppeleTag.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="V">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Viewstate">
+				<param name="Local" value="html/PowerPoint/ppeleViewstate.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Microsoft Word XML Reference">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="A">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ActiveWritingStyle">
+				<param name="Local" value="html/Word/wdeleActiveWritingStyle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AdjustLineHeightInTable">
+				<param name="Local" value="html/Word/wdeleAdjustLineHeightInTable.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AlignTablesRowByRow">
+				<param name="Local" value="html/Word/wdeleAlignTablesRowByRow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AnchorLock">
+				<param name="Local" value="html/Word/wdeleanchorlock.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AttachedTemplate">
+				<param name="Local" value="html/Word/wdeleAttachedTemplate.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoHyphenation">
+				<param name="Local" value="html/Word/wdeleAutoHyphenation.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="AutoSpaceLikeWord95">
+				<param name="Local" value="html/Word/wdeleAutoSpaceLikeWord95.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="B">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BalanceSingleByteDoubleByteWidth">
+				<param name="Local" value="html/Word/wdeleDontBalanceSingleByteDoubleByteWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BorderBottom">
+				<param name="Local" value="html/Word/wdeleborderbottom.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BorderLeft">
+				<param name="Local" value="html/Word/wdeleborderleft.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BorderRight">
+				<param name="Local" value="html/Word/wdeleborderright.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BorderTop">
+				<param name="Local" value="html/Word/wdelebordertop.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="BrowserLevel">
+				<param name="Local" value="html/Word/wdeleDefaultBrowserLevel.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="C">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ClickAndTypeStyle&nbsp;Element">
+				<param name="Local" value="html/Word/wdeleClickAndTypeStyle.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ConsecutiveHyphensLimit">
+				<param name="Local" value="html/Word/wdeleConsecutiveHyphensLimit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ConvMailMergeEsc">
+				<param name="Local" value="html/Word/wdeleConvMailMergeEsc.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="D">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Data">
+				<param name="Local" value="html/Word/wdeledata.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayHorizontalDrawingGridEvery&nbsp;Element">
+				<param name="Local" value="html/Word/wdeleDisplayHorizontalDrawingGridEvery.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DisplayVerticalDrawingGridEvery&nbsp;Element">
+				<param name="Local" value="html/Word/wdeleDisplayVerticalDrawingGridEvery.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DocumentKind">
+				<param name="Local" value="html/Word/wdeleDocumentKind.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DocumentProtection">
+				<param name="Local" value="html/Word/wdeleDocumentProtection.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DocumentVariables">
+				<param name="Local" value="html/Word/wdeleDocumentVariables.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotExpandShiftReturn">
+				<param name="Local" value="html/Word/wdeleExpandShiftReturn.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotHyphenateCaps">
+				<param name="Local" value="html/Word/wdeleHyphenateCaps.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotLeaveBackslashAlone">
+				<param name="Local" value="html/Word/wdeleLeaveBackslashAlone.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotOptimizeForBrowser">
+				<param name="Local" value="html/Word/wdeleDoNotoptimizeForBrowser.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotPrintRevisions">
+				<param name="Local" value="html/Word/wdelePrintRevisions.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotShadeFormData">
+				<param name="Local" value="html/Word/wdeleDoNotShadeFormData.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotShowRevisions">
+				<param name="Local" value="html/Word/wdeleShowRevisions.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DoNotUseHTMLParagraphAutoSpacing">
+				<param name="Local" value="html/Word/wdeleDoNotUseHTMLParagraphAutoSpacing.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DrawingGridHorizontalOrigin&nbsp;Element">
+				<param name="Local" value="html/Word/wdeleDrawingGridHorizontalOrigin.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DrawingGridHorizontalSpacing">
+				<param name="Local" value="html/Word/wdeleDrawingGridHorizontalSpacing.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DrawingGridVerticalOrigin&nbsp;Element">
+				<param name="Local" value="html/Word/wdeleDrawingGridVerticalOrigin.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DrawingGridVerticalSpacing">
+				<param name="Local" value="html/Word/wdeleDrawingGridVerticalSpacing.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="E">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="EmbedTrueTypeFonts">
+				<param name="Local" value="html/Word/wdeleEmbedTrueTypeFonts.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="EnvelopeVis">
+				<param name="Local" value="html/Word/wdeleEnvelopeVis.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="F">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FootnoteLayoutLikeWW8">
+				<param name="Local" value="html/Word/wdeleFootnoteLayoutLikeWW8.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ForgetLastTabAlignment">
+				<param name="Local" value="html/Word/wdeleForgetLastTabAlignement.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FormsDesign">
+				<param name="Local" value="html/Word/wdeleFormsDesign.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="H">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HideGrammaticalErrors">
+				<param name="Local" value="html/Word/wdeleHideGrammaticalErrors.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HideSpellingErrors">
+				<param name="Local" value="html/Word/wdeleHideSpellingErrors.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HyphenationZone">
+				<param name="Local" value="html/Word/wdeleHyphenationZone.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="L">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LayoutRawTableWidth">
+				<param name="Local" value="html/Word/wdeleLayoutRawTableWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LayoutTableRowsApart">
+				<param name="Local" value="html/Word/wdeleLayoutTableRowsApart.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="LineWrapLikeWord6">
+				<param name="Local" value="html/Word/wdeleLineWrapLikeWord6.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="M">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeActiveRecord">
+				<param name="Local" value="html/Word/wdeleMailMergeActiveRecord.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeAddressFieldName">
+				<param name="Local" value="html/Word/wdeleMailMergeAddressFieldName.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeAsAttachment">
+				<param name="Local" value="html/Word/wdeleMailMergeAsAttachment.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeCheckErrors">
+				<param name="Local" value="html/Word/wdeleMailMergeCheckErrors.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeConnectString">
+				<param name="Local" value="html/Word/wdeleMailMergeConnectString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeDataSource">
+				<param name="Local" value="html/Word/wdeleMailMergeDataSource.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeDataType">
+				<param name="Local" value="html/Word/wdeleMailMergeDataType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeDestination">
+				<param name="Local" value="html/Word/wdeleMailMergeDestination.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeDoNotSuppressBlankLines">
+				<param name="Local" value="html/Word/wdeleMailMergeDoNotSuppressBlankLines.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeHeaderSource">
+				<param name="Local" value="html/Word/wdeleMailMergeHeaderSource.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeLinkToQuery">
+				<param name="Local" value="html/Word/wdeleMailMergeLinkToQuery.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeMailSubject">
+				<param name="Local" value="html/Word/wdeleMailMergeMailSubject.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeMainDocType">
+				<param name="Local" value="html/Word/wdeleMailMergeMainDocType.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeQueryString">
+				<param name="Local" value="html/Word/wdeleMailMergeQueryString.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MailMergeViewMergedData">
+				<param name="Local" value="html/Word/wdeleMailMergeViewMergedData.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MWSmallCaps">
+				<param name="Local" value="html/Word/wdeleMWSmallCaps.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="N">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoColumnBalance">
+				<param name="Local" value="html/Word/wdeleNoColumnBalance.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoExtraLineSpacing">
+				<param name="Local" value="html/Word/wdeleNoExtraLineSpacing.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoLeading">
+				<param name="Local" value="html/Word/wdeleNoLeading.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoLineBreaksAfter&nbsp;Element">
+				<param name="Local" value="html/Word/wdeleNoLineBreaksAfter.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoLineBreaksBefore&nbsp;Element">
+				<param name="Local" value="html/Word/wdeleNoLineBreaksBefore.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoSpaceRaiseLower">
+				<param name="Local" value="html/Word/wdeleNoSpaceRaiseLower.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NoTabHangIndent">
+				<param name="Local" value="html/Word/wdeleNoTabHangIndent.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="O">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="OrigWordTableRules">
+				<param name="Local" value="html/Word/wdeleOrigWordTableRules.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="P">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PrintBodyTextBeforeHeader">
+				<param name="Local" value="html/Word/wdelePrintBodyTextBeforeHeader.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PrintColBlack">
+				<param name="Local" value="html/Word/wdelePrintColBlack.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PrintFormsData">
+				<param name="Local" value="html/Word/wdelePrintFormsData.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PrintFractionalCharacterWidths">
+				<param name="Local" value="html/Word/wdelePrintFractionalCharacterWidths.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PrintPostScriptOverText">
+				<param name="Local" value="html/Word/wdelePrintPostScriptOverText.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PrintTwoOnOne&nbsp;Element">
+				<param name="Local" value="html/Word/wdelePrintTwoOnOne.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PunctuationKerning">
+				<param name="Local" value="html/Word/wdelePunctuationKerning.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="S">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SaveFormsData">
+				<param name="Local" value="html/Word/wdeleSaveFormsData.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SaveSubsetFonts">
+				<param name="Local" value="html/Word/wdeleSaveSubsetFonts.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShapeLayoutLikeWW8">
+				<param name="Local" value="html/Word/wdeleShapeLayoutAnchorRect.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ShowBreaksInFrames">
+				<param name="Local" value="html/Word/wdeleShowBreaksInFrames.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SpaceForUL">
+				<param name="Local" value="html/Word/wdeleNoSpaceForUL.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SpacingInWholePoints">
+				<param name="Local" value="html/Word/wdeleSpacingInWholePoints.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SubFontBySize">
+				<param name="Local" value="html/Word/wdeleSubFontBySize.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SummaryLength">
+				<param name="Local" value="html/Word/wdeleSummaryLength.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SuppressBottomSpacing">
+				<param name="Local" value="html/Word/wdeleSupressBottomSpacing.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SuppressSpBfAfterPgBrk">
+				<param name="Local" value="html/Word/wdeleSupressSpBfAfterPgBrk.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SuppressTopSpacing">
+				<param name="Local" value="html/Word/wdeleSupressTopSpacing.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SuppressTopSpacingMac5">
+				<param name="Local" value="html/Word/wdeleSupressTopSpacingMac5.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SuppressTopSpacingWP">
+				<param name="Local" value="html/Word/wdeleSupressTopSpacingWP.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SwapBordersFacingPages">
+				<param name="Local" value="html/Word/wdeleSwapBordersFacingPages.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="T">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TrackRevisions">
+				<param name="Local" value="html/Word/wdeleTrackRevisions.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TransparentMetafiles">
+				<param name="Local" value="html/Word/wdeleTransparentMetafiles.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TruncateFontHeight">
+				<param name="Local" value="html/Word/wdeleTruncateFontHeight.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="U">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ULTrailSpace">
+				<param name="Local" value="html/Word/wdeleDontULTrailSpace.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UpdateStylesOnOpen">
+				<param name="Local" value="html/Word/wdeleUpdateStylesOnOpen.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UseFELayout">
+				<param name="Local" value="html/Word/wdeleUseFELayout.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UseMarginsForDrawingGridOrigin&nbsp;Element">
+				<param name="Local" value="html/Word/wdeleUseMarginsForDrawingGridOrigin.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UsePrinterMetrics">
+				<param name="Local" value="html/Word/wdeleUsePrinterMetrics.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UseWord97LineBreakingRules">
+				<param name="Local" value="html/Word/wdeleUseWord97LineBreakingRules.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="V">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="View">
+				<param name="Local" value="html/Word/wdeleView.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="W">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WordCompatibility">
+				<param name="Local" value="html/Word/wdeleWordCompatibility.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WordDocument">
+				<param name="Local" value="html/Word/wdeleWordDocument.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WPJustification">
+				<param name="Local" value="html/Word/wdeleWPJustification.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WPSpaceWidth">
+				<param name="Local" value="html/Word/wdeleWPSpaceWidth.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Wrap">
+				<param name="Local" value="html/Word/wdelewrap.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WrapTrailSpaces">
+				<param name="Local" value="html/Word/wdeleWrapTrailSpaces.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WW6BorderRules">
+				<param name="Local" value="html/Word/wdeleWW6BorderRules.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Z">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Zoom">
+				<param name="Local" value="html/Word/wdeleZoom.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Microsoft Data Source Control XML Reference">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="C">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CaptionElementID">
+				<param name="Local" value="html/Dsc/dceleCaptionElementID.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ChildLabel">
+				<param name="Local" value="html/Dsc/dceleChildLabel.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ConsumesRecordset">
+				<param name="Local" value="html/Dsc/dceleConsumesRecordset.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ControlSource">
+				<param name="Local" value="html/Dsc/dceleControlSource.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="D">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataEntry">
+				<param name="Local" value="html/Dsc/dceleDataEntry.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataModel">
+				<param name="Local" value="html/Dsc/dceleDataModel.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DatapageSize">
+				<param name="Local" value="html/Dsc/dceleDatapageSize.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DataSourceControl">
+				<param name="Local" value="html/Dsc/dceleDataSourceControl.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DefaultSort">
+				<param name="Local" value="html/Dsc/dceleDefaultSort.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="E">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ElementExtension">
+				<param name="Local" value="html/Dsc/dceleElementExtension.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ElementID">
+				<param name="Local" value="html/Dsc/dceleElementID.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="F">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FooterElementID">
+				<param name="Local" value="html/Dsc/dceleFooterElementID.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="G">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GridX">
+				<param name="Local" value="html/Dsc/dceleGridX.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GridY">
+				<param name="Local" value="html/Dsc/dceleGridY.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="GroupLevel">
+				<param name="Local" value="html/Dsc/dceleGroupLevel.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="H">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="HeaderElementID">
+				<param name="Local" value="html/Dsc/dceleHeaderElementID.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="M">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MaxRecords">
+				<param name="Local" value="html/Dsc/dceleMaxRecords.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="P">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="PageField">
+				<param name="Local" value="html/Dsc/dcelePageField.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="R">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RecordNavigationElementID">
+				<param name="Local" value="html/Dsc/dceleRecordNavigationElementID.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RecordSetDef">
+				<param name="Local" value="html/Dsc/dceleRecordSetDef.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RecordSource">
+				<param name="Local" value="html/Dsc/dceleRecordSource.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="RelatedField">
+				<param name="Local" value="html/Dsc/dceleRelatedField.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="S">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SchemaField">
+				<param name="Local" value="html/Dsc/dceleSchemaField.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SchemaRowSource">
+				<param name="Local" value="html/Dsc/dceleSchemaRowSource.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Sublist">
+				<param name="Local" value="html/Dsc/dceleSublist.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="U">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="UseRemoteProvider">
+				<param name="Local" value="html/Dsc/dceleUseRemoteProvider.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

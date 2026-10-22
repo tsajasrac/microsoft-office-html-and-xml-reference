@@ -1,0 +1,40 @@
+<html><head>
+<title>Fields</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Fields</H1>
+
+<p class=T>Microsoft Word fields are used for documentation purposes, but many features throughout the program
+also use fields as their underlying implementation mechanism. A field includes distinct code
+and results areas where Word allows rich formatting and content.</p>
+<p class=T>Word marks and stores information for simple fields by means of the <b>Span</b>
+element with the <b>mso-field-code</b>  style. The <b>mso-field-code</b> value represents the string value of the field code.
+Formatting in the original field code might be lost when saving as HTML if only the string value of the code
+is necessary for its calculation.</p>
+<p class=T>Word has a different way of storing field information to HTML for more
+complex fields, such as ones that have formatted text or long values. Word marks these fields with <code>&lt;!--[if supportFields]></code>
+ so the data is not displayed in the browser. Word uses the <b>Span</b>
+element with the <b>mso-element: field-begin</b>, <b>mso-element: field-separator</b>, and <b>mso-element: field-end</b> attributes to contain the three respective parts of the field code: the field start, the separator
+between field code and field results, and the field end. Whenever
+possible, Word will save the field to HTML in the method that uses the least file space.</p>
+<H4 class=RH4> Binary data</h4>
+<p class=T>For fields that consist of binary data, Word uses the <b><a href="wdeledata.htm">Data</a></b>
+element to contain the data.</p>
+<H4 class=RH4>Locked field results</h4>
+<p class=T> To save the locked state of a field in
+HTML, Word uses a new <b>mso-field-lock</b>  style attribute. The default value is
+<b>no</b>, so only <b>yes</b> is saved to HTML. For simple fields, <b>mso-field-lock
+</b>should be placed
+in the same <b>Span</b> element as the <b>mso-field-code</b>  style attribute. In
+the case of advanced fields, it should be placed on the <b>Span</b> element that includes the <b>mso-element:&nbsp;field-begin</b>
+ attribute.</p>
+
+
+<p class=T>For information about the style attributes that Office uses and their possible values, see the
+<a href="../concepts/ofconStyleTable.htm">Style Attributes</a> 
+topic.</p>
+
+
+</body></html>

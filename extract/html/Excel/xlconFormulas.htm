@@ -1,0 +1,142 @@
+<html>
+
+<head>
+<title>Formulas and Data Types</title>
+<style>@import url(../Shared/msdn_ie4.css);</style>
+<link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1 class="RH1">Formulas and Data Types</h1>
+<p class="T">In Microsoft Excel 2000, formulas and data types are specified in
+attributes of HTML table elements. These attributes are specific to Excel and
+have an <em>x</em> namespace character prefix. External references are specified
+using the <a href="../Excel/xleleSupBook.htm"><b>SupBook</b></a> element.</p>
+<p class="T"><a href="#fmla"><b>fmla</b> Attribute</a><br>
+<a href="#bool"><b>bool</b> Attribute</a><br>
+<a href="#err"><b>err</b> Attribute</a><br>
+<a href="#num"><b>num</b> Attribute</a><br>
+<a href="#str"><b>str</b> Attribute</a></p>
+
+<NAME ID="fmla">
+<h4 class="RH4">fmla Attribute</h4>
+</NAME>
+<p class="T">This attribute contains the formula used in a table cell. It
+contains an equal sign (<b>=</b>) followed by the formula string. The <b>fmla</b>
+attribute is specified in an HTML <b>TD</b> or <b>TH</b> table element. The
+element contains the result of the formula, or if formulas are displayed when
+the Web page is saved, the formula string.</p>
+<p class="T">Any Excel function or formula can be specified. English language
+formulas are converted to A1-style cell references when the page is saved. Range
+references are based relative to the top left cell of the table (which is
+considered to be A1) and specified in A1-style.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In the following example, the expense in cell B10 is subtracted
+from sales in cell A10 to determine the profit in cell C10.</p>
+<pre class="C"><code>
+ &lt;tr height=17 valign=bottom style='height:12.75pt'&gt;
+  &lt;td height=17 style='height:12.75pt'&gt;Sales&lt;/td&gt;
+  &lt;td&gt;Expenses&lt;/td&gt;
+  &lt;td&gt;Profit&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr height=17 valign=bottom style='height:12.75pt'&gt;
+  &lt;td height=17 align=right style='height:12.75pt' x:num&gt;100&lt;/td&gt;
+  &lt;td align=right x:num&gt;85&lt;/td&gt;
+  &lt;td align=right x:num x:fmla=&quot;=A10-B10&quot;&gt;15&lt;/td&gt;
+ &lt;/tr&gt;
+</code></pre>
+<p class="T">The data in the table appears the same regardless of whether the
+Web browser supports formulas. However, in a browser that supports formulas, if
+a user changes the value in a cell referenced by the formula, the formula is
+recalculated.</p>
+<p class="T">When using Excel built-in functions, the equal sign (<b>=</b>) must
+be specified as shown in the following examples.</p>
+<pre class="C"><code>
+ &lt;td height=17 align=right style='height:12.75pt' x:num x:fmla=&quot;=SUM(B2:B5)&quot;&gt;10&lt;/td&gt;
+ &lt;td height=17 align=center style='height:12.75pt' x:err=&quot;#DIV/0!&quot; 
+   x:fmla=&quot;=AVERAGE(D3:D10)&quot;&gt;#DIV/0!&lt;/td&gt;
+</code></pre>
+<p class="T">Character entities can be specified and are required in some cases.
+For example, if double or single quotation marks are specified in the function,
+the <b>&amp;quot;</b> entity for double quotation marks or the <b>&amp;#39;</b>
+entity for single marks must be used.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In the next example, two strings are joined.</p>
+<pre class="C"><code>
+ &lt;td height=17 style='height:12.75pt' 
+  x:fmla=&quot;=CONCATENATE(&quot;The &quot;, &quot;bicycle&quot;)&quot;&gt;The bicycle&lt;/td&gt;
+</code></pre>
+<h4 class="RH4">Specifying Data Types</h4>
+<p class="T">Attributes are used to specify the data type of a cell in a table
+created using Microsoft Excel. If the <b>str</b> attribute is specified in the <b>Table</b>
+element, and if a data type attribute is not specified in the cell element, the
+default data type is string. If the <b>str</b> attribute is not specified in the
+<b>Table</b> element, Microsoft Excel determines the data type.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In the following example, the first cell contains the string 12345,
+and the second cell contains the number 12345.</p>
+<pre class="C"><code>
+ &lt;td height=17 align=right style='height:12.75pt' x:str&gt;12345&lt;/td&gt;
+ &lt;td height=17 align=right style='height:12.75pt' x:num&gt;12345&lt;/td&gt;
+</code></pre>
+<NAME ID="bool">
+<h4 class="RH4">bool Attribute</h4>
+</NAME>
+<p class="T">The <b>bool</b> attribute specifies that a cell contains a Boolean
+value. This attribute contains the string constant <b>TRUE</b> or <b>FALSE</b>.
+The <b>bool</b> attribute is specified in an HTML <b>TD</b> or <b>TH</b> table
+element. The element contains the string constant <b>TRUE</b> or <b>FALSE</b>,
+or the localized equivalent string.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the cell contains the Boolean value <b>TRUE</b>.</p>
+<pre class="C"><code>
+ &lt;td height=17 align=center style='height:12.75pt' x:bool=&quot;TRUE&quot;&gt;TRUE&lt;/td&gt;
+</code></pre>
+<NAME ID="err">
+<h4 class="RH4">err Attribute</h4>
+</NAME>
+<p class="T">This attribute specifies that a cell contains an error value. It
+contains one of the following string constants: <b>#DIV/0</b>, <b>#NAME?</b>, <b>#NULL</b>,
+<b>#NUM</b>, <b>#N/A</b>, <b>#REF!</b>, or <b>#VALUE</b>. The <b>err</b>
+attribute is specified in an HTML <b>TD</b> or <b>TH</b> table element. The
+element contains one of the string constants or the localized equivalent string.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">This example shows a division by zero error in the cell.</p>
+<pre class="C"><code>
+ &lt;td height=17 align=center style='height:12.75pt' x:err=&quot;#DIV/0!&quot; 
+  x:fmla=&quot;=A1/A3&quot;&gt;#DIV/0!&lt;/td&gt;
+</code></pre>
+<NAME ID="num">
+<h4 class="RH4">num Attribute</h4>
+</NAME>
+<p class="T">The <b>num</b> attribute specifies that a cell contains a number,
+and it contains the precise value of the cell. If the cell value equals the
+precise value, the attribute is specified without a value. The <b>num</b>
+attribute is specified in an HTML <b>TD</b> or <b>TH</b> table element.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">In this example, the precise value of the first cell is 12345, and
+the precise value of the second cell is 12344.6789.</p>
+<pre class="C"><code>
+ &lt;td height=17 align=right style='height:12.75pt' x:num&gt;12345&lt;/td&gt;
+ &lt;td height=17 class=xl24 align=right style='height:12.75pt' 
+  x:num=&quot;12344.6789&quot;&gt;12345&lt;/td&gt;
+</code></pre>
+<NAME ID="str">
+<h4 class="RH4">str Attribute</h4>
+</NAME>
+<p class="T">The <b>str</b> attribute specifies that a cell contains a string,
+but it is optional if the <b>str</b> attribute is specified in the <b>Table</b>
+element. The <b>str</b> attribute is specified in an HTML <b>TD</b> or <b>TH</b>
+table element.</p>
+<p class="RL"><b>Example</b></p>
+<p class="T">This example shows a cell containing the string &quot;12345&quot;.</p>
+<pre class="C"><code>
+ &lt;td height=17 align=right style='height:12.75pt' x:str&gt;12345&lt;/td&gt;
+</code></pre>
+
+</body>
+
+</html>

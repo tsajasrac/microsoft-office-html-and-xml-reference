@@ -1,0 +1,130 @@
+<html><head>
+<title>OLEObject Element (Microsoft Office)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="msdn_ie3.css">
+</head>
+<body BGCOLOR="#ffffff" TEXT="#000000">
+<H1 class=RH1>OLEObject Element (Microsoft Office)</H1>
+<p class=T> Defines how an OLE object is stored.</p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<TR valign=top>
+<TD class=I width="33%" align=left><B>Attribute</B></TD>
+<TD class=I width="66%" align=left><B>Description</B></TD>
+</TR>
+<TR valign=top>
+<TD class=T width="33%"><B>Type</B></TD>
+<TD class=T width="66%"> Defines how the OLE data relates to the file. Required. Values include:
+
+<TABLE  cellpadding=4 cellspacing=4 border=1>
+        <TBODY>
+        
+        <tr><td><b>Link</b></td><td>The data is linked; that is, the data is 
+            not stored with the file, but is accessible by a 
+link.</td></tr>
+<tr><td><b>Embed</b></td><td>The data is embedded; that is, the data is 
+            stored with the file.</td></tr>
+
+</TD> </TR> </TABLE>
+     
+<TR valign=top>
+<TD class=T width="33%"><B>ObjectID</B></TD>
+<TD class=T width="66%">Defines the <STRONG>ObjectID 
+      </STRONG>of the object, that is, string that 
+      identifies where the object stands in the object storage hierarchy. The 
+      string may resemble a number but is not required to do so, and may contain an 
+      underscore at the beginning.</TD>
+</TR>
+
+<TR valign=top>
+<TD class=T width="33%"><B>ProgID</B></TD>
+<TD class=T width="66%">Defines the <STRONG>ProgID 
+      </STRONG>of the object; that is, a human-readable name that is identified 
+      with the particular object.</TD>
+</TR>
+<TR valign=top>
+<TD class=T width="33%"><B>DrawAspect</B></TD>
+<TD class=T width="66%">
+      <P>Defines how the object will be portrayed. Values include:
+	  <TABLE  cellpadding=4 cellspacing=4 border=1>
+        <TBODY>
+        
+        <tr><td><b>Content</b></td><td>The data will be displayed by the object 
+            server. For example, if the object is a drawing, the actual drawing will be 
+displayed.</td></tr>
+<tr><td><b>Icon</b></td><td>Only an icon will be displayed.</td></tr>
+
+</TD> </TR></TBODY></TABLE></P></TD></TR>
+<TR valign=top>
+<TD class=T width="33%"><B>CLSID</B></TD>
+<TD class=T width="66%">    
+       Defines the OLE Class ID; 
+      that is, a <STRONG>GUID </STRONG>that uniquely    
+       defines the object. Not required.</TD>
+</TR>
+
+<TR valign=top>
+<TD class=T width="33%"><B>Moniker</B></TD>
+<TD class=T width="66%">    
+       Defines the OLE moniker, that 
+      is, the manner in which the object may be found if it is linked. Required 
+      if <STRONG>Type </STRONG>is set to <STRONG>Embed</STRONG>.</TD>
+</TR><TR valign=top>
+<TD class=T width="33%"><B>UpdateMode</B></TD>
+<TD class=T width="66%">    
+       Defines how linked data is 
+      updated. Required if <STRONG>Type </STRONG>is set to 
+      <STRONG>Embed</STRONG>. Values include:
+	   <TABLE  cellpadding=4 cellspacing=4 border=1>
+        <TBODY>
+        
+        <tr><td><b>Always</b></td><td>         
+             The data is updated every time the file is 
+opened.</td></tr>
+<tr><td><b>OnCall</b></td><td>The data is updated only if the user requests 
+            it through a refresh.</td></tr>
+
+</TD> </TR></TBODY></TABLE></TD></TR><TR valign=top>
+<TD class=T width="33%"><STRONG>ShapeID</STRONG></TD>
+<TD class=T width="66%">    
+       Defines the Shape ID, that 
+      is, an ID that is used if the object can be stored as an    
+       Microsoft OfficeArt Shape (using VML).</TD>
+</TR>
+
+<TR valign=top>
+<TD class=T width="33%"><STRONG>LockedField</STRONG></TD>
+<TD class=T width="66%">    
+       Defines    
+       whether the field is locked 
+      for Microsoft Word. The default value is <STRONG>False</STRONG>.</TD>
+</TR><TR valign=top>
+<TD class=T width="33%"><B>LinkType</B></TD>
+<TD class=T width="66%">    
+       Defines the type of link for 
+      Microsoft Word. Required if <STRONG>Type </STRONG>is set to 
+      <STRONG>Link</STRONG>. Values include:
+	   <TABLE  cellpadding=4 cellspacing=4 border=1>
+        <TBODY>
+        
+        <tr><td><b>Picture</b></td><td>         
+                  The data is a 
+picture.</td></tr>
+<tr><td><b>Bitmap</b></td><td>The data is a bitmap.</td></tr></TD> </TR></TBODY></TABLE></TD></TR><TR valign=top>
+<TD class=T width="33%"><STRONG>Shape</STRONG></TD>
+<TD class=T width="66%">Defines the <STRONG>Shape</STRONG> name if the shape is stored in Microsoft Word.</TD>
+</TR></TABLE>
+<P class=RL><B>Contained In</B></P>
+<P class=T><B><A href="../Excel/xleleWebChart.htm">WebChart</A></B> (Microsoft Excel)</P>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The <B>OLEObject</B> element defines where the OLE data is stored.
+See the Microsoft Platform SDK for more information about OLE.</p>
+<P class=RL><B>See Also</B></P>
+<P class=T><B><A href="../PowerPoint/ppeleOleclientdata.htm">OLEClientData</A> </B>(Microsoft PowerPoint),
+<B><A href="../Excel/xleleClientData.htm">ClientData</A></B> (Microsoft Excel)</P>
+<P class=RL><A NAME="Example"><b>Example</b></A></P>
+<p class=T>A Microsoft Excel worksheet is embedded in a Microsoft Word document.<BR><PRE class=C>
+</pre>
+<PRE><CODE>&nbsp;&nbsp;&nbsp;&lt;o:OLEObject Type=&quot;Embed&quot; ProgID=&quot;Excel.Sheet.8&quot;
+&nbsp;&nbsp;&nbsp;ShapeID=&quot;_x0000_i1032&quot; DrawAspect=&quot;Content&quot; ObjectID=&quot;_989231762&quot;&gt;
+&nbsp;&nbsp;&nbsp;&lt;/o:OLEObject&gt;
+</PRE></CODE>
+</body></html>

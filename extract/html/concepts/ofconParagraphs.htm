@@ -1,0 +1,69 @@
+<html><head>
+<title>Paragraphs</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Paragraphs</H1>
+
+<p class=T>Office saves paragraphs using the <b>P</b> element. Whenever possible, Office
+uses standard HTML attributes to save paragraph settings to HTML. Office also
+uses CSS to store and display paragraph settings.</p>
+
+<p class=T>The general
+syntax for Office paragraph elements follows, where <i> stylename</i> is
+the name of the style applied to the paragraph, <i>center|right</i> are
+the alignment values, and <i>attributes</i> are the style attributes for the
+paragraph.</p>
+<p class=T><b>&lt;p class=</b><i>stylename</i><b> align=</b><i>center|right</i><b>
+style='</b><i>attributes</i><b>'&gt;</b></p>
+<p class=T>For more information about how styles are saved to HTML, see the <a href="ofconStyle.htm">CSS Styles</a> topic.</p>
+
+<p class="T"> Word has more paragraph settings than other Office programs and uses the
+following style attributes to store these settings. </p>
+<TABLE border=1 cellpadding=5 cols=2 frame=below rules=rows width="100%">
+<TR valign=top>
+<TD class=I width=33% align=left><b>Word paragraph setting</b></TD>
+<TD class=I width=66% align=left><b>Style attribute</b></TD>
+</TR>
+<tr>
+<TD class=T width=33%>Don't hyphenate</TD>
+<TD class=T width=66%><b>mso-hyphenate</b></TD>
+</tr>
+<tr>
+<TD class=T width=33%>
+  <p class="T">Line spacing rule</TD>
+<TD class=T width=66%>
+<p class="T"><b>mso-line-height-rule</b>, <b> mso-line-height-alt</b></p>
+
+</TD>
+</tr>
+<tr>
+<TD class=T width=33%>Outline level</TD>
+<TD class=T width=66%><b>mso-outline-level</b></TD>
+</tr>
+<tr>
+<TD class=T width=33%>Page break before</TD>
+<TD class=T width=66%><b>page-break-before</b></TD>
+</tr>
+<tr>
+<TD class=T width=33%>Widow/Orphan control<br>
+  Keep lines together<br>
+  Keep with next<br>
+  Suppress line numbers</TD>
+<TD class=T width=66%><b>mso-pagination</b></TD>
+</tr>
+</TABLE>
+
+<p class="T">For information about how Word saves paragraph spacing settings to HTML, see the <a href="../word/wdconParagraphSpacing.htm">Paragraph
+Spacing</a> topic.</p>
+<p class="T">Empty paragraphs are often used for spacing, and Office saves
+empty paragraphs to HTML so that they are visible in a Web browser. To do so, a nonbreaking space is inserted in the <b>P</b> element between
+<code>&lt;![if !supportEmptyParas]></code>
+and <code>&lt;![endif]></code>   tags in case the browser does not support empty
+paragraphs. Office also inserts an <b>o:p</b>  element within the <b>P</b>
+element.</p>
+<p class="T">For more information about the style attributes that Office uses and
+their possible values, see the <a href="../concepts/ofconStyleTable.htm">Style
+Attributes</a> topic.</p>
+</body></html>

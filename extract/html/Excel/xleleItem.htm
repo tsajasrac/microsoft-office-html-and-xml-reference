@@ -1,0 +1,21 @@
+<html><head>
+<title>Item Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>Item Element (Microsoft Excel)</H1>
+<p class=T>Contains the name of a child item in a PivotTable field, or the index number of an item described by the <B>PTLineItem</B> element.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleMapChildItems.htm"><B>MapChildItems</B></A>,
+<A HREF="xlelePTLineItem.htm"><B>PTLineItem</B></A>,
+<A HREF="xleleReference.htm"><B>Reference</B></A><BR>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>For a child item, this element contains a text string name.
+<p class=T>For OLAP-based PivotTable reports, the name is the unique item name contained in the <A HREF="xleleSourceName.htm"><B>SourceName</B></A> subelement of the <A HREF="xlelePivotItem.htm"><B>PivotItem</B></A> element describing the referenced child item.</p>
+<p class=T>For all other data sources, the name is the displayed name contained in the <A HREF="xleleName.htm"><B>Name</B></A> subelement of the <B>PivotItem</B> element describing the referenced child item.
+<p class=T>If <B>Item</B> is a subelement of the <B>PTLineItem</B> element, the <B>Item</B> element contains an integer.</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xlelePivotTable.htm#Example"><B>PivotTable</B></A> element topic.</p>
+</body></html>

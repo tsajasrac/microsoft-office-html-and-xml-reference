@@ -1,0 +1,25 @@
+<html><head>
+<title>BaseField Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>BaseField Element (Microsoft Excel)</H1>
+<p class=T>Contains the name of a base field used for a custom calculation or, for a group field, describes the field the grouping information is based on.
+<!-- *** -->
+For a PivotList component, specifies the smallest grouping field of a field set of  automatic dates.</p>
+<!-- *** -->
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<p class=T>The name is a text string.</p>
+<!-- *** -->
+<p class=T>For a PivotList component, the <B>BaseField</B> element is not specified for the smallest grouping level.</p>
+<!-- *** -->
+<p class=T>For a PivotTable report on a worksheet, the <B>BaseField</B> element is valid only when the <B>PivotField</B> element describes a data field or grouped field.</p>
+<p class=T>For OLAP-based PivotTable reports, the name is the unique field name contained in the <A HREF="xleleSourceName.htm"><B>SourceName</B></A> subelement of the <B>PivotField</B> element describing the referenced field.</p>
+<p class=T>For all other data sources, the same name is contained both in the <B>BaseField</B> element and in the <A HREF="xleleName.htm"><B>Name</B></A> subelement of the <B>PivotField</B> element describing the referenced field.
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>See the example in the <A HREF="xlelePivotTable.htm#Example"><B>PivotTable</B></A> element topic.</p>
+</body></html>

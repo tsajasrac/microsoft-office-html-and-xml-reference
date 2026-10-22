@@ -1,0 +1,392 @@
+<html><head>
+<title>PivotTable Element (Microsoft Excel)</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1 class=RH1>PivotTable Element (Microsoft Excel)</H1>
+<p class=T>Contains the properties and description of a PivotTable report.</p>
+<p class=RL><b>Contained In</b></p>
+<p class=T>
+<A HREF="xleleExcelWorksheet.htm"><B>ExcelWorksheet</B></A><BR>
+</p>
+<p class=RL><b>Subelements</b></p>
+<p class=T>For a PivotList component:
+<A HREF="xleleCacheDetails.htm"><B>CacheDetails</B></A>,
+<A HREF="xleleCommandText.htm"><B>CommandText</B></A>,
+<A HREF="xleleConnectionString.htm"><B>ConnectionString</B></A>,
+<A HREF="xleleCubeField.htm"><B>CubeField</B></A>,
+<A HREF="xleleDataAxisEmpty.htm"><B>DataAxisEmpty</B></A>,
+<A HREF="xleleDataMember.htm"><B>DataMember</B></A>,
+<A HREF="xleleDisplayFieldList.htm"><B>DisplayFieldList</B></A>,
+<A HREF="xleleFieldListBottom.htm"><B>FieldListBottom</B></A>,
+<A HREF="xleleFieldListLeft.htm"><B>FieldListLeft</B></A>,
+<A HREF="xleleFieldListRight.htm"><B>FieldListRight</B></A>,
+<A HREF="xleleFieldListTop.htm"><B>FieldListTop</B></A>,
+<A HREF="xleleHeight.htm"><B>Height</B></A>,
+<A HREF="xleleLocation.htm"><B>Location</B></A>,
+<A HREF="xleleMaxHeight.htm"><B>MaxHeight</B></A>,
+<A HREF="xleleMaxWidth.htm"><B>MaxWidth</B></A>,
+<A HREF="xleleMemberExpand.htm"><B>MemberExpand</B></A>,
+<A HREF="xleleName.htm"><B>Name</B></A>,
+<A HREF="xleleNoAllowDetails.htm"><B>NoAllowDetails</B></A>,
+<A HREF="xleleNoAllowFiltering.htm"><B>NoAllowFiltering</B></A>,
+<A HREF="xleleNoAllowGrouping.htm"><B>NoAllowGrouping</B></A>,
+<A HREF="xleleNoAllowPropertyToolbox.htm"><B>NoAllowPropertyToolbox</B></A>,
+<A HREF="xleleNoAutoFit.htm"><B>NoAutoFit</B></A>,
+<A HREF="xleleNoColumnGrand.htm"><B>NoColumnGrand</B></A>,
+<A HREF="xleleNoDisplayAlerts.htm"><B>NoDisplayAlerts</B></A>,
+<A HREF="xleleNoDisplayExpandIndicator.htm"><B>NoDisplayExpandIndicator</B></A>,
+<A HREF="xleleNoDisplayToolbar.htm"><B>NoDisplayToolbar</B></A>,
+<A HREF="xleleNoRowGrand.htm"><B>NoRowGrand</B></A>,
+<A HREF="xleleOWCVersion.htm"><B>OWCVersion</B></A>,
+<A HREF="xlelePivotAxis.htm"><B>PivotAxis</B></A>,
+<A HREF="xlelePivotData.htm"><B>PivotData</B></A>,
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A>,
+<A HREF="xlelePivotView.htm"><B>PivotView</B></A>,
+<A HREF="xlelePLExport.htm"><B>PLExport</B></A>,
+<A HREF="xlelePLPivotField.htm"><B>PLPivotField</B></A>,
+<A HREF="xlelePLTotal.htm"><B>PLTotal</B></A>,
+<A HREF="xlelePTFormat.htm"><B>PTFormat</B></A>,
+<A HREF="xlelePTSource.htm"><B>PTSource</B></A>,
+<A HREF="xleleWidth.htm"><B>Width</B></A>
+</p>
+<p class=T>For a workbook:
+<A HREF="xleleAutoFormatAlignment.htm"><B>AutoFormatAlignment</B></A>,
+<A HREF="xleleAutoFormatBorder.htm"><B>AutoFormatBorder</B></A>,
+<A HREF="xleleAutoFormatFont.htm"><B>AutoFormatFont</B></A>,
+<A HREF="xleleAutoFormatName.htm"><B>AutoFormatName</B></A>,
+<A HREF="xleleAutoFormatNumber.htm"><B>AutoFormatNumber</B></A>,
+<A HREF="xleleAutoFormatPattern.htm"><B>AutoFormatPattern</B></A>,
+<A HREF="xleleCubeField.htm"><B>CubeField</B></A>,
+<A HREF="xleleDataMember.htm"><B>DataMember</B></A>,
+<A HREF="xleleDisableDrillDown.htm"><B>DisableDrillDown</B></A>,
+<A HREF="xleleDisableFieldDialog.htm"><B>DisableFieldDialog</B></A>,
+<A HREF="xleleDisableWizard.htm"><B>DisableWizard</B></A>,
+<A HREF="xleleDisplayErrorString.htm"><B>DisplayErrorString</B></A>,
+<A HREF="xleleErrorString.htm"><B>ErrorString</B></A>,
+<A HREF="xleleGrandTotalString.htm"><B>GrandTotalString</B></A>,
+<A HREF="xleleHasNoAutoFormat.htm"><B>HasNoAutoFormat</B></A>,
+<A HREF="xleleHideTotalsAnnotation.htm"><B>HideTotalsAnnotation</B></A>,
+<A HREF="xleleLocation.htm"><B>Location</B></A>,
+<A HREF="xleleMergeLabels.htm"><B>MergeLabels</B></A>,
+<A HREF="xleleName.htm"><B>Name</B></A>,
+<A HREF="xleleNoAutoFormatWidth.htm"><B>NoAutoFormatWidth</B></A>,
+<A HREF="xleleNoColumnGrand.htm"><B>NoColumnGrand</B></A>,
+<A HREF="xleleNoDisplayNullString.htm"><B>NoDisplayNullString</B></A>,
+<A HREF="xleleNoPreserveFormatting.htm"><B>NoPreserveFormatting</B></A>,
+<A HREF="xleleNoPrintRepeatItems.htm"><B>NoPrintRepeatItems</B></A>,
+<A HREF="xleleNoRowGrand.htm"><B>NoRowGrand</B></A>,
+<A HREF="xleleNullString.htm"><B>NullString</B></A>,
+<A HREF="xlelePageFieldOrder.htm"><B>PageFieldOrder</B></A>,
+<A HREF="xlelePageFieldStyle.htm"><B>PageFieldStyle</B></A>,
+<A HREF="xlelePageFieldWrapCount.htm"><B>PageFieldWrapCount</B></A>,
+<A HREF="xlelePivotField.htm"><B>PivotField</B></A>,
+<A HREF="xlelePLExport.htm"><B>PLExport</B></A>,
+<A HREF="xlelePrintSetTitles.htm"><B>PrintSetTitles</B></A>,
+<A HREF="xlelePTFormat.htm"><B>PTFormat</B></A>,
+<A HREF="xlelePTFormula.htm"><B>PTFormula</B></A>,
+<A HREF="xlelePTLineItems.htm"><B>PTLineItems</B></A>,
+<A HREF="xlelePTSource.htm"><B>PTSource</B></A>,
+<A HREF="xleleSelection.htm"><B>Selection</B></A>,
+<A HREF="xleleSmallGrid.htm"><B>SmallGrid</B></A>,
+<A HREF="xleleSubtotalHiddenPageItems.htm"><B>SubtotalHiddenPageItems</B></A>,
+<A HREF="xleleTableStyle.htm"><B>TableStyle</B></A>,
+<A HREF="xleleTag.htm"><B>Tag</B></A>,
+<A HREF="xleleVacatedStyle.htm"><B>VacatedStyle</B></A>,
+<A HREF="xleleVersionLastUpdate.htm"><B>VersionLastUpdate</B></A>,
+<A HREF="xleleVersionUpdateableMin.htm"><B>VersionUpdateableMin</B></A>
+</p>
+<p class=RL><b>Remarks</b></p>
+<!-- *** -->
+<p class=T>For a PivotList component, the <B>Name</B> subelement is required.
+Zero or more <B>CubeField</B>, <B>PivotAxis</B>, <B>PivotField</B>, <B>PLPivotField</B>, <B>PLTotal</B>, <B>PTFormat</B> subelements can be specified.
+Either the <B>DataMember</B> or <B>CommandText</B> subelement can be specified, but not both.
+If the <B>NoAutoFit</B> subelement is specified, the <B>Height</B> and <B>Width</B> subelements are required, but if the <B>NoAutoFit</B> subelement is not specified, the <B>MaxHeight</B> and <B>MaxWidth</B> subelements are required.
+All other subelements are optional.
+</p>
+<!-- *** -->
+<p class=T>For a workbook, the <B>Location</B>, <B>Name</B>, <B>PTSource</B>, and one or more <B>PivotField</B> subelements are required.
+Up to two <B>PTLineItems</B> subelements (one for row-oriented items in a PivotTable report and the other for column-oriented items) can be specified.
+The <B>CubeField</B> subelement is required if the PivotTable report is based on an OLAP data source.
+The order in which the <B>PivotField</B> subelements for base fields are specified must match the order in which its data appears in the PivotTable cache.
+All other subelements are optional.
+There can be one or more <B>CubeField</B>, <B>PTFormat</B>, and <B>PTFormula</B> subelements.
+</p>
+<p class=RL><A NAME="Example"><b>Example</b></A></p>
+<p class=T>This example defines a PivotTable report in range A1:E297 based on data queried from the authors table in a Microsoft SQL Server database.
+A parameter query is used to obtain records of contact information from the pubs2.dbo.authors table for the state of California.</p>
+
+<p class=T>The first part of the example specifies that cells in the PivotTable report containing an error display the string "incorrect", and cells containing null values display the string "N/A".
+The page fields are displayed over and down, one field per column.
+The report is formatted using the built-in Report4 style, and the number, border, font, pattern, and alignment are changed.
+The formatting is not preserved when the report is refreshed; however, refreshes are disabled.
+No column or row grand totals are displayed.
+Row print titles are set to the rows that contain the report’s column field items, and column print titles are set to the columns that contain its row items.</p>
+<PRE class=C><CODE>
+ &lt;x:PivotTable&gt;
+  &lt;x:Name&gt;PivotTable4&lt;/x:Name&gt;
+  &lt;x:ErrorString&gt;incorrect&lt;/x:ErrorString&gt;
+  &lt;x:NullString&gt;N/A&lt;/x:NullString&gt;
+  &lt;x:PageFieldOrder&gt;OverThenDown&lt;/x:PageFieldOrder&gt;
+  &lt;x:PageFieldWrapCount&gt;1&lt;/x:PageFieldWrapCount&gt;
+  &lt;x:AutoFormatName&gt;Report4&lt;/x:AutoFormatName&gt;
+  &lt;x:AutoFormatNumber/&gt;
+  &lt;x:AutoFormatBorder/&gt;
+  &lt;x:AutoFormatFont/&gt;
+  &lt;x:AutoFormatPattern/&gt;
+  &lt;x:AutoFormatAlignment/&gt;
+  &lt;x:NoPreserveFormatting/&gt;
+  &lt;x:DisplayErrorString/&gt;
+  &lt;x:SubtotalHiddenPageItems/&gt;
+  &lt;x:NoRowGrand/&gt;
+  &lt;x:NoColumnGrand/&gt;
+  &lt;x:PrintSetTitles/&gt;
+  &lt;x:MergeLabels/&gt;
+  &lt;x:HideTotalsAnnotation/&gt;
+  &lt;x:Location&gt;$A$1:$E$297&lt;/x:Location&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;au_id&lt;/x:Name&gt;
+   &lt;x:SQLType&gt;VariableCharacter&lt;/x:SQLType&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;au_lname&lt;/x:Name&gt;
+   &lt;x:Orientation&gt;Row&lt;/x:Orientation&gt;
+   &lt;x:SQLType&gt;VariableCharacter&lt;/x:SQLType&gt;
+   &lt;x:AutoShowType&gt;Auto&lt;/x:AutoShowType&gt;
+   &lt;x:AutoShowField&gt;Count of au_id&lt;/x:AutoShowField&gt;
+   &lt;x:AutoSortOrder&gt;Descending&lt;/x:AutoSortOrder&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+   &lt;x:ShowAllItems/&gt;
+   &lt;x:BlankLineAfterItems/&gt;
+   &lt;x:Position&gt;2&lt;/x:Position&gt;
+   &lt;x:ParentField&gt;au_lname2&lt;/x:ParentField&gt;
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;Yokomoto&lt;/x:Name&gt;
+   &lt;/x:PivotItem&gt;
+</CODE></PRE>
+<p class=T>This section of the example defines rules for specific items.
+In the author last name field, data for authors Steinbeck and Smith are not in the PivotTable cache.
+One of the items contains a formula that returns the string "del Castillo".
+In the author first name field, data for the authors with the first name Abraham, Akiko, and Albert is hidden.
+Data for Albert is also missing from the PivotTable cache.</p>
+<PRE class=C><CODE>
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;Steinbeck&lt;/x:Name&gt;
+    &lt;x:Missing/&gt;
+   &lt;/x:PivotItem&gt;
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;Smith&lt;/x:Name&gt;
+    &lt;x:Missing/&gt;
+   &lt;/x:PivotItem&gt;
+   .
+   .
+   .
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;Formula2&lt;/x:Name&gt;
+    &lt;x:Formula&gt;='del Castillo'&lt;/x:Formula&gt;
+    &lt;x:FormulaIndex&gt;1&lt;/x:FormulaIndex&gt;
+   &lt;/x:PivotItem&gt;
+   .
+   .
+   .
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;au_fname&lt;/x:Name&gt;
+   &lt;x:Orientation&gt;Row&lt;/x:Orientation&gt;
+   &lt;x:SQLType&gt;VariableCharacter&lt;/x:SQLType&gt;
+   &lt;x:AutoShowField&gt;Count of au_id&lt;/x:AutoShowField&gt;
+   &lt;x:AutoSortOrder&gt;Ascending&lt;/x:AutoSortOrder&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+   &lt;x:Position&gt;3&lt;/x:Position&gt;
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;Abraham&lt;/x:Name&gt;
+    &lt;x:Hidden/&gt;
+   &lt;/x:PivotItem&gt;
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;Akiko&lt;/x:Name&gt;
+    &lt;x:Hidden/&gt;
+   &lt;/x:PivotItem&gt;
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;Albert&lt;/x:Name&gt;
+    &lt;x:Hidden/&gt;
+    &lt;x:Missing/&gt;
+   &lt;/x:PivotItem&gt;
+</CODE></PRE>
+<p class=T>The following section of the example specifies that the address, city, contract, phone number, state, and zip code fields are in outline form.
+The state field uses server-based filtering and the current page is California.
+The field named Field2 contains a formula referencing the zip code field.
+Field2 cannot be dragged to the row, column, and page positions.
+The field named au_lname2 is grouped according to the data in the au_lname field.
+All items in the field are visible, and a blank line is displayed after the items.
+The child field items are defined.</p>
+<PRE class=C><CODE>
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;phone&lt;/x:Name&gt;
+   &lt;x:SQLType&gt;Character&lt;/x:SQLType&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;address&lt;/x:Name&gt;
+   &lt;x:SQLType&gt;VariableCharacter&lt;/x:SQLType&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;city&lt;/x:Name&gt;
+   &lt;x:SQLType&gt;VariableCharacter&lt;/x:SQLType&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;state&lt;/x:Name&gt;
+   &lt;x:Orientation&gt;Page&lt;/x:Orientation&gt;
+   &lt;x:SQLType&gt;Character&lt;/x:SQLType&gt;
+   &lt;x:AutoShowType&gt;Auto&lt;/x:AutoShowType&gt;
+   &lt;x:AutoShowRange&gt;Bottom&lt;/x:AutoShowRange&gt;
+   &lt;x:AutoShowCount&gt;44&lt;/x:AutoShowCount&gt;
+   &lt;x:AutoShowField&gt;Count of au_id&lt;/x:AutoShowField&gt;
+   &lt;x:AutoSortOrder&gt;Ascending&lt;/x:AutoSortOrder&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+   &lt;x:ServerBased/&gt;
+   &lt;x:CurrentPage&gt;CA&lt;/x:CurrentPage&gt;
+   &lt;x:Position&gt;1&lt;/x:Position&gt;
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;CA&lt;/x:Name&gt;
+   &lt;/x:PivotItem&gt;
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;IN&lt;/x:Name&gt;
+   &lt;/x:PivotItem&gt;
+   .
+   .
+   .
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;zip&lt;/x:Name&gt;
+   &lt;x:SQLType&gt;Character&lt;/x:SQLType&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;contract&lt;/x:Name&gt;
+   &lt;x:SQLType&gt;Bit&lt;/x:SQLType&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+   &lt;x:DataType&gt;Integer&lt;/x:DataType&gt;
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;Field2&lt;/x:Name&gt;
+   &lt;x:Subtotal&gt;None&lt;/x:Subtotal&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+   &lt;x:NoDragToRow/&gt;
+   &lt;x:NoDragToColumn/&gt;
+   &lt;x:NoDragToPage/&gt;
+   &lt;x:Formula&gt;=zip&lt;/x:Formula&gt;
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;au_lname2&lt;/x:Name&gt;
+   &lt;x:Orientation&gt;Row&lt;/x:Orientation&gt;
+   &lt;x:Subtotal&gt;None&lt;/x:Subtotal&gt;
+   &lt;x:LayoutForm&gt;Outline&lt;/x:LayoutForm&gt;
+   &lt;x:ShowAllItems/&gt;
+   &lt;x:BlankLineAfterItems/&gt;
+   &lt;x:Position&gt;1&lt;/x:Position&gt;
+   &lt;x:BaseField&gt;au_lname&lt;/x:BaseField&gt;
+   &lt;x:MapChildItems&gt;
+    &lt;x:Item&gt;Yokomoto&lt;/x:Item&gt;
+    &lt;x:Item&gt;White&lt;/x:Item&gt;
+    .
+    .
+    .
+   &lt;/x:MapChildItems&gt;
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;Yokomoto&lt;/x:Name&gt;
+   &lt;/x:PivotItem&gt;
+   &lt;x:PivotItem&gt;
+    &lt;x:Name&gt;White&lt;/x:Name&gt;
+    &lt;x:Hidden/&gt;
+   &lt;/x:PivotItem&gt;
+</CODE></PRE>
+<p class=T>In the last section of the example, the column field named Data is a data field.
+In all, there are 2 instances of line item 0 and 3 instances of line item 1.
+Both items are in the row position.
+In the column position, line item 1 contains an index to aggregate field 2.
+The PivotTable cache memory usage is optimized.
+In the data area of the report, the minimum of au_id and the count of Field2 are displayed, and only data can be selected.</p>
+<PRE class=C><CODE>
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:DataField/&gt;
+   &lt;x:Name&gt;Data&lt;/x:Name&gt;
+   &lt;x:Orientation&gt;Column&lt;/x:Orientation&gt;
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;Min of au_id&lt;/x:Name&gt;
+   &lt;x:ParentField&gt;au_id&lt;/x:ParentField&gt;
+   &lt;x:Orientation&gt;Data&lt;/x:Orientation&gt;
+   &lt;x:Function&gt;Min&lt;/x:Function&gt;
+   &lt;x:Position&gt;1&lt;/x:Position&gt;
+  &lt;/x:PivotField&gt;
+  &lt;x:PivotField&gt;
+   &lt;x:Name&gt;Count of Field2&lt;/x:Name&gt;
+   &lt;x:ParentField&gt;Field2&lt;/x:ParentField&gt;
+   &lt;x:Orientation&gt;Data&lt;/x:Orientation&gt;
+   &lt;x:Function&gt;Count&lt;/x:Function&gt;
+   &lt;x:Position&gt;2&lt;/x:Position&gt;
+  &lt;/x:PivotField&gt;
+  &lt;x:PTLineItems&gt;
+   &lt;x:PTLineItem&gt;
+    &lt;x:ItemType&gt;Default&lt;/x:ItemType&gt;
+    &lt;x:CountOfSameItems&gt;1&lt;/x:CountOfSameItems&gt;
+    &lt;x:Item&gt;0&lt;/x:Item&gt;
+   &lt;/x:PTLineItem&gt;
+   &lt;x:PTLineItem&gt;
+    &lt;x:ItemType&gt;Blank&lt;/x:ItemType&gt;
+    &lt;x:CountOfSameItems&gt;2&lt;/x:CountOfSameItems&gt;
+    &lt;x:Item&gt;1&lt;/x:Item&gt;
+   &lt;/x:PTLineItem&gt;
+   .
+   .
+   .
+  &lt;/x:PTLineItems&gt;
+  &lt;x:PTLineItems&gt;
+   &lt;x:Orientation&gt;Column&lt;/x:Orientation&gt;
+   &lt;x:PTLineItem&gt;
+    &lt;x:Item&gt;0&lt;/x:Item&gt;
+   &lt;/x:PTLineItem&gt;
+   &lt;x:PTLineItem&gt;
+    &lt;x:DataField&gt;2&lt;/x:DataField&gt;
+    &lt;x:Item&gt;1&lt;/x:Item&gt;
+   &lt;/x:PTLineItem&gt;
+  &lt;/x:PTLineItems&gt;
+  &lt;x:PTSource&gt;
+   &lt;x:CacheIndex&gt;1&lt;/x:CacheIndex&gt;
+   &lt;x:RefreshName&gt;T456TST&lt;/x:RefreshName&gt;
+   &lt;x:CacheFile HRef="./PTauth.files/cachedata.xml"/&gt;
+   &lt;x:RefreshDate&gt;1999-04-15T15:14:36&lt;/x:RefreshDate&gt;
+   &lt;x:OptimizeCache/&gt;
+   &lt;x:DisableRefresh/&gt;
+   &lt;x:QuerySource&gt;
+    &lt;x:Connection&gt;DRIVER=SQL Server;SERVER=xsrvone;UID=xtstacc;;APP=MicrosoftR Query;WSID=T456TST&lt;/x:Connection&gt;
+    &lt;x:CommandText&gt;SELECT authors.au_id, authors.au_lname, authors.au_fname, &lt;/x:CommandText&gt;
+    &lt;x:CommandText&gt;authors.phone, authors.address, authors.city, authors.state, &lt;/x:CommandText&gt;
+    &lt;x:CommandText&gt;authors.zip, authors.contract &lt;/x:CommandText&gt;
+    &lt;x:CommandText&gt;FROM pubs2.dbo.authors authors &lt;/x:CommandText&gt;
+    &lt;x:CommandText&gt;WHERE (authors.state=?)&lt;/x:CommandText&gt;
+    &lt;x:CommandTextOriginal&gt;SELECT authors.au_id, authors.au_lname, authors.au_fname, &lt;/x:CommandTextOriginal&gt;
+    &lt;x:CommandTextOriginal&gt;authors.phone, authors.address, authors.city, authors.state, &lt;/x:CommandTextOriginal&gt;
+    &lt;x:CommandTextOriginal&gt;authors.zip, authors.contract &lt;/x:CommandTextOriginal&gt;
+    &lt;x:CommandTextOriginal&gt;FROM pubs2.dbo.authors authors&lt;/x:CommandTextOriginal&gt;
+    &lt;x:Parameter&gt;
+     &lt;x:Name&gt;Parameter1&lt;/x:Name&gt;
+     &lt;x:SQLType&gt;Character&lt;/x:SQLType&gt;
+     &lt;x:ParameterType&gt;Value&lt;/x:ParameterType&gt;
+     &lt;x:ParameterValue&gt;CA&lt;/x:ParameterValue&gt;
+    &lt;/x:Parameter&gt;
+   &lt;/x:QuerySource&gt;
+  &lt;/x:PTSource&gt;
+  &lt;x:Selection&gt;
+   &lt;x:PTRule&gt;
+    &lt;x:RuleType&gt;DataOnly&lt;/x:RuleType&gt;
+   &lt;/x:PTRule&gt;
+  &lt;/x:Selection&gt;
+ &lt;/x:PivotTable&gt;
+</CODE></PRE>
+</body></html>

@@ -1,0 +1,32 @@
+<html><head>
+<title>Security, Protection, and VBA Projects</title>
+<style>@import url(../Shared/msdn_ie4.css);</style><link disabled rel="stylesheet" href="../Shared/msdn_ie3.css">
+</head>
+<body BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1 class=RH1>Security, Protection, and VBA Projects</H1>
+
+<p class=T>Microsoft Office 2000 applications allow password protection of a document saved to a native binary format file.
+However, since HTML is a plain text file format, a password is ineffective protection since the page can be opened in one of many commonly available text editors.
+If password protection is required, the use of binary format files is recommended.</p>
+
+<p class=T>Office applications also allow you to specify a document as read-only to prevent the document from being changed when it is opened.
+When the document is saved as a Web page, the read-only status is saved using the <A HREF="../Shared/ofeleReadOnlyRecommended.htm"><B>ReadOnlyRecommended</B></A> subelement of the <A HREF="../Shared/ofeleOfficeDocumentSettings.htm"><B>OfficeDocumentSettings</B></A> element.</p>
+
+<p class=T>In Microsoft Word, the <A HREF="../Word/wdeleDocumentProtection.htm"><B>DocumentProtection</B></A> element specifies the protection level of a document and its individual sections.
+If you specify a password for a level of protection and save the document as a Web page, the protection level is preserved but the document is no longer password-protected.</p>
+
+<p class=T>In Microsoft Excel, the <A HREF="../Excel/xleleProtectStructure.htm"><B>ProtectStructure</B></A>
+and <A HREF="../Excel/xleleProtectWindows.htm"><B>ProtectWindows</B></A> elements specify 
+workbook-level protection, while the <A HREF="../Excel/xleleProtectContents.htm"><B>ProtectContents</B></A>, 
+<A HREF="../Excel/xleleProtectObjects.htm"><B>ProtectObjects</B></A>, and 
+<A HREF="../Excel/xleleProtectScenarios.htm"><B>ProtectScenarios</B></A> elements 
+specify worksheet-level protection.
+Note that a workbook saved as a Web page cannot be protected and shared.
+Cell-level protection is specified using CSS <B>mso-protection</B> styles within the cell elements of the HTML table that represents the worksheet.
+A cell can be locked, unlocked, hidden, or visible.
+If you specify a password for a level of protection and save the document as a Web page, the protection level is preserved but the document is no longer password-protected.</p>
+
+<p class=T>Visual Basic for Applications (VBA) projects, project properties and settings, references, window states, password, and digital signatures are stored in the editdata.mso file in binary format. Password protection of VBA projects is retained when the document is saved as a Web page and opened in an Office application. To learn where the editdata.mso file is stored, see the <A HREF="ofconFolderandFileNames.htm">Folder and File Names</A> topic.
+
+</body></html>
